@@ -1,0 +1,1870 @@
+[
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 13335, 
+                    "value": 10089
+                }, 
+                {
+                    "asn": 13335, 
+                    "value": 19020
+                }, 
+                {
+                    "asn": 13335, 
+                    "value": 20050
+                }, 
+                {
+                    "asn": 13335, 
+                    "value": 20500
+                }, 
+                {
+                    "asn": 13335, 
+                    "value": 20530
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.0.0/24", 
+            "as-path": "29680 13335"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.153", 
+            "prefix": "1.0.0.0/24", 
+            "as-path": "35699 13335"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.0.0/24", 
+            "as-path": "43578 13335"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.4.0/22", 
+            "as-path": "29680 6939 4826 38803 56203"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.151", 
+            "prefix": "1.0.4.0/22", 
+            "as-path": "35699 6939 4826 38803 56203"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.4.0/22", 
+            "as-path": "43578 6939 4826 38803 56203"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.4.0/24", 
+            "as-path": "29680 6939 4826 38803 56203"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.151", 
+            "prefix": "1.0.4.0/24", 
+            "as-path": "35699 6939 4826 38803 56203"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.4.0/24", 
+            "as-path": "43578 6939 4826 38803 56203"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.5.0/24", 
+            "as-path": "29680 6939 4826 38803 56203"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.151", 
+            "prefix": "1.0.5.0/24", 
+            "as-path": "35699 6939 4826 38803 56203"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.5.0/24", 
+            "as-path": "43578 6939 4826 38803 56203"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.6.0/24", 
+            "as-path": "29680 6939 4826 38803 56203"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.151", 
+            "prefix": "1.0.6.0/24", 
+            "as-path": "35699 6939 4826 38803 56203"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.6.0/24", 
+            "as-path": "43578 6939 4826 38803 56203"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.7.0/24", 
+            "as-path": "29680 6939 4826 38803 56203"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.151", 
+            "prefix": "1.0.7.0/24", 
+            "as-path": "35699 6939 4826 38803 56203"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.7.0/24", 
+            "as-path": "43578 6939 4826 38803 56203"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21201
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22032
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.16.0/24", 
+            "as-path": "29680 174 2519"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.16.0/24", 
+            "as-path": "35699 174 2519"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.16.0/24", 
+            "as-path": "43578 174 2519"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 8220, 
+                    "value": 65002
+                }, 
+                {
+                    "asn": 8220, 
+                    "value": 65303
+                }, 
+                {
+                    "asn": 8220, 
+                    "value": 65401
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.64.0/18", 
+            "as-path": "29680 8220 7670 18144"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.64.0/18", 
+            "as-path": "35699 2914 2497 7670 18144"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.64.0/18", 
+            "as-path": "43578 1299 2497 7670 18144"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.128.0/17", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.128.0/17", 
+            "as-path": "35699 2914 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.128.0/17", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.128.0/18", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.128.0/18", 
+            "as-path": "35699 2914 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.128.0/18", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.128.0/19", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.128.0/19", 
+            "as-path": "35699 2914 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.128.0/19", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.128.0/24", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.128.0/24", 
+            "as-path": "35699 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.128.0/24", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.129.0/24", 
+            "as-path": "29680 6939 4651 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.151", 
+            "prefix": "1.0.129.0/24", 
+            "as-path": "35699 6939 4651 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.129.0/24", 
+            "as-path": "43578 6939 4651 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.131.0/24", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.131.0/24", 
+            "as-path": "35699 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.131.0/24", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.132.0/22", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.132.0/22", 
+            "as-path": "35699 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.132.0/22", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.136.0/24", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.136.0/24", 
+            "as-path": "35699 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.136.0/24", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.137.0/24", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.137.0/24", 
+            "as-path": "35699 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.137.0/24", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.138.0/24", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.138.0/24", 
+            "as-path": "35699 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.138.0/24", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.139.0/24", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.139.0/24", 
+            "as-path": "35699 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.139.0/24", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.142.0/24", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.142.0/24", 
+            "as-path": "35699 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.142.0/24", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.143.0/24", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.143.0/24", 
+            "as-path": "35699 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.143.0/24", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.144.0/20", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.144.0/20", 
+            "as-path": "35699 2914 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.144.0/20", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.160.0/19", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.160.0/19", 
+            "as-path": "35699 2914 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.160.0/19", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.160.0/22", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.160.0/22", 
+            "as-path": "35699 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.160.0/22", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.164.0/24", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.164.0/24", 
+            "as-path": "35699 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.164.0/24", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.165.0/24", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.165.0/24", 
+            "as-path": "35699 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.165.0/24", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.166.0/24", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.166.0/24", 
+            "as-path": "35699 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.166.0/24", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.167.0/24", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.167.0/24", 
+            "as-path": "35699 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.167.0/24", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.168.0/22", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.168.0/22", 
+            "as-path": "35699 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.168.0/22", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.172.0/22", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.172.0/22", 
+            "as-path": "35699 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.172.0/22", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.176.0/20", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.176.0/20", 
+            "as-path": "35699 2914 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.176.0/20", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.192.0/18", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.192.0/18", 
+            "as-path": "35699 2914 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.192.0/18", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.192.0/19", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.143", 
+            "prefix": "1.0.192.0/19", 
+            "as-path": "35699 2914 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.143", 
+        "collector": "rrc18", 
+        "peer_asn": 35699
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [], 
+            "next-hop": "193.242.98.160", 
+            "prefix": "1.0.192.0/19", 
+            "as-path": "43578 1299 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.160", 
+        "collector": "rrc18", 
+        "peer_asn": 43578
+    }, 
+    {
+        "status": "valid", 
+        "elem_type": "R", 
+        "fields": {
+            "communities": [
+                {
+                    "asn": 174, 
+                    "value": 21001
+                }, 
+                {
+                    "asn": 174, 
+                    "value": 22013
+                }
+            ], 
+            "next-hop": "193.242.98.141", 
+            "prefix": "1.0.192.0/21", 
+            "as-path": "29680 174 38040 23969"
+        }, 
+        "project": "ris", 
+        "record_type": "rib", 
+        "time": 1547020800, 
+        "peer_address": "193.242.98.141", 
+        "collector": "rrc18", 
+        "peer_asn": 29680
+    }
+]

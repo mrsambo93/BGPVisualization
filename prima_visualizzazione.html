@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        
+        html {
+            font-size: 110%;
+        }
+        
+        svg {
+            display: block;
+            margin: auto;
+            outline: solid black;
+        }
+
+        form {
+            display: block;
+            margin: 0 auto;
+            width: 500px;
+        }
+
+        #aspath {
+            width: 300px;
+        }
+
+        .line {
+            fill: none;
+            stroke: black;
+            stroke-width: 3;
+        }
+
+        .dot {
+            fill: black;
+            stroke: #fff;
+        }
+
+        .grid line {
+            stroke: grey;
+            stroke-opacity: 0.7;
+            shape-rendering: crispEdges;
+        }
+
+        .grid path {
+            stroke-width: 0;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <form id="form1" onsubmit="return false;">
+        AS Path:
+        <input id="aspath" type="text" name="aspath">
+        <input id="bt" type="submit" onclick="get_aspath()" value="Submit">
+    </form>
+    <br>
+    <br>
+    <script src="http://d3js.org/d3.v5.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        const server = "http://localhost:8080"
+        
+        var aspath = [];
+
+        var margin = {top: 50, right: 50, bottom: 50, left: 50}
+            , width = 1366 - margin.left - margin.right 
+            , height = 768 - margin.top - margin.bottom;
+
+        var radius = 20;
+        
+        var x = d3.scaleLinear().range([margin.left, width - margin.left - margin.right]);
+        var y = d3.scaleLinear().range([height, 0]);
+
+        var svg = d3.select("body").append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        
+        function make_y_gridlines(ticks) {		
+            return d3.axisLeft(y)
+                    .ticks(ticks)
+        }
+
+        function get_aspath() {
+            var form = document.getElementById("form1");
+            var aspath_string = form.elements[0].value;
+            aspath = aspath_string.split(" ");
+            data = {"aspath" : aspath};
+            console.log(data);
+            const params = {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body : JSON.stringify(data),
+                method : "POST"
+            };
+            fetch(server + "/aspath", params)
+                .then(data => {return data.json()})
+                .then(response => {
+                    draw_axis(response.response);
+                });
+        }
+
+        function draw_axis(data) {
+            x.domain([0, aspath.length]);
+            ran = [];
+            for (i=0; i<=aspath.length; i++) {
+                ran.push(i);
+            }
+            
+            /*svg.append("g")
+                .attr("transform", "translate(" + 0 + "," + height + ")")
+                .call(d3.axisBottom(x)
+                        .tickValues(ran)
+                        .tickFormat(d3.format("d")));
+
+            svg.append("g")
+                .attr("transform", "translate(" + margin.left + "," + 0 + ")")
+                .call(d3.axisLeft(y).tickValues([0,1,2,3]).tickFormat(d3.format("d")));*/
+
+            draw_as(data);
+        }
+
+        function draw_as(as_data) {
+            clear();
+
+            transl_to_positive(as_data, function(as_data) {
+                var ticks = d3.max(as_data, function(d) {return d.y});
+                y.domain([0, ticks]);
+
+                svg.append("g")			
+                    .attr("class", "grid")
+                    .call(make_y_gridlines(ticks)
+                        .tickSize(- width)
+                        .tickFormat("")
+                )
+
+                var line = d3.line()
+                    .x(function(d) { return x(d.x); })
+                    .y(function(d) { return y(d.y); });
+            
+                svg.append("path")
+                    .datum(as_data)
+                    .attr("class", "line")
+                    .attr("d", line);
+
+                svg.selectAll(".dot")
+                    .data(as_data)
+                    .enter().append("circle")
+                            .attr("class", "dot")
+                            .attr("cx", function(d) { return x(d.x); })
+                            .attr("cy", function(d) { return y(d.y); })
+                            .attr("r", radius)
+            });
+        }
+
+        function transl_to_positive(data, callback) {
+            var value = 0;
+
+            for(var i = 0; i < data.length; i++) {
+                if(data[i].y < value) value = data[i].y;
+            }
+
+            if(value < 0) {
+                var absolute = Math.abs(value);
+                for(var i = 0; i < data.length; i++) {
+                    data[i].y += absolute;
+                }
+            }
+            callback(data);
+        }
+
+        function clear() {
+            svg.selectAll(".grid").remove();
+            svg.selectAll(".line").remove();
+            svg.selectAll(".dot").remove();
+        }
+
+    </script>
+</body>
+</html>
