@@ -28,12 +28,12 @@
 
         .line {
             fill: none;
-            stroke: black;
+            stroke: darkblue;
             stroke-width: 3;
         }
 
         .dot {
-            fill: black;
+            fill: darkblue;
             stroke: #fff;
         }
 
@@ -45,6 +45,12 @@
 
         .grid path {
             stroke-width: 0;
+        }
+
+        .label {
+            font-family: sans-serif;
+            font-size: 15px;
+            fill: #fff;
         }
     </style>
 </head>
@@ -61,7 +67,7 @@
     <script src="http://d3js.org/d3.v5.min.js" type="text/javascript"></script>
     <script type="text/javascript">
 
-        const server = "http://localhost:8080"
+        const server = "http://localhost:8080";
         
         var aspath = [];
 
@@ -69,10 +75,10 @@
             , width = 1366 - margin.left - margin.right 
             , height = 768 - margin.top - margin.bottom;
 
-        var radius = 20;
+        var radius = 40;
         
-        var x = d3.scaleLinear().range([margin.left, width - margin.left - margin.right]);
-        var y = d3.scaleLinear().range([height, 0]);
+        var x = d3.scaleLinear().range([margin.left + margin.right, width - margin.left - margin.right]);
+        var y = d3.scaleLinear().range([height - margin.top, margin.top]);
 
         var svg = d3.select("body").append("svg")
                 .attr("width", width + margin.left + margin.right)
@@ -80,6 +86,34 @@
             .append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
         
+        var defs = svg.append("defs");
+        
+        defs.append("marker")
+            .attr("id", "router-end")
+            .attr("markerHeight", 8)
+            .attr("markerWidth", 8)
+            .attr("markerUnits", "strokeWidth")
+            .attr("orient", "auto")
+            .attr("refX", radius/2)
+            .attr("refY", 0)
+            .attr("viewBox", "-6 -6 12 12")
+            .append("path")
+                .attr("d", "M 0, 0  m -5, 0  a 5,5 0 1,0 10,0  a 5,5 0 1,0 -10,0")
+                .attr("fill", "red")
+
+        defs.append("marker")
+            .attr("id", "router-start")
+            .attr("markerHeight", 8)
+            .attr("markerWidth", 8)
+            .attr("markerUnits", "strokeWidth")
+            .attr("orient", "auto")
+            .attr("refX", (-radius)/2)
+            .attr("refY", 0)
+            .attr("viewBox", "-6 -6 12 12")
+            .append("path")
+                .attr("d", "M 0, 0  m -5, 0  a 5,5 0 1,0 10,0  a 5,5 0 1,0 -10,0")
+                .attr("fill", "red")
+
         function make_y_gridlines(ticks) {		
             return d3.axisLeft(y)
                     .ticks(ticks)
@@ -140,22 +174,39 @@
                         .tickFormat("")
                 )
 
-                var line = d3.line()
-                    .x(function(d) { return x(d.x); })
-                    .y(function(d) { return y(d.y); });
-            
-                svg.append("path")
-                    .datum(as_data)
-                    .attr("class", "line")
-                    .attr("d", line);
-
                 svg.selectAll(".dot")
                     .data(as_data)
                     .enter().append("circle")
                             .attr("class", "dot")
                             .attr("cx", function(d) { return x(d.x); })
                             .attr("cy", function(d) { return y(d.y); })
-                            .attr("r", radius)
+                            .attr("r", radius);
+
+                var line = d3.line()
+                    .x(function(d) { return x(d.x); })
+                    .y(function(d) { return y(d.y); });
+
+                split_data(as_data, function(splitted) {
+                    splitted.forEach(element => {
+                        svg.append("path")
+                            .datum(element)
+                            .attr("class", "line")
+                            .attr("d", line)
+                            .attr("marker-start", "url(#router-start)")
+                            .attr("marker-end", "url(#router-end)");
+                    });
+
+                    svg.selectAll(".label")
+                        .data(as_data)
+                        .enter().append("text")
+                                .attr("class", "label")
+                                .attr("x", function(d) {return x(d.x)})
+                                .attr("y", function(d) {return y(d.y) + 6})
+                                .attr("text-anchor", "middle")
+                                .text(function(d) {
+                                    return "AS" + d.asn;
+                                });
+                });
             });
         }
 
@@ -175,10 +226,20 @@
             callback(data);
         }
 
+        function split_data(data, callback) {
+            var result = data.reduce(function(result, value, index, array) {
+                result.push(array.slice(index, index + 2));
+                return result;
+            }, []);
+            result.pop();
+            callback(result);
+        }
+
         function clear() {
             svg.selectAll(".grid").remove();
             svg.selectAll(".line").remove();
             svg.selectAll(".dot").remove();
+            svg.selectAll(".label").remove();
         }
 
     </script>
