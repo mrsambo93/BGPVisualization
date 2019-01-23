@@ -99,7 +99,7 @@
             .attr("viewBox", "-6 -6 12 12")
             .append("path")
                 .attr("d", "M 0, 0  m -5, 0  a 5,5 0 1,0 10,0  a 5,5 0 1,0 -10,0")
-                .attr("fill", "red")
+                .attr("fill", "green")
 
         defs.append("marker")
             .attr("id", "router-start")
@@ -112,7 +112,7 @@
             .attr("viewBox", "-6 -6 12 12")
             .append("path")
                 .attr("d", "M 0, 0  m -5, 0  a 5,5 0 1,0 10,0  a 5,5 0 1,0 -10,0")
-                .attr("fill", "red")
+                .attr("fill", "green")
 
         function make_y_gridlines(ticks) {		
             return d3.axisLeft(y)
@@ -141,9 +141,9 @@
         }
 
         function draw_axis(data) {
-            x.domain([0, aspath.length]);
+            x.domain([0, aspath.length - 1]);
             ran = [];
-            for (i=0; i<=aspath.length; i++) {
+            for (i=0; i<aspath.length; i++) {
                 ran.push(i);
             }
             
