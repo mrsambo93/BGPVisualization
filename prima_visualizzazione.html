@@ -22,6 +22,16 @@
             width: 500px;
         }
 
+        .container {
+            text-align: center;
+        }
+
+        .container pre {
+            display: inline-block;
+            text-align: left;
+            font-size: 20px;
+        }
+
         #aspath {
             width: 300px;
         }
@@ -47,29 +57,42 @@
             stroke-width: 0;
         }
 
-        .label {
+        .inner_label {
             font-family: sans-serif;
             font-size: 15px;
             fill: #fff;
+        }
+
+        .outer_label {
+            font-family: sans-serif;
+            font-size: 15px;
+            fill: black;
         }
     </style>
 </head>
 <body>
     <br>
     <br>
+    <!--
     <form id="form1" onsubmit="return false;">
         AS Path:
         <input id="aspath" type="text" name="aspath">
         <input id="bt" type="submit" onclick="get_aspath()" value="Submit">
     </form>
+    --->
     <br>
+    <div class="container">
+        <pre id="info"></pre>
+    </div>
     <br>
     <script src="http://d3js.org/d3.v5.min.js" type="text/javascript"></script>
     <script type="text/javascript">
 
         const server = "http://localhost:8080";
+        const asrank = "http://as-rank.caida.org/api/v1/asns/"
         
         var aspath = [];
+        var announce = {}; 
 
         var margin = {top: 50, right: 50, bottom: 50, left: 50}
             , width = 1366 - margin.left - margin.right 
@@ -114,16 +137,24 @@
                 .attr("d", "M 0, 0  m -5, 0  a 5,5 0 1,0 10,0  a 5,5 0 1,0 -10,0")
                 .attr("fill", "green")
 
+        d3.json("announces")
+            .then(data => {
+                announce = data[2];
+                aspath = announce.aspath;
+                show_info(announce);
+                get_aspath(aspath);
+            });
+
         function make_y_gridlines(ticks) {		
             return d3.axisLeft(y)
                     .ticks(ticks)
         }
 
-        function get_aspath() {
-            var form = document.getElementById("form1");
+        function get_aspath(asp) {
+            /*var form = document.getElementById("form1");
             var aspath_string = form.elements[0].value;
-            aspath = aspath_string.split(" ");
-            data = {"aspath" : aspath};
+            aspath = aspath_string.split(" ");*/
+            data = {"aspath" : asp};
             console.log(data);
             const params = {
                 headers: {
@@ -157,7 +188,10 @@
                 .attr("transform", "translate(" + margin.left + "," + 0 + ")")
                 .call(d3.axisLeft(y).tickValues([0,1,2,3]).tickFormat(d3.format("d")));*/
 
-            draw_as(data);
+            get_as_names(data, function(res) {
+                console.log(res);
+                draw_as(res);
+            });
         }
 
         function draw_as(as_data) {
@@ -196,18 +230,60 @@
                             .attr("marker-end", "url(#router-end)");
                     });
 
-                    svg.selectAll(".label")
+                    svg.selectAll(".inner_label")
                         .data(as_data)
                         .enter().append("text")
-                                .attr("class", "label")
+                                .attr("class", "inner_label")
                                 .attr("x", function(d) {return x(d.x)})
                                 .attr("y", function(d) {return y(d.y) + 6})
                                 .attr("text-anchor", "middle")
                                 .text(function(d) {
                                     return "AS" + d.asn;
                                 });
+                    
+                    svg.selectAll(".outer_label")
+                        .data(as_data)
+                        .enter().append("text")
+                                .attr("class", "outer_label")
+                                .attr("x", function(d) {return x(d.x)})
+                                .attr("y", function(d) {return y(d.y) + 15 + radius})
+                                .attr("text-anchor", "middle")
+                                .text(function(d) {
+                                    console.log(d);
+                                    return d.name;
+                                });
                 });
             });
+        }
+
+        function show_info(data) {
+            var complete = JSON.parse(JSON.stringify(data));
+            var output = "";
+            output += "Date: " + complete.datetime + "\n";
+            output += "Prefix: " + complete.prefix + "\n";
+            fetch(server + "/rrc/" + data.rrc)
+                .then(rrc => {return rrc.json()})
+                .then(rrc => {
+                    var ixp = rrc.ixp;
+                    d3.json("collectors")
+                        .then(collector => {
+                            if(data.rrc == "03") {
+                                ixp = collector[complete.collectedby];
+                            } 
+                            output += "Collector: route learned in " + rrc.location + " at " + ixp + "\n";  
+                            output += "Communities: \n";
+                            d3.json("communities")
+                                .then(communities => {
+                                    complete.community.forEach(elem => {
+                                        var couple = elem.split(":");
+                                        var key = couple[0];
+                                        var value = couple[1];
+                                        output = output + elem + " - " + communities[key][value] + "\n";
+                                    });
+                                    document.getElementById("info").innerHTML = output;
+                                });
+                        });
+                });
         }
 
         function transl_to_positive(data, callback) {
@@ -233,6 +309,21 @@
             }, []);
             result.pop();
             callback(result);
+        }
+
+        function get_as_names(data, callback) {
+            var processed = 0
+            data.forEach(element => {
+                fetch(asrank + element.asn)
+                    .then(response => {return response.json()})
+                    .then(response => {
+                        processed++;
+                        element.name = response.data.name
+                        if(processed === data.length) {
+                            callback(data);
+                        }
+                    });
+            });
         }
 
         function clear() {

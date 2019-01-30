@@ -1,0 +1,100 @@
+{
+    "00" : {
+        "ixp" : "RIPE NCC",
+        "location" : "Amsterdam"
+    },
+    "01" : {
+        "ixp" : "LINX | LONAP",
+        "ixp-asn" : {"LINX" : ["5459"], "LONAP" : ["8330", "8550"]},
+        "location" : "London"
+    },
+    "02" : {
+        "ixp" : "SFINX",
+        "location" : "Paris"
+    },
+    "03" : {
+        "ixp" : "AMS-IX | NL-IX | GN-IX",
+        "ixp-asn" : {
+            "AMS-IX" : ["58516", "6777", "1200", "58560"],
+            "NL-IX" : ["34307"],
+            "GN-IX" : ["24957"]
+        },
+        "location" : "Amsterdam"
+    },
+    "04" : {
+        "ixp" : "CIXP",
+        "location" : "Geneva"
+    },
+    "05" : {
+        "ixp" : "VIX",
+        "location" : "Vienna"
+    },
+    "06" : {
+        "ixp" : "JPIX",
+        "location" : "Otemachi"
+    },
+    "07" : {
+        "ixp" : "NETNOD",
+        "location" : "Stockholm"
+    },
+    "08" : {
+        "ixp" : "MAE-WEST",
+        "location" : "San Jose"
+    },
+    "09" : {
+        "ixp" : "TIX",
+        "location" : "Zurich"
+    },
+    "10" : {
+        "ixp" : "MIX",
+        "location" : "Milan"
+    },
+    "11" : {
+        "ixp" : "NYIIX",
+        "location" : "New York"
+    },
+    "12" : {
+        "ixp" : "DE-CIX",
+        "location" : "Frankfurt"
+    },
+    "13" : {
+        "ixp" : "MSK-IX",
+        "location" : "Moscow"
+    },
+    "14" : {
+        "ixp" : "PAIX",
+        "location" : "Palo Alto"
+    },
+    "15" : {
+        "ixp" : "PTTMetro-SP",
+        "location" : "Sao Paulo"
+    },
+    "16" : {
+        "ixp" : "NOTA",
+        "location" : "Miami"
+    },
+    "18" : {
+        "ixp" : "CATNIX",
+        "location" : "Barcelona"
+    },
+    "19" : {
+        "ixp" : "NAP Africa JB",
+        "location" : "Johannesburg"
+    },
+    "20" : {
+        "ixp" : "SwissIX",
+        "location" : "Zurich"
+    },
+    "21" : {
+        "ixp" : "FranceIX",
+        "location" : "Paris"
+    },
+    "22" : {
+        "ixp" : "Interlan",
+        "location" : "Bucharest"
+    },
+    "23" : {
+        "ixp" : "Equinix SG",
+        "location" : "Singapore"
+    }
+}

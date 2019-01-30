@@ -6,7 +6,7 @@ const morgan = require('morgan')
 
 app.use(morgan('tiny'));
 app.use(bodyParser.json()); 
-//app.use(express.static(__dirname + '/scripts'))
+//app.use(express.static(__dirname + '/datasets'));
 
 var port = process.env.PORT || 8080;
 
@@ -14,10 +14,28 @@ app.get('/', function(req,res) {
   res.sendFile(__dirname + '/prima_visualizzazione.html');
 });
 
+app.get('/announces', function(req, res) {
+    res.sendFile(__dirname + '/datasets/announces.json');
+});
+
+app.get('/communities', function(req, res) {
+    res.sendFile(__dirname + "/datasets/communities.json");
+});
+
+app.get('/rrc/:num', function(req, res) {
+    var obj = JSON.parse(fs.readFileSync(__dirname + '/datasets/rrc.json'));
+    var result = obj[req.params.num];
+    res.json(result);
+});
+
+app.get('/collectors', function(req, res) {
+    res.sendFile(__dirname + "/datasets/collectors.json");
+});
+
 app.post('/aspath', function(req, res) {
     var as_list = req.body.aspath;
     a(as_list, function(aspathcompleto) {
-        var result = { "response" : aspathcompleto};
+        var result = {"response" : aspathcompleto};
         res.json(result); 
     });
 });
@@ -34,7 +52,7 @@ function a(goods, callback) {
     var aspath = goods;
     aspath.reverse();
 
-      //your code here
+    //your code here
     fs.readFile("input.txt", "utf8", function(err, data) {
         var i,len;
 
