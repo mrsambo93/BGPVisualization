@@ -270,7 +270,7 @@
                             if(data.rrc == "03") {
                                 ixp = collector[complete.collectedby];
                             } 
-                            output += "Collector: route learned in " + rrc.location + " at " + ixp + "\n";  
+                            output += "Collector: route collected at rrc" + data.rrc + " in " + rrc.location + " at " + ixp + "\n";  
                             output += "Communities: \n";
                             d3.json("communities")
                                 .then(communities => {
