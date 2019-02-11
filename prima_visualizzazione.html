@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
-        
+
         html {
             font-size: 110%;
         }
-        
+
         #mainsvg {
             display: block;
             margin: auto;
@@ -75,7 +75,7 @@
 		    stroke-width: 1px;
   		    stroke-linejoin: round;
 	    }
-	    
+
         .mesh {
 		    fill: none;
   		    stroke: lightgrey;
@@ -103,18 +103,18 @@
 
         const server = "http://localhost:8080";
         const asrank = "http://as-rank.caida.org/api/v1/asns/"
-        
+
         var aspath = [];
-        var announce = {}; 
+        var announce = {};
 
         var margin = {top: 50, right: 50, bottom: 50, left: 50}
-            , width = 1362 - margin.left - margin.right 
+            , width = 1362 - margin.left - margin.right
             , height = 768 - margin.top - margin.bottom;
 
         var gap = 150
 
         var radius = 40;
-        
+
         var x = d3.scaleLinear().range([margin.left + margin.right, width - margin.left - margin.right]);
         var y = d3.scaleLinear().range([height - margin.top, margin.top]);
 
@@ -122,14 +122,14 @@
                 .attr("id", "mainsvg")
                 .attr("width", width + margin.left + margin.right)
                 .attr("height", 2*(height + margin.top + margin.bottom + margin.bottom))
-        
+
         var svg = container.append("svg")
                 .attr("id", "svg1")
                 .attr("width", width + margin.left + margin.right)
                 .attr("height", height + margin.top + margin.bottom)
             .append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-        
+
         var projection = d3.geoMercator()
             .scale(200)
             .translate( [width / 2, height / 1.5]);
@@ -139,7 +139,7 @@
             .translateExtent([[0,0], [width, height]])
             .extent([[0, 0], [width, height]])
             .on("zoom", zoomed);
-        
+
         var path = d3.geoPath().projection(projection);
 
         var url_map = "https://unpkg.com/world-atlas@1/world/110m.json";
@@ -153,14 +153,14 @@
                 .call(zoom)
             .append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-            
+
         d3.json(url_map)
             .then(function(world) {
                 world_map.append("rect")
                     .attr("width", "100%")
                     .attr("height", "100%")
                     .attr("fill", "#ffff");
-                
+
                 world_map.selectAll("path")
                     .data(topojson.feature(world, world.objects.countries).features)
                     .enter()
@@ -168,7 +168,7 @@
                         .attr("class", "feature")
                         .attr("d", path)
                         .style("fill", "steelblue");
-                        
+
                 world_map.append("path")
                     .datum(topojson.mesh(world, world.objects.countries, function(a, b) { return a !== b; }))
                     .attr("class", "mesh")
@@ -176,7 +176,7 @@
             });
 
         var defs = svg.append("defs");
-        
+
         defs.append("marker")
             .attr("id", "router-end")
             .attr("markerHeight", 8)
@@ -220,7 +220,7 @@
                 get_aspath(aspath);
             });
 
-        function make_y_gridlines(ticks) {		
+        function make_y_gridlines(ticks) {
             return d3.axisLeft(y)
                     .ticks(ticks)
         }
@@ -252,7 +252,7 @@
             for (i=0; i<aspath.length; i++) {
                 ran.push(i);
             }
-            
+
             /*svg.append("g")
                 .attr("transform", "translate(" + 0 + "," + height + ")")
                 .call(d3.axisBottom(x)
@@ -276,7 +276,7 @@
                 var ticks = d3.max(as_data, function(d) {return d.y});
                 y.domain([0, ticks]);
 
-                svg.append("g")			
+                svg.append("g")
                     .attr("class", "grid")
                     .call(make_y_gridlines(ticks)
                         .tickSize(- width)
@@ -315,7 +315,7 @@
                                 .text(function(d) {
                                     return "AS" + d.asn;
                                 });
-                    
+
                     svg.selectAll(".outer_label")
                         .data(as_data)
                         .enter().append("text")
@@ -340,8 +340,8 @@
 		        .attr("cy", function (d) { return projection(d)[1]; })
 		        .attr("r", "8px")
                 .attr("fill", "red");
-                
-            
+
+
         }
 
         function get_coordinates(data, callback) {
@@ -355,7 +355,7 @@
                     .then(response => {
                         coordinates.push(response);
                         i++;
-                        if(i === queries.length) 
+                        if(i === queries.length)
                             callback(coordinates);
                     });
                 });
@@ -383,7 +383,7 @@
                 });
             });
         }
-        
+
         function zoomed() {
             world_map.selectAll(".feature")
                 .attr('transform', d3.event.transform);
@@ -410,8 +410,8 @@
                         .then(collector => {
                             if(data.rrc == "03") {
                                 ixp = collector[complete.collectedby];
-                            } 
-                            output += "Collector: route collected at rrc" + data.rrc + " in " + rrc.location + " at " + ixp + "\n";  
+                            }
+                            output += "Collector: route collected at rrc" + data.rrc + " in " + rrc.location + " at " + ixp + "\n";
                             output += "Communities: \n";
                             d3.json("communities")
                                 .then(communities => {
