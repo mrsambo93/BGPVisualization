@@ -1,14 +1,24 @@
-const express = require('express')
-const app = express()
-var fs  = require("fs")
+const express = require('express');
+const app = express();
+var fs  = require("fs");
 var bodyParser = require('body-parser');
-const morgan = require('morgan')
+const morgan = require('morgan');
+require('dotenv').config();
+var NodeGeocoder = require('node-geocoder');
 
 app.use(morgan('tiny'));
 app.use(bodyParser.json()); 
 //app.use(express.static(__dirname + '/datasets'));
 
 var port = process.env.PORT || 8080;
+
+var options = {
+    provider: 'mapquest',
+    apiKey: process.env.MQ_CONSUMER_KEY, 
+    formatter: null
+  };
+
+var geocoder = NodeGeocoder(options);
 
 app.get('/', function(req,res) {
   res.sendFile(__dirname + '/prima_visualizzazione.html');
@@ -38,6 +48,17 @@ app.post('/aspath', function(req, res) {
         var result = {"response" : aspathcompleto};
         res.json(result); 
     });
+});
+
+app.get('/coordinates/:query', function(req, res) {
+    geocoder.geocode(req.params.query)
+        .then(result => {
+            console.log(result);
+            res.json(result[0]);
+        })
+        .catch(err => {
+            console.log(err);
+        });
 });
 
 app.listen(port, function() {

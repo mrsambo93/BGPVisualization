@@ -10,7 +10,7 @@
             font-size: 110%;
         }
         
-        svg {
+        #mainsvg {
             display: block;
             margin: auto;
             outline: solid black;
@@ -68,11 +68,23 @@
             font-size: 15px;
             fill: black;
         }
+
+        .feature {
+		    fill: none;
+		    stroke: grey;
+		    stroke-width: 1px;
+  		    stroke-linejoin: round;
+	    }
+	    
+        .mesh {
+		    fill: none;
+  		    stroke: lightgrey;
+  		    stroke-width: 2px;
+  		    stroke-linejoin: round;
+	    }
     </style>
 </head>
 <body>
-    <br>
-    <br>
     <!--
     <form id="form1" onsubmit="return false;">
         AS Path:
@@ -86,6 +98,7 @@
     </div>
     <br>
     <script src="http://d3js.org/d3.v5.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
     <script type="text/javascript">
 
         const server = "http://localhost:8080";
@@ -95,20 +108,73 @@
         var announce = {}; 
 
         var margin = {top: 50, right: 50, bottom: 50, left: 50}
-            , width = 1366 - margin.left - margin.right 
+            , width = 1362 - margin.left - margin.right 
             , height = 768 - margin.top - margin.bottom;
+
+        var gap = 150
 
         var radius = 40;
         
         var x = d3.scaleLinear().range([margin.left + margin.right, width - margin.left - margin.right]);
         var y = d3.scaleLinear().range([height - margin.top, margin.top]);
 
-        var svg = d3.select("body").append("svg")
+        var container = d3.select("body").append("svg")
+                .attr("id", "mainsvg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", 2*(height + margin.top + margin.bottom + margin.bottom))
+        
+        var svg = container.append("svg")
+                .attr("id", "svg1")
                 .attr("width", width + margin.left + margin.right)
                 .attr("height", height + margin.top + margin.bottom)
             .append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
         
+        var projection = d3.geoMercator()
+            .scale(200)
+            .translate( [width / 2, height / 1.5]);
+
+        var zoom = d3.zoom()
+            .scaleExtent([1, 20])
+            .translateExtent([[0,0], [width, height]])
+            .extent([[0, 0], [width, height]])
+            .on("zoom", zoomed);
+        
+        var path = d3.geoPath().projection(projection);
+
+        var url_map = "https://unpkg.com/world-atlas@1/world/110m.json";
+
+        var world_map = container.append("g")
+                .attr("transform", "translate(" + 0 + "," + (height + gap) + ")")
+            .append("svg")
+                .attr("id", "svg2")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .call(zoom)
+            .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+            
+        d3.json(url_map)
+            .then(function(world) {
+                world_map.append("rect")
+                    .attr("width", "100%")
+                    .attr("height", "100%")
+                    .attr("fill", "#ffff");
+                
+                world_map.selectAll("path")
+                    .data(topojson.feature(world, world.objects.countries).features)
+                    .enter()
+                    .append("path")
+                        .attr("class", "feature")
+                        .attr("d", path)
+                        .style("fill", "steelblue");
+                        
+                world_map.append("path")
+                    .datum(topojson.mesh(world, world.objects.countries, function(a, b) { return a !== b; }))
+                    .attr("class", "mesh")
+                    .attr("d", path);
+            });
+
         var defs = svg.append("defs");
         
         defs.append("marker")
@@ -139,9 +205,18 @@
 
         d3.json("announces")
             .then(data => {
-                announce = data[2];
+                announce = data[0];
                 aspath = announce.aspath;
-                show_info(announce);
+                //show_info(announce);
+                get_coordinates(announce, function(coordinates) {
+                    var num_coord = []
+                    coordinates.forEach(coord => {
+                        var pair = []
+                        pair.push(coord.longitude, coord.latitude);
+                        num_coord.push(pair);
+                    });
+                    draw_points(num_coord);
+                });
                 get_aspath(aspath);
             });
 
@@ -155,7 +230,7 @@
             var aspath_string = form.elements[0].value;
             aspath = aspath_string.split(" ");*/
             data = {"aspath" : asp};
-            console.log(data);
+            //console.log(data);
             const params = {
                 headers: {
                     'Accept': 'application/json',
@@ -189,7 +264,7 @@
                 .call(d3.axisLeft(y).tickValues([0,1,2,3]).tickFormat(d3.format("d")));*/
 
             get_as_names(data, function(res) {
-                console.log(res);
+                //console.log(res);
                 draw_as(res);
             });
         }
@@ -249,11 +324,77 @@
                                 .attr("y", function(d) {return y(d.y) + 15 + radius})
                                 .attr("text-anchor", "middle")
                                 .text(function(d) {
-                                    console.log(d);
+                                    //console.log(d);
                                     return d.name;
                                 });
                 });
             });
+        }
+
+        function draw_points(coordinates) {
+            world_map.selectAll("circle")
+                .data(coordinates)
+                .enter()
+                .append("circle")
+                .attr("cx", function (d) { console.log(projection(d)); return projection(d)[0]; })
+		        .attr("cy", function (d) { return projection(d)[1]; })
+		        .attr("r", "8px")
+                .attr("fill", "red");
+                
+            
+        }
+
+        function get_coordinates(data, callback) {
+            var coordinates = []
+            build_location_queries(data, function(queries) {
+                var i = 0;
+                console.log(queries);
+                queries.forEach(query => {
+                    fetch(server + "/coordinates/" + query)
+                    .then(response => {return response.json()})
+                    .then(response => {
+                        coordinates.push(response);
+                        i++;
+                        if(i === queries.length) 
+                            callback(coordinates);
+                    });
+                });
+            });
+        }
+
+        function build_location_queries(data, callback) {
+            var queries = [];
+            d3.json("communities")
+            .then(communities => {
+                Object.entries(data.community).forEach(([key, com_list]) => {
+                    var query = "";
+                    com_list.forEach(elem => {
+                        var comm = communities[key][elem];
+                        if(comm.type == "city" || comm.type == "country")
+                            query += comm.address + " ";
+                    });
+                    if(query != "") queries.push(query);
+                });
+                fetch(server + "/rrc/" + data.rrc)
+                .then(rrc => {return rrc.json()})
+                .then(rrc => {
+                    queries.push(rrc.location);
+                    callback(queries);
+                });
+            });
+        }
+        
+        function zoomed() {
+            world_map.selectAll(".feature")
+                .attr('transform', d3.event.transform);
+
+            world_map.selectAll(".mesh")
+                .attr('transform', d3.event.transform);
+
+            world_map.selectAll("circle")
+                .attr("transform", d3.event.transform)
+                .transition()
+                .attr("r", 8 / d3.event.transform.k + "px");
         }
 
         function show_info(data) {
@@ -278,7 +419,7 @@
                                         var couple = elem.split(":");
                                         var key = couple[0];
                                         var value = couple[1];
-                                        output = output + elem + " - " + communities[key][value] + "\n";
+                                        output = output + elem + " - " + communities[key][value]["value"] + "\n";
                                     });
                                     document.getElementById("info").innerHTML = output;
                                 });

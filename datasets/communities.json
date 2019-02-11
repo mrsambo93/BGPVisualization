@@ -1,56 +1,106 @@
 {
     "3356" : {
-        "3" : "route learned in North America",
-        "86" : "local preference",
-        "575" : "route learned in USA",
-        "666" : "learned from peer",
-        "2008" : "route learned in Dallas"
+        "3" : {
+            "value" : "route learned in North America",
+            "type" : "continent",
+            "address" : "North America"
+            },
+        "86" : {"value" : "local preference 86"},
+        "575" : {
+            "value" : "route learned in USA",
+            "type" : "country",
+            "address" : "USA"
+        },
+        "666" : {"value" : "learned from peer"},
+        "2008" : {
+            "value" : "route learned in Dallas",
+            "type" : "city",
+            "address" : "Dallas"
+        }
     },
     "30781" : {
-        "22003" : "route learned in Telehouse Europe 2 Paris, 137 Boulevard Voltaire, 75011 Paris 11",
-        "31000" : "route learned by transit",
-        "31010" : ""
+        "22003" : {
+            "value" : "route learned in Telehouse Europe 2 Paris, 137 Boulevard Voltaire, 75011 Paris 11",
+            "type" : "city",
+            "address" : "Paris, 137 Boulevard Voltaire, 75011 Paris 11"
+        },
+        "31000" : {"value" : "route learned by transit"},
+        "31010" : {"value" : ""}
     },
     "59689" : {
-        "103" : "",
-        "330" : ""
+        "103" : {"value" : ""},
+        "330" : {"value" : ""}
     },
     "6762" : {
-        "31" : "route learned in North America",
-        "10100" : "route learned in Newark/New York City"
+        "31" : {
+            "value" : "route learned in North America",
+            "type" : "continent",
+            "address" : "North America"
+        },
+        "10100" : {
+            "value" : "route learned in Newark/New York City",
+            "type" : "city",
+            "address" : "Newark, New York City"
+        }
     },
     "8283" : {
-        "15" : "route received from Fusix",
-        "103" : "matching valid Route Origin Attestation exists"
+        "15" : {"value" : "route received from Fusix"},
+        "103" : {"value" : "matching valid Route Origin Attestation exists"}
     },
     "57866" : {
-        "11" : "Resource Public Key Infrastructure unverified",
-        "100": "any transit",
-        "105": "received from Telecom Italia Sparkle",
-        "10500" : ""
+        "11" : {"value" : "Resource Public Key Infrastructure unverified"},
+        "100": {"value" : "any transit"},
+        "105": {"value" : "received from Telecom Italia Sparkle"},
+        "10500" : {"value" : ""}
     },
     "13101" : {
-        "110" : "learned from peer",
-        "1000" : "learned from peering point DE-CIX",
-        "2020" : "learned in Frankfurt",
-        "5000" : "announcements to DE-CIX peers. Don't announce to peer"
+        "110" : {"value" : "learned from peer"},
+        "1000" : {"value" : "learned from peering point DE-CIX"},
+        "2020" : {
+            "value" : "learned in Frankfurt",
+            "type" : "city",
+            "address" : "Frankfurt"
+        },
+        "5000" : {"value" : "announcements to DE-CIX peers. Don't announce to peer"}
     },
     "20485" : {
-        "10066" : "route learned in Russia(1) from customer(00) in Ekaterinburg node(66)"
+        "10066" : {
+            "value" : "route learned in Russia(1) from customer(00) in Ekaterinburg node(66)",
+            "type" : "city",
+            "address" : "Ekaterinburg, Russia"
+        }
     },
     "34549" : {
-        "103" : ""
+        "103" : {"value" : ""}
     },
     "65101" : {
-        "1085" : "route learned in edge01.fra12 switch"
+        "1085" : {
+            "value" : "route learned in edge01.fra12 switch",
+            "owner" : "DE-CIX"
+        }
     },
     "65102" : {
-        "1000" : "route learned in Frankfurt"
+        "1000" : {
+            "value" : "route learned in Frankfurt",
+            "type" : "city",
+            "address" : "Frankfurt",
+            "owner" : "DE-CIX"
+        }
     },
     "65103" : {
-        "276" : "route learned in Germany"
+        "276" : {
+            "value" : "route learned in Germany",
+            "type" : "country",
+            "address" : "Germany",
+            "owner" : "DE-CIX"
+        }
     },
     "65104" : {
-        "150" : "route learned in Europe"
+        "150" : {
+            "value" : "route learned in Europe",
+            "type" : "continent",
+            "address" : "Europe",
+            "owner" : "DE-CIX"
+        }
     }
 }
