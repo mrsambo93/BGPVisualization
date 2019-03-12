@@ -42,6 +42,13 @@
             stroke-width: 3;
         }
 
+        #outer_line {
+            fill: none;
+            stroke: green;
+            stroke-width: 3;
+            pointer-events: none;
+        }
+
         .dot {
             fill: darkblue;
             stroke: #fff;
@@ -106,6 +113,7 @@
 
         var aspath = [];
         var announce = {};
+        var outer_points = [];
 
         var margin = {top: 50, right: 50, bottom: 50, left: 50}
             , width = 1362 - margin.left - margin.right
@@ -114,14 +122,23 @@
         var gap = 150
 
         var radius = 40;
+        var points_radius = 10;
 
         var x = d3.scaleLinear().range([margin.left + margin.right, width - margin.left - margin.right]);
         var y = d3.scaleLinear().range([height - margin.top, margin.top]);
 
+        var line = d3.line()
+            .x(function(d) { return x(d.x); })
+            .y(function(d) { return y(d.y); });
+
+        var new_line = d3.line()
+            .x(function(d) { return d.x })
+            .y(function(d) { return d.y });
+
         var container = d3.select("body").append("svg")
                 .attr("id", "mainsvg")
                 .attr("width", width + margin.left + margin.right)
-                .attr("height", 2*(height + margin.top + margin.bottom + margin.bottom))
+                .attr("height", 2*(height + margin.top + margin.bottom + margin.bottom));
 
         var svg = container.append("svg")
                 .attr("id", "svg1")
@@ -135,7 +152,7 @@
             .translate( [width / 2, height / 1.5]);
 
         var zoom = d3.zoom()
-            .scaleExtent([1, 20])
+            .scaleExtent([1, 200])
             .translateExtent([[0,0], [width, height]])
             .extent([[0, 0], [width, height]])
             .on("zoom", zoomed);
@@ -145,14 +162,18 @@
         var url_map = "https://unpkg.com/world-atlas@1/world/110m.json";
 
         var world_map = container.append("g")
-                .attr("transform", "translate(" + 0 + "," + (height + gap) + ")")
+                .attr("transform", "translate(" + margin.left + "," + (height + gap) + ")")
             .append("svg")
                 .attr("id", "svg2")
-                .attr("width", width + margin.left + margin.right)
+                .attr("width", width)
                 .attr("height", height + margin.top + margin.bottom)
-                .call(zoom)
             .append("g")
-                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+                .attr("transform", "translate(" + 0 + "," + margin.top + ")")
+            .append("g")
+                .call(zoom);
+
+        var line_container = container.append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
         d3.json(url_map)
             .then(function(world) {
@@ -175,44 +196,17 @@
                     .attr("d", path);
             });
 
-        var defs = svg.append("defs");
-
-        defs.append("marker")
-            .attr("id", "router-end")
-            .attr("markerHeight", 8)
-            .attr("markerWidth", 8)
-            .attr("markerUnits", "strokeWidth")
-            .attr("orient", "auto")
-            .attr("refX", radius/2)
-            .attr("refY", 0)
-            .attr("viewBox", "-6 -6 12 12")
-            .append("path")
-                .attr("d", "M 0, 0  m -5, 0  a 5,5 0 1,0 10,0  a 5,5 0 1,0 -10,0")
-                .attr("fill", "green")
-
-        defs.append("marker")
-            .attr("id", "router-start")
-            .attr("markerHeight", 8)
-            .attr("markerWidth", 8)
-            .attr("markerUnits", "strokeWidth")
-            .attr("orient", "auto")
-            .attr("refX", (-radius)/2)
-            .attr("refY", 0)
-            .attr("viewBox", "-6 -6 12 12")
-            .append("path")
-                .attr("d", "M 0, 0  m -5, 0  a 5,5 0 1,0 10,0  a 5,5 0 1,0 -10,0")
-                .attr("fill", "green")
-
         d3.json("announces")
             .then(data => {
                 announce = data[0];
                 aspath = announce.aspath;
                 //show_info(announce);
-                get_coordinates(announce, function(coordinates) {
-                    console.log(coordinates);
-                    draw_points(coordinates);
-                });
                 get_aspath(aspath);
+                get_coordinates(announce, function(coordinates) {
+                    draw_points(coordinates, function() {
+                        draw_lines(aspath)
+                    });
+                });
             });
 
         function make_y_gridlines(ticks) {
@@ -286,19 +280,14 @@
                             .attr("cy", function(d) { return y(d.y); })
                             .attr("r", radius);
 
-                var line = d3.line()
-                    .x(function(d) { return x(d.x); })
-                    .y(function(d) { return y(d.y); });
-
                 split_data(as_data, function(splitted) {
                     splitted.forEach(element => {
-                        svg.append("path")
+                        var path = svg.append("path")
                             .datum(element)
                             .attr("class", "line")
-                            .attr("id", "svg1" + element[1].asn)
                             .attr("d", line)
-                            .attr("marker-start", "url(#router-start)")
-                            .attr("marker-end", "url(#router-end)");
+
+                        draw_markers(path, element);
                     });
 
                     svg.selectAll(".inner_label")
@@ -327,28 +316,101 @@
             });
         }
 
-        function draw_points(coordinates) {
-            world_map.selectAll("circle")
-                .data(coordinates)
-                .enter()
-                .append("circle")
-                .attr("cx", function (d) {  return projection(d)[0]; })
-		        .attr("cy", function (d) { return projection(d)[1]; })
-		        .attr("r", "8px")
-                .attr("fill", "red");            
+        function draw_markers(path, element) {
+            var asn1 = element[0].asn;
+            var asn2 = element[1].asn;
+            var start_point = path.node().getPointAtLength(radius);
+            
+            svg.append("circle")
+                .attr("class", "start_" + asn1)
+                .attr("cx", start_point.x)
+                .attr("cy", start_point.y)
+                .attr("r", points_radius)
+                .style("fill", "green");
+            
+            var l = path.node().getTotalLength();
+            var end_point = path.node().getPointAtLength(l - radius);
+
+            svg.append("circle")
+                .attr("class", "end_" + asn2)
+                .attr("cx", end_point.x)
+                .attr("cy", end_point.y)
+                .attr("r", points_radius)
+                .style("fill", "green");
+
+        }
+
+        function draw_points(coordinates, callback) {
+            coordinates.forEach(element => {
+                key = element[0];
+                lonlat = element[1]
+                world_map.append("circle")
+                    .attr("class", "svg2_" + key)
+                    .attr("cx", function (d) { return projection(lonlat)[0]; })
+		            .attr("cy", function (d) { return projection(lonlat)[1]; })
+		            .attr("r", points_radius)
+                    .attr("fill", "green");
+            });
+            callback();            
+        }
+
+        function draw_lines(asp, transform = null) {
+            line_container.selectAll("#outer_line").remove();
+            asp.forEach(asn => {
+                var node1 = svg.select(".end_" + asn);
+                var node2 = world_map.select(".svg2_" + asn);
+
+                if(node1.node() && node2.node()) {
+                    
+                    var point1 = {
+                        x : parseFloat(node1.attr("cx")),
+                        y : parseFloat(node1.attr("cy"))
+                    };
+
+                    var point2 = {
+                        x : parseFloat(node2.attr("cx")),
+                        y : parseFloat(node2.attr("cy")) 
+                    };
+
+                    if(transform) {
+                        var inverted = transform.apply([point2.x, point2.y]);
+
+                        point2.x = inverted[0];
+                        point2.y = inverted[1];
+                    }
+
+                    point2.y += height + gap;
+                    
+                    var data = [point1, point2];
+
+                    line_container.append("path")
+                        .datum(data)
+                        .attr("id", "outer_line")
+                        .attr("class", "outer_line_" + asn)
+                        .attr("d", new_line)
+                        .style("opacity", function(d) {
+                            var point = d[1];
+                            if(point.x < 0 || point.x > width || point.y < height + gap - 50 || point.y > 2*height + gap + 50)
+                                return 0;
+                            return 1;
+                        });
+                }
+            });
         }
 
         function get_coordinates(data, callback) {
             var coordinates = []
             build_location_queries(data, function(queries) {
                 var i = 0;
-                console.log(queries);
-                Object.entries(queries).forEach(([key, query]) => {
+                queries.forEach(element => {
+                    var key = element[0];
+                    var query = element[1];
                     fetch(server + "/coordinates/" + query)
                     .then(response => {return response.json()})
                     .then(response => {
                         var num_coord = [response.longitude, response.latitude];
-                        coordinates.push({ key : num_coord });
+                        var item = [key, num_coord];
+                        coordinates.push(item);
                         i++;
                         if(i === queries.length)
                             callback(coordinates);
@@ -368,14 +430,16 @@
                         if(comm.type == "city" || comm.type == "country")
                             query += comm.address + " ";
                     });
-                    if(query != "") queries.push({ key : query });
+                    if(query != "") {
+                        queries.push([key, query]);
+                    }
                 });
                 fetch(server + "/rrc/" + data.rrc)
                 .then(rrc => {return rrc.json()})
                 .then(rrc => {
                     key = data.aspath[0];
                     query = rrc.location;
-                    queries.push({ key : query });
+                    queries.push([key, query]);
                     callback(queries);
                 });
             });
@@ -390,11 +454,12 @@
 
             world_map.selectAll("circle")
                 .attr("transform", d3.event.transform)
-                .transition()
-                .attr("r", 8 / d3.event.transform.k + "px");
+                .attr("r", points_radius / d3.event.transform.k + "px");
+
+            draw_lines(aspath, d3.zoomTransform(world_map.node()));
         }
 
-        function show_info(data) {
+        /*function show_info(data) {
             var complete = JSON.parse(JSON.stringify(data));
             var output = "";
             output += "Date: " + complete.datetime + "\n";
@@ -422,7 +487,7 @@
                                 });
                         });
                 });
-        }
+        }*/
 
         function transl_to_positive(data, callback) {
             var value = 0;
@@ -462,6 +527,18 @@
                         }
                     });
             });
+        }
+        
+        function getTransform(transformStr) {
+            var cleanedUpTransformAttrArr = transformStr.split(')', ).slice(0,-1);
+
+            return cleanedUpTransformAttrArr.reduce(function(retObj, item) { 
+                var transformPair = item.split('(');
+
+                retObj[transformPair[0].replace(/\s+/g, '')] = transformPair[1].split(',');
+
+                return retObj;
+            }, {});
         }
 
         function clear() {
