@@ -22,8 +22,12 @@ var options = {
 var geocoder = NodeGeocoder(options);
 
 app.get('/', function(req,res) {
-  res.sendFile(__dirname + '/prima_visualizzazione.html');
+  res.sendFile(__dirname + '/landing_page.html');
 });
+
+app.get('/parsley', function(req, res) {
+  res.sendFile(__dirname + '/parsley/parsley.js');
+})
 
 app.get('/announces', function(req, res) {
     res.sendFile(__dirname + '/datasets/announces.json');
