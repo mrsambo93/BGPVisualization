@@ -28,9 +28,10 @@ var options = {
 var geocoder = NodeGeocoder(options);
 
 app.get('/', function(req,res) {
-  res.sendFile(__dirname + '/prima_visualizzazione.html');
+  res.sendFile(__dirname + '/landing_page.html');
 });
 
+<<<<<<< HEAD
 
 
 ////////////////////////////////////////////////
@@ -58,6 +59,11 @@ app.post('/solve', function (req, res, next) {
 
 
 
+=======
+app.get('/parsley', function(req, res) {
+  res.sendFile(__dirname + '/parsley/parsley.js');
+})
+>>>>>>> 8de3921696e92b1c658b806f88a4745335b61846
 
 app.get('/announces', function(req, res) {
     res.sendFile(__dirname + '/datasets/announces.json');
