@@ -1,3 +1,4 @@
+require("tls").DEFAULT_ECDH_CURVE = "auto"
 const express = require('express');
 const app = express();
 var fs  = require("fs");
@@ -6,8 +7,13 @@ const morgan = require('morgan');
 require('dotenv').config();
 var NodeGeocoder = require('node-geocoder');
 const findCycle = require('find-cycle/directed')
+const axios = require('axios');
+var appendQuery = require('append-query');
+
+
 
 app.use(morgan('tiny'));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 //app.use(express.static(__dirname + '/datasets'));
 
@@ -24,6 +30,34 @@ var geocoder = NodeGeocoder(options);
 app.get('/', function(req,res) {
   res.sendFile(__dirname + '/prima_visualizzazione.html');
 });
+
+
+
+////////////////////////////////////////////////
+
+// route to '/' to return the html file
+app.get('/toDo', function (req, res, next) {
+  res.sendFile(__dirname + '/index.html');
+});
+
+//route that receives the post body and returns your computation
+app.post('/solve', function (req, res, next) {
+  console.log(req.body.param2);
+  if(!req.body.param22 && !req.body.param23){
+    pleaseSolve(req.body, res);
+  }
+  if(req.body.param22 && req.body.param23 && req.body.param1 && req.body.param2 && req.body.param3){
+    pleaseSolveDoublePath(req.body, res);
+  }
+});
+
+
+/////////////////////////////////////////////
+
+
+
+
+
 
 app.get('/announces', function(req, res) {
     res.sendFile(__dirname + '/datasets/announces.json');
@@ -232,7 +266,7 @@ function populate_x(path1, path2) {
   var nodes2 = {};
   var edges1 = {};
   var edges2 = {};
-  build_x_graph(path1, 0, nodes1, edges1) 
+  build_x_graph(path1, 0, nodes1, edges1)
   //console.log(nodes1);
   //console.log(edges1);
   var discarded1 = [];
@@ -245,7 +279,7 @@ function populate_x(path1, path2) {
     //console.log(discarded1);
     cycle1 = getCycle(edges1);
   }
-  build_x_graph(path2, Object.keys(nodes1).length, nodes2, edges2) 
+  build_x_graph(path2, Object.keys(nodes1).length, nodes2, edges2)
   //console.log(nodes2);
   //console.log(edges2);
   let cycle2 = getCycle(edges2);
@@ -285,7 +319,7 @@ var path = [
   {
     asn: 'd',
     y: -2
-  }, 
+  },
   {
     asn: 'a',
     y: -3
@@ -323,12 +357,12 @@ function populate_y(path1, path2) {
   var discarded1 = [];
   var discarded2 = [];
   var discarded3 = [];
-  
+
   let cycle1 = getCycle(edges1);
   if(cycle1) {
     //console.log("cycle");
     //console.log(cycle1);
-    discarded1 = resolve_cycle_y(edges1, nodes1, path1, cycle1, 0); 
+    discarded1 = resolve_cycle_y(edges1, nodes1, path1, cycle1, 0);
     //console.log("nodes");
     //console.log(nodes1);
     //console.log("edges");
@@ -360,7 +394,7 @@ function populate_y(path1, path2) {
       cycle2 = getCycle(edges2);
     }
   }
-  
+
   let full_nodes = {...nodes1, ...nodes2};
   var result = merge_y_graphs(edges1, edges2, full_nodes);
   let cycle3 = getCycle(result);
@@ -386,7 +420,7 @@ function populate_y(path1, path2) {
       cycle3 = getCycle(result);
     }
   }
-  
+
   var discarded = discarded1.concat(discarded2, discarded3).filter(el => {return el.length > 0});
   discarded = [...new Set(discarded.map(v => JSON.stringify(v)))].map(v => JSON.parse(v));
   /*console.log("disc");
@@ -419,7 +453,7 @@ function build_x_graph(aspath, index, nodes, edges) {
   for(let key in edges) {
     edges[key] = Array.from(edges[key]);
     for(let i = 0; i < edges[key].length; i++) {
-      let edge = edges[key][i]; 
+      let edge = edges[key][i];
       let node = getKey(nodes, edge);
       edges[key][i] = node;
     }
@@ -495,14 +529,14 @@ function visit_x(graph, nodes, points, to_enumerate) {
           points.push(new_point);
         }
         to_enumerate.delete(current);
-      } 
+      }
     }
   }
   return points;
 }
 
 function build_y_graph(aspath, index, nodes, edges, deleted) {
-  
+
   for(let i = 0; i < aspath.length; i++) {
     if(i > 0) {
       let curr = aspath[i];
@@ -516,7 +550,7 @@ function build_y_graph(aspath, index, nodes, edges, deleted) {
         new_el.add(aspath[i].asn);
         let id = index;
         nodes[id] = new_el;
-        index++;  
+        index++;
       }
     } else {
       new_el = new Set();
@@ -561,7 +595,7 @@ function build_y_graph(aspath, index, nodes, edges, deleted) {
   }
   for(let edge in edges) {
     edges[edge] = Array.from(edges[edge]);
-  }  
+  }
 }
 
 function merge_y_graphs(graph1, graph2, node_list) {
@@ -635,7 +669,7 @@ function visit_y(graph, nodes, points, to_enumerate) {
           points.push(new_point);
         }
         to_enumerate.delete(current);
-      } 
+      }
     }
   }
   return points;
@@ -657,7 +691,7 @@ function already_existsSecond(node, nodes, i) {
       return key;
   }
   return -1;
-} 
+}
 
 function isSuperset(set, subset) {
   for (var elem of subset) {
@@ -679,7 +713,7 @@ function contains(set, subset) {
 
 function getKey(dict, elem) {
   for(var key in dict) {
-    if(dict[key].has(elem)) 
+    if(dict[key].has(elem))
       return key;
   }
   return -1;
@@ -750,13 +784,13 @@ function resolve_cycle_y(edges, nodes, aspath, cycle, index) {
           delete nodes[key];
         for(let key in edges)
           delete edges[key];
-        build_y_graph(aspath, index, nodes, edges, deleted) 
+        build_y_graph(aspath, index, nodes, edges, deleted)
         let new_cycle = getCycle(edges);
         if(!new_cycle) {
-          return deleted;  
+          return deleted;
         }
       }
-    }  
+    }
   }
   return [[]];
 }
@@ -794,7 +828,7 @@ function resolve_merge_cycle(path1, path2, edges, nodes, edges1, nodes1, edges2,
           console.log(new_nodes);
           console.log("new_graph");
           console.log(new_graph);
-          return [new_nodes, new_graph, deleted];  
+          return [new_nodes, new_graph, deleted];
         }
       }
     }
@@ -828,7 +862,7 @@ function resolve_reverse_y(aspath, edges, nodes, cycle) {
       edges[next] = Array.from(edges[next]);
     }
   }
-  return []; 
+  return [];
 }
 
 function get_origins(graph) {
@@ -854,7 +888,7 @@ function get_anchestors(node, graph) {
 
 function get_anchestor_x(anchestor, nodes, points) {
   let set = nodes[anchestor];
-  let name = Array.from(set)[0] 
+  let name = Array.from(set)[0]
   for(let i = 0; i < points.length; i++) {
     if(points[i].asn == name)
       return points[i].x;
@@ -864,7 +898,7 @@ function get_anchestor_x(anchestor, nodes, points) {
 
 function get_anchestor_y(anchestor, nodes, points) {
   let set = nodes[anchestor];
-  let name = Array.from(set)[0] 
+  let name = Array.from(set)[0]
   for(let i = 0; i < points.length; i++) {
     if(points[i].asn == name)
       return points[i].y;
@@ -919,4 +953,137 @@ function merge_coordinates(points_x, points_y) {
     }
   }
   return new_points;
+}
+
+
+
+
+
+
+//////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+
+
+function pleaseSolve(parms, res) {
+  var ip = parms.param1;
+  var date = parms.param2;
+  var time = parms.param3;
+  var rrc = parms.param4;
+console.log(ip,date,time,rrc);
+  var dateTime = date.concat("T"+time);
+  console.log(date + " " +time );
+
+
+  var a = getFirstQuery(ip,dateTime,rrc);
+   //appendQuery(`https://stat.ripe.net/data/bgp-state/data.json`,`resource=${ip}&timestamp=${dateTime}&rrcs=${rrc}`);
+
+  //console.log(appendQuery);
+  //AXIOS: Promise based HTTP client for the browser and node.js
+  axios.get(a).then((response) =>  {
+    var tPrefix = response.data.data.bgp_state[1].target_prefix;
+    var nRoutes = response.data.data.nr_routes;
+
+    //console.log(response.data.data);
+    if (response.data.status_code != 200) {
+      throw new Error('Unable to find that address.');
+    }
+    if(response.data.data.bgp_state[1] == null){
+      throw new Error('No info about this route. Advice: Try to change rrc');
+
+    }
+    var aspath = response.data.data.bgp_state[1].path;
+    var community = response.data.data.bgp_state[1].community;
+    console.log("AS-PATH: "+aspath);
+    console.log("COMMUNITY: "+community);
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('The query was: ip=> '+ip+ '\nDate => '+date+'\n \n \nRETRIEVED DATA:\n \nASPATH is \n'+ aspath +'\n \nCommunity: \n' +community+ '\n \nRRC:'+rrc+'\n \nTarget prefix: '+tPrefix+'\n \nN. of BGP routes observed at that time: '+nRoutes);
+  })
+   /*.then((res) => {  })*/
+  .catch((e) => {
+    if(e.code === 'ENOTFOUND'){
+      console.log('Unable to connect to API servers');
+    } else {
+      console.log(e.message);
+    }
+  });
+}
+
+function getFirstQuery(ip,isoTimeDateFirst,rrc) {
+  return axios.get(`https://stat.ripe.net/data/bgp-state/data.json?resource=${ip}&timestamp=${isoTimeDateFirst}&rrcs=${rrc}`);
+}
+function getSecondQuery(ip,isoTimeDateSecond,rrc){
+  return axios.get(`https://stat.ripe.net/data/bgp-state/data.json?resource=${ip}&timestamp=${isoTimeDateSecond}&rrcs=${rrc}`);
+}
+
+function pleaseSolveDoublePath(parms, res) {
+  var ip = parms.param1;
+  var dateFirst = parms.param2;
+  var timeFirst = parms.param3;
+  var rrc = parms.param4;
+
+  var dateSecond = parms.param22;
+  var timeSecond = parms.param23;
+
+  var dateTimeFirst = dateFirst.concat("T"+timeFirst);
+  var dateTimeSecond = dateSecond.concat("T"+timeSecond)
+
+  console.log(dateTimeFirst+"\n");
+  console.log(dateTimeSecond+"\n");
+
+  //AXIOS: Promise based HTTP client for the browser and node.js
+
+    axios.all([getFirstQuery(ip,dateTimeFirst,rrc),getSecondQuery(ip,dateTimeSecond,rrc)])
+    .then(axios.spread(function (responseA, responseB) {
+
+      console.log(responseA.data.data)
+
+
+
+
+    if (responseA.data.status_code != 200) {
+      res.writeHead(200, { 'Content-Type': 'text/plain' });
+      res.end("Unable to find that address");
+      throw new Error('Unable to find that address.');
+
+    }
+    if(responseA.data.data.bgp_state[1] == null){
+      res.writeHead(200, { 'Content-Type': 'text/plain' });
+      res.end("No info about this route. Advice: Try to change rrc");
+      throw new Error('No info about this route. Advice: Try to change rrc');
+
+    }
+    var tPrefix = responseA.data.data.bgp_state[1].target_prefix;
+    var nRoutes = responseA.data.data.nr_routes;
+
+    var aspath = responseA.data.data.bgp_state[1].path;
+    var community = responseA.data.data.bgp_state[1].community;
+
+    console.log("AS-PATH: "+aspath);
+    console.log("COMMUNITY: "+community);
+
+
+    if (responseB.data.status_code != 200) {
+      throw new Error('Unable to find that address.');
+    }
+    if(responseB.data.data.bgp_state[1] == null){
+      throw new Error('No info about this route. Advice: Try to change rrc');
+
+    }
+    var aspathSecond = responseB.data.data.bgp_state[1].path;
+    var communitySecond = responseB.data.data.bgp_state[1].community;
+
+    console.log("AS-PATH: "+aspathSecond);
+    console.log("COMMUNITY: "+communitySecond);
+
+
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('The query was: ip=> '+ip+ '\nDate => '+dateFirst+'\n \n \nRETRIEVED DATA:\n \nFIRST ASPATH is \n'+aspath +'\n \nCommunity: \n'+community+'\n \nRRC: \n'+rrc+'\n\nTarget prefix: \n'+tPrefix+' \n\nN. of BGP routes observed at that time: '+nRoutes+' \n\nDate => '+dateSecond+'\n \n \nRETRIEVED DATA:\n \nSECOND ASPATH is \n'+ aspathSecond +'\n \nCommunity: \n' +communitySecond);
+  }))
+  .catch((e) => {
+    if(e.code === 'ENOTFOUND'){
+      console.log('Unable to connect to API servers');
+    } else {
+      console.log(e.message);
+    }
+  });
 }
