@@ -1,0 +1,962 @@
+Status,ASN,Description,Address,IPv4 prefixes,IPv6 prefixes,RRC,Place,IXP
+Up,AS1836,GREEN - green.ch AG Autonomous System,146.228.1.3,734453,0,0,Amsterdam,
+Up,AS1836,GREEN - green.ch AG Autonomous System,2a01:2a8::3,0,62792,0,Amsterdam,
+Up,AS3333,RIPE-NCC-AS - Reseaux IP Europeens Network Coordination Centre (RIPE NCC),193.0.0.56,742541,64880,0,Amsterdam,
+Up,AS3549,LVLT-3549 - Level 3 Parent,208.51.134.248,730537,0,0,Amsterdam,
+Up,AS4608,APNIC-SERVICES Asia Pacific Network Information Centre,203.119.104.1,761251,0,0,Amsterdam,
+Up,AS6881,NIXCZ - NIX.CZ z.s.p.o.,195.47.235.100,758049,0,0,Amsterdam,
+Up,AS6881,NIXCZ - NIX.CZ z.s.p.o.,2a02:38::2,0,64665,0,Amsterdam,
+Up,AS7018,ATT-INTERNET4 - AT&T Services,12.0.1.63,726710,0,0,Amsterdam,
+Up,AS7018,ATT-INTERNET4 - AT&T Services,2001:1890:111d:1::63,0,61904,0,Amsterdam,
+Up,AS8758,IWAY - Iway AG,2001:8e0:0:ffff::9,0,27911,0,Amsterdam,
+Up,AS8758,IWAY - Iway AG,212.25.27.44,747432,0,0,Amsterdam,
+Up,AS15562,SNIJDERS - Job Snijders,165.254.255.2,726202,0,0,Amsterdam,
+Up,AS15562,SNIJDERS - Job Snijders,2001:728:1808::2,0,61705,0,Amsterdam,
+Up,AS20514,QBRANCH - Axians AB,217.151.205.144,734557,0,0,Amsterdam,
+Up,AS20514,QBRANCH - Axians AB,2a03:c300:ffff:ffff:1::1,0,1,0,Amsterdam,
+Up,AS22652,FIBRENOIRE-INTERNET - Fibrenoire Inc.,2607:fad8::1:9,0,63190,0,Amsterdam,
+Up,AS22652,FIBRENOIRE-INTERNET - Fibrenoire Inc.,45.61.0.85,733391,0,0,Amsterdam,
+Up,AS29504,"LBCFREE - Freenet Liberec, z.s.",185.193.84.191,742934,0,0,Amsterdam,
+Up,AS29504,"LBCFREE - Freenet Liberec, z.s.",2a0a:3640:0:d::191,0,65238,0,Amsterdam,
+Up,AS29608,WAN2MANY-AS - Absolight,2a01:678::2,0,63098,0,Amsterdam,
+Up,AS29608,WAN2MANY-AS - Absolight,79.143.241.12,314159,0,0,Amsterdam,
+Up,AS32097,WII - WholeSale Internet,2001:4858:251:b00b::3,0,64786,0,Amsterdam,
+Up,AS32097,WII - WholeSale Internet,69.30.209.253,761121,0,0,Amsterdam,
+Up,AS34549,MEER-AS - meerfarbig GmbH & Co. KG,2a01:360:0:6::2,0,64775,0,Amsterdam,
+Up,AS34549,MEER-AS - meerfarbig GmbH & Co. KG,80.77.16.114,742327,0,0,Amsterdam,
+Up,AS37989,DCS1-02-AS-AP DCS1 Pte Ltd,203.123.48.6,741481,0,0,Amsterdam,
+Up,AS39351,ESAB-AS - 31173 Services AB,193.138.216.164,740604,0,0,Amsterdam,
+Up,AS39351,ESAB-AS - 31173 Services AB,2a03:1b20:1:ff01::5,0,67130,0,Amsterdam,
+Up,AS48821,MAUVE - Mauve Mailorder Software GmbH & CO. KG,185.138.53.0,742941,0,0,Amsterdam,
+Up,AS48821,MAUVE - Mauve Mailorder Software GmbH & CO. KG,2a07:a40::,0,64822,0,Amsterdam,
+Up,AS49432,SCHALLERT-AS - Dominic Schallert trading as schallert.com e.U.,185.210.224.254,739024,0,0,Amsterdam,
+Up,AS49432,SCHALLERT-AS - Dominic Schallert trading as schallert.com e.U.,2a0b:5cc0:0:ffff::254,0,65805,0,Amsterdam,
+Up,AS50300,CUSTDC - CustodianDC Limited,176.12.110.8,732871,0,0,Amsterdam,
+Up,AS50300,CUSTDC - CustodianDC Limited,2a00:1c10:10::8,0,64961,0,Amsterdam,
+Up,AS50304,BLIX - Blix Solutions AS,178.255.145.243,731539,0,0,Amsterdam,
+Up,AS50304,BLIX - Blix Solutions AS,2a02:20c8:1f:1::4,0,62854,0,Amsterdam,
+Up,AS57381,FNUTT - PE Fnutt Consulting Daniel Husand,193.150.22.1,732364,0,0,Amsterdam,
+Up,AS57381,FNUTT - PE Fnutt Consulting Daniel Husand,2001:67c:24e4:1::1,0,65196,0,Amsterdam,
+Up,AS57821,NONATTACHED-AS - Mr Florian Riehm,193.160.39.1,732312,0,0,Amsterdam,
+Up,AS57821,NONATTACHED-AS - Mr Florian Riehm,2001:67c:26f4::1,0,64715,0,Amsterdam,
+Up,AS58057,SECUREBIT - Securebit AG,139.28.99.254,4,0,0,Amsterdam,
+Up,AS64050,BCPL-SG BGPNET Global ASN,182.54.128.2,727317,0,0,Amsterdam,
+Up,AS200334,OFIS-LINK - Alptekin Sunnetci,2001:19f0:5001:1cb5:5400:1ff:fed6:7f3f,0,64327,0,Amsterdam,
+Up,AS202365,CHRONOS - Omer GOLGELI,194.50.19.4,746480,0,0,Amsterdam,
+Up,AS202365,CHRONOS - Omer GOLGELI,2a07:59c6:e89a::100,0,65196,0,Amsterdam,
+Up,AS202409,LOCIX-INTERNET-EXCHANGE - Hilko Boecker,185.215.214.6,167,0,0,Amsterdam,
+Up,AS202409,LOCIX-INTERNET-EXCHANGE - Hilko Boecker,2a07:59c6:ee00:cafe::c0de,0,675,0,Amsterdam,
+Up,AS205523,SERVPERSO-SYSTEMS - cedric rossius,194.28.98.37,747973,0,0,Amsterdam,
+Up,AS205523,SERVPERSO-SYSTEMS - cedric rossius,2a0c:b640:ffff:194:28:98:32:37,0,65524,0,Amsterdam,
+Up,AS205593,MAREK-KROLIKOWSKI - Marek Krolikowski trading as TaKeN,185.215.214.10,67071,0,0,Amsterdam,
+Up,AS205593,MAREK-KROLIKOWSKI - Marek Krolikowski trading as TaKeN,2a07:1c44:3100::1,0,65289,0,Amsterdam,
+Up,AS206479,JPBE-AS - Jan-Philipp Benecke,185.120.22.16,742493,0,0,Amsterdam,
+Up,AS206479,JPBE-AS - Jan-Philipp Benecke,2001:67c:16c8:18d1::1,0,1,0,Amsterdam,
+Up,AS206499,MMNETWORKS - Marek Ziolkowski trading as M&M Networks,185.215.214.1,742462,0,0,Amsterdam,
+Up,AS206499,MMNETWORKS - Marek Ziolkowski trading as M&M Networks,2a06:1287:3308:cafe::1,0,64904,0,Amsterdam,
+Up,AS395152,CLOUDPBX-VAN - CloudPBX,192.102.254.1,763595,0,0,Amsterdam,
+Up,AS395766,CLOUDPBX-MTL - CloudPBX,98.159.46.1,731488,0,0,Amsterdam,
+Up,AS396503,10VPN-HOSTING - 10VPN Hosting,23.129.32.65,755743,0,0,Amsterdam,
+Up,AS396503,10VPN-HOSTING - 10VPN Hosting,2602:fed2:fc0::1,0,63245,0,Amsterdam,
+Up,AS42,WOODYNET-1 - WoodyNet,195.66.225.238,158,0,1,London,
+Up,AS286,KPN - KPN B.V.,195.66.224.54,732741,0,1,London,
+Up,AS2856,BT-UK-AS - British Telecommunications PLC,195.66.227.42,694,0,1,London,
+Up,AS2856,BT-UK-AS - British Telecommunications PLC,2001:7f8:4::b28:6,0,26,1,London,
+Up,AS2914,NTT-COMMUNICATIONS-2914 - NTT America,195.66.224.138,730417,0,1,London,
+Up,AS2914,NTT-COMMUNICATIONS-2914 - NTT America,2001:7f8:4::b62:1,0,62298,1,London,
+Up,AS3292,TDC - TDC A/S,195.66.224.64,825,0,1,London,
+Up,AS3303,SWISSCOM - Swisscom (Schweiz) AG,195.66.224.110,3421,0,1,London,
+Up,AS3856,PCH-AS - Packet Clearing House,195.66.225.239,1,0,1,London,
+Up,AS4637,ASN-TELSTRA-GLOBAL Telstra Global,195.66.224.177,55187,0,1,London,
+Up,AS4637,ASN-TELSTRA-GLOBAL Telstra Global,2001:7f8:4::121d:2,0,2451,1,London,
+Up,AS5400,BT - British Telecommunications PLC,195.66.224.108,1361,0,1,London,
+Up,AS5400,BT - British Telecommunications PLC,2001:7f8:4::1518:1,0,59,1,London,
+Up,AS5503,RMIFL - RM Education Ltd,195.66.224.101,21,0,1,London,
+Up,AS5511,OPENTRANSIT - Orange S.A.,195.66.224.83,53507,0,1,London,
+Up,AS6730,SUNRISE - Sunrise Communications AG,195.66.224.85,542,0,1,London,
+Up,AS6830,LGI-UPC - Liberty Global B.V.,195.66.224.89,12919,0,1,London,
+Up,AS6830,LGI-UPC - Liberty Global B.V.,2001:7f8:4::1aae:4,0,998,1,London,
+Up,AS6866,CYTA-NETWORK - Cyprus Telecommunications Authority,195.66.226.205,136,0,1,London,
+Up,AS6866,CYTA-NETWORK - Cyprus Telecommunications Authority,2001:7f8:4::1ad2:1,0,9,1,London,
+Up,AS6894,KDDI-EUROPE - KDDI Europe Ltd,2001:7f8:17::1aee:1,0,64745,1,London,
+Up,AS6894,KDDI-EUROPE - KDDI Europe Ltd,5.57.81.186,737928,0,1,London,
+Up,AS6939,HURRICANE - Hurricane Electric LLC,195.66.224.21,129463,0,1,London,
+Up,AS6939,HURRICANE - Hurricane Electric LLC,2001:7f8:4::1b1b:1,0,63269,1,London,
+Up,AS8218,NEO-ASN - Zayo France SAS,2001:7f8:17::201a:1,0,62568,1,London,
+Up,AS8218,NEO-ASN - Zayo France SAS,5.57.80.210,741072,0,1,London,
+Up,AS8220,COLT - COLT Technology Services Group Limited,195.66.224.49,3320,0,1,London,
+Up,AS8220,COLT - COLT Technology Services Group Limited,2001:7f8:4::201c:1,0,324,1,London,
+Up,AS8330,LONAP - LONAP Ltd,5.57.80.250,3,0,1,London,
+Up,AS8422,NETCOLOGNE - NetCologne GmbH,195.66.224.172,109,0,1,London,
+Up,AS8607,TIMICO - Timico Limited,195.66.224.111,731402,0,1,London,
+Up,AS8607,TIMICO - Timico Limited,2001:7f8:4::219f:1,0,63278,1,London,
+Up,AS8708,RCS-RDS - RCS & RDS SA,195.66.224.46,845,0,1,London,
+Up,AS8708,RCS-RDS - RCS & RDS SA,2001:7f8:4::2204:1,0,41,1,London,
+Up,AS8851,EDGE - GCI Network Solutions Limited,195.66.224.93,31,0,1,London,
+Up,AS8896,XFIBER-AS - XFIBER AS,195.66.226.13,731997,0,1,London,
+Up,AS8896,XFIBER-AS - XFIBER AS,2001:7f8:4::22c0:1,0,64701,1,London,
+Up,AS8897,KCOM-SPN - KCOM Group Public Limited Company,195.66.224.70,62,0,1,London,
+Up,AS8966,ETISALAT-AS - Emirates Telecommunications Corporation,195.66.224.159,3609,0,1,London,
+Up,AS9002,RETN-AS - RETN Limited,195.66.224.193,30408,0,1,London,
+Up,AS9002,RETN-AS - RETN Limited,2001:7f8:4::232a:1,0,63070,1,London,
+Up,AS9318,SKB-AS SK Broadband Co Ltd,195.66.224.176,36,0,1,London,
+Up,AS12779,ITGATE - IT.Gate S.p.A.,195.66.226.31,733938,0,1,London,
+Up,AS12779,ITGATE - IT.Gate S.p.A.,2001:7f8:4::31eb:1,0,63100,1,London,
+Up,AS13030,INIT7 - Init7 (Switzerland) Ltd.,195.66.224.175,733177,0,1,London,
+Up,AS13030,INIT7 - Init7 (Switzerland) Ltd.,2001:7f8:4::32e6:1,0,50583,1,London,
+Up,AS13285,OPALTELECOM-AS - TalkTalk Communications Limited,195.66.224.136,137,0,1,London,
+Up,AS15830,TELECITY-LON - TELECITYGROUP INTERNATIONAL LIMITED,195.66.224.82,306,0,1,London,
+Up,AS21099,GAMEGROUP-UK-AS - Game Stores Group Ltd,195.66.224.162,2,0,1,London,
+Up,AS21320,GEANT_IAS_VRF - GEANT Vereniging,195.66.226.161,1453,0,1,London,
+Up,AS21320,GEANT_IAS_VRF - GEANT Vereniging,2001:7f8:4::5348:1,0,181,1,London,
+Up,AS22822,LLNW - Limelight Networks,195.66.224.133,227,0,1,London,
+Up,AS25061,ANLX-UK - Associated Networks (UK) Limited,195.66.225.22,20,0,1,London,
+Up,AS25160,VORBOSS_AS - Vorboss Limited,195.66.225.216,733782,0,1,London,
+Up,AS25160,VORBOSS_AS - Vorboss Limited,2001:7f8:4::6248:1,0,62477,1,London,
+Up,AS25178,KEYCOM-AS - PCCW Global Networks (UK) PLC,2001:7f8:4::625a:1,0,1,1,London,
+Up,AS29527,ASTUTIUM-AS - Astutium Limited,195.66.224.244,10,0,1,London,
+Up,AS29527,ASTUTIUM-AS - Astutium Limited,2001:7f8:4::7357:1,0,2,1,London,
+Up,AS29550,SIMPLYTRANSIT - Simply Transit Ltd,195.66.224.223,31,0,1,London,
+Up,AS30844,LIQUID-AS - Liquid Telecommunications Ltd,195.66.224.68,2219,0,1,London,
+Up,AS31122,DIGIWEB-AS - Digiweb ltd,2001:7f8:4::7992:1,0,63296,1,London,
+Up,AS31727,NODE4-AS - Node4 Limited,195.66.224.135,71,0,1,London,
+Up,AS31742,SOTACONNECT - Sota Solutions Ltd.,2001:7f8:17::7bfe:1,0,65336,1,London,
+Up,AS31742,SOTACONNECT - Sota Solutions Ltd.,5.57.81.210,731896,0,1,London,
+Up,AS32787,PROLEXIC-TECHNOLOGIES-DDOS-MITIGATION-NETWORK - Akamai Technologies,195.66.224.31,1823,0,1,London,
+Up,AS34245,MAGNET-AS - Magnet Networks Limited,195.66.224.208,21,0,1,London,
+Up,AS34790,AS34790 - TFM NETWORKS LIMITED,2001:7f8:17::87e6:1,0,2,1,London,
+Up,AS34790,AS34790 - TFM NETWORKS LIMITED,2001:7f8:4::87e6:1,0,2,1,London,
+Up,AS34790,AS34790 - TFM NETWORKS LIMITED,5.57.81.174,9,0,1,London,
+Up,AS35228,O2BROADBAND - Telefonica UK Limited,195.66.224.232,127,0,1,London,
+Up,AS35228,O2BROADBAND - Telefonica UK Limited,195.66.227.153,3,0,1,London,
+Up,AS35228,O2BROADBAND - Telefonica UK Limited,195.66.227.169,3,0,1,London,
+Up,AS35266,EXN-AS - EX Networks Limited,2001:7f8:17::89c2:1,0,62534,1,London,
+Up,AS35266,EXN-AS - EX Networks Limited,5.57.81.216,731668,0,1,London,
+Up,AS37349,Aptus,195.66.225.219,134003,0,1,London,
+Up,AS37349,Aptus,2001:7f8:4::91e5:1,0,63281,1,London,
+Up,AS38001,NEWMEDIAEXPRESS-AS-AP NewMedia Express Pte Ltd,195.66.227.129,128482,0,1,London,
+Up,AS38001,NEWMEDIAEXPRESS-AS-AP NewMedia Express Pte Ltd,2001:7f8:4::9471:1,0,12853,1,London,
+Up,AS39122,BLACKNIGHT-AS - Blacknight Internet Solutions Limited,195.66.226.97,741156,0,1,London,
+Up,AS39122,BLACKNIGHT-AS - Blacknight Internet Solutions Limited,2001:7f8:4::98d2:1,0,63769,1,London,
+Up,AS39202,GCAP-AS - Global Radio Limited,195.66.225.2,1,0,1,London,
+Up,AS42473,ANEXIA - ANEXIA Internetdienstleistungs GmbH,195.66.226.113,730359,0,1,London,
+Up,AS42473,ANEXIA - ANEXIA Internetdienstleistungs GmbH,2001:7f8:4::a5e9:1,0,62137,1,London,
+Up,AS49375,AS-TRUNKNETWORKS - Trunk Networks Limited,2001:7f8:17::c0df:1,0,4,1,London,
+Up,AS49375,AS-TRUNKNETWORKS - Trunk Networks Limited,5.57.80.146,5,0,1,London,
+Up,AS51185,ONECOM-AS - Onecom Global Communications LTD,195.66.227.90,739902,0,1,London,
+Up,AS56730,WIREHIVE-AS - Wirehive Limited,195.66.226.20,736934,0,1,London,
+Up,AS56730,WIREHIVE-AS - Wirehive Limited,2001:7f8:4::dd9a:1,0,65188,1,London,
+Up,AS57111,ALTITUD - ALTITUD S.r.l.,195.66.227.132,2,0,1,London,
+Up,AS57111,ALTITUD - ALTITUD S.r.l.,2001:7f8:4::df17:1,0,1,1,London,
+Up,AS60171,AFRIX-AS - AFR-IX TELECOM S.L.,195.66.226.123,148,0,1,London,
+Up,AS60171,AFRIX-AS - AFR-IX TELECOM S.L.,2001:7f8:4::eb0b:1,0,3,1,London,
+Up,AS60501,SIRIUSTEC-IT - Sirius Technology SRL,195.66.226.84,735474,0,1,London,
+Up,AS60501,SIRIUSTEC-IT - Sirius Technology SRL,2001:7f8:4::ec55:1,0,63232,1,London,
+Up,AS199283,UKSCOMMS-AS - STRUCTURED COMMUNICATIONS LIMITED,195.66.227.58,316200,0,1,London,
+Up,AS199283,UKSCOMMS-AS - STRUCTURED COMMUNICATIONS LIMITED,2001:7f8:4::3:a73:1,0,62333,1,London,
+Up,AS207044,ENET-AS - Enet Telecommunications Networks Limited,195.66.227.104,732785,0,1,London,
+Up,AS207044,ENET-AS - Enet Telecommunications Networks Limited,2001:7f8:4::3:28c4:1,0,62691,1,London,
+Up,AS328145,Lyca-Digital-AS,195.66.225.228,732555,0,1,London,
+Up,AS328145,Lyca-Digital-AS,2001:7f8:4::5:1d1:1,0,68246,1,London,
+Up,AS42,WOODYNET-1 - WoodyNet,80.249.208.250,159,0,3,Amsterdam,AMSIX-NLIX
+Up,AS714,APPLE-ENGINEERING - Apple Inc.,2001:7f8:1::a500:714:1,0,66,3,Amsterdam,AMSIX-NLIX
+Up,AS714,APPLE-ENGINEERING - Apple Inc.,2001:7f8:1::a500:714:2,0,66,3,Amsterdam,AMSIX-NLIX
+Up,AS714,APPLE-ENGINEERING - Apple Inc.,80.249.211.160,631,0,3,Amsterdam,AMSIX-NLIX
+Up,AS714,APPLE-ENGINEERING - Apple Inc.,80.249.211.183,631,0,3,Amsterdam,AMSIX-NLIX
+Up,AS1103,SURFNET-NL - SURFnet bv,2001:7f8:1::a500:1103:2,0,63193,3,Amsterdam,AMSIX-NLIX
+Up,AS1103,SURFNET-NL - SURFnet bv,80.249.208.34,742336,0,3,Amsterdam,AMSIX-NLIX
+Up,AS1126,VANCIS - Vancis Advanced ICT Services,80.249.208.252,4,0,3,Amsterdam,AMSIX-NLIX
+Up,AS1273,CW - Vodafone Group PLC,2001:7f8:1::a500:1273:1,0,62437,3,Amsterdam,AMSIX-NLIX
+Up,AS2686,ATGS-MMD-AS - AT&T Global Network Services,80.249.208.37,475,0,3,Amsterdam,AMSIX-NLIX
+Up,AS3292,TDC - TDC A/S,80.249.208.104,826,0,3,Amsterdam,AMSIX-NLIX
+Up,AS3856,PCH-AS - Packet Clearing House,80.249.209.250,1,0,3,Amsterdam,AMSIX-NLIX
+Up,AS5390,EURONET - Euronet Communications B.V.,80.249.208.70,5,0,3,Amsterdam,AMSIX-NLIX
+Up,AS5413,AS5413 - Daisy Communications Ltd,80.249.208.95,141,0,3,Amsterdam,AMSIX-NLIX
+Up,AS5466,EIRCOM - Eircom Limited,80.249.208.160,77,0,3,Amsterdam,AMSIX-NLIX
+Up,AS5524,BREEDBANDNEDERLAND - Breedband Nederland B.V.,2001:7f8:1::a500:5524:1,0,8,3,Amsterdam,AMSIX-NLIX
+Up,AS5524,BREEDBANDNEDERLAND - Breedband Nederland B.V.,80.249.209.104,17,0,3,Amsterdam,AMSIX-NLIX
+Up,AS5583,ORANGE-BUSINESS-SERVICES-BENELUX - Orange S.A.,80.249.208.66,42,0,3,Amsterdam,AMSIX-NLIX
+Up,AS6453,AS6453 - TATA COMMUNICATIONS (AMERICA) INC,2001:7f8:1::a500:6453:1,0,62210,3,Amsterdam,AMSIX-NLIX
+Up,AS6453,AS6453 - TATA COMMUNICATIONS (AMERICA) INC,80.249.209.167,730242,0,3,Amsterdam,AMSIX-NLIX
+Up,AS6730,SUNRISE - Sunrise Communications AG,80.249.208.116,542,0,3,Amsterdam,AMSIX-NLIX
+Up,AS6774,ASN-BICS - Belgacom International Carrier Services SA,80.249.208.87,1609,0,3,Amsterdam,AMSIX-NLIX
+Up,AS6830,LGI-UPC - Liberty Global B.V.,2001:7f8:1::a500:6830:2,0,998,3,Amsterdam,AMSIX-NLIX
+Up,AS6830,LGI-UPC - Liberty Global B.V.,80.249.208.106,12919,0,3,Amsterdam,AMSIX-NLIX
+Up,AS6866,CYTA-NETWORK - Cyprus Telecommunications Authority,2001:7f8:1::a500:6866:1,0,9,3,Amsterdam,AMSIX-NLIX
+Up,AS6866,CYTA-NETWORK - Cyprus Telecommunications Authority,80.249.211.198,153,0,3,Amsterdam,AMSIX-NLIX
+Up,AS6939,HURRICANE - Hurricane Electric LLC,2001:7f8:1::a500:6939:1,0,63267,3,Amsterdam,AMSIX-NLIX
+Up,AS6939,HURRICANE - Hurricane Electric LLC,80.249.209.150,115930,0,3,Amsterdam,AMSIX-NLIX
+Up,AS8220,COLT - COLT Technology Services Group Limited,2001:7f8:1::a500:8220:1,0,324,3,Amsterdam,AMSIX-NLIX
+Up,AS8220,COLT - COLT Technology Services Group Limited,80.249.208.236,3320,0,3,Amsterdam,AMSIX-NLIX
+Up,AS8283,COLOCLUE-AS - Netwerkvereniging Coloclue,2001:7f8:1::a500:8283:1,0,64820,3,Amsterdam,AMSIX-NLIX
+Up,AS8283,COLOCLUE-AS - Netwerkvereniging Coloclue,80.249.211.161,735432,0,3,Amsterdam,AMSIX-NLIX
+Up,AS8455,ATOM86-AS - Schuberg Philis B.V.,2001:7f8:1::a500:8455:1,0,62619,3,Amsterdam,AMSIX-NLIX
+Up,AS8455,ATOM86-AS - Schuberg Philis B.V.,80.249.211.217,729875,0,3,Amsterdam,AMSIX-NLIX
+Up,AS8560,ONEANDONE-AS - 1&1 Internet SE,80.249.208.220,308,0,3,Amsterdam,AMSIX-NLIX
+Up,AS8708,RCS-RDS - RCS & RDS SA,2001:7f8:1::a500:8708:1,0,41,3,Amsterdam,AMSIX-NLIX
+Up,AS8708,RCS-RDS - RCS & RDS SA,80.249.208.51,844,0,3,Amsterdam,AMSIX-NLIX
+Up,AS9031,EDPNET,80.249.208.180,63,0,3,Amsterdam,AMSIX-NLIX
+Up,AS9150,INTERCONNECT - ML Consultancy,193.239.116.109,24,0,3,Amsterdam,AMSIX-NLIX
+Up,AS12306,PLUSLINE - Plus.line AG,80.249.208.161,75,0,3,Amsterdam,AMSIX-NLIX
+Up,AS12414,NL-SOLCON - Solcon Internetdiensten B.V.,2001:7f8:1::a501:2414:1,0,8,3,Amsterdam,AMSIX-NLIX
+Up,AS12414,NL-SOLCON - Solcon Internetdiensten B.V.,80.249.208.165,17,0,3,Amsterdam,AMSIX-NLIX
+Up,AS12779,ITGATE - IT.Gate S.p.A.,2001:7f8:1::a501:2779:1,0,22,3,Amsterdam,AMSIX-NLIX
+Up,AS12779,ITGATE - IT.Gate S.p.A.,80.249.209.17,265,0,3,Amsterdam,AMSIX-NLIX
+Up,AS12859,NL-BIT - BIT BV,2001:7f8:1::a501:2859:1,0,64716,3,Amsterdam,AMSIX-NLIX
+Up,AS12859,NL-BIT - BIT BV,2001:7f8:1::a501:2859:2,0,64715,3,Amsterdam,AMSIX-NLIX
+Up,AS12859,NL-BIT - BIT BV,80.249.208.200,734539,0,3,Amsterdam,AMSIX-NLIX
+Up,AS12902,LUNA - Luna.nl B.V.,193.239.116.65,2,0,3,Amsterdam,AMSIX-NLIX
+Up,AS12902,LUNA - Luna.nl B.V.,2001:7f8:1::a501:2902:1,0,1,3,Amsterdam,AMSIX-NLIX
+Up,AS12902,LUNA - Luna.nl B.V.,80.249.208.223,2,0,3,Amsterdam,AMSIX-NLIX
+Up,AS12956,"TELEFONICA - Telefonica International Wholesale Services II, S.L.U.",80.249.208.208,35961,0,3,Amsterdam,AMSIX-NLIX
+Up,AS12989,HWNG - StackPath LLC,2001:7f8:1::a501:2989:1,0,361,3,Amsterdam,AMSIX-NLIX
+Up,AS12989,HWNG - StackPath LLC,80.249.208.94,1458,0,3,Amsterdam,AMSIX-NLIX
+Up,AS13030,INIT7 - Init7 (Switzerland) Ltd.,2001:7f8:1::a501:3030:1,0,50621,3,Amsterdam,AMSIX-NLIX
+Up,AS13101,TNG-AS - ennit server GmbH,193.239.116.27,66,0,3,Amsterdam,AMSIX-NLIX
+Up,AS13101,TNG-AS - ennit server GmbH,80.249.209.119,71,0,3,Amsterdam,AMSIX-NLIX
+Up,AS14907,WIKIMEDIA - Wikimedia Foundation Inc.,2001:7f8:1::a501:4907:1,0,64741,3,Amsterdam,AMSIX-NLIX
+Up,AS14907,WIKIMEDIA - Wikimedia Foundation Inc.,80.249.209.176,735490,0,3,Amsterdam,AMSIX-NLIX
+Up,AS15435,KABELFOON - CAIW Diensten B.V.,2001:7f8:1::a501:5435:1,0,64859,3,Amsterdam,AMSIX-NLIX
+Up,AS15435,KABELFOON - CAIW Diensten B.V.,80.249.208.149,733236,0,3,Amsterdam,AMSIX-NLIX
+Up,AS15703,TRUESERVER-AS - True B.V.,80.249.208.171,57,0,3,Amsterdam,AMSIX-NLIX
+Up,AS16265,LEASEWEB-NETWORK - LeaseWeb Network B.V.,80.249.208.215,205,0,3,Amsterdam,AMSIX-NLIX
+Up,AS16298,INTERBOX-AS - Lubbers Box Telematica BV,193.239.116.187,2,0,3,Amsterdam,AMSIX-NLIX
+Up,AS16298,INTERBOX-AS - Lubbers Box Telematica BV,80.249.208.183,2,0,3,Amsterdam,AMSIX-NLIX
+Up,AS20495,WEDARE - We Dare B.V.,2001:7f8:1::a502:495:1,0,7,3,Amsterdam,AMSIX-NLIX
+Up,AS20495,WEDARE - We Dare B.V.,80.249.208.107,98,65071,3,Amsterdam,AMSIX-NLIX
+Up,AS20504,RTL-AS - RTL Nederland B.V.,193.239.116.30,1,0,3,Amsterdam,AMSIX-NLIX
+Up,AS20562,OPEN-PEERING-AS - Broadband Hosting B.V,193.239.116.17,180515,0,3,Amsterdam,AMSIX-NLIX
+Up,AS20562,OPEN-PEERING-AS - Broadband Hosting B.V,80.249.208.189,180515,0,3,Amsterdam,AMSIX-NLIX
+Up,AS20940,AKAMAI-ASN1 - Akamai International B.V.,80.249.208.168,31,0,3,Amsterdam,AMSIX-NLIX
+Up,AS20953,INFONL-AS - Info.nl/hf b.v.,80.249.208.203,1,0,3,Amsterdam,AMSIX-NLIX
+Up,AS21263,TELEDATA-AS - TeleData GmbH,2001:7f8:1::a502:1263:1,0,8,3,Amsterdam,AMSIX-NLIX
+Up,AS21263,TELEDATA-AS - TeleData GmbH,80.249.209.74,24,0,3,Amsterdam,AMSIX-NLIX
+Up,AS21320,GEANT_IAS_VRF - GEANT Vereniging,2001:7f8:1::a502:1320:1,0,181,3,Amsterdam,AMSIX-NLIX
+Up,AS21320,GEANT_IAS_VRF - GEANT Vereniging,80.249.210.137,1453,0,3,Amsterdam,AMSIX-NLIX
+Up,AS24753,GCE-NET - Globecomm Europe B.V.,193.239.116.5,96,0,3,Amsterdam,AMSIX-NLIX
+Up,AS24875,NOVOSERVE-AS - NovoServe B.V.,2001:7f8:1::a502:4875:1,0,5,3,Amsterdam,AMSIX-NLIX
+Up,AS24875,NOVOSERVE-AS - NovoServe B.V.,80.249.208.126,102,0,3,Amsterdam,AMSIX-NLIX
+Up,AS28788,UNILOGICNET-AS - Unilogic Networks B.V.,80.249.208.237,5,0,3,Amsterdam,AMSIX-NLIX
+Up,AS30132,ISC-F-AS - Internet Systems Consortium,80.249.208.111,758217,0,3,Amsterdam,AMSIX-NLIX
+Up,AS31027,NIANET-AS - Nianet A/S,2001:7f8:1::a503:1027:1,0,121,3,Amsterdam,AMSIX-NLIX
+Up,AS31027,NIANET-AS - Nianet A/S,80.249.208.233,434,0,3,Amsterdam,AMSIX-NLIX
+Up,AS31042,SERBIA-BROADBAND-AS - Serbia BroadBand-Srpske Kablovske mreze d.o.o.,2001:7f8:1::a503:1042:1,0,1,3,Amsterdam,AMSIX-NLIX
+Up,AS31042,SERBIA-BROADBAND-AS - Serbia BroadBand-Srpske Kablovske mreze d.o.o.,80.249.210.89,404,0,3,Amsterdam,AMSIX-NLIX
+Up,AS31383,NEDERLANDNET-AS - Computel Standby BV,193.239.116.18,2,0,3,Amsterdam,AMSIX-NLIX
+Up,AS31383,NEDERLANDNET-AS - Computel Standby BV,2001:7f8:1::a503:1383:1,0,1,3,Amsterdam,AMSIX-NLIX
+Up,AS31800,DALNET - DALnet,193.239.116.162,3,0,3,Amsterdam,AMSIX-NLIX
+Up,AS32934,FACEBOOK - Facebook,2001:7f8:1::a503:2934:1,0,28,3,Amsterdam,AMSIX-NLIX
+Up,AS32934,FACEBOOK - Facebook,2001:7f8:1::a503:2934:2,0,28,3,Amsterdam,AMSIX-NLIX
+Up,AS32934,FACEBOOK - Facebook,80.249.209.115,37,0,3,Amsterdam,AMSIX-NLIX
+Up,AS32934,FACEBOOK - Facebook,80.249.209.164,37,0,3,Amsterdam,AMSIX-NLIX
+Up,AS34305,BASEIP - Base IP B.V.,193.239.116.103,10,3,3,Amsterdam,AMSIX-NLIX
+Up,AS35332,DATAWEB - DataWeb B.V.,193.239.116.10,13,0,3,Amsterdam,AMSIX-NLIX
+Up,AS39591,GLOBAL-E - Global-e BV,193.239.116.98,30,0,3,Amsterdam,AMSIX-NLIX
+Up,AS47147,AS-ANX - ANEXIA Internetdienstleistungs GmbH,2001:7f8:1::a504:7147:1,0,62410,3,Amsterdam,AMSIX-NLIX
+Up,AS47147,AS-ANX - ANEXIA Internetdienstleistungs GmbH,80.249.213.102,734053,0,3,Amsterdam,AMSIX-NLIX
+Up,AS47441,"TRUNKM - TRUNK MOBILE, INC",80.249.213.213,746721,0,3,Amsterdam,AMSIX-NLIX
+Up,AS47692,NESSUS - Nessus GmbH,193.239.118.93,742721,0,3,Amsterdam,AMSIX-NLIX
+Up,AS47692,NESSUS - Nessus GmbH,2001:7f8:13::a504:7692:1,0,64846,3,Amsterdam,AMSIX-NLIX
+Up,AS49544,I3DNET - i3D.net B.V,2001:7f8:1::a504:9544:1,0,52,3,Amsterdam,AMSIX-NLIX
+Up,AS49544,I3DNET - i3D.net B.V,80.249.208.162,211,0,3,Amsterdam,AMSIX-NLIX
+Up,AS50763,MCKAYCOM - MCKAYCOM LTD,2001:7f8:1::a505:763:1,0,64210,3,Amsterdam,AMSIX-NLIX
+Up,AS50763,MCKAYCOM - MCKAYCOM LTD,80.249.210.99,482062,0,3,Amsterdam,AMSIX-NLIX
+Up,AS57111,ALTITUD - ALTITUD S.r.l.,2001:7f8:1::a505:7111:1,0,1,3,Amsterdam,AMSIX-NLIX
+Up,AS57111,ALTITUD - ALTITUD S.r.l.,80.249.213.239,2,0,3,Amsterdam,AMSIX-NLIX
+Up,AS59605,ZAINGP-AS - MENA LEVANT W.L.L,2001:7f8:1::a505:9605:1,0,62801,3,Amsterdam,AMSIX-NLIX
+Up,AS59605,ZAINGP-AS - MENA LEVANT W.L.L,80.249.210.78,741999,0,3,Amsterdam,AMSIX-NLIX
+Up,AS60501,SIRIUSTEC-IT - Sirius Technology SRL,2001:7f8:1::a506:501:1,0,63232,3,Amsterdam,AMSIX-NLIX
+Up,AS60501,SIRIUSTEC-IT - Sirius Technology SRL,80.249.213.107,735474,0,3,Amsterdam,AMSIX-NLIX
+Up,AS197301,PARKNET-AS - Parknet F.M.B.A,193.239.118.134,2,0,3,Amsterdam,AMSIX-NLIX
+Up,AS205206,NETSITE - Netsite A/S,193.239.117.18,731467,0,3,Amsterdam,AMSIX-NLIX
+Up,AS205206,NETSITE - Netsite A/S,2001:7f8:13::a520:5206:1,0,64779,3,Amsterdam,AMSIX-NLIX
+Up,AS513,CERN - CERN - European Organization for Nuclear Research,192.65.185.3,741129,0,4,Geneva Switzerland,CIXP
+Up,AS513,CERN - CERN - European Organization for Nuclear Research,2001:7f8:1c:24a::201:1,0,50096,4,Geneva Switzerland,CIXP
+Up,AS559,SWITCH,192.65.185.130,117,0,4,Geneva Switzerland,CIXP
+Up,AS559,SWITCH,2001:7f8:1c:24a::22f:1,0,12,4,Geneva Switzerland,CIXP
+Up,AS3303,SWISSCOM - Swisscom (Schweiz) AG,192.65.185.137,1797,0,4,Geneva Switzerland,CIXP
+Up,AS8220,COLT - COLT Technology Services Group Limited,192.65.185.165,3489,0,4,Geneva Switzerland,CIXP
+Up,AS8220,COLT - COLT Technology Services Group Limited,2001:7f8:1c:24a::201c:1,0,324,4,Geneva Switzerland,CIXP
+Up,AS12350,VTX-NETWORK - VTX Services SA,192.65.185.157,733074,0,4,Geneva Switzerland,CIXP
+Up,AS15547,NETPLUS - netplus.ch SA,192.65.185.195,747567,0,4,Geneva Switzerland,CIXP
+Up,AS15547,NETPLUS - netplus.ch SA,2001:7f8:1c:24a::3cbb:1,0,64995,4,Geneva Switzerland,CIXP
+Up,AS20932,SIG-ST - Services Industriels de Geneve,192.65.185.142,734041,0,4,Geneva Switzerland,CIXP
+Up,AS20932,SIG-ST - Services Industriels de Geneve,2001:7f8:1c:24a::51c4:1,0,65479,4,Geneva Switzerland,CIXP
+Up,AS21320,GEANT_IAS_VRF - GEANT Vereniging,192.65.185.119,1453,0,4,Geneva Switzerland,CIXP
+Up,AS21320,GEANT_IAS_VRF - GEANT Vereniging,2001:7f8:1c:24a::51e5:1,0,181,4,Geneva Switzerland,CIXP
+Up,AS25091,IP-MAX - IP-Max SA,192.65.185.244,736515,0,4,Geneva Switzerland,CIXP
+Up,AS25091,IP-MAX - IP-Max SA,2001:7f8:1c:24a::6203:1,0,64746,4,Geneva Switzerland,CIXP
+Up,AS29222,INFOMANIAK-AS - Infomaniak Network SA,192.65.185.140,745428,0,4,Geneva Switzerland,CIXP
+Up,AS33845,SWISSGOV - Swiss Federation represented by FOITT,192.65.185.133,5,0,4,Geneva Switzerland,CIXP
+Up,AS35054,EQUINIX-CH-ASN - Equinix (Switzerland) Enterprises GMBH,192.65.185.243,740588,0,4,Geneva Switzerland,CIXP
+Up,AS42,WOODYNET-1 - WoodyNet,193.203.0.33,129,0,5,Vienna Austria,VIX
+Up,AS1853,ACONET - ACOnet Backbone,193.203.0.1,255,0,5,Vienna Austria,VIX
+Up,AS1853,ACONET - ACOnet Backbone,2001:7f8:30:0:1:1:0:1853,0,50,5,Vienna Austria,VIX
+Up,AS2686,ATGS-MMD-AS - AT&T Global Network Services,193.203.0.3,477,0,5,Vienna Austria,VIX
+Up,AS2686,ATGS-MMD-AS - AT&T Global Network Services,2001:7f8:30:0:2:1:0:2686,0,9,5,Vienna Austria,VIX
+Up,AS3856,PCH-AS - Packet Clearing House,193.203.0.126,1,0,5,Vienna Austria,VIX
+Up,AS5403,AS5403 - APA-IT Informations Technologie G.m.b.H,193.203.0.15,21,0,5,Vienna Austria,VIX
+Up,AS5403,AS5403 - APA-IT Informations Technologie G.m.b.H,193.203.0.5,21,0,5,Vienna Austria,VIX
+Up,AS5588,GTSCE - T-Mobile Czech Republic a.s.,193.203.0.101,1953,0,5,Vienna Austria,VIX
+Up,AS6720,"MAGWIEN - Magistrat der Stadt Wien, Magistratsabteilung 01",193.203.0.63,749382,0,5,Vienna Austria,VIX
+Up,AS6720,"MAGWIEN - Magistrat der Stadt Wien, Magistratsabteilung 01",2001:7f8:30:0:1:1:0:6720,0,66442,5,Vienna Austria,VIX
+Up,AS6730,SUNRISE - Sunrise Communications AG,193.203.0.64,539,0,5,Vienna Austria,VIX
+Up,AS6730,SUNRISE - Sunrise Communications AG,2001:7f8:30:0:2:1:67:30,0,93,5,Vienna Austria,VIX
+Up,AS6939,HURRICANE - Hurricane Electric LLC,193.203.0.185,115860,0,5,Vienna Austria,VIX
+Up,AS6939,HURRICANE - Hurricane Electric LLC,2001:7f8:30:0:2:1:0:6939,0,63269,5,Vienna Austria,VIX
+Up,AS8220,COLT - COLT Technology Services Group Limited,193.203.0.55,3489,0,5,Vienna Austria,VIX
+Up,AS8220,COLT - COLT Technology Services Group Limited,2001:7f8:30:0:1:1:0:8220,0,324,5,Vienna Austria,VIX
+Up,AS8339,KABSI-AS - kabelplus GmbH,193.203.0.10,31,0,5,Vienna Austria,VIX
+Up,AS8339,KABSI-AS - kabelplus GmbH,193.203.0.18,31,0,5,Vienna Austria,VIX
+Up,AS8387,T-SYSTEMS-AT - T-Systems Austria GesmbH,193.203.0.26,107,0,5,Vienna Austria,VIX
+Up,AS8447,TELEKOM-AT - A1 Telekom Austria AG,193.203.0.11,808,0,5,Vienna Austria,VIX
+Up,AS8447,TELEKOM-AT - A1 Telekom Austria AG,193.203.0.21,808,0,5,Vienna Austria,VIX
+Up,AS8447,TELEKOM-AT - A1 Telekom Austria AG,2001:7f8:30:0:1:1:0:8447,0,72,5,Vienna Austria,VIX
+Up,AS8447,TELEKOM-AT - A1 Telekom Austria AG,2001:7f8:30:0:2:1:0:8447,0,72,5,Vienna Austria,VIX
+Up,AS12401,INTERNIC-AS12401 - internic Datenkommunikations GmbH,2001:7f8:30:0:2:1:1:2401,0,1,5,Vienna Austria,VIX
+Up,AS12577,MMC-AT-AS - mmc kommunikationstechnologie gmbh,193.203.0.86,6,0,5,Vienna Austria,VIX
+Up,AS12605,LIWEST-AT - LIWEST Kabelmedien GmbH,193.203.0.43,31,0,5,Vienna Austria,VIX
+Up,AS12895,IT-AUSTRIA - s IT Solutions AT Spardat GmbH,193.203.0.37,2,0,5,Vienna Austria,VIX
+Up,AS12971,BIOS-AT - Internet Viennaweb Service GmbH,193.203.0.54,7,0,5,Vienna Austria,VIX
+Up,AS13030,INIT7 - Init7 (Switzerland) Ltd.,2001:7f8:30:0:2:1:1:3030,0,50624,5,Vienna Austria,VIX
+Up,AS13101,TNG-AS - ennit server GmbH,193.203.0.111,41,0,5,Vienna Austria,VIX
+Up,AS13237,LAMBDANET-AS - euNetworks GmbH,193.203.0.91,735052,0,5,Vienna Austria,VIX
+Up,AS16314,WIENKAV - Wiener Krankenanstaltenverbund,193.203.0.78,1,0,5,Vienna Austria,VIX
+Up,AS20704,FUNKNETZ-AS - www.funknetz.at MH GmbH,193.203.0.80,13,0,5,Vienna Austria,VIX
+Up,AS20704,FUNKNETZ-AS - www.funknetz.at MH GmbH,2001:7f8:30:0:2:1:2:704,0,1,5,Vienna Austria,VIX
+Up,AS20751,ASN-AZISTA - AZISTA GmbH,193.203.0.81,27,0,5,Vienna Austria,VIX
+Up,AS21013,ITANDTEL-AS - eww ag,193.203.0.131,112,0,5,Vienna Austria,VIX
+Up,AS21320,GEANT_IAS_VRF - GEANT Vereniging,193.203.0.172,1453,0,5,Vienna Austria,VIX
+Up,AS21320,GEANT_IAS_VRF - GEANT Vereniging,2001:7f8:30:0:2:1:2:965,0,181,5,Vienna Austria,VIX
+Up,AS21360,EMPIRION - Empirion Telekommunikations Services GmbH,193.203.0.87,3,0,5,Vienna Austria,VIX
+Up,AS21385,TNIB - Trusted Network GmbH,193.203.0.136,412,0,5,Vienna Austria,VIX
+Up,AS21385,TNIB - Trusted Network GmbH,2001:7f8:30:0:2:1:2:1385,0,83,5,Vienna Austria,VIX
+Up,AS24953,ASN-CARRIER66 - NETPLANET GmbH,193.203.0.104,30,0,5,Vienna Austria,VIX
+Up,AS28760,INFOTECH-AT-AS - Infotech EDV-Systeme GmbH,193.203.0.115,5,0,5,Vienna Austria,VIX
+Up,AS32934,FACEBOOK - Facebook,193.203.0.194,35,0,5,Vienna Austria,VIX
+Up,AS32934,FACEBOOK - Facebook,193.203.0.205,35,0,5,Vienna Austria,VIX
+Up,AS32934,FACEBOOK - Facebook,2001:7f8:30:0:2:1:3:2934,0,25,5,Vienna Austria,VIX
+Up,AS32934,FACEBOOK - Facebook,2001:7f8:30:0:2:2:3:2934,0,25,5,Vienna Austria,VIX
+Up,AS34347,CITYNET-AT-AS - Stadtwerke Hall in Tirol GmbH,193.203.0.124,25,0,5,Vienna Austria,VIX
+Up,AS35369,LAGIS-AS - lagis Internet Service Provider GmbH,193.203.0.157,741943,0,5,Vienna Austria,VIX
+Up,AS35369,LAGIS-AS - lagis Internet Service Provider GmbH,2001:7f8:30:0:2:1:3:5369,0,64783,5,Vienna Austria,VIX
+Up,AS39912,I3B-AS - oja.at GmbH,193.203.0.134,74,0,5,Vienna Austria,VIX
+Up,AS39912,I3B-AS - oja.at GmbH,2001:7f8:30:0:2:1:3:9912,0,23,5,Vienna Austria,VIX
+Up,AS47147,AS-ANX - ANEXIA Internetdienstleistungs GmbH,193.203.0.19,733643,0,5,Vienna Austria,VIX
+Up,AS47147,AS-ANX - ANEXIA Internetdienstleistungs GmbH,2001:7f8:30:0:1:1:4:7147,0,62359,5,Vienna Austria,VIX
+Up,AS47692,NESSUS - Nessus GmbH,193.203.0.192,742717,0,5,Vienna Austria,VIX
+Up,AS47692,NESSUS - Nessus GmbH,2001:7f8:30:0:2:1:4:7692,0,64845,5,Vienna Austria,VIX
+Up,AS42,WOODYNET-1 - WoodyNet,202.249.2.183,69,0,6,Tokyo Japan,DIX-IE
+Up,AS2497,IIJ Internet Initiative Japan Inc.,2001:200:0:fe00::9c1:0,0,62506,6,Tokyo Japan,DIX-IE
+Up,AS2497,IIJ Internet Initiative Japan Inc.,202.249.2.169,736876,0,6,Tokyo Japan,DIX-IE
+Up,AS3856,PCH-AS - Packet Clearing House,202.249.2.184,1,0,6,Tokyo Japan,DIX-IE
+Up,AS4777,APNIC-NSPIXP2-AS Asia Pacific Network Information Centre,2001:200:0:fe00::12a9:0,0,62578,6,Tokyo Japan,DIX-IE
+Up,AS4777,APNIC-NSPIXP2-AS Asia Pacific Network Information Centre,202.249.2.20,742622,0,6,Tokyo Japan,DIX-IE
+Up,AS25152,K-ROOT-SERVER - Reseaux IP Europeens Network Coordination Centre (RIPE NCC),2001:200:0:fe00::6249:0,0,64655,6,Tokyo Japan,DIX-IE
+Up,AS25152,K-ROOT-SERVER - Reseaux IP Europeens Network Coordination Centre (RIPE NCC),202.249.2.185,756160,0,6,Tokyo Japan,DIX-IE
+Up,AS714,APPLE-ENGINEERING - Apple Inc.,194.68.123.9,629,0,7,Stockholm Sweden,Netnod
+Up,AS714,APPLE-ENGINEERING - Apple Inc.,2001:7f8:d:ff::9,0,66,7,Stockholm Sweden,Netnod
+Up,AS2116,ASN-CATCHCOM - Broadnet AS,194.68.123.149,453,0,7,Stockholm Sweden,Netnod
+Up,AS2603,NORDUNET - NORDUnet,194.68.123.24,1869,0,7,Stockholm Sweden,Netnod
+Up,AS3292,TDC - TDC A/S,194.68.123.41,825,0,7,Stockholm Sweden,Netnod
+Up,AS3292,TDC - TDC A/S,2001:7f8:d:ff::41,0,122,7,Stockholm Sweden,Netnod
+Up,AS3301,TELIANET-SWEDEN - Telia Company AB,194.68.123.111,763,0,7,Stockholm Sweden,Netnod
+Up,AS3303,SWISSCOM - Swisscom (Schweiz) AG,194.68.123.116,1797,0,7,Stockholm Sweden,Netnod
+Up,AS3327,CITIC - CITIC Telecom CPC Netherlands B.V.,194.68.123.164,291,0,7,Stockholm Sweden,Netnod
+Up,AS3327,CITIC - CITIC Telecom CPC Netherlands B.V.,2001:7f8:d:ff::164,0,24,7,Stockholm Sweden,Netnod
+Up,AS6667,EUNET-FINLAND - Elisa Oyj,194.68.123.136,734003,0,7,Stockholm Sweden,Netnod
+Up,AS6667,EUNET-FINLAND - Elisa Oyj,2001:7f8:d:ff::136,0,62767,7,Stockholm Sweden,Netnod
+Up,AS6939,HURRICANE - Hurricane Electric LLC,194.68.123.187,115926,0,7,Stockholm Sweden,Netnod
+Up,AS6939,HURRICANE - Hurricane Electric LLC,2001:7f8:d:ff::187,0,63269,7,Stockholm Sweden,Netnod
+Up,AS8220,COLT - COLT Technology Services Group Limited,194.68.123.104,3489,0,7,Stockholm Sweden,Netnod
+Up,AS8220,COLT - COLT Technology Services Group Limited,2001:7f8:d:ff::104,0,324,7,Stockholm Sweden,Netnod
+Up,AS8674,NETNOD-IX - NETNOD Internet Exchange i Sverige AB,194.68.123.73,46,0,7,Stockholm Sweden,Netnod
+Up,AS9002,RETN-AS - RETN Limited,194.68.123.157,740166,0,7,Stockholm Sweden,Netnod
+Up,AS9002,RETN-AS - RETN Limited,2001:7f8:d:ff::157,0,63070,7,Stockholm Sweden,Netnod
+Up,AS13189,LIDERO - Liden Data Internetwork AB,194.68.123.138,68,0,7,Stockholm Sweden,Netnod
+Up,AS16086,DNA - DNA Oyj,194.68.123.152,293,0,7,Stockholm Sweden,Netnod
+Up,AS16086,DNA - DNA Oyj,2001:7f8:d:ff::152,0,38,7,Stockholm Sweden,Netnod
+Up,AS20764,RASCOM-AS - CJSC RASCOM,194.68.123.188,744129,0,7,Stockholm Sweden,Netnod
+Up,AS20764,RASCOM-AS - CJSC RASCOM,2001:7f8:d:ff::188,0,64858,7,Stockholm Sweden,Netnod
+Up,AS24482,SGGS-AS-AP SG.GS,194.68.123.226,738994,0,7,Stockholm Sweden,Netnod
+Up,AS24482,SGGS-AS-AP SG.GS,2001:7f8:d:ff::226,0,64878,7,Stockholm Sweden,Netnod
+Up,AS31027,NIANET-AS - Nianet A/S,194.68.123.22,434,0,7,Stockholm Sweden,Netnod
+Up,AS31027,NIANET-AS - Nianet A/S,2001:7f8:d:ff::22,0,119,7,Stockholm Sweden,Netnod
+Up,AS31133,MF-MGSM-AS - PJSC MegaFon,194.68.123.35,9799,0,7,Stockholm Sweden,Netnod
+Up,AS31133,MF-MGSM-AS - PJSC MegaFon,2001:7f8:d:ff::35,0,630,7,Stockholm Sweden,Netnod
+Up,AS39651,COMHEM-SWEDEN - Com Hem AB,194.68.123.156,19,0,7,Stockholm Sweden,Netnod
+Up,AS39651,COMHEM-SWEDEN - Com Hem AB,2001:7f8:d:ff::156,0,3,7,Stockholm Sweden,Netnod
+Up,AS42473,ANEXIA - ANEXIA Internetdienstleistungs GmbH,194.68.123.18,735792,0,7,Stockholm Sweden,Netnod
+Up,AS42473,ANEXIA - ANEXIA Internetdienstleistungs GmbH,2001:7f8:d:ff::18,0,62882,7,Stockholm Sweden,Netnod
+Up,AS49515,SERVERCENTRALEN - Nordiska Servercentralen AB,194.68.123.125,733398,60739,7,Stockholm Sweden,Netnod
+Up,AS57463,NETIX - NetIX Communications Ltd.,194.68.123.249,6033,0,7,Stockholm Sweden,Netnod
+Up,AS57463,NETIX - NetIX Communications Ltd.,2001:7f8:d:ff::249,0,180,7,Stockholm Sweden,Netnod
+Up,AS5392,TELNET-ITALY - TELNET S.r.l.,2001:7f8:b:100:1d1:a5d0:5392:5,0,5,10,Milan Italy,MIX
+Up,AS5392,TELNET-ITALY - TELNET S.r.l.,217.29.66.5,730882,0,10,Milan Italy,MIX
+Up,AS5396,AS-IRIDEOS-MC - IRIDEOS S.P.A.,2001:7f8:b:100:1d1:a5d0:5396:4,0,29466,10,Milan Italy,MIX
+Up,AS5396,AS-IRIDEOS-MC - IRIDEOS S.P.A.,217.29.66.4,731446,0,10,Milan Italy,MIX
+Up,AS5602,AS-IRIDEOS-KP - IRIDEOS S.P.A.,2001:7f8:b:100:1d1:a5d0:5602:10,0,9,10,Milan Italy,MIX
+Up,AS5602,AS-IRIDEOS-KP - IRIDEOS S.P.A.,217.29.66.10,731198,0,10,Milan Italy,MIX
+Up,AS6939,HURRICANE - Hurricane Electric LLC,2001:7f8:b:100:1d1:a5d0:6939:125,0,63269,10,Milan Italy,MIX
+Up,AS6939,HURRICANE - Hurricane Electric LLC,217.29.66.125,115950,0,10,Milan Italy,MIX
+Up,AS8220,COLT - COLT Technology Services Group Limited,2001:7f8:b:100:1d1:a5d0:8220:68,0,324,10,Milan Italy,MIX
+Up,AS8220,COLT - COLT Technology Services Group Limited,217.29.66.68,3489,0,10,Milan Italy,MIX
+Up,AS8224,INTERCOM-AS - Intercom s.r.l.,217.29.66.54,4,0,10,Milan Italy,MIX
+Up,AS8816,IT-STCOM - Metrolink S.R.L.,217.29.66.62,11,0,10,Milan Italy,MIX
+Up,AS9026,ULI-MAIN - Utility Line Italia S.r.l.,217.29.66.24,5,0,10,Milan Italy,MIX
+Up,AS12637,SEEWEB - SEEWEB s.r.l.,2001:7f8:b:100:1d1:a5d1:2637:86,0,63205,10,Milan Italy,MIX
+Up,AS12637,SEEWEB - SEEWEB s.r.l.,217.29.66.86,733804,0,10,Milan Italy,MIX
+Up,AS12779,ITGATE - IT.Gate S.p.A.,2001:7f8:b:100:1d1:a5d1:2779:65,0,63102,10,Milan Italy,MIX
+Up,AS12779,ITGATE - IT.Gate S.p.A.,217.29.66.65,733938,0,10,Milan Italy,MIX
+Up,AS15605,CONNESI - Connesi s.p.a.,2001:7f8:b:100:1d1:a5d1:5605:120,0,64884,10,Milan Italy,MIX
+Up,AS15605,CONNESI - Connesi s.p.a.,217.29.66.120,742025,0,10,Milan Italy,MIX
+Up,AS16004,MIXITA-AS - MIX S.r.L. - Milan Internet eXchange,2001:7f8:b:100:1d1:a5d1:6004:1,0,1,10,Milan Italy,MIX
+Up,AS20811,BRENNERCOM-AS - Brennercom S.p.A.,2001:7f8:b:100:1d1:a5d2:811:88,0,62728,10,Milan Italy,MIX
+Up,AS20811,BRENNERCOM-AS - Brennercom S.p.A.,217.29.66.88,732193,0,10,Milan Italy,MIX
+Up,AS20912,"ASN-PANSERVICE - Giuliano Claudio Peritore trading as ""Panservice s.a.s. di Cuseo Fabrizio & C.""",2001:7f8:b:100:1d1:a5d2:912:54,0,64597,10,Milan Italy,MIX
+Up,AS20912,"ASN-PANSERVICE - Giuliano Claudio Peritore trading as ""Panservice s.a.s. di Cuseo Fabrizio & C.""",217.29.67.54,737650,0,10,Milan Italy,MIX
+Up,AS21320,GEANT_IAS_VRF - GEANT Vereniging,2001:7f8:b:100:1d1:a5d2:965:183,0,181,10,Milan Italy,MIX
+Up,AS21320,GEANT_IAS_VRF - GEANT Vereniging,217.29.66.183,1453,0,10,Milan Italy,MIX
+Up,AS24482,SGGS-AS-AP SG.GS,2001:7f8:b:100:1d1:a5d2:4482:158,0,64882,10,Milan Italy,MIX
+Up,AS24482,SGGS-AS-AP SG.GS,217.29.66.158,738985,0,10,Milan Italy,MIX
+Up,AS24880,EPRESS-AS - EPRESS S.P.A.,217.29.66.60,1,0,10,Milan Italy,MIX
+Up,AS28929,ASDASD-AS - ASDASD srl a socio unico,2001:7f8:b:100:1d1:a5d2:8929:30,0,1,10,Milan Italy,MIX
+Up,AS28929,ASDASD-AS - ASDASD srl a socio unico,217.29.66.30,129358,0,10,Milan Italy,MIX
+Up,AS29449,IP-TELECOM-AS - ip telecom srl,2001:7f8:b:100:1d1:a5d2:9449:87,0,1,10,Milan Italy,MIX
+Up,AS29449,IP-TELECOM-AS - ip telecom srl,217.29.66.87,2,0,10,Milan Italy,MIX
+Up,AS32934,FACEBOOK - Facebook,217.29.66.131,35,0,10,Milan Italy,MIX
+Up,AS41497,AS_INTERACTIVE - Qcom spa,2001:7f8:b:100:1d1:a5d4:1497:108,0,64613,10,Milan Italy,MIX
+Up,AS41497,AS_INTERACTIVE - Qcom spa,217.29.66.108,731569,0,10,Milan Italy,MIX
+Up,AS49605,DTS-AS - Digital Telecommunication Services S.r.l.,2001:7f8:b:100:1d1:a5d4:9605:127,0,64869,10,Milan Italy,MIX
+Up,AS49605,DTS-AS - Digital Telecommunication Services S.r.l.,217.29.66.127,747206,0,10,Milan Italy,MIX
+Up,AS50877,AIRBEAM-AS - Airbeam S.r.l.,2001:7f8:b:100:1d1:a5d5:877:225,0,62542,10,Milan Italy,MIX
+Up,AS50877,AIRBEAM-AS - Airbeam S.r.l.,217.29.66.225,732125,0,10,Milan Italy,MIX
+Up,AS51185,ONECOM-AS - Onecom Global Communications LTD,217.29.66.102,739939,0,10,Milan Italy,MIX
+Up,AS57111,ALTITUD - ALTITUD S.r.l.,2001:7f8:b:100:1d1:a5d5:7111:13,0,1,10,Milan Italy,MIX
+Up,AS57111,ALTITUD - ALTITUD S.r.l.,217.29.67.13,2,0,10,Milan Italy,MIX
+Up,AS57463,NETIX - NetIX Communications Ltd.,217.29.66.216,6387,0,10,Milan Italy,MIX
+Up,AS60501,SIRIUSTEC-IT - Sirius Technology SRL,2001:7f8:b:100:1d1:a5d6:501:138,0,63235,10,Milan Italy,MIX
+Up,AS60501,SIRIUSTEC-IT - Sirius Technology SRL,217.29.66.138,735481,0,10,Milan Italy,MIX
+Up,AS62166,SPADHAUSEN - Spadhausen SRL Unipersonale,2001:7f8:b:100:1d1:a5d6:2166:36,0,1,10,Milan Italy,MIX
+Up,AS62166,SPADHAUSEN - Spadhausen SRL Unipersonale,217.29.67.36,9,0,10,Milan Italy,MIX
+Up,AS196753,FIBERTELECOM-AS - Fiber Telecom S.p.A.,2001:7f8:b:100:1d1:a519:6753:51,0,62305,10,Milan Italy,MIX
+Up,AS196753,FIBERTELECOM-AS - Fiber Telecom S.p.A.,217.29.67.51,727910,0,10,Milan Italy,MIX
+Up,AS199324,DODONET - EL.COM. S.R.L.,2001:7f8:b:100:1d1:a519:9324:23,0,2,10,Milan Italy,MIX
+Up,AS199324,DODONET - EL.COM. S.R.L.,217.29.67.23,9,0,10,Milan Italy,MIX
+Up,AS201950,NEXTIT - Next.it S.r.l.,2001:7f8:b:100:1d1:a520:1950:12,0,2,10,Milan Italy,MIX
+Up,AS201950,NEXTIT - Next.it S.r.l.,217.29.67.12,6,0,10,Milan Italy,MIX
+Up,AS202032,GOLINE - GOLINE SA,2001:7f8:b:100:1d1:a520:2032:192,0,63278,10,Milan Italy,MIX
+Up,AS202032,GOLINE - GOLINE SA,217.29.66.192,130095,0,10,Milan Italy,MIX
+Up,AS203201,IT-SUPERNAP - SUPERNAP Italia S.r.l.,2001:7f8:b:100:1d1:a520:3201:218,0,4,10,Milan Italy,MIX
+Up,AS203201,IT-SUPERNAP - SUPERNAP Italia S.r.l.,217.29.66.218,22,0,10,Milan Italy,MIX
+Up,AS2497,IIJ Internet Initiative Japan Inc.,198.32.160.42,737402,0,11,New York City US,NYIIX
+Up,AS2497,IIJ Internet Initiative Japan Inc.,2001:504:1::a500:2497:1,0,62702,11,New York City US,NYIIX
+Up,AS2516,KDDI KDDI CORPORATION,198.32.160.25,6063,0,11,New York City US,NYIIX
+Up,AS6233,XTOM - xTom,198.32.160.187,159847,0,11,New York City US,NYIIX
+Up,AS6233,XTOM - xTom,2001:504:1::a500:6233:1,0,63467,11,New York City US,NYIIX
+Up,AS6939,HURRICANE - Hurricane Electric LLC,198.32.160.61,130162,0,11,New York City US,NYIIX
+Up,AS6939,HURRICANE - Hurricane Electric LLC,2001:504:1::a500:6939:1,0,63479,11,New York City US,NYIIX
+Up,AS8966,ETISALAT-AS - Emirates Telecommunications Corporation,198.32.160.45,3580,0,11,New York City US,NYIIX
+Up,AS9002,RETN-AS - RETN Limited,198.32.160.182,740692,0,11,New York City US,NYIIX
+Up,AS9002,RETN-AS - RETN Limited,2001:504:1::a500:9002:1,0,63269,11,New York City US,NYIIX
+Up,AS9304,HUTCHISON-AS-AP HGC Global Communications Limited,198.32.160.39,733993,0,11,New York City US,NYIIX
+Up,AS9304,HUTCHISON-AS-AP HGC Global Communications Limited,2001:504:1::a500:9304:1,0,64828,11,New York City US,NYIIX
+Up,AS10310,YAHOO-1 - Yahoo!,198.32.160.121,254,0,11,New York City US,NYIIX
+Up,AS10310,YAHOO-1 - Yahoo!,2001:504:1::a501:310:1,0,92,11,New York City US,NYIIX
+Up,AS10848,DELL-SERVICES - Dell Marketing USA,198.32.160.108,4,0,11,New York City US,NYIIX
+Up,AS10848,DELL-SERVICES - Dell Marketing USA,2001:504:1::a501:848:1,0,1,11,New York City US,NYIIX
+Up,AS11403,NYINTERNET - NYI,198.32.160.87,72,0,11,New York City US,NYIIX
+Up,AS13030,INIT7 - Init7 (Switzerland) Ltd.,198.32.160.103,733714,0,11,New York City US,NYIIX
+Up,AS13030,INIT7 - Init7 (Switzerland) Ltd.,2001:504:1::a501:3030:1,0,50381,11,New York City US,NYIIX
+Up,AS15547,NETPLUS - netplus.ch SA,198.32.160.113,748223,0,11,New York City US,NYIIX
+Up,AS15547,NETPLUS - netplus.ch SA,2001:504:1::a501:5547:1,0,65200,11,New York City US,NYIIX
+Up,AS15695,EXPEREO - Expereo International BV,198.32.160.175,17,0,11,New York City US,NYIIX
+Up,AS15695,EXPEREO - Expereo International BV,2001:504:1::a501:5695:1,0,1,11,New York City US,NYIIX
+Up,AS16570,TELOIP-SW-ASN - AgniCorp Inc.,198.32.160.40,11,0,11,New York City US,NYIIX
+Up,AS19151,WVFIBER-1 - WV FIBER,198.32.160.137,735949,0,11,New York City US,NYIIX
+Up,AS19151,WVFIBER-1 - WV FIBER,2001:504:1::a501:9151:1,0,66290,11,New York City US,NYIIX
+Up,AS20940,AKAMAI-ASN1 - Akamai International B.V.,198.32.160.47,26,0,11,New York City US,NYIIX
+Up,AS20940,AKAMAI-ASN1 - Akamai International B.V.,2001:504:1::a502:940:1,0,4,11,New York City US,NYIIX
+Up,AS22691,ISPNET-1 - ISPnet,198.32.160.15,72,0,11,New York City US,NYIIX
+Up,AS22691,ISPNET-1 - ISPnet,198.32.160.60,73,0,11,New York City US,NYIIX
+Up,AS24482,SGGS-AS-AP SG.GS,198.32.160.242,739312,0,11,New York City US,NYIIX
+Up,AS24482,SGGS-AS-AP SG.GS,2001:504:1::a502:4482:1,0,65068,11,New York City US,NYIIX
+Up,AS27257,WEBAIR-INTERNET - Webair Internet Development Company Inc.,198.32.160.100,124,0,11,New York City US,NYIIX
+Up,AS29838,AMC - Atlantic Metro Communications,198.32.160.107,132,0,11,New York City US,NYIIX
+Up,AS42473,ANEXIA - ANEXIA Internetdienstleistungs GmbH,198.32.160.11,756174,0,11,New York City US,NYIIX
+Up,AS42473,ANEXIA - ANEXIA Internetdienstleistungs GmbH,2001:504:1::a504:2473:1,0,64705,11,New York City US,NYIIX
+Up,AS46450,PILOT - Pilot Fiber,198.32.160.124,148,0,11,New York City US,NYIIX
+Up,AS46450,PILOT - Pilot Fiber,2001:504:1::a504:6450:1,0,14,11,New York City US,NYIIX
+Up,AS51185,ONECOM-AS - Onecom Global Communications LTD,198.32.160.168,740620,0,11,New York City US,NYIIX
+Up,AS397143,NEPTUNE-NETWORKS - Neptune Networks,198.32.160.58,168844,0,11,New York City US,NYIIX
+Up,AS397143,NEPTUNE-NETWORKS - Neptune Networks,2001:504:1::a539:7143:1,0,63477,11,New York City US,NYIIX
+Up,AS286,KPN - KPN B.V.,2001:7f8::11e:0:1,0,62727,12,Frankfurt Germany,DE-CIX
+Up,AS553,BELWUE - Universitaet Stuttgart,2001:7f8::229:0:1,0,64018,12,Frankfurt Germany,DE-CIX
+Up,AS553,BELWUE - Universitaet Stuttgart,80.81.192.175,743080,0,12,Frankfurt Germany,DE-CIX
+Up,AS680,DFN - Verein zur Foerderung eines Deutschen Forschungsnetzes e.V.,2001:7f8::2a8:0:1,0,63589,12,Frankfurt Germany,DE-CIX
+Up,AS680,DFN - Verein zur Foerderung eines Deutschen Forschungsnetzes e.V.,80.81.192.222,740082,0,12,Frankfurt Germany,DE-CIX
+Up,AS2857,RLP-NET - Johannes Gutenberg-Universitaet Mainz,2001:7f8::b29:0:1,0,64888,12,Frankfurt Germany,DE-CIX
+Up,AS2914,NTT-COMMUNICATIONS-2914 - NTT America,2001:7f8::b62:0:1,0,62500,12,Frankfurt Germany,DE-CIX
+Up,AS2914,NTT-COMMUNICATIONS-2914 - NTT America,80.81.192.46,730976,0,12,Frankfurt Germany,DE-CIX
+Up,AS3257,GTT-BACKBONE - GTT Communications Inc.,2001:7f8::cb9:0:1,0,62510,12,Frankfurt Germany,DE-CIX
+Up,AS3257,GTT-BACKBONE - GTT Communications Inc.,80.81.192.30,217067,0,12,Frankfurt Germany,DE-CIX
+Up,AS5413,AS5413 - Daisy Communications Ltd,2001:7f8::1525:0:1,0,13,12,Frankfurt Germany,DE-CIX
+Up,AS5413,AS5413 - Daisy Communications Ltd,80.81.192.11,142,0,12,Frankfurt Germany,DE-CIX
+Up,AS5430,FREENETDE - freenet Datenkommunikations GmbH,80.81.192.49,20,0,12,Frankfurt Germany,DE-CIX
+Up,AS6461,ZAYO-6461 - Zayo Bandwidth,2001:7f8::193d:0:1,0,3585,12,Frankfurt Germany,DE-CIX
+Up,AS6461,ZAYO-6461 - Zayo Bandwidth,80.81.194.26,63640,0,12,Frankfurt Germany,DE-CIX
+Up,AS6667,EUNET-FINLAND - Elisa Oyj,2001:7f8::1a0b:0:1,0,62967,12,Frankfurt Germany,DE-CIX
+Up,AS6762,SEABONE-NET - TELECOM ITALIA SPARKLE S.p.A.,2001:7f8::1a6a:0:1,0,62595,12,Frankfurt Germany,DE-CIX
+Up,AS6762,SEABONE-NET - TELECOM ITALIA SPARKLE S.p.A.,80.81.192.194,731695,0,12,Frankfurt Germany,DE-CIX
+Up,AS6774,ASN-BICS - Belgacom International Carrier Services SA,2001:7f8::1a76:0:1,0,52,12,Frankfurt Germany,DE-CIX
+Up,AS6830,LGI-UPC - Liberty Global B.V.,2001:7f8::1aae:0:2,0,990,12,Frankfurt Germany,DE-CIX
+Up,AS6830,LGI-UPC - Liberty Global B.V.,80.81.192.111,12893,0,12,Frankfurt Germany,DE-CIX
+Up,AS6866,CYTA-NETWORK - Cyprus Telecommunications Authority,2001:7f8::1ad2:0:1,0,9,12,Frankfurt Germany,DE-CIX
+Up,AS6866,CYTA-NETWORK - Cyprus Telecommunications Authority,80.81.193.153,153,0,12,Frankfurt Germany,DE-CIX
+Up,AS6939,HURRICANE - Hurricane Electric LLC,2001:7f8::1b1b:0:1,0,63479,12,Frankfurt Germany,DE-CIX
+Up,AS6939,HURRICANE - Hurricane Electric LLC,80.81.192.172,130162,0,12,Frankfurt Germany,DE-CIX
+Up,AS8220,COLT - COLT Technology Services Group Limited,2001:7f8::201c:0:1,0,334,12,Frankfurt Germany,DE-CIX
+Up,AS8220,COLT - COLT Technology Services Group Limited,2001:7f8::201c:0:2,0,334,12,Frankfurt Germany,DE-CIX
+Up,AS8220,COLT - COLT Technology Services Group Limited,80.81.192.61,3368,0,12,Frankfurt Germany,DE-CIX
+Up,AS8220,COLT - COLT Technology Services Group Limited,80.81.193.61,3368,0,12,Frankfurt Germany,DE-CIX
+Up,AS8222,NETPLACE - netplace Telematic GmbH,80.81.194.82,734321,0,12,Frankfurt Germany,DE-CIX
+Up,AS8319,NETHINKS-AS - NETHINKS GmbH,2001:7f8::207f:0:1,0,2,12,Frankfurt Germany,DE-CIX
+Up,AS8319,NETHINKS-AS - NETHINKS GmbH,80.81.193.94,14,0,12,Frankfurt Germany,DE-CIX
+Up,AS8359,MTS - MTS PJSC,2001:7f8::20a7:0:1,0,324,12,Frankfurt Germany,DE-CIX
+Up,AS8359,MTS - MTS PJSC,80.81.192.78,6302,0,12,Frankfurt Germany,DE-CIX
+Up,AS8365,MANDA - Man-da.de GmbH,2001:7f8::20ad:0:1,0,12,12,Frankfurt Germany,DE-CIX
+Up,AS8365,MANDA - Man-da.de GmbH,80.81.192.6,54,0,12,Frankfurt Germany,DE-CIX
+Up,AS8447,TELEKOM-AT - A1 Telekom Austria AG,80.81.192.69,804,0,12,Frankfurt Germany,DE-CIX
+Up,AS8551,BEZEQ-INTERNATIONAL-AS - Bezeq International-Ltd,80.81.192.191,1431,0,12,Frankfurt Germany,DE-CIX
+Up,AS8560,ONEANDONE-AS - 1&1 Internet SE,80.81.192.123,308,0,12,Frankfurt Germany,DE-CIX
+Up,AS8648,KAMP-DE - KAMP Netzwerkdienste GmbH,80.81.192.42,7,0,12,Frankfurt Germany,DE-CIX
+Up,AS8708,RCS-RDS - RCS & RDS SA,2001:7f8::2204:0:1,0,41,12,Frankfurt Germany,DE-CIX
+Up,AS8708,RCS-RDS - RCS & RDS SA,80.81.192.87,843,0,12,Frankfurt Germany,DE-CIX
+Up,AS8763,DENIC-AS - DENIC eG,2001:7f8::223b:0:1,0,13,12,Frankfurt Germany,DE-CIX
+Up,AS9002,RETN-AS - RETN Limited,2001:7f8::232a:0:1,0,63269,12,Frankfurt Germany,DE-CIX
+Up,AS9063,SAARGATE-AS - VSE NET GmbH,80.81.192.100,123,0,12,Frankfurt Germany,DE-CIX
+Up,AS12355,HAMCOM-DE - HeLi NET Telekommunication GmbH & Co.,2001:7f8::3043:0:1,0,9,12,Frankfurt Germany,DE-CIX
+Up,AS12355,HAMCOM-DE - HeLi NET Telekommunication GmbH & Co.,80.81.192.240,15,0,12,Frankfurt Germany,DE-CIX
+Up,AS12713,OTEGLOBE - OTEGlobe - OTE Global Solutions SA,80.81.192.207,3543,0,12,Frankfurt Germany,DE-CIX
+Up,AS13030,INIT7 - Init7 (Switzerland) Ltd.,2001:7f8::32e6:0:1,0,50851,12,Frankfurt Germany,DE-CIX
+Up,AS13101,TNG-AS - ennit server GmbH,80.81.192.83,263,0,12,Frankfurt Germany,DE-CIX
+Up,AS15600,FINECOM - Quickline AG,80.81.192.138,129,0,12,Frankfurt Germany,DE-CIX
+Up,AS20811,BRENNERCOM-AS - Brennercom S.p.A.,2001:7f8::514b:0:1,0,62935,12,Frankfurt Germany,DE-CIX
+Up,AS20811,BRENNERCOM-AS - Brennercom S.p.A.,80.81.194.131,732766,0,12,Frankfurt Germany,DE-CIX
+Up,AS20940,AKAMAI-ASN1 - Akamai International B.V.,80.81.192.168,43,0,12,Frankfurt Germany,DE-CIX
+Up,AS20940,AKAMAI-ASN1 - Akamai International B.V.,80.81.192.28,47,0,12,Frankfurt Germany,DE-CIX
+Up,AS21263,TELEDATA-AS - TeleData GmbH,2001:7f8::530f:0:1,0,8,12,Frankfurt Germany,DE-CIX
+Up,AS21263,TELEDATA-AS - TeleData GmbH,80.81.192.250,24,0,12,Frankfurt Germany,DE-CIX
+Up,AS21320,GEANT_IAS_VRF - GEANT Vereniging,2001:7f8::51e5:0:1,0,181,12,Frankfurt Germany,DE-CIX
+Up,AS21320,GEANT_IAS_VRF - GEANT Vereniging,80.81.192.173,1461,0,12,Frankfurt Germany,DE-CIX
+Up,AS21336,INFORENT-AS - INFORENT GmbH,80.81.192.189,2,0,12,Frankfurt Germany,DE-CIX
+Up,AS21385,TNIB - Trusted Network GmbH,80.81.192.79,459,0,12,Frankfurt Germany,DE-CIX
+Up,AS25220,GLOBALNOC-AS - equada network GmbH,2001:7f8::6284:0:1,0,64984,12,Frankfurt Germany,DE-CIX
+Up,AS25220,GLOBALNOC-AS - equada network GmbH,80.81.194.140,743210,0,12,Frankfurt Germany,DE-CIX
+Up,AS29140,HOSTSERVER-AS - Hostserver GmbH,2001:7f8::71d4:0:1,0,64873,12,Frankfurt Germany,DE-CIX
+Up,AS29140,HOSTSERVER-AS - Hostserver GmbH,80.81.194.59,734890,0,12,Frankfurt Germany,DE-CIX
+Up,AS29686,PROBENETWORKS-AS - Probe Networks,2001:7f8::73f6:0:1,0,65237,12,Frankfurt Germany,DE-CIX
+Up,AS29686,PROBENETWORKS-AS - Probe Networks,80.81.192.133,733723,0,12,Frankfurt Germany,DE-CIX
+Up,AS31027,NIANET-AS - Nianet A/S,2001:7f8::7933:0:1,0,121,12,Frankfurt Germany,DE-CIX
+Up,AS31027,NIANET-AS - Nianet A/S,80.81.194.79,436,0,12,Frankfurt Germany,DE-CIX
+Up,AS31042,SERBIA-BROADBAND-AS - Serbia BroadBand-Srpske Kablovske mreze d.o.o.,2001:7f8::7942:0:1,0,1,12,Frankfurt Germany,DE-CIX
+Up,AS31042,SERBIA-BROADBAND-AS - Serbia BroadBand-Srpske Kablovske mreze d.o.o.,80.81.194.190,403,0,12,Frankfurt Germany,DE-CIX
+Up,AS32934,FACEBOOK - Facebook,80.81.194.40,38,0,12,Frankfurt Germany,DE-CIX
+Up,AS32934,FACEBOOK - Facebook,80.81.195.40,38,0,12,Frankfurt Germany,DE-CIX
+Up,AS33891,CORE-BACKBONE - Core-Backbone GmbH,2001:7f8::8463:0:1,0,1119,12,Frankfurt Germany,DE-CIX
+Up,AS33891,CORE-BACKBONE - Core-Backbone GmbH,80.81.192.187,4633,0,12,Frankfurt Germany,DE-CIX
+Up,AS34288,AS34288 - Kantonsschule Zug,2001:7f8::85f0:0:1,0,66669,12,Frankfurt Germany,DE-CIX
+Up,AS34288,AS34288 - Kantonsschule Zug,80.81.194.119,756494,0,12,Frankfurt Germany,DE-CIX
+Up,AS35320,ETT-AS - Eurotranstelecom Ltd,2001:7f8::89f8:0:1,0,112,12,Frankfurt Germany,DE-CIX
+Up,AS35320,ETT-AS - Eurotranstelecom Ltd,80.81.192.113,2294,0,12,Frankfurt Germany,DE-CIX
+Up,AS42708,PORTLANE - GleSYS AB,2001:7f8::a6d4:0:1,0,105,12,Frankfurt Germany,DE-CIX
+Up,AS42708,PORTLANE - GleSYS AB,80.81.194.215,649,0,12,Frankfurt Germany,DE-CIX
+Up,AS47147,AS-ANX - ANEXIA Internetdienstleistungs GmbH,2001:7f8::a5e9:0:3,0,62567,12,Frankfurt Germany,DE-CIX
+Up,AS47147,AS-ANX - ANEXIA Internetdienstleistungs GmbH,80.81.195.166,734149,0,12,Frankfurt Germany,DE-CIX
+Up,AS47441,"TRUNKM - TRUNK MOBILE, INC",80.81.193.128,747267,0,12,Frankfurt Germany,DE-CIX
+Up,AS47692,NESSUS - Nessus GmbH,2001:7f8::ba4c:0:1,0,65047,12,Frankfurt Germany,DE-CIX
+Up,AS47692,NESSUS - Nessus GmbH,80.81.194.100,743373,0,12,Frankfurt Germany,DE-CIX
+Up,AS47950,LNK - LNK Systems Muntenia SRL,2001:7f8::bb4e:0:1,0,64330,12,Frankfurt Germany,DE-CIX
+Up,AS47950,LNK - LNK Systems Muntenia SRL,80.81.195.243,730639,0,12,Frankfurt Germany,DE-CIX
+Up,AS50384,W-IX_LTD - W-IX LTD,80.81.194.83,3165,0,12,Frankfurt Germany,DE-CIX
+Up,AS57111,ALTITUD - ALTITUD S.r.l.,2001:7f8::df17:0:1,0,657,12,Frankfurt Germany,DE-CIX
+Up,AS57111,ALTITUD - ALTITUD S.r.l.,80.81.194.92,2,0,12,Frankfurt Germany,DE-CIX
+Up,AS60169,GFIT-AS - G-FIT Gesellschaft fuer innovative Telekommunikationsdienste mbH & Co. KG,2001:7f8::eb09:0:1,0,18,12,Frankfurt Germany,DE-CIX
+Up,AS60169,GFIT-AS - G-FIT Gesellschaft fuer innovative Telekommunikationsdienste mbH & Co. KG,80.81.192.52,117,0,12,Frankfurt Germany,DE-CIX
+Up,AS60501,SIRIUSTEC-IT - Sirius Technology SRL,2001:7f8::ec55:0:1,0,63430,12,Frankfurt Germany,DE-CIX
+Up,AS60501,SIRIUSTEC-IT - Sirius Technology SRL,80.81.195.14,736051,0,12,Frankfurt Germany,DE-CIX
+Up,AS206356,FREIFUNK-ESSEN - Freifunk Essen e.V.,2001:7f8::3:2614:0:1,0,65005,12,Frankfurt Germany,DE-CIX
+Up,AS206356,FREIFUNK-ESSEN - Freifunk Essen e.V.,80.81.195.178,743564,0,12,Frankfurt Germany,DE-CIX
+Up,AS2854,ROSPRINT-AS - LLC Equant,195.208.210.19,244,0,13,Moscow Russian Federation,MSK-IX
+Up,AS2854,ROSPRINT-AS - LLC Equant,2001:7f8:20:101::210:19,0,14,13,Moscow Russian Federation,MSK-IX
+Up,AS2895,FREE-NET-AS - OOO FREEnet Group,195.208.208.36,745324,0,13,Moscow Russian Federation,MSK-IX
+Up,AS3267,RUNNET - The federal state autonomous educational establishment of additional professional education Center of Realization of State Educational Policy and Informational Technologies,195.208.208.44,2905,0,13,Moscow Russian Federation,MSK-IX
+Up,AS3267,RUNNET - The federal state autonomous educational establishment of additional professional education Center of Realization of State Educational Policy and Informational Technologies,2001:7f8:20:101::208:44,0,228,13,Moscow Russian Federation,MSK-IX
+Up,AS6866,CYTA-NETWORK - Cyprus Telecommunications Authority,195.208.208.188,136,0,13,Moscow Russian Federation,MSK-IX
+Up,AS6866,CYTA-NETWORK - Cyprus Telecommunications Authority,2001:7f8:20:101::208:188,0,9,13,Moscow Russian Federation,MSK-IX
+Up,AS6939,HURRICANE - Hurricane Electric LLC,195.208.210.40,116967,0,13,Moscow Russian Federation,MSK-IX
+Up,AS6939,HURRICANE - Hurricane Electric LLC,2001:7f8:20:101::210:40,0,29546,13,Moscow Russian Federation,MSK-IX
+Up,AS8331,RINET-AS - Cronyx Plus Ltd.,195.208.208.111,119,0,13,Moscow Russian Federation,MSK-IX
+Up,AS8359,MTS - MTS PJSC,195.208.208.30,6831,0,13,Moscow Russian Federation,MSK-IX
+Up,AS8470,MACOMNET - JSC Macomnet,195.208.208.59,59,0,13,Moscow Russian Federation,MSK-IX
+Up,AS8470,MACOMNET - JSC Macomnet,2001:7f8:20:101::208:59,0,11,13,Moscow Russian Federation,MSK-IX
+Up,AS9002,RETN-AS - RETN Limited,195.208.208.187,740692,0,13,Moscow Russian Federation,MSK-IX
+Up,AS20764,RASCOM-AS - CJSC RASCOM,195.208.208.223,744754,0,13,Moscow Russian Federation,MSK-IX
+Up,AS20764,RASCOM-AS - CJSC RASCOM,2001:7f8:20:101::208:223,0,65075,13,Moscow Russian Federation,MSK-IX
+Up,AS24482,SGGS-AS-AP SG.GS,195.208.209.109,739577,0,13,Moscow Russian Federation,MSK-IX
+Up,AS24482,SGGS-AS-AP SG.GS,2001:7f8:20:101::209:109,0,65089,13,Moscow Russian Federation,MSK-IX
+Up,AS25091,IP-MAX - IP-Max SA,195.208.209.93,736476,0,13,Moscow Russian Federation,MSK-IX
+Up,AS25091,IP-MAX - IP-Max SA,2001:7f8:20:101::209:93,0,64949,13,Moscow Russian Federation,MSK-IX
+Up,AS25227,"ASN-AVANTEL-MSK - Avantel, Close Joint Stock Company",195.208.209.174,748059,0,13,Moscow Russian Federation,MSK-IX
+Up,AS28917,"FIORD-AS - LLC ""TRC FIORD""",195.208.208.147,744989,64810,13,Moscow Russian Federation,MSK-IX
+Up,AS28917,"FIORD-AS - LLC ""TRC FIORD""",2001:7f8:20:101::208:147,0,64814,13,Moscow Russian Federation,MSK-IX
+Up,AS29479,TRANSDATA - Transdata AS,195.208.209.55,743421,0,13,Moscow Russian Federation,MSK-IX
+Up,AS29479,TRANSDATA - Transdata AS,2001:7f8:20:101::209:55,0,2,13,Moscow Russian Federation,MSK-IX
+Up,AS30733,"GLOBUS-AS - JSC ""Globus-Telecom""",195.208.208.170,48,0,13,Moscow Russian Federation,MSK-IX
+Up,AS30733,"GLOBUS-AS - JSC ""Globus-Telecom""",2001:7f8:20:101::208:170,0,2,13,Moscow Russian Federation,MSK-IX
+Up,AS39821,CANMOS-AS - OOO Versiya,195.208.208.15,751450,0,13,Moscow Russian Federation,MSK-IX
+Up,AS41095,IPTP - IPTP LTD,195.208.209.4,733223,0,13,Moscow Russian Federation,MSK-IX
+Up,AS41617,SOLID-IFC - CJSC IFC Solid,195.208.208.168,1,0,13,Moscow Russian Federation,MSK-IX
+Up,AS41617,SOLID-IFC - CJSC IFC Solid,2001:7f8:20:101::208:168,0,1,13,Moscow Russian Federation,MSK-IX
+Up,AS41722,MIRAN-AS - Miran Ltd.,195.208.210.52,754112,0,13,Moscow Russian Federation,MSK-IX
+Up,AS41722,MIRAN-AS - Miran Ltd.,2001:7f8:20:101::210:52,0,65642,13,Moscow Russian Federation,MSK-IX
+Up,AS44030,OTRADNOE-AS - OtradnoeNet Ltd.,2001:7f8:20:101::209:70,0,1,13,Moscow Russian Federation,MSK-IX
+Up,AS47441,"TRUNKM - TRUNK MOBILE, INC",195.208.210.33,747267,0,13,Moscow Russian Federation,MSK-IX
+Up,AS42,WOODYNET-1 - WoodyNet,198.32.176.53,188,0,14,Palo Alto California,PAIX
+Up,AS714,APPLE-ENGINEERING - Apple Inc.,198.32.176.237,655,0,14,Palo Alto California,PAIX
+Up,AS714,APPLE-ENGINEERING - Apple Inc.,2001:504:d::714:1,0,77,14,Palo Alto California,PAIX
+Up,AS1280,ISC-AS-1280 - Internet Systems Consortium,198.32.176.3,759020,0,14,Palo Alto California,PAIX
+Up,AS1280,ISC-AS-1280 - Internet Systems Consortium,2001:504:d::1,0,65114,14,Palo Alto California,PAIX
+Up,AS2497,IIJ Internet Initiative Japan Inc.,198.32.176.24,737397,0,14,Palo Alto California,PAIX
+Up,AS2497,IIJ Internet Initiative Japan Inc.,2001:504:d::2,0,62701,14,Palo Alto California,PAIX
+Up,AS2914,NTT-COMMUNICATIONS-2914 - NTT America,198.32.176.14,730930,0,14,Palo Alto California,PAIX
+Up,AS2914,NTT-COMMUNICATIONS-2914 - NTT America,2001:504:d::6,0,62499,14,Palo Alto California,PAIX
+Up,AS3292,TDC - TDC A/S,198.32.176.101,818,0,14,Palo Alto California,PAIX
+Up,AS3856,PCH-AS - Packet Clearing House,198.32.176.249,1,0,14,Palo Alto California,PAIX
+Up,AS4780,SEEDNET Digital United Inc.,198.32.176.130,1351,0,14,Palo Alto California,PAIX
+Up,AS6762,SEABONE-NET - TELECOM ITALIA SPARKLE S.p.A.,198.32.176.70,731692,0,14,Palo Alto California,PAIX
+Up,AS6762,SEABONE-NET - TELECOM ITALIA SPARKLE S.p.A.,2001:504:d::46,0,62601,14,Palo Alto California,PAIX
+Up,AS6939,HURRICANE - Hurricane Electric LLC,198.32.176.20,117405,0,14,Palo Alto California,PAIX
+Up,AS6939,HURRICANE - Hurricane Electric LLC,2001:504:d::10,0,63479,14,Palo Alto California,PAIX
+Up,AS7575,AARNET-AS-AP Australian Academic and Reasearch Network (AARNet),198.32.176.177,745864,0,14,Palo Alto California,PAIX
+Up,AS7575,AARNET-AS-AP Australian Academic and Reasearch Network (AARNet),2001:504:d::b1,0,65142,14,Palo Alto California,PAIX
+Up,AS9264,ASNET Academic Sinica Network,2001:504:d::ae,0,31,14,Palo Alto California,PAIX
+Up,AS9505,TWGATE-AP Taiwan Internet Gateway,198.32.176.160,4382,0,14,Palo Alto California,PAIX
+Up,AS9505,TWGATE-AP Taiwan Internet Gateway,2001:504:d::a0,0,146,14,Palo Alto California,PAIX
+Up,AS14061,DIGITALOCEAN-ASN - DigitalOcean,198.32.176.147,732581,0,14,Palo Alto California,PAIX
+Up,AS14907,WIKIMEDIA - Wikimedia Foundation Inc.,198.32.176.214,740493,0,14,Palo Alto California,PAIX
+Up,AS14907,WIKIMEDIA - Wikimedia Foundation Inc.,2001:504:d::1:4907:1,0,64865,14,Palo Alto California,PAIX
+Up,AS17451,BIZNET-AS-AP BIZNET NETWORKS,198.32.176.60,469,0,14,Palo Alto California,PAIX
+Up,AS19151,WVFIBER-1 - WV FIBER,198.32.176.164,735949,0,14,Palo Alto California,PAIX
+Up,AS19151,WVFIBER-1 - WV FIBER,2001:504:d::9151:1,0,62167,14,Palo Alto California,PAIX
+Up,AS32934,FACEBOOK - Facebook,198.32.176.108,38,0,14,Palo Alto California,PAIX
+Up,AS32934,FACEBOOK - Facebook,198.32.176.71,38,0,14,Palo Alto California,PAIX
+Up,AS1916,Associa��o Rede Nacional de Ensino e Pesquisa,187.16.216.4,752440,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS1916,Associa��o Rede Nacional de Ensino e Pesquisa,2001:12f8::4,0,65793,15,Sao Paulo Brazil,PTTMetro
+Up,AS14026,N�cleo de Inf. e Coord. do Ponto BR - NIC.,187.16.216.56,2,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS14840,COMMCORP COMUNICACOES LTDA,187.16.216.219,153179,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS14840,COMMCORP COMUNICACOES LTDA,2001:12f8::219,0,31391,15,Sao Paulo Brazil,PTTMetro
+Up,AS16735,ALGAR TELECOM S/A,187.16.217.48,736716,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS16735,ALGAR TELECOM S/A,2001:12f8::217:48,0,66429,15,Sao Paulo Brazil,PTTMetro
+Up,AS22548,N�cleo de Inf. e Coord. do Ponto BR - NIC.,187.16.217.17,1,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS22548,N�cleo de Inf. e Coord. do Ponto BR - NIC.,2001:12f8::217:17,0,65328,15,Sao Paulo Brazil,PTTMetro
+Up,AS23106,Cemig Telecomunica��es SA,187.16.217.59,754327,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS23106,Cemig Telecomunica��es SA,2001:12f8::217:59,0,66198,15,Sao Paulo Brazil,PTTMetro
+Up,AS25933,Vogel Solu��es em Telecom e Inform�tica S/A,187.16.216.127,743091,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS25933,Vogel Solu��es em Telecom e Inform�tica S/A,2001:12f8::127,0,99,15,Sao Paulo Brazil,PTTMetro
+Up,AS28186,ITS TELECOMUNICA��ES LTDA,187.16.219.51,745988,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS28186,ITS TELECOMUNICA��ES LTDA,187.16.223.133,746016,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS28186,ITS TELECOMUNICA��ES LTDA,2001:12f8::219:51,0,65357,15,Sao Paulo Brazil,PTTMetro
+Up,AS28220,CABO SERVICOS DE TELECOMUNICACOES LTDA,187.16.216.75,753179,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS28260,ALTA REDE CORPORATE NETWORK TELECOM LTDA - EPP,187.16.221.189,744828,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS28571,UNIVERSIDADE DE SAO PAULO,187.16.216.20,36,3,15,Sao Paulo Brazil,PTTMetro
+Up,AS28571,UNIVERSIDADE DE SAO PAULO,2001:12f8::20,0,66120,15,Sao Paulo Brazil,PTTMetro
+Up,AS28634,Life Tecnologia Ltda.,187.16.216.131,736049,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS28634,Life Tecnologia Ltda.,187.16.216.209,643100,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS28634,Life Tecnologia Ltda.,2001:12f8::209,0,66206,15,Sao Paulo Brazil,PTTMetro
+Up,AS37468,ANGOLA-CABLES,187.16.221.193,1773,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS37468,ANGOLA-CABLES,2001:12f8::221:193,0,331,15,Sao Paulo Brazil,PTTMetro
+Up,AS42473,ANEXIA - ANEXIA Internetdienstleistungs GmbH,187.16.216.121,734779,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS42473,ANEXIA - ANEXIA Internetdienstleistungs GmbH,2001:12f8::121,0,62892,15,Sao Paulo Brazil,PTTMetro
+Up,AS52720,WEBFOCO TELECOMUNICACOES LTDA,187.16.218.121,742802,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS52720,WEBFOCO TELECOMUNICACOES LTDA,2001:12f8::218:121,0,65342,15,Sao Paulo Brazil,PTTMetro
+Up,AS52863,UPX Technologies,187.16.219.162,752644,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS52863,UPX Technologies,2001:12f8::219:162,0,65608,15,Sao Paulo Brazil,PTTMetro
+Up,AS52871,TASCOM TELECOMUNICA��ES LTDA,187.16.223.214,353,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS52871,TASCOM TELECOMUNICA��ES LTDA,2001:12f8::223:214,0,102,15,Sao Paulo Brazil,PTTMetro
+Up,AS52873,SOFTDADOS CONECTIVIDADE,187.16.220.216,741444,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS52873,SOFTDADOS CONECTIVIDADE,2001:12f8::220:216,0,65178,15,Sao Paulo Brazil,PTTMetro
+Up,AS52888,UNIVERSIDADE FEDERAL DE SAO CARLOS,187.16.218.21,743355,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS52888,UNIVERSIDADE FEDERAL DE SAO CARLOS,2001:12f8::218:21,0,66134,15,Sao Paulo Brazil,PTTMetro
+Up,AS53067,ADASTEL - Adamantina Servi�os de Telecomunica��es,187.16.220.214,4155,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS53067,ADASTEL - Adamantina Servi�os de Telecomunica��es,2001:12f8::220:214,0,105,15,Sao Paulo Brazil,PTTMetro
+Up,AS53070,T-Systems Telecomunica��es e Servi�os Ltda.,187.16.216.102,740205,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS53070,T-Systems Telecomunica��es e Servi�os Ltda.,2001:12f8::102,0,65498,15,Sao Paulo Brazil,PTTMetro
+Up,AS57695,MISAKA - Misaka Network LLC,187.16.220.159,742613,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS57695,MISAKA - Misaka Network LLC,2001:12f8::220:159,0,65183,15,Sao Paulo Brazil,PTTMetro
+Up,AS61595,,187.16.223.139,198,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS61595,,2001:12f8::223:139,0,48672,15,Sao Paulo Brazil,PTTMetro
+Up,AS262317,Rodrigo Orlandeli Sanches,187.16.221.238,156944,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS262317,Rodrigo Orlandeli Sanches,2001:12f8::221:238,0,63731,15,Sao Paulo Brazil,PTTMetro
+Up,AS262757,Insidesign Tecnologia Ltda EPP,187.16.223.117,779248,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS262757,Insidesign Tecnologia Ltda EPP,2001:12f8::223:117,0,65693,15,Sao Paulo Brazil,PTTMetro
+Up,AS263075,TV Cabo de Santo Anastacio Ltda,187.16.222.6,156241,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS263075,TV Cabo de Santo Anastacio Ltda,2001:12f8::222:6,0,63636,15,Sao Paulo Brazil,PTTMetro
+Up,AS263152,AGUIARI E AGUIARI PROVEDOR DE INTERNET,187.16.222.107,844,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS263152,AGUIARI E AGUIARI PROVEDOR DE INTERNET,2001:12f8::222:107,0,63485,15,Sao Paulo Brazil,PTTMetro
+Up,AS263508,SIMNET TELECOMUNICACOES LTDA,187.16.220.210,155903,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS263508,SIMNET TELECOMUNICACOES LTDA,2001:12f8::220:210,0,117,15,Sao Paulo Brazil,PTTMetro
+Up,AS263584,WanHouse Solucoes em Tecnologia LTDA - EPP,187.16.220.193,166068,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS263651,RVNeT - V. Montoro & Cia Ltda,187.16.222.66,4894,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS263651,RVNeT - V. Montoro & Cia Ltda,2001:12f8::222:66,0,2146,15,Sao Paulo Brazil,PTTMetro
+Up,AS263674,JSneT- Joao S Viana Junior ME,187.16.218.95,119679,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS263674,JSneT- Joao S Viana Junior ME,2001:12f8::218:95,0,2109,15,Sao Paulo Brazil,PTTMetro
+Up,AS264911,PRISCILA SANTOS DA SILVA INFORMATICA ME,187.16.216.151,105702,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS264911,PRISCILA SANTOS DA SILVA INFORMATICA ME,2001:12f8::151,0,208,15,Sao Paulo Brazil,PTTMetro
+Up,AS267129,NET+ TELECOM,187.16.218.133,4,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS267129,NET+ TELECOM,2001:12f8::218:133,0,2,15,Sao Paulo Brazil,PTTMetro
+Up,AS267613,ELETRONET S.A.,187.16.220.80,754036,0,15,Sao Paulo Brazil,PTTMetro
+Up,AS267613,ELETRONET S.A.,2001:12f8::220:80,0,65686,15,Sao Paulo Brazil,PTTMetro
+Up,AS714,APPLE-ENGINEERING - Apple Inc.,198.32.125.152,656,0,16,Miami Florida US,NOTA
+Up,AS714,APPLE-ENGINEERING - Apple Inc.,198.32.125.99,656,0,16,Miami Florida US,NOTA
+Up,AS714,APPLE-ENGINEERING - Apple Inc.,2001:478:124::1099,0,77,16,Miami Florida US,NOTA
+Up,AS714,APPLE-ENGINEERING - Apple Inc.,2001:478:124::1152,0,77,16,Miami Florida US,NOTA
+Up,AS6774,ASN-BICS - Belgacom International Carrier Services SA,198.32.124.183,1571,0,16,Miami Florida US,NOTA
+Up,AS6774,ASN-BICS - Belgacom International Carrier Services SA,2001:478:124::183,0,52,16,Miami Florida US,NOTA
+Up,AS6939,HURRICANE - Hurricane Electric LLC,198.32.124.176,116911,0,16,Miami Florida US,NOTA
+Up,AS6939,HURRICANE - Hurricane Electric LLC,2001:478:124::176,0,63479,16,Miami Florida US,NOTA
+Up,AS8075,MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation,198.32.124.188,216,0,16,Miami Florida US,NOTA
+Up,AS8075,MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation,2001:478:124::188,0,58,16,Miami Florida US,NOTA
+Up,AS8075,MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation,2001:478:124::189,0,58,16,Miami Florida US,NOTA
+Up,AS10310,YAHOO-1 - Yahoo!,198.32.124.115,209,0,16,Miami Florida US,NOTA
+Up,AS10310,YAHOO-1 - Yahoo!,2001:478:124::115,0,92,16,Miami Florida US,NOTA
+Up,AS13760,UNITI-FIBER - Southern Light,198.32.125.132,757073,0,16,Miami Florida US,NOTA
+Up,AS13760,UNITI-FIBER - Southern Light,2001:478:124::1132,0,216,16,Miami Florida US,NOTA
+Up,AS20080,AMPATH - Florida International University,198.32.124.55,733101,0,16,Miami Florida US,NOTA
+Up,AS20080,AMPATH - Florida International University,2001:478:124::241,0,65122,16,Miami Florida US,NOTA
+Up,AS25152,K-ROOT-SERVER - Reseaux IP Europeens Network Coordination Centre (RIPE NCC),198.32.124.146,759365,0,16,Miami Florida US,NOTA
+Up,AS25152,K-ROOT-SERVER - Reseaux IP Europeens Network Coordination Centre (RIPE NCC),2001:478:124::146,0,64871,16,Miami Florida US,NOTA
+Up,AS32934,FACEBOOK - Facebook,198.32.124.200,38,0,16,Miami Florida US,NOTA
+Up,AS32934,FACEBOOK - Facebook,198.32.125.125,38,0,16,Miami Florida US,NOTA
+Up,AS33132,FIBERNET-DIRECT - Fibernet Direct,198.32.124.213,729,0,16,Miami Florida US,NOTA
+Up,AS33132,FIBERNET-DIRECT - Fibernet Direct,2001:478:124::213,0,18,16,Miami Florida US,NOTA
+Up,AS37468,ANGOLA-CABLES,198.32.125.217,1950,0,16,Miami Florida US,NOTA
+Up,AS37468,ANGOLA-CABLES,2001:478:124::1017,0,358,16,Miami Florida US,NOTA
+Up,AS42473,ANEXIA - ANEXIA Internetdienstleistungs GmbH,198.32.125.182,161959,0,16,Miami Florida US,NOTA
+Up,AS42473,ANEXIA - ANEXIA Internetdienstleistungs GmbH,2001:478:124::1182,0,62270,16,Miami Florida US,NOTA
+Up,AS51185,ONECOM-AS - Onecom Global Communications LTD,198.32.125.181,740611,0,16,Miami Florida US,NOTA
+Up,AS52320,GlobeNet Cabos Submarinos Colombia,198.32.124.254,745567,0,16,Miami Florida US,NOTA
+Up,AS52320,GlobeNet Cabos Submarinos Colombia,2001:478:124::254,0,65262,16,Miami Florida US,NOTA
+Up,AS393950,XIBER-LLC - FiberIndy,198.32.125.219,756066,0,16,Miami Florida US,NOTA
+Up,AS393950,XIBER-LLC - FiberIndy,2001:478:124::1219,0,1,16,Miami Florida US,NOTA
+Up,AS766,REDIRIS - Entidad Publica Empresarial Red.es,193.242.98.19,119,0,18,Barcelona Spain,Catnix
+Up,AS766,REDIRIS - Entidad Publica Empresarial Red.es,2001:7f8:2a:0:1:1:0:766,0,17,18,Barcelona Spain,Catnix
+Up,AS8220,COLT - COLT Technology Services Group Limited,193.242.98.13,3538,0,18,Barcelona Spain,Catnix
+Up,AS8220,COLT - COLT Technology Services Group Limited,2001:7f8:2a:0:1:1:0:8220,0,334,18,Barcelona Spain,Catnix
+Up,AS13041,CESCA-AC - Consorci de Serveis Universitaris de Catalunya,193.242.98.38,10,0,18,Barcelona Spain,Catnix
+Up,AS13041,CESCA-AC - Consorci de Serveis Universitaris de Catalunya,2001:7f8:2a:0:1:1:1:3041,0,3,18,Barcelona Spain,Catnix
+Up,AS15699,AS_ADAM - OGIC Informatica S.L.,193.242.98.137,31,0,18,Barcelona Spain,Catnix
+Up,AS15699,AS_ADAM - OGIC Informatica S.L.,2001:7f8:2a:0:2:1:1:5699,0,3,18,Barcelona Spain,Catnix
+Up,AS16030,"ALTECOM - Alta Tecnologia en Comunicacions, S.L",193.242.98.4,99,0,18,Barcelona Spain,Catnix
+Up,AS16030,"ALTECOM - Alta Tecnologia en Comunicacions, S.L",2001:7f8:2a:0:1:1:1:6030,0,2,18,Barcelona Spain,Catnix
+Up,AS20940,AKAMAI-ASN1 - Akamai International B.V.,193.242.98.157,5,0,18,Barcelona Spain,Catnix
+Up,AS20940,AKAMAI-ASN1 - Akamai International B.V.,2001:7f8:2a:0:2:1:2:940,0,4,18,Barcelona Spain,Catnix
+Up,AS24592,"NEXICA-AS - COM 2002, S.L.",193.242.98.133,6,0,18,Barcelona Spain,Catnix
+Up,AS24592,"NEXICA-AS - COM 2002, S.L.",2001:7f8:2a:0:2:1:2:4592,0,1,18,Barcelona Spain,Catnix
+Up,AS26415,VERISIGN-INC - VeriSign Global Registry Services,193.242.98.125,2,0,18,Barcelona Spain,Catnix
+Up,AS26415,VERISIGN-INC - VeriSign Global Registry Services,2001:7f8:2a:0:1:1:2:6415,0,2,18,Barcelona Spain,Catnix
+Up,AS29680,"VOZTELECOM - VozTelecom Oigaa360, S.A.",193.242.98.141,745676,0,18,Barcelona Spain,Catnix
+Up,AS29680,"VOZTELECOM - VozTelecom Oigaa360, S.A.",2001:7f8:2a:0:2:1:2:9680,0,63918,18,Barcelona Spain,Catnix
+Up,AS30892,T-SYSTEMS-ELTEC - T-SYSTEMS ITC IBERIA S.A.,193.242.98.130,6,0,18,Barcelona Spain,Catnix
+Up,AS30892,T-SYSTEMS-ELTEC - T-SYSTEMS ITC IBERIA S.A.,2001:7f8:2a:0:2:1:3:892,0,2,18,Barcelona Spain,Catnix
+Up,AS35699,ADAMOEU-AS - Adamo Telecom Iberia S.A.,193.242.98.143,734043,0,18,Barcelona Spain,Catnix
+Up,AS35699,ADAMOEU-AS - Adamo Telecom Iberia S.A.,2001:7f8:2a:0:2:1:2:9518,0,7,18,Barcelona Spain,Catnix
+Up,AS43578,BITNAP - MBA DATACENTERS S.L.,193.242.98.160,731251,0,18,Barcelona Spain,Catnix
+Up,AS43578,BITNAP - MBA DATACENTERS S.L.,2001:7f8:2a:0:3:1:4:3578,0,6,18,Barcelona Spain,Catnix
+Up,AS49835,"GUIFINET-AS - Fundacio Privada per a la Xarxa Lliure, Oberta i Neutral, guifi.net",193.242.98.144,69,0,18,Barcelona Spain,Catnix
+Up,AS49835,"GUIFINET-AS - Fundacio Privada per a la Xarxa Lliure, Oberta i Neutral, guifi.net",2001:7f8:2a:0:2:1:4:9835,0,11,18,Barcelona Spain,Catnix
+Up,AS60082,CATNIX-RS - Consorci de Serveis Universitaris de Catalunya,193.242.98.98,1215,0,18,Barcelona Spain,Catnix
+Up,AS60082,CATNIX-RS - Consorci de Serveis Universitaris de Catalunya,2001:7f8:2a:0:1:1:6:82,0,144,18,Barcelona Spain,Catnix
+Up,AS60458,ASN-XTUDIONET - Xtudio Networks S.L.U.,193.242.98.161,20,0,18,Barcelona Spain,Catnix
+Up,AS2018,TENET-1,196.60.8.216,19300,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS2018,TENET-1,2001:43f8:6d0::216,0,16313,19,Johannesburg South Africa,NAP Africa JB
+Up,AS3491,BTN-ASN - PCCW Global,196.60.8.152,734229,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS3491,BTN-ASN - PCCW Global,2001:43f8:6d0::1b,0,61230,19,Johannesburg South Africa,NAP Africa JB
+Up,AS8075,MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation,196.60.8.133,215,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS8075,MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation,2001:43f8:6d0::133,0,59,19,Johannesburg South Africa,NAP Africa JB
+Up,AS16637,MTNNS-AS,196.60.8.203,323,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS16637,MTNNS-AS,2001:43f8:6d0::203,0,6,19,Johannesburg South Africa,NAP Africa JB
+Up,AS26415,VERISIGN-INC - VeriSign Global Registry Services,196.60.8.93,2,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS26415,VERISIGN-INC - VeriSign Global Registry Services,2001:43f8:6d0::93,0,2,19,Johannesburg South Africa,NAP Africa JB
+Up,AS30844,LIQUID-AS - Liquid Telecommunications Ltd,196.60.8.215,1500,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS30844,LIQUID-AS - Liquid Telecommunications Ltd,2001:43f8:6d0::215,0,111,19,Johannesburg South Africa,NAP Africa JB
+Up,AS32653,ENETWORKS,196.60.8.139,20,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS37100,SEACOM-AS,196.60.8.188,2667,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS37100,SEACOM-AS,2001:43f8:6d0::15,0,141,19,Johannesburg South Africa,NAP Africa JB
+Up,AS37239,ICTGLOBE,196.60.8.190,773888,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS37239,ICTGLOBE,2001:43f8:6d0::190,0,63504,19,Johannesburg South Africa,NAP Africa JB
+Up,AS37271,Workonline,197.157.79.173,732820,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS37271,Workonline,2c0f:fa90:200:3:6::e,0,62919,19,Johannesburg South Africa,NAP Africa JB
+Up,AS37314,Syrex-Pty-Ltd,196.60.8.156,23,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS37314,Syrex-Pty-Ltd,2001:43f8:6d0::156,0,5,19,Johannesburg South Africa,NAP Africa JB
+Up,AS37468,ANGOLA-CABLES,196.60.8.60,760334,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS37468,ANGOLA-CABLES,2001:43f8:6d0::60,0,64668,19,Johannesburg South Africa,NAP Africa JB
+Up,AS37497,Network-Platforms,196.60.8.185,736500,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS37542,Iclix-CC,196.60.8.34,4,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS37542,Iclix-CC,2001:43f8:6d0::34,4,1,19,Johannesburg South Africa,NAP Africa JB
+Up,AS37640,CAPE-CONNECT-AS,196.60.8.199,196384,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS37640,CAPE-CONNECT-AS,2001:43f8:6d0::199,0,64981,19,Johannesburg South Africa,NAP Africa JB
+Up,AS37662,WIOCC-AS,196.60.8.232,1319,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS37662,WIOCC-AS,2001:43f8:6d0::232,0,43,19,Johannesburg South Africa,NAP Africa JB
+Up,AS37680,COOL-IDEAS,196.60.8.171,62944,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS37697,webmasters,196.60.9.84,760596,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS42473,ANEXIA - ANEXIA Internetdienstleistungs GmbH,196.60.8.56,360831,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS42473,ANEXIA - ANEXIA Internetdienstleistungs GmbH,2001:43f8:6d0::56,0,64811,19,Johannesburg South Africa,NAP Africa JB
+Up,AS57695,MISAKA - Misaka Network LLC,196.60.9.165,721236,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS57695,MISAKA - Misaka Network LLC,2001:43f8:6d0::9:165,0,63475,19,Johannesburg South Africa,NAP Africa JB
+Up,AS327781,VANGIBUZZ,196.60.8.170,6,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS327813,Web4Africa,196.60.8.176,14,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS327813,Web4Africa,2001:43f8:6d0::176,0,2,19,Johannesburg South Africa,NAP Africa JB
+Up,AS327872,IBITS-Internet,196.60.8.31,2,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS327872,IBITS-Internet,2001:43f8:6d0::31,0,1,19,Johannesburg South Africa,NAP Africa JB
+Up,AS327960,PC-MANIACS,196.60.8.22,766839,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS327983,Interworks-Wireless-Solutions,196.60.8.44,126544,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS327983,Interworks-Wireless-Solutions,2001:43f8:6d0::44,0,64985,19,Johannesburg South Africa,NAP Africa JB
+Up,AS327984,Skyfi-Internet-Solutions,196.60.8.67,2042,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS327991,MEGASURF-WIRELESS-INTERNET,196.60.8.55,1,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS328145,Lyca-Digital-AS,196.60.9.28,49,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS328145,Lyca-Digital-AS,2001:43f8:6d0::9:28,0,6,19,Johannesburg South Africa,NAP Africa JB
+Up,AS328206,JAWUG,2001:43f8:6d0::9:66,0,68822,19,Johannesburg South Africa,NAP Africa JB
+Up,AS328220,Altech-Radio-AS,196.60.9.88,2,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS328320,Kurlec-AS,196.60.9.155,124443,0,19,Johannesburg South Africa,NAP Africa JB
+Up,AS1836,GREEN - green.ch AG Autonomous System,2001:7f8:24::5e,0,23,20,Zurich Switzerland,SwissIX
+Up,AS1836,GREEN - green.ch AG Autonomous System,91.206.52.94,133,0,20,Zurich Switzerland,SwissIX
+Up,AS6461,ZAYO-6461 - Zayo Bandwidth,2001:7f8:24::73,0,3585,20,Zurich Switzerland,SwissIX
+Up,AS6461,ZAYO-6461 - Zayo Bandwidth,91.206.52.115,63640,0,20,Zurich Switzerland,SwissIX
+Up,AS8218,NEO-ASN - Zayo France SAS,2001:7f8:24::74,0,62762,20,Zurich Switzerland,SwissIX
+Up,AS8218,NEO-ASN - Zayo France SAS,91.206.52.116,741568,0,20,Zurich Switzerland,SwissIX
+Up,AS8220,COLT - COLT Technology Services Group Limited,2001:7f8:24::ac,0,334,20,Zurich Switzerland,SwissIX
+Up,AS8220,COLT - COLT Technology Services Group Limited,91.206.52.172,3538,0,20,Zurich Switzerland,SwissIX
+Up,AS8758,IWAY - Iway AG,2001:7f8:24::6,0,27947,20,Zurich Switzerland,SwissIX
+Up,AS8758,IWAY - Iway AG,91.206.52.6,748083,0,20,Zurich Switzerland,SwissIX
+Up,AS12307,RAVANA - Sandro Bolliger,2001:7f8:24::44,0,65046,20,Zurich Switzerland,SwissIX
+Up,AS12307,RAVANA - Sandro Bolliger,91.206.52.68,748079,0,20,Zurich Switzerland,SwissIX
+Up,AS15547,NETPLUS - netplus.ch SA,2001:7f8:24::95,0,65198,20,Zurich Switzerland,SwissIX
+Up,AS15547,NETPLUS - netplus.ch SA,91.206.52.149,748217,0,20,Zurich Switzerland,SwissIX
+Up,AS20612,SWISSIX - SwissIX Internet Exchange,2001:7f8:24::7e,0,63661,20,Zurich Switzerland,SwissIX
+Up,AS20612,SWISSIX - SwissIX Internet Exchange,2001:7f8:24::7f,0,63659,20,Zurich Switzerland,SwissIX
+Up,AS20612,SWISSIX - SwissIX Internet Exchange,91.206.52.126,744096,0,20,Zurich Switzerland,SwissIX
+Up,AS20612,SWISSIX - SwissIX Internet Exchange,91.206.52.127,744099,0,20,Zurich Switzerland,SwissIX
+Up,AS21232,GGAMAUR - Genossenschaft GGA Maur,2001:7f8:24::20,0,30384,20,Zurich Switzerland,SwissIX
+Up,AS21232,GGAMAUR - Genossenschaft GGA Maur,91.206.52.32,748205,0,20,Zurich Switzerland,SwissIX
+Up,AS24482,SGGS-AS-AP SG.GS,2001:7f8:24::cd,0,65089,20,Zurich Switzerland,SwissIX
+Up,AS24482,SGGS-AS-AP SG.GS,91.206.52.205,739577,0,20,Zurich Switzerland,SwissIX
+Up,AS25091,IP-MAX - IP-Max SA,2001:7f8:24::75,0,64949,20,Zurich Switzerland,SwissIX
+Up,AS25091,IP-MAX - IP-Max SA,91.206.52.117,736478,0,20,Zurich Switzerland,SwissIX
+Up,AS29691,NINE - Nine Internet Solutions AG,2001:7f8:24::9,0,65047,20,Zurich Switzerland,SwissIX
+Up,AS29691,NINE - Nine Internet Solutions AG,91.206.52.9,735040,0,20,Zurich Switzerland,SwissIX
+Up,AS31424,NEXELLENT-AS - nexellent ag,2001:7f8:24::11,0,16238,20,Zurich Switzerland,SwissIX
+Up,AS31424,NEXELLENT-AS - nexellent ag,91.206.52.17,743677,0,20,Zurich Switzerland,SwissIX
+Up,AS47147,AS-ANX - ANEXIA Internetdienstleistungs GmbH,2001:7f8:24::5,0,62573,20,Zurich Switzerland,SwissIX
+Up,AS47147,AS-ANX - ANEXIA Internetdienstleistungs GmbH,91.206.52.5,734229,0,20,Zurich Switzerland,SwissIX
+Up,AS49605,DTS-AS - Digital Telecommunication Services S.r.l.,2001:7f8:24::66,0,65078,20,Zurich Switzerland,SwissIX
+Up,AS49605,DTS-AS - Digital Telecommunication Services S.r.l.,91.206.52.102,747920,0,20,Zurich Switzerland,SwissIX
+Up,AS51873,ARCADE-AS - Arcade Solutions AG,2001:7f8:24::c5,0,66330,20,Zurich Switzerland,SwissIX
+Up,AS51873,ARCADE-AS - Arcade Solutions AG,91.206.52.197,760567,0,20,Zurich Switzerland,SwissIX
+Up,AS58299,OPENFACTORY-AS - Openfactory GmbH,2001:7f8:24::82,0,65256,20,Zurich Switzerland,SwissIX
+Up,AS58299,OPENFACTORY-AS - Openfactory GmbH,91.206.52.130,735782,65023,20,Zurich Switzerland,SwissIX
+Up,AS59414,CLOUDSCALE - cloudscale.ch AG,2001:7f8:24::5a,0,61913,20,Zurich Switzerland,SwissIX
+Up,AS59414,CLOUDSCALE - cloudscale.ch AG,91.206.52.90,734851,0,20,Zurich Switzerland,SwissIX
+Up,AS59891,FSIT - FSIT AG,2001:7f8:24::8d,0,65166,20,Zurich Switzerland,SwissIX
+Up,AS59891,FSIT - FSIT AG,91.206.52.141,760484,0,20,Zurich Switzerland,SwissIX
+Up,AS64463,PREM - Premium Routing Gmbh,2001:7f8:24::b4,0,65821,20,Zurich Switzerland,SwissIX
+Up,AS64463,PREM - Premium Routing Gmbh,91.206.52.180,730702,0,20,Zurich Switzerland,SwissIX
+Up,AS196621,FREESTONE - Matthias Cramer,2001:7f8:24::67,0,64613,20,Zurich Switzerland,SwissIX
+Up,AS196621,FREESTONE - Matthias Cramer,91.206.52.103,743865,0,20,Zurich Switzerland,SwissIX
+Up,AS198249,OPSONE - Ops One AG,2001:7f8:24::c7,0,65535,20,Zurich Switzerland,SwissIX
+Up,AS198249,OPSONE - Ops One AG,91.206.52.199,748241,0,20,Zurich Switzerland,SwissIX
+Up,AS198385,ALPINEDC - AlpineDC SA,2001:7f8:24::6d,0,66094,20,Zurich Switzerland,SwissIX
+Up,AS198385,ALPINEDC - AlpineDC SA,91.206.52.109,749300,0,20,Zurich Switzerland,SwissIX
+Up,AS202032,GOLINE - GOLINE SA,2001:7f8:24::d8,0,63507,20,Zurich Switzerland,SwissIX
+Up,AS202032,GOLINE - GOLINE SA,91.206.52.216,127259,0,20,Zurich Switzerland,SwissIX
+Up,AS202194,EDSI-TECH - EDSI-Tech Sarl,2001:7f8:24::3c,0,66620,20,Zurich Switzerland,SwissIX
+Up,AS202194,EDSI-TECH - EDSI-Tech Sarl,91.206.52.60,764277,0,20,Zurich Switzerland,SwissIX
+Up,AS2613,VAN_GULIK - Willem van Gulik,2001:7f8:54::246,0,63469,21,Paris France,France-IX
+Up,AS2613,VAN_GULIK - Willem van Gulik,37.49.236.246,740047,0,21,Paris France,France-IX
+Up,AS6461,ZAYO-6461 - Zayo Bandwidth,2001:7f8:54::1:180,0,63424,21,Paris France,France-IX
+Up,AS6461,ZAYO-6461 - Zayo Bandwidth,37.49.237.180,739931,0,21,Paris France,France-IX
+Up,AS8218,NEO-ASN - Zayo France SAS,2001:7f8:54:5::7,0,62762,21,Paris France,France-IX
+Up,AS8218,NEO-ASN - Zayo France SAS,2001:7f8:54::1,0,62762,21,Paris France,France-IX
+Up,AS8218,NEO-ASN - Zayo France SAS,37.49.232.7,741566,0,21,Paris France,France-IX
+Up,AS8218,NEO-ASN - Zayo France SAS,37.49.236.1,741568,0,21,Paris France,France-IX
+Up,AS8220,COLT - COLT Technology Services Group Limited,2001:7f8:54::58,0,334,21,Paris France,France-IX
+Up,AS8220,COLT - COLT Technology Services Group Limited,37.49.236.58,3368,0,21,Paris France,France-IX
+Up,AS8426,CLARANET-AS - ClaraNET LTD,2001:7f8:54::61,0,62929,21,Paris France,France-IX
+Up,AS8426,CLARANET-AS - ClaraNET LTD,37.49.236.61,734734,0,21,Paris France,France-IX
+Up,AS12779,ITGATE - IT.Gate S.p.A.,2001:7f8:54::177,0,63408,21,Paris France,France-IX
+Up,AS12779,ITGATE - IT.Gate S.p.A.,37.49.236.177,734466,0,21,Paris France,France-IX
+Up,AS15547,NETPLUS - netplus.ch SA,2001:7f8:54::156,0,65200,21,Paris France,France-IX
+Up,AS15547,NETPLUS - netplus.ch SA,37.49.236.156,748223,0,21,Paris France,France-IX
+Up,AS15830,TELECITY-LON - TELECITYGROUP INTERNATIONAL LIMITED,2001:7f8:54::89,0,44,21,Paris France,France-IX
+Up,AS15830,TELECITY-LON - TELECITYGROUP INTERNATIONAL LIMITED,37.49.236.89,305,0,21,Paris France,France-IX
+Up,AS16347,RMI-FITECH - ADISTA SAS,2001:7f8:54::36,0,34500,21,Paris France,France-IX
+Up,AS16347,RMI-FITECH - ADISTA SAS,37.49.236.36,743534,0,21,Paris France,France-IX
+Up,AS24482,SGGS-AS-AP SG.GS,2001:7f8:54::228,0,65085,21,Paris France,France-IX
+Up,AS24482,SGGS-AS-AP SG.GS,37.49.236.228,739586,0,21,Paris France,France-IX
+Up,AS25091,IP-MAX - IP-Max SA,2001:7f8:54::1:83,0,64952,21,Paris France,France-IX
+Up,AS25091,IP-MAX - IP-Max SA,37.49.237.83,736473,0,21,Paris France,France-IX
+Up,AS34019,HIVANE - Hivane,2001:7f8:54::71,0,65315,21,Paris France,France-IX
+Up,AS34019,HIVANE - Hivane,37.49.236.71,372705,0,21,Paris France,France-IX
+Up,AS34177,CELESTE-AS - CELESTE SAS,37.49.236.32,733801,0,21,Paris France,France-IX
+Up,AS42473,ANEXIA - ANEXIA Internetdienstleistungs GmbH,2001:7f8:54::85,0,62547,21,Paris France,France-IX
+Up,AS42473,ANEXIA - ANEXIA Internetdienstleistungs GmbH,37.49.236.85,730921,0,21,Paris France,France-IX
+Up,AS43100,LYONIX - Rezopole A.D.,2001:7f8:54::240,0,3528,21,Paris France,France-IX
+Up,AS43100,LYONIX - Rezopole A.D.,37.49.236.240,42400,0,21,Paris France,France-IX
+Up,AS48526,TANGO-TELINDUS - Proximus Luxembourg S.A.,2001:7f8:54::1:46,0,66182,21,Paris France,France-IX
+Up,AS48526,TANGO-TELINDUS - Proximus Luxembourg S.A.,37.49.237.46,751256,0,21,Paris France,France-IX
+Up,AS49463,ASN-LNC - Les Nouveaux Constructeurs SA,2001:7f8:54::145,0,65162,21,Paris France,France-IX
+Up,AS49463,ASN-LNC - Les Nouveaux Constructeurs SA,37.49.236.145,743758,0,21,Paris France,France-IX
+Up,AS50620,BLUENET-TECH-AS - Blue Networks Technologies SARL,2001:7f8:54::74,0,65520,21,Paris France,France-IX
+Up,AS51405,VOIPGATE - Voipgate S.A.,2001:7f8:54::136,0,64754,21,Paris France,France-IX
+Up,AS51405,VOIPGATE - Voipgate S.A.,37.49.236.136,734339,0,21,Paris France,France-IX
+Up,AS58308,CUSAE-AS - Cusae SAS,37.49.236.172,708828,0,21,Paris France,France-IX
+Up,AS59689,KEYADE-AS - Keyade SAS,2001:7f8:54::188,0,65003,21,Paris France,France-IX
+Up,AS59689,KEYADE-AS - Keyade SAS,37.49.236.188,742979,0,21,Paris France,France-IX
+Up,AS60171,AFRIX-AS - AFR-IX TELECOM S.L.,2001:7f8:54::239,0,3,21,Paris France,France-IX
+Up,AS60171,AFRIX-AS - AFR-IX TELECOM S.L.,37.49.236.239,148,0,21,Paris France,France-IX
+Up,AS60427,SYSTEM-NET-AS - System-Net Sas,2001:7f8:54:5::25,0,1,21,Paris France,France-IX
+Up,AS60427,SYSTEM-NET-AS - System-Net Sas,37.49.232.25,6,0,21,Paris France,France-IX
+Up,AS198290,AS-GITS - Global IT Services PSF SA,2001:7f8:54::123,0,64726,21,Paris France,France-IX
+Up,AS198290,AS-GITS - Global IT Services PSF SA,37.49.236.123,734195,0,21,Paris France,France-IX
+Up,AS204708,MDW-MAIN-AS - Midway's Network,2001:7f8:54::1:194,0,1,21,Paris France,France-IX
+Up,AS204708,MDW-MAIN-AS - Midway's Network,37.49.237.194,1,0,21,Paris France,France-IX
+Up,AS8075,MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation,2001:7f8:64:225::8075:1,0,59,22,Bucharest Romania,InterLAN
+Up,AS8075,MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation,86.104.125.130,215,0,22,Bucharest Romania,InterLAN
+Up,AS10310,YAHOO-1 - Yahoo!,2001:7f8:64:225:0:1:310:2,0,27,22,Bucharest Romania,InterLAN
+Up,AS10310,YAHOO-1 - Yahoo!,86.104.125.67,51,0,22,Bucharest Romania,InterLAN
+Up,AS714,APPLE-ENGINEERING - Apple Inc.,2001:de8:4::714:1,0,64,23,Singapore Singapore,Equinix SG
+Up,AS714,APPLE-ENGINEERING - Apple Inc.,2001:de8:4::714:2,0,64,23,Singapore Singapore,Equinix SG
+Up,AS714,APPLE-ENGINEERING - Apple Inc.,27.111.228.107,648,0,23,Singapore Singapore,Equinix SG
+Up,AS714,APPLE-ENGINEERING - Apple Inc.,27.111.228.242,648,0,23,Singapore Singapore,Equinix SG
+Up,AS4775,GLOBE-TELECOM-AS Globe Telecoms,2001:de8:4::4775:1,0,11,23,Singapore Singapore,Equinix SG
+Up,AS4775,GLOBE-TELECOM-AS Globe Telecoms,27.111.228.226,218,0,23,Singapore Singapore,Equinix SG
+Up,AS8075,MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation,2001:de8:4::8075:1,0,59,23,Singapore Singapore,Equinix SG
+Up,AS8075,MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation,27.111.228.57,217,0,23,Singapore Singapore,Equinix SG
+Up,AS8220,COLT - COLT Technology Services Group Limited,2001:de8:4::8220:1,0,334,23,Singapore Singapore,Equinix SG
+Up,AS8220,COLT - COLT Technology Services Group Limited,27.111.229.123,3531,0,23,Singapore Singapore,Equinix SG
+Up,AS9658,ETPI-IDS-AS-AP Eastern Telecoms Phils.,2001:de8:4::9658:1,0,5,23,Singapore Singapore,Equinix SG
+Up,AS9658,ETPI-IDS-AS-AP Eastern Telecoms Phils.,27.111.228.46,468,0,23,Singapore Singapore,Equinix SG
+Up,AS9930,TTNET-MY TIME dotCom Berhad,2001:de8:4::9930:1,0,72,23,Singapore Singapore,Equinix SG
+Up,AS9930,TTNET-MY TIME dotCom Berhad,27.111.229.2,294,0,23,Singapore Singapore,Equinix SG
+Up,AS14907,WIKIMEDIA - Wikimedia Foundation Inc.,2001:de8:4::1:4907:1,0,62701,23,Singapore Singapore,Equinix SG
+Up,AS14907,WIKIMEDIA - Wikimedia Foundation Inc.,27.111.228.186,733417,0,23,Singapore Singapore,Equinix SG
+Up,AS17639,CONVERGE-AS Converge ICT Solutions Inc.,2001:de8:4::1:7639:1,0,64021,23,Singapore Singapore,Equinix SG
+Up,AS17639,CONVERGE-AS Converge ICT Solutions Inc.,27.111.229.79,760443,0,23,Singapore Singapore,Equinix SG
+Up,AS18106,VIEWQWEST-SG-AP Viewqwest Pte Ltd,2001:de8:4::1:8106:1,0,67226,23,Singapore Singapore,Equinix SG
+Up,AS18106,VIEWQWEST-SG-AP Viewqwest Pte Ltd,27.111.228.6,762169,0,23,Singapore Singapore,Equinix SG
+Up,AS58952,FRONTIIRCOLTD-MM Frontiir Co. Ltd,2001:de8:4::5:8952:1,0,1,23,Singapore Singapore,Equinix SG
+Up,AS58952,FRONTIIRCOLTD-MM Frontiir Co. Ltd,27.111.229.109,34,0,23,Singapore Singapore,Equinix SG
+Up,AS63956,COLO-AS-AP Colocation Australia Pty Ltd,2001:de8:4::6:3956:1,0,63289,23,Singapore Singapore,Equinix SG
+Up,AS63956,COLO-AS-AP Colocation Australia Pty Ltd,27.111.229.136,736575,0,23,Singapore Singapore,Equinix SG
+Up,AS136168,CAMPANA-AS-AP Campana MYTHIC Co. Ltd.,2001:de8:4::13:6168:1,0,22,23,Singapore Singapore,Equinix SG
+Up,AS136168,CAMPANA-AS-AP Campana MYTHIC Co. Ltd.,27.111.228.170,174,0,23,Singapore Singapore,Equinix SG

@@ -10,12 +10,13 @@ const findCycle = require('find-cycle/directed')
 const axios = require('axios');
 var appendQuery = require('append-query');
 
-
+var cache = null;
+var cache2 = null;
 
 app.use(morgan('tiny'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-//app.use(express.static(__dirname + '/datasets'));
+app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
 var port = process.env.PORT || 8080;
 
@@ -27,14 +28,11 @@ var options = {
 
 var geocoder = NodeGeocoder(options);
 
+var collector_peers = JSON.parse(fs.readFileSync(__dirname + '/datasets/rrc_ris.json'));
+
 app.get('/', function(req,res) {
   res.sendFile(__dirname + '/landing_page.html');
 });
-
-<<<<<<< HEAD
-
-
-////////////////////////////////////////////////
 
 // route to '/' to return the html file
 app.get('/toDo', function (req, res, next) {
@@ -43,34 +41,40 @@ app.get('/toDo', function (req, res, next) {
 
 //route that receives the post body and returns your computation
 app.post('/solve', function (req, res, next) {
-  console.log(req.body.param2);
-  if(!req.body.param22 && !req.body.param23){
+  cache = null;
+  cache2 = null;
+  console.log(req.body);
+  if(!req.body.param22){
     pleaseSolve(req.body, res);
   }
-  if(req.body.param22 && req.body.param23 && req.body.param1 && req.body.param2 && req.body.param3){
+  if(req.body.param22 && req.body.param1 && req.body.param2){
     pleaseSolveDoublePath(req.body, res);
   }
 });
 
+app.post('/visualize', function(req, res) {
+  console.log(req.body);
+  if(req.body.coll_peer && req.body.rrc) {
+    var announces = get_announces(req.body.coll_peer, req.body.rrc);
+    
+    fs.writeFileSync("temp.json", JSON.stringify(announces, null, 2), 'utf8', function(err) {
+      if(err) console.log(err);
+    });
 
-/////////////////////////////////////////////
+    res.sendFile(__dirname + '/prima_visualizzazione.html');
+  }
+});
 
-
-
-
-
-=======
 app.get('/parsley', function(req, res) {
   res.sendFile(__dirname + '/parsley/parsley.js');
 })
->>>>>>> 8de3921696e92b1c658b806f88a4745335b61846
 
 app.get('/announces', function(req, res) {
-    res.sendFile(__dirname + '/datasets/announces.json');
+    res.sendFile(__dirname + '/temp.json');
 });
 
 app.get('/communities', function(req, res) {
-    res.sendFile(__dirname + "/datasets/communities.json");
+    res.sendFile(__dirname + "/datasets/CommunityDB.json");
 });
 
 app.get('/rrc/:num', function(req, res) {
@@ -85,6 +89,7 @@ app.get('/collectors', function(req, res) {
 
 app.post('/aspath', function(req, res) {
     var as_list = req.body.aspath;
+    as_list = remove_prepending(as_list);
     a(as_list.reverse(), function(aspathcompleto) {
         var result = {"response" : aspathcompleto};
         res.json(result);
@@ -93,8 +98,9 @@ app.post('/aspath', function(req, res) {
 
 app.post('/aspaths', function(req, res) {
   var as_list1 = req.body.aspath1.reverse().map(String);
+  as_list1 = remove_prepending(as_list1);
   var as_list2 = req.body.aspath2.reverse().map(String);
-  console.log(as_list1, as_list2);
+  as_list2 = remove_prepending(as_list2);
   var pop_x = populate_x(as_list1, as_list2);
   var points_x = pop_x[0];
   a(as_list1, function(aspath1) {
@@ -117,7 +123,6 @@ app.post('/aspaths', function(req, res) {
 app.get('/coordinates/:query', function(req, res) {
     geocoder.geocode(req.params.query)
         .then(result => {
-            console.log(result);
             res.json(result[0]);
         })
         .catch(err => {
@@ -962,31 +967,35 @@ function merge_coordinates(points_x, points_y) {
 }
 
 
-
-
-
-
-//////////////////////////////////////////////////////
-/////////////////////////////////////////////////////
-
-
 function pleaseSolve(parms, res) {
   var ip = parms.param1;
   var date = parms.param2;
-  var time = parms.param3;
   var rrc = parms.param4;
-console.log(ip,date,time,rrc);
-  var dateTime = date.concat("T"+time);
-  console.log(date + " " +time );
+  console.log(ip,date,rrc);
 
 
-  var a = getFirstQuery(ip,dateTime,rrc);
-   //appendQuery(`https://stat.ripe.net/data/bgp-state/data.json`,`resource=${ip}&timestamp=${dateTime}&rrcs=${rrc}`);
+  var query = getFirstQuery(ip,date,rrc);
+  //appendQuery(`https://stat.ripe.net/data/bgp-state/data.json`,`resource=${ip}&timestamp=${dateTime}&rrcs=${rrc}`);
 
   //console.log(appendQuery);
   //AXIOS: Promise based HTTP client for the browser and node.js
-  axios.get(a).then((response) =>  {
-    var tPrefix = response.data.data.bgp_state[1].target_prefix;
+  axios.get(query).then((response) =>  {
+    var complete = response.data.data.bgp_state;
+    complete.forEach(el => {
+      el['ip'] = ip;
+      el['query_time'] = date;
+      el['rrc'] = rrc;
+    });
+    cache = JSON.parse(JSON.stringify(complete));
+
+    var peers = new Set(complete.map(el => el["source_id"].substring(el["source_id"].indexOf('-') + 1)));
+
+    var peers_n = peers_names(peers);
+
+    res.json({"response" : Array.from(peers_n)});
+
+
+    /*var tPrefix = response.data.data.bgp_state[1].target_prefix;
     var nRoutes = response.data.data.nr_routes;
 
     //console.log(response.data.data);
@@ -1001,59 +1010,91 @@ console.log(ip,date,time,rrc);
     var community = response.data.data.bgp_state[1].community;
     console.log("AS-PATH: "+aspath);
     console.log("COMMUNITY: "+community);
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('The query was: ip=> '+ip+ '\nDate => '+date+'\n \n \nRETRIEVED DATA:\n \nASPATH is \n'+ aspath +'\n \nCommunity: \n' +community+ '\n \nRRC:'+rrc+'\n \nTarget prefix: '+tPrefix+'\n \nN. of BGP routes observed at that time: '+nRoutes);
+    var result = [{
+      "ip" : ip,
+      "date" : date,
+      "aspath": aspath,
+      "community": community,
+      "rrc" : rrc,
+      "target_prefix" : tPrefix,
+      "observed_routes" : nRoutes
+    }]
+    fs.writeFile("temp.json", JSON.stringify(result, null, 2), 'utf8', function(err) {
+      if(err) console.log(err);
+    });
+    res.json(result);*/
+    //res.sendFile(__dirname + "/prima_visualizzazione.html");
+    //res.end('The query was: ip=> '+ip+ '\nDate => '+date+'\n \n \nRETRIEVED DATA:\n \nASPATH is \n'+ aspath +'\n \nCommunity: \n' +community+ '\n \nRRC:'+rrc+'\n \nTarget prefix: '+tPrefix+'\n \nN. of BGP routes observed at that time: '+nRoutes);
   })
    /*.then((res) => {  })*/
   .catch((e) => {
-    if(e.code === 'ENOTFOUND'){
+    if(e.code === 'ENOTFOUND') {
       console.log('Unable to connect to API servers');
     } else {
-      console.log(e.message);
+      console.log(e);
     }
   });
 }
 
 function getFirstQuery(ip,isoTimeDateFirst,rrc) {
-  return axios.get(`https://stat.ripe.net/data/bgp-state/data.json?resource=${ip}&timestamp=${isoTimeDateFirst}&rrcs=${rrc}`);
+  var query = `https://stat.ripe.net/data/bgp-state/data.json?resource=${ip}&timestamp=${isoTimeDateFirst}&rrcs=${rrc}`;
+  console.log(query);
+  return query;
 }
 function getSecondQuery(ip,isoTimeDateSecond,rrc){
-  return axios.get(`https://stat.ripe.net/data/bgp-state/data.json?resource=${ip}&timestamp=${isoTimeDateSecond}&rrcs=${rrc}`);
+  var query = `https://stat.ripe.net/data/bgp-state/data.json?resource=${ip}&timestamp=${isoTimeDateSecond}&rrcs=${rrc}`;
+  console.log(query);
+  return query;
 }
 
 function pleaseSolveDoublePath(parms, res) {
   var ip = parms.param1;
   var dateFirst = parms.param2;
-  var timeFirst = parms.param3;
   var rrc = parms.param4;
 
   var dateSecond = parms.param22;
-  var timeSecond = parms.param23;
-
-  var dateTimeFirst = dateFirst.concat("T"+timeFirst);
-  var dateTimeSecond = dateSecond.concat("T"+timeSecond)
-
-  console.log(dateTimeFirst+"\n");
-  console.log(dateTimeSecond+"\n");
 
   //AXIOS: Promise based HTTP client for the browser and node.js
+  var query1 = axios.get(getFirstQuery(ip,dateFirst,rrc));
+  var query2 = axios.get(getSecondQuery(ip,dateSecond,rrc));
 
-    axios.all([getFirstQuery(ip,dateTimeFirst,rrc),getSecondQuery(ip,dateTimeSecond,rrc)])
+    axios.all([query1, query2])
     .then(axios.spread(function (responseA, responseB) {
+      var complete1 = responseA.data.data.bgp_state;
+      var complete2 = responseB.data.data.bgp_state;
 
-      console.log(responseA.data.data)
+      complete1.forEach(el => {
+        el['ip'] = ip;
+        el['query_time'] = dateFirst;
+        el['rrc'] = rrc;
+      });
 
+      complete2.forEach(el => {
+        el['ip'] = ip;
+        el['query_time'] = dateSecond;
+        el['rrc'] = rrc;
+      });
 
+      cache = JSON.parse(JSON.stringify(complete1));
+      cache2 = JSON.parse(JSON.stringify(complete2));
 
+      var peers1 = new Set(complete1.map(el => el["source_id"].substring(el["source_id"].indexOf('-') + 1)));
+      var peers2 = new Set(complete2.map(el => el["source_id"].substring(el["source_id"].indexOf('-') + 1)));
+
+      var intersection = new Set([...peers1].filter(x => peers2.has(x)));
+
+      var peers_n = peers_names(intersection);
+
+      res.json({"response" : Array.from(peers_n)});
+
+    /*console.log(responseA.data.data)
 
     if (responseA.data.status_code != 200) {
-      res.writeHead(200, { 'Content-Type': 'text/plain' });
       res.end("Unable to find that address");
       throw new Error('Unable to find that address.');
 
     }
     if(responseA.data.data.bgp_state[1] == null){
-      res.writeHead(200, { 'Content-Type': 'text/plain' });
       res.end("No info about this route. Advice: Try to change rrc");
       throw new Error('No info about this route. Advice: Try to change rrc');
 
@@ -1078,18 +1119,117 @@ function pleaseSolveDoublePath(parms, res) {
     var aspathSecond = responseB.data.data.bgp_state[1].path;
     var communitySecond = responseB.data.data.bgp_state[1].community;
 
+    var tPrefixSecond = responseB.data.data.bgp_state[1].target_prefix;
+    var nRoutesSecond = responseB.data.data.nr_routes;
+
     console.log("AS-PATH: "+aspathSecond);
     console.log("COMMUNITY: "+communitySecond);
-
-
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('The query was: ip=> '+ip+ '\nDate => '+dateFirst+'\n \n \nRETRIEVED DATA:\n \nFIRST ASPATH is \n'+aspath +'\n \nCommunity: \n'+community+'\n \nRRC: \n'+rrc+'\n\nTarget prefix: \n'+tPrefix+' \n\nN. of BGP routes observed at that time: '+nRoutes+' \n\nDate => '+dateSecond+'\n \n \nRETRIEVED DATA:\n \nSECOND ASPATH is \n'+ aspathSecond +'\n \nCommunity: \n' +communitySecond);
+    var result1 = {
+      "ip" : ip,
+      "date" : dateFirst,
+      "aspath": aspath,
+      "community": community,
+      "rrc" : rrc,
+      "target_prefix" : tPrefix,
+      "observed_routes" : nRoutes
+    };
+    var result2 = {
+      "ip" : ip,
+      "date" : dateSecond,
+      "aspath": aspathSecond,
+      "community": communitySecond,
+      "rrc" : rrc,
+      "target_prefix" : tPrefixSecond,
+      "observed_routes" : nRoutesSecond
+    };
+    var result = [result1, result2];
+    fs.writeFile("temp.json", JSON.stringify(result, null, 2), 'utf8', function(err) {
+      if(err) console.log(err);
+    });
+    res.json(result);*/
+    //res.sendFile(__dirname + "/prima_visualizzazione.html");
+    //res.end('The query was: ip=> '+ip+ '\nDate => '+dateFirst+'\n \n \nRETRIEVED DATA:\n \nFIRST ASPATH is \n'+aspath +'\n \nCommunity: \n'+community+'\n \nRRC: \n'+rrc+'\n\nTarget prefix: \n'+tPrefix+' \n\nN. of BGP routes observed at that time: '+nRoutes+' \n\nDate => '+dateSecond+'\n \n \nRETRIEVED DATA:\n \nSECOND ASPATH is \n'+ aspathSecond +'\n \nCommunity: \n' +communitySecond);
   }))
   .catch((e) => {
     if(e.code === 'ENOTFOUND'){
       console.log('Unable to connect to API servers');
     } else {
-      console.log(e.message);
+      console.log(e);
     }
   });
+}
+
+function peers_names(peer_list) {
+  var result = [];
+  peer_list.forEach(peer_ip => {
+    collector_peers.forEach(peer => {
+      if(peer['Address'] === peer_ip) {
+        result.push(peer['ASN']);
+        return;
+      }
+    });
+  });
+  return result;
+}
+
+function asn_to_ip(asn, rrc) {
+  var result = null;
+  collector_peers.forEach(peer => {
+    if(peer['ASN'] === asn && peer['RRC'] === rrc && peer["IPv6 prefixes"] === "0") {
+      result = peer['Address'];
+      return;
+    }
+  });
+  return result;
+}
+
+function get_announces(coll_peer, rrc) {
+  var result = [];
+  if(cache) {
+    console.log("cache1");
+    console.log(cache);
+    var ann1 = get_announce_from_coll_peer(cache, coll_peer, rrc);
+    if(ann1) {
+      result.push(ann1)
+    }
+  }  
+  if(cache2) {
+    console.log("cache2");
+    console.log(cache2);
+    var ann2 = get_announce_from_coll_peer(cache2, coll_peer, rrc);
+    if(ann2) {
+      result.push(ann2)
+    }
+  }
+  return result;
+}
+
+function get_announce_from_coll_peer(announces, coll_peer, rrc) {
+  var result = null;
+  var ip = asn_to_ip(coll_peer, rrc);
+  announces.forEach(ann => {
+    var source = ann['source_id'].substring(ann["source_id"].indexOf('-') + 1);
+    if(source === ip) {
+      result = ann;
+      return;
+    }
+  });
+  console.log(result);
+  return result;
+}
+
+function remove_prepending(aspath) {
+  var result = [];
+  for(let i = 0; i < aspath.length; i++) {
+    let curr = aspath[i];
+    if(i < aspath.length - 1) {
+      let next = aspath[i + 1];
+      if(next !== curr) {
+        result.push(curr);
+      }
+    } else {
+      result.push(curr);
+    }
+  }
+  return result;
 }

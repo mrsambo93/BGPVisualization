@@ -12,8 +12,11 @@
 
         #mainsvg {
             display: block;
+            position: relative;
             margin: auto;
             outline: solid black;
+            top: 0;
+            left: 0;
         }
 
         form {
@@ -22,14 +25,14 @@
             width: 500px;
         }
 
-        .container {
+        .info-container {
             text-align: center;
         }
 
-        .container pre {
+        .info-container pre {
             display: inline-block;
             text-align: left;
-            font-size: 20px;
+            font-size: 12px;
         }
 
         #aspath {
@@ -39,6 +42,12 @@
         .line {
             fill: none;
             stroke: darkblue;
+            stroke-width: 3;
+        }
+
+        .line_warning {
+            fill: none;
+            stroke: red;
             stroke-width: 3;
         }
 
@@ -89,6 +98,14 @@
   		    stroke-width: 2px;
   		    stroke-linejoin: round;
 	    }
+
+        .svg-container { 
+	        display: inline-block;
+	        position: relative;
+	        width: 100%; 
+	        vertical-align: middle; 
+	        overflow: visible; 
+        }
     </style>
 </head>
 <body>
@@ -98,14 +115,26 @@
         <input id="aspath" type="text" name="aspath">
         <input id="bt" type="submit" onclick="get_aspath()" value="Submit">
     </form>
-    --->
     <br>
-    <div class="container">
+    --->
+    <div class="info-container">
+        <div style="display: inline-block; text-align: left"> 
         <pre id="info"></pre>
+        <details id="det1">
+            <summary id="sum1">First announce:</summary>
+            <pre id="info1"></pre>
+        </details>
+        <details id="det2">
+            <summary id="sum2">Second announce:</summary>
+            <pre id="info2"></pre>
+        </details>
+        </div>
     </div>
     <br>
+    <div class="svg-container"></div>
     <script src="http://d3js.org/d3.v5.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/topojson-client@3"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript">
 
         const server = "http://localhost:8080";
@@ -119,7 +148,7 @@
             , width = 1362 - margin.left - margin.right
             , height = 768 - margin.top - margin.bottom;
 
-        var gap = 150
+        var gap = 150;
 
         var radius = 40;
         var points_radius = 10;
@@ -131,21 +160,28 @@
             .x(function(d) { return x(d.x); })
             .y(function(d) { return y(d.y); });
 
+        var line_curve = d3.line()
+            .x(function(d) { return x(d.x); })
+            .y(function(d) { return y(d.y); })
+            .curve(d3.curveNatural);
+
         var new_line = d3.line()
             .x(function(d) { return d.x })
             .y(function(d) { return d.y });
 
-        var container = d3.select("body").append("svg")
+        var container = d3.select(".svg-container").append("svg")
                 .attr("id", "mainsvg")
-                .attr("width", width + margin.left + margin.right)
-                .attr("height", 2*(height + margin.top + margin.bottom + margin.bottom));
+                .attr("viewBox", "0 0 " + (width + margin.left + margin.right) + " " + (2*(height + margin.top + margin.bottom + margin.bottom)))
+                //.attr("height", 2*(height + margin.top + margin.bottom + margin.bottom))
+                .attr("height", "97vh")
+                .attr("preserveAspectRatio", "xMidYMin meet");
 
         var svg = container.append("svg")
                 .attr("id", "svg1")
                 .attr("width", width + margin.left + margin.right)
-                .attr("height", height + margin.top + margin.bottom)
+                .attr("height", height + margin.top + 2*margin.bottom)
             .append("g")
-                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+                .attr("transform", "translate(" + margin.left + "," + 1.7*margin.top + ")");
 
         var projection = d3.geoMercator()
             .scale(200)
@@ -198,15 +234,30 @@
 
         d3.json("announces")
             .then(data => {
-                announce = data[0];
-                aspath = announce.aspath;
-                //show_info(announce);
-                get_aspath(aspath);
-                get_coordinates(announce, function(coordinates) {
-                    draw_points(coordinates, function() {
-                        draw_lines(aspath)
+                if(data.length === 2) {
+                    var announce1 = data[0];
+                    var announce2 = data[1];
+
+                    var aspath1 = announce1.path;
+                    var aspath2 = announce2.path;
+
+                    var aspath1_clean = remove_prepending(aspath1);
+                    var aspath2_clean = remove_prepending(aspath2);
+
+                    show_info(announce1, announce2)
+                    get_aspaths(aspath1_clean, aspath2_clean);
+                } else {
+                    var announce = data[0];
+                    var aspath = announce.path;
+                    var aspath_clean = remove_prepending(aspath);
+                    show_info(announce);
+                    get_aspath(aspath_clean);
+                    get_coordinates(announce, function(coordinates) {
+                        draw_points(coordinates, function() {
+                            draw_lines(aspath_clean)
+                        });
                     });
-                });
+                }
             });
 
         function make_y_gridlines(ticks) {
@@ -218,7 +269,7 @@
             /*var form = document.getElementById("form1");
             var aspath_string = form.elements[0].value;
             aspath = aspath_string.split(" ");*/
-            data = {"aspath" : asp};
+            var data = {"aspath" : asp};
             //console.log(data);
             const params = {
                 headers: {
@@ -231,12 +282,35 @@
             fetch(server + "/aspath", params)
                 .then(data => {return data.json()})
                 .then(response => {
-                    draw_axis(response.response);
+                    draw_axis(response.response, asp);
                 });
         }
 
-        function draw_axis(data) {
-            x.domain([0, aspath.length - 1]);
+        function get_aspaths(aspath1, aspath2) {
+            var data = {
+                "aspath1" : aspath1,
+                "aspath2" : aspath2
+            };
+            const params = {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body : JSON.stringify(data),
+                method : "POST"
+            };
+            fetch(server + "/aspaths", params)
+                .then(data => {return data.json()})
+                .then(response => {
+                    draw_axis(response.response, aspath1, aspath2, response.discarded);
+                });
+        }
+
+        function draw_axis(data, aspath1, aspath2=[], discarded=[]) {
+            var xmax = d3.max(data, function(d) {return d.x});
+            console.log(xmax);
+            x.domain([0, xmax]);
+
             /*var ran = [];
             for (i=0; i<aspath.length; i++) {
                 ran.push(i);
@@ -254,41 +328,73 @@
 
             get_as_names(data, function(res) {
                 //console.log(res);
-                draw_as(res);
+                draw_as(res, aspath1, aspath2, discarded);
             });
         }
 
-        function draw_as(as_data) {
+        function draw_as(as_data, aspath1, aspath2, discarded) {
             clear();
 
             transl_to_positive(as_data, function(as_data) {
+
                 var ticks = d3.max(as_data, function(d) {return d.y});
+                console.log(ticks);
                 y.domain([0, ticks]);
 
                 svg.append("g")
                     .attr("class", "grid")
                     .call(make_y_gridlines(ticks)
                         .tickSize(- width)
-                        .tickFormat("")
-                )
-
-                svg.selectAll(".dot")
-                    .data(as_data)
-                    .enter().append("circle")
-                            .attr("class", "dot")
-                            .attr("cx", function(d) { return x(d.x); })
-                            .attr("cy", function(d) { return y(d.y); })
-                            .attr("r", radius);
-
-                split_data(as_data, function(splitted) {
+                        .tickFormat(""));
+                
+                aspath1.reverse();
+                aspath2.reverse();
+                adjust_overlapping(as_data, ticks);
+                split_data(as_data, aspath1, aspath2, discarded, function(splitted) {
+                    console.log(splitted);
+                    var paths = [];
                     splitted.forEach(element => {
                         var path = svg.append("path")
                             .datum(element)
                             .attr("class", "line")
                             .attr("d", line)
+                            .style("stroke", function(d) {
+                                var id = belongs_to(d, aspath1, aspath2);
+                                if(id === 1) {
+                                    return "darkblue";
+                                }
+                                if(id === 2) {
+                                    return "yellow";
+                                }
+                                if(id === 3) {
+                                    return "green";   
+                                }
+                            });
 
-                        draw_markers(path, element);
+                        paths.push([path, element]);
                     });
+
+                    var disc_arcs = get_discarded(as_data, discarded);
+                    disc_arcs.forEach(element => {
+                        var mid_point = get_mid_point(element[0].x, element[0].y, element[1].x, element[1].y, ticks, x.domain()[1]);
+                        var new_datum = [element[0], mid_point, element[1]];
+                        var path = svg.append("path")
+                            .datum(new_datum)
+                            .attr("class", "line_warning")
+                            .attr("d", line_curve);
+                    });
+
+                    svg.selectAll(".dot")
+                        .data(as_data)
+                        .enter().append("circle")
+                                .attr("class", "dot")
+                                .attr("cx", function(d) { return x(d.x); })
+                                .attr("cy", function(d) { return y(d.y); })
+                                .attr("r", radius);
+
+                    paths.forEach(element => {
+                        draw_markers(element[0], element[1]);
+                    })
 
                     svg.selectAll(".inner_label")
                         .data(as_data)
@@ -423,7 +529,19 @@
             var queries = [];
             d3.json("communities")
             .then(communities => {
-                Object.entries(data.community).forEach(([key, com_list]) => {
+                data.community.forEach(community => {
+                    for(let i = 0; i < communities.length; i++) {
+                        if(communities[i]["id"] === community) {
+                            var value = communities[i]["comment"];
+                            console.log(value);
+                            var country = value.match('/<country>[^|]+/');
+                            if(country) {
+                                console.log(country);
+                            }
+                        }
+                    }
+                });
+                /*Object.entries(data.community).forEach(([key, com_list]) => {
                     var query = "";
                     com_list.forEach(elem => {
                         var comm = communities[key][elem];
@@ -441,7 +559,7 @@
                     query = rrc.location;
                     queries.push([key, query]);
                     callback(queries);
-                });
+                });*/
             });
         }
 
@@ -459,35 +577,28 @@
             draw_lines(aspath, d3.zoomTransform(world_map.node()));
         }
 
-        /*function show_info(data) {
-            var complete = JSON.parse(JSON.stringify(data));
-            var output = "";
-            output += "Date: " + complete.datetime + "\n";
-            output += "Prefix: " + complete.prefix + "\n";
-            fetch(server + "/rrc/" + data.rrc)
-                .then(rrc => {return rrc.json()})
-                .then(rrc => {
-                    var ixp = rrc.ixp;
-                    d3.json("collectors")
-                        .then(collector => {
-                            if(data.rrc == "03") {
-                                ixp = collector[complete.collectedby];
-                            }
-                            output += "Collector: route collected at rrc" + data.rrc + " in " + rrc.location + " at " + ixp + "\n";
-                            output += "Communities: \n";
-                            d3.json("communities")
-                                .then(communities => {
-                                    complete.community.forEach(elem => {
-                                        var couple = elem.split(":");
-                                        var key = couple[0];
-                                        var value = couple[1];
-                                        output = output + elem + " - " + communities[key][value]["value"] + "\n";
-                                    });
-                                    document.getElementById("info").innerHTML = output;
-                                });
-                        });
-                });
-        }*/
+        function show_info(announce1, announce2=null) {
+            var info = {
+                "Prefix" : announce1["target_prefix"],
+                "RRC" : announce1["rrc"],
+                "Collected by" : announce1["source_id"]
+            };
+            $('#info').text(JSON.stringify(info, null, 4));
+            var info1 = {
+                "Aspath" : announce1['path'],
+                "Communities" : announce1['community'],
+                "Time" : announce1['query_time']
+            };
+            $('#info1').text(JSON.stringify(info1, null, 4));
+            if(announce2) {
+                var info2 = {
+                    "Aspath" : announce2['path'],
+                    "Communities" : announce2['community'],
+                    "Time" : announce2['query_time']
+                };
+                $('#info2').text(JSON.stringify(info2, null, 4));
+            }
+        }
 
         function transl_to_positive(data, callback) {
             var value = 0;
@@ -505,13 +616,45 @@
             callback(data);
         }
 
-        function split_data(data, callback) {
-            var result = data.reduce(function(result, value, index, array) {
-                result.push(array.slice(index, index + 2));
-                return result;
-            }, []);
-            result.pop();
+        function split_data(data, aspath1, aspath2, discarded, callback) {
+            var result = [];
+            for(let i = 0; i < data.length - 1; i++) {
+                let curr = data[i];
+                for(let j = i + 1; j < data.length; j++) {
+                    let next = data[j];
+                    if((is_next(aspath1, curr.asn, next.asn) || is_next(aspath2, curr.asn, next.asn)) 
+                        && !(array_in_matrix(discarded, [curr.asn, next.asn])))
+                        result.push([curr, next]);
+                }
+            }
             callback(result);
+        }
+
+        function get_discarded(data, discarded) {
+            var res = [];
+            discarded.forEach(arc => {
+                console.log(arc);
+                var el1 = arc[0];
+                var el2 = arc[1];
+                var element = [];
+                for(let i = 0; i < data.length; i++) {
+                    if(data[i].asn == el1 || data[i].asn == el2) {
+                        element.push(data[i]);
+                    }
+                }
+                if(element.length === 2)
+                    res.push(element)
+            });
+            return res;
+        }
+
+        function array_in_matrix(matrix, array) {
+            var item_as_string = JSON.stringify(array);
+
+            var contains = matrix.some(function(ele) {
+                return JSON.stringify(ele) === item_as_string;
+            });
+            return contains;
         }
 
         function get_as_names(data, callback) {
@@ -521,7 +664,7 @@
                     .then(response => {return response.json()})
                     .then(response => {
                         processed++;
-                        element.name = response.data.name
+                        element.name = response.data.org.name;
                         if(processed === data.length) {
                             callback(data);
                         }
@@ -539,6 +682,77 @@
 
                 return retObj;
             }, {});
+        }
+
+        function get_mid_point(x1, y1, x2, y2, ymax, xmax) {
+            let midx = (x1 + x2)*0.5;
+            let midy = (y1 + y2)*0.5;
+
+            console.log(xmax);
+            midy += ymax*0.6;
+            midx += xmax*0.1;
+
+            return {
+                x : midx,
+                y : midy,
+            }
+        }
+
+        function is_next(path, el1, el2) {
+            let i1 = path.indexOf(parseInt(el1));
+            let i2 = path.indexOf(parseInt(el2));
+            console.log(path);
+            console.log(el1, el2);
+            console.log(i1, i2);
+            if(i1 !== -1 && i2 !== -1) {
+                if(i1 === i2 - 1) 
+                    return true;
+            }
+            return false;
+        }
+
+        function adjust_overlapping(data, ticks) {
+            for(let i = 0; i < data.length - 1; i++) {
+                let curr = data[i];
+                for(let j = i; j < data.length; j++) {
+                    let next = data[j];
+                    if(curr.x === next.x && curr.y === next.y) {
+                        curr.y -= ticks*0.085;
+                        next.y += ticks*0.085;
+                    }
+                }
+            }
+        }
+
+        function belongs_to(arc, path1, path2) {
+            var asn1 = arc[0].asn;
+            var asn2 = arc[1].asn;
+            if(is_next(path1, asn1, asn2) && is_next(path2, asn1, asn2)) {
+                return 3;
+            }
+            if(is_next(path1, asn1, asn2)) {
+                return 1;
+            }
+            if(is_next(path2, asn1, asn2)) {
+                return 2;
+            }
+            return 0;
+        }
+
+        function remove_prepending(aspath) {
+            var result = [];
+            for(let i = 0; i < aspath.length; i++) {
+                let curr = aspath[i];
+                if(i < aspath.length - 1) {
+                    let next = aspath[i + 1];
+                    if(next !== curr) {
+                        result.push(curr);
+                    }
+                } else {
+                    result.push(curr);
+                }
+            }
+            return result;
         }
 
         function clear() {

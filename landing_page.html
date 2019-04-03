@@ -18,17 +18,31 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label class="control-label">IP Address or Prefix</label>
-                        <input type="text" class="form-control" name="ipaddress" id="ipaddress">
+                        <label for="ipaddress" class="control-label">IP Address or Prefix</label>
+                        <input type="text" class="form-control" 
+                        name="ipaddress" 
+                        id="ipaddress" 
+                        autocomplete="on" 
+                        data-parsley-required 
+                        data-parsley-trigger="keyup blur" 
+                        data-parsley-ipaddress="" 
+                        data-parsley-validation-threshold="0" 
+                        onkeyup="try_send_data()">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class='col-md-6'>
                     <div class="form-group">
-                        <label class="control-label">First BGP time</label>
+                        <label for="date1" class="control-label">First BGP time</label>
                         <div class='input-group date' id='datetimepicker1'>
-                            <input type='text' class="form-control" />
+                            <input type='text' class="form-control" name="date1" id="date1" 
+                            data-parsley-required 
+                            data-parsley-trigger="keyup blur"
+                            placeholder="dd/mm/yyyy HH:MM" 
+                            data-parsley-validation-threshold="0"
+                            data-parsley-datetime=""
+                            onkeyup="try_send_data()"/>
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-calendar"></span>
                             </span>
@@ -37,9 +51,14 @@
                 </div>
                 <div class='col-md-6'>
                     <div class="form-group">
-                        <label class="control-label">Second BGP time</label>
+                        <label for="date2" class="control-label">Second BGP time</label>
                         <div class='input-group date' id='datetimepicker2'>
-                            <input type='text' class="form-control" />
+                            <input type='text' class="form-control" name="date2" id="date2" 
+                            placeholder="dd/mm/yyyy HH:MM(optional)"
+                            data-parsley-trigger="keyup blur" 
+                            data-parsley-validation-threshold="0"
+                            data-parsley-datetime="" 
+                            onkeyup="try_send_data()"/>
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-calendar"></span>
                             </span>
@@ -50,14 +69,22 @@
             <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label">RRC</label>
-                            <select name="rrcs" id="choice">
+                            <label for="rrcs" class="control-label">RRC</label>
+                            <select name="rrcs" id="choice" onchange="try_send_data()">
+                                <option>To fill</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="col_peers" class="control-label">Collector peer</label>
+                            <select name="col_peers" id="choice2">
                                 <option>To fill</option>
                             </select>
                         </div>
                     </div>
                 </div>
-            <input type="submit" class="btn btn-primary" id="button" value="Submit">
+            <input type="submit" class="btn btn-primary" id="button" value="Submit" onclick="submit_peer()">
         </div>
     </div>
 </div>
@@ -65,21 +92,94 @@
 <script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
-<script type="text/javascript" src="parsley"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="bower_components/parsleyjs/dist/parsley.js"></script>
 <script>
+    const server = "http://localhost:8080";
     var today = new Date();
+
+    window.Parsley.addValidator('ipaddress', {
+        validateString : function(value) {
+            var ip = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\/([0-9]|[1-2][0-9]|3[0-2]))?$/;
+            if(ip.test(value))
+                return true;
+            return false;
+        },
+        messages : {
+            en : "Not a valid IP address or prefix"
+        }
+    });
+
+    window.Parsley.addValidator('datetime', {
+        validate : function(value) {
+            var isValid = moment(value, 'DD/MM/YYYY HH:mm', true).isValid();
+            return isValid;
+        },
+        messages : {
+            en : 'Please provide date in format dd/mm/yyyy HH:MM'
+        }
+    })
+    
+    var ip_parsley = $('#ipaddress').parsley();
+    var date1_parsley = $('#date1').parsley();
+    var date2_parsley = $('#date2').parsley();
 
     $(function () {
         $('#datetimepicker1').datetimepicker({
             format : 'DD/MM/YYYY HH:mm',
-            maxDate : new Date()
+            maxDate : today,
+            useCurrent: false,
+            showClose: true
+        })
+        .on('dp.change', function() {
+            $('#date1').parsley().validate();
+            try_send_data();
+        })
+        .on('dp.show', function() {
+            if ($('#date1').val() === ""){
+                $(this).data('DateTimePicker').defaultDate(today);
+            }
         });
     });
 
-    var vals = [];
+    $('#date1').keyup(function() {
+        if(!$('#date1').parsley().isValid()) {
+            var value = $('#date1').val();
+            $('#datetimepicker1').data('DateTimePicker').clear();
+            $('#date1').val(value);
+        }
+    });
+
+    $(function () {
+        $('#datetimepicker2').datetimepicker({
+            format : 'DD/MM/YYYY HH:mm',
+            maxDate : today,
+            useCurrent: false,
+            showClose: true
+        })
+        .on('dp.change', function() {
+            $('#date2').parsley().validate();
+            try_send_data();
+        })
+        .on('dp.show', function() {
+            if ($('#date2').val() == ""){
+                $(this).data('DateTimePicker').defaultDate(today);
+            }
+        });
+    });
+
+    $('#date2').keyup(function() {
+        if(!$('#date2').parsley().isValid()) {
+            var value = $('#date2').val();
+            $('#datetimepicker2').data('DateTimePicker').clear();
+            $('#date2').val(value);
+        }
+    });
+
+    var vals = ["----"];
 
     for(let i = 0; i < 24; i++) {
-        if(i !== 17)
+        if(i !== 17 && i !== 2 && i !== 8 && i !== 9)
             vals.push(i);
     }
 
@@ -89,7 +189,92 @@
         $choice.append('<option>' + value + '</option>');
     });
 
+    var $choice2 = $('#choice2');
+    $choice2.empty();
+    $choice2.css("pointer-events", "none");
+    $choice2.css('opacity', '.5');
+    $choice2.append('<option>----</option>');
+
+    var button = $('#button');
+    button.css("pointer-events", "none");
+    button.css('opacity', '.5');
     
+    $choice2.change(function() {
+        if($choice2.val() !== "----") {
+            button.css("pointer-events", "auto");
+            button.css("opacity", "1");
+        }
+    });
+
+    function send_data() {
+        var ip = $("#ipaddress").val();
+        var date1 = $("#datetimepicker1").data('DateTimePicker').date().toISOString().substring(0, 16);
+        var rrc = $("#choice").val();
+        var parameters = {
+            "param1" : ip,
+            "param2" : date1,
+            "param4" : rrc  
+        }
+        if($("#date2").val() !== "") {
+            var date2 = $("#datetimepicker2").data('DateTimePicker').date().toISOString().substring(0, 16);
+            parameters["param22"] = date2;
+        }
+        console.log("sent");
+        console.log(parameters);
+        $.post(server + '/solve', parameters)
+            .done(function(data) {
+                console.log(data);
+                var peers = data.response;
+                $.each(peers, function(index, value) {
+                    $choice2.append('<option>' + value + '</option>');
+                });
+                $choice2.css("pointer-events", "auto");
+                $choice2.css('opacity', '1');
+            });         
+    }
+
+    function try_send_data() {
+        $choice2.empty();
+        $choice2.append('<option>----</option>');
+        $choice2.css("pointer-events", "none");
+        $choice2.css('opacity', '.5');
+        button.css("pointer-events", "none");
+        button.css('opacity', '.5');
+        if(ip_parsley.isValid() && date1_parsley.isValid()) {
+            var ip = $("#ipaddress").val();
+            var date1 = $("#datetimepicker1").data('DateTimePicker').date().toISOString().substring(0, 16);
+            var rrc = $("#choice").val();
+            if(ip !== "" && date1 !== "" & !Number.isNaN(parseInt(rrc))) {
+                send_data();
+            }
+        }
+    }
+
+    function submit_peer() {
+        var peer = $('#choice2').val();
+        var rrc = $('#choice').val();
+        
+        var params = {
+            "coll_peer" : peer,
+            "rrc" : rrc
+        };
+        
+        var form = document.createElement('form');
+        form.setAttribute('method', 'post');
+        form.setAttribute('action', server + '/visualize');
+
+        for(param in params) {
+            var hiddenField = document.createElement('input');
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", param);
+            hiddenField.setAttribute("value", params[param]);
+            
+            form.appendChild(hiddenField);
+        }
+
+        document.body.appendChild(form);
+        form.submit();
+    }
 
 </script>
 </body>
