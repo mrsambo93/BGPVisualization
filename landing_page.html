@@ -131,14 +131,14 @@
             useCurrent: false,
             showClose: true
         })
-        .on('dp.change', function() {
-            $('#date1').parsley().validate();
-            try_send_data();
-        })
         .on('dp.show', function() {
             if ($('#date1').val() === ""){
                 $(this).data('DateTimePicker').defaultDate(today);
             }
+        })
+        .on('dp.change', function() {
+            $('#date1').parsley().validate();
+            try_send_data();
         });
     });
 
@@ -157,14 +157,14 @@
             useCurrent: false,
             showClose: true
         })
-        .on('dp.change', function() {
-            $('#date2').parsley().validate();
-            try_send_data();
-        })
         .on('dp.show', function() {
             if ($('#date2').val() == ""){
                 $(this).data('DateTimePicker').defaultDate(today);
             }
+        })
+        .on('dp.change', function() {
+            $('#date2').parsley().validate();
+            try_send_data();
         });
     });
 

@@ -17,6 +17,7 @@ app.use(morgan('tiny'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
+app.use('/d3tip', express.static(__dirname + '/node_modules/d3-tip/dist/index.js'))
 
 var port = process.env.PORT || 8080;
 
@@ -63,6 +64,10 @@ app.post('/visualize', function(req, res) {
 
     res.sendFile(__dirname + '/prima_visualizzazione.html');
   }
+});
+
+app.get('/worldmap', function(req, res) {
+  res.sendFile(__dirname + '/datasets/combined2.json')
 });
 
 app.get('/parsley', function(req, res) {
@@ -1081,9 +1086,9 @@ function pleaseSolveDoublePath(parms, res) {
       var peers1 = new Set(complete1.map(el => el["source_id"].substring(el["source_id"].indexOf('-') + 1)));
       var peers2 = new Set(complete2.map(el => el["source_id"].substring(el["source_id"].indexOf('-') + 1)));
 
-      var intersection = new Set([...peers1].filter(x => peers2.has(x)));
+      var un = union(peers1, peers2);
 
-      var peers_n = peers_names(intersection);
+      var peers_n = peers_names(un);
 
       res.json({"response" : Array.from(peers_n)});
 
@@ -1164,21 +1169,10 @@ function peers_names(peer_list) {
   peer_list.forEach(peer_ip => {
     collector_peers.forEach(peer => {
       if(peer['Address'] === peer_ip) {
-        result.push(peer['ASN']);
+        result.push(peer['ASN'] + " - " + peer_ip);
         return;
       }
     });
-  });
-  return result;
-}
-
-function asn_to_ip(asn, rrc) {
-  var result = null;
-  collector_peers.forEach(peer => {
-    if(peer['ASN'] === asn && peer['RRC'] === rrc && peer["IPv6 prefixes"] === "0") {
-      result = peer['Address'];
-      return;
-    }
   });
   return result;
 }
@@ -1206,7 +1200,7 @@ function get_announces(coll_peer, rrc) {
 
 function get_announce_from_coll_peer(announces, coll_peer, rrc) {
   var result = null;
-  var ip = asn_to_ip(coll_peer, rrc);
+  var ip = coll_peer.split(" ")[2];
   announces.forEach(ann => {
     var source = ann['source_id'].substring(ann["source_id"].indexOf('-') + 1);
     if(source === ip) {
