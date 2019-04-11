@@ -17,7 +17,7 @@ app.use(morgan('tiny'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
-app.use('/d3tip', express.static(__dirname + '/node_modules/d3-tip/dist/index.js'))
+app.use('/d3tip', express.static(__dirname + '/node_modules/d3-tip/dist/index.js'));
 
 var port = process.env.PORT || 8080;
 
@@ -67,7 +67,7 @@ app.post('/visualize', function(req, res) {
 });
 
 app.get('/worldmap', function(req, res) {
-  res.sendFile(__dirname + '/datasets/combined2.json')
+  res.sendFile(__dirname + '/datasets/countries.topo.json');
 });
 
 app.get('/parsley', function(req, res) {
@@ -1193,6 +1193,8 @@ function get_announces(coll_peer, rrc) {
     var ann2 = get_announce_from_coll_peer(cache2, coll_peer, rrc);
     if(ann2) {
       result.push(ann2)
+    } else {
+      result.push({});
     }
   }
   return result;

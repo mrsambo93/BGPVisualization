@@ -19,6 +19,14 @@
             left: 0;
         }
 
+        #svg1 {
+            display: block;
+            position: relative;
+            margin: auto;
+            top: 0;
+            left: 0;
+        }
+
         form {
             display: block;
             margin: 0 auto;
@@ -86,8 +94,6 @@
         }
 
         .feature {
-		    fill: none;
-		    stroke: grey;
 		    stroke-width: 1px;
   		    stroke-linejoin: round;
 	    }
@@ -116,6 +122,18 @@
             font-size: 12px;
         }
 
+        #mapid {
+            height: 45vh;
+            width: 40vw;
+            position: absolute;
+            top: 49vh;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 1;
+        }
+
     </style>
 </head>
 <body>
@@ -141,10 +159,18 @@
         </div>
     </div>
     <br>
-    <div class="svg-container"></div>
+    <div class="svg-container">
+        <div id="mapid"></div>
+    </div>
     <script src="http://d3js.org/d3.v5.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/topojson-client@3"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+        integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+        crossorigin=""></script>
     <script src="d3tip"></script>
     <script type="text/javascript">
 
@@ -179,6 +205,21 @@
         var new_line = d3.line()
             .x(function(d) { return d.x })
             .y(function(d) { return d.y });
+
+        var map = L.map('mapid', {
+            maxBoundsViscosity: 1.0
+        }).setView([46.81509864599243, 8.3221435546875], 2).setMaxBounds( [[-90,-180], [90,180]] );
+
+        var tiles = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            minZoom: 2,
+            id: 'mapbox.streets',
+            accessToken: 'pk.eyJ1IjoibXJzYW1ibzkzIiwiYSI6ImNqdTlraWMzZjFqdGMzemxtemo0aGlsaWgifQ.zLyN6NXgZEWVGUfiYhMiVg',
+            noWrap: true
+        }).addTo(map);
+
+        L.svg().addTo(map);
 
         var container = d3.select(".svg-container").append("svg")
                 .attr("id", "mainsvg")
@@ -228,6 +269,7 @@
                 var content = "<span style='margin-left: 2.5px;'><b>" + d.properties.name + "</b></span><br>";
                 return content;
             });
+            
         world_map.append('circle')
             .attr('id', 'tipfollowscursor');
         world_map.call(tip);
@@ -270,6 +312,47 @@
                     .attr("class", "mesh")
                     .attr("d", path)
                     .style('pointer-events', 'none');
+
+                
+                var world_map2 = d3.select('#mapid').select('g');
+
+                const projectPoint = function(x, y){
+                    var point = map.latLngToLayerPoint(new L.LatLng(y, x))
+                        this.stream.point(point.x, point.y)
+                    };
+                    
+                const transform = d3.geoTransform({point: projectPoint});
+                    
+                const geoPath = d3.geoPath().projection(transform);
+
+                const featureElement = world_map2.selectAll("path")
+                    .data(topojson.feature(world, world.objects.countries).features)
+                    .enter()
+                        .append("path")
+                        .attr("class", "feature")
+                        .attr("name", function(d) {return d.properties.name;})
+                        .attr("fill", "black")
+                        .attr("fill-opacity", 0);
+                
+                var circle = world_map2.append('circle')
+                    .attr('cx', function(d) { return map.latLngToLayerPoint([0, 0]).x })
+                    .attr('cy', function(d) { return map.latLngToLayerPoint([0, 0]).y })
+                    .attr('r', 10)
+                    .style("fill", "red");
+                    
+                const update = () => {
+                    featureElement.attr("d", geoPath);
+                    circle.attr('cx', function(d) { return map.latLngToLayerPoint([0, 0]).x })
+                        .attr('cy', function(d) { return map.latLngToLayerPoint([0, 0]).y });
+                };
+
+                update();
+
+                map.on("moveend", update);
+
+                world_map2.select('[name="Italy"]')
+                    .attr("fill", "red")
+                    .attr("fill-opacity", 0.6);
             });
 
         d3.json("announces")
