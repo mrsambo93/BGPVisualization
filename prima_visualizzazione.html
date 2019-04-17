@@ -27,6 +27,13 @@
             left: 0;
         }
 
+        #svg3 {
+            position: relative;
+            margin: auto;
+            top: 0;
+            left: 0;
+        }
+
         form {
             display: block;
             margin: 0 auto;
@@ -67,7 +74,7 @@
         #outer_line {
             fill: none;
             stroke: green;
-            stroke-width: 3;
+            stroke-width: 0.2vh;
             pointer-events: none;
         }
 
@@ -118,23 +125,27 @@
 	    }
 
         .svg-container {
-          position: absolute;
-          z-index: 2; /* put .green-box above .dashed-box */
-          /*background: lightgreen;*/
-          width: 20%;
-          left: 35%;
-          top: -25px;
-          height: 7em;
-          opacity: 0.9;
+            position: absolute;
+            left: 35%;
+            top: 1vh;
         }
+
+        #line-svg-container {
+            position: absolute;
+            width: 99%;
+            height: 98%;
+            z-index: 10;
+            pointer-events: none;
+        }
+
         .dashed-box {
-          position: relative;
-          z-index: -1;
-          /*border: dashed;*/
-          height: 2em;
-          margin-bottom: 1em;
-          margin-top: 0em;
-}
+            position: relative;
+            z-index: -1;
+            /*border: dashed;*/
+            height: 2em;
+            margin-bottom: 1em;
+            margin-top: 0em;
+        }
 
         .d3-tip {
             line-height: 1;
@@ -145,14 +156,20 @@
             font-size: 12px;
         }
 
-        #mapid {
-            height: 45vh;
-            width: 40vw;
+        #map-container {
+            height: 47%;
+            width: 94%;
             position: absolute;
-            top: 49vh;
-            left: 1.35vw;
+            bottom: 3%;
+            left: 3%;
             right: 0;
             z-index: 1;
+        }
+
+        #mapid {
+            height: 100%;
+            width: 100%;
+            position: relative;
         }
 
     </style>
@@ -181,11 +198,13 @@
             <pre id="info2"></pre>
         </details>
         </div>
-
-        <div class="svg-container">
+    </span>
+    <div class="svg-container">
+        <div id="map-container">
             <div id="mapid"></div>
         </div>
-    <br>
+    </div>
+    <div id="line-svg-container"></div>
     <script src="http://d3js.org/d3.v5.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/topojson-client@3"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -230,21 +249,6 @@
             .x(function(d) { return d.x })
             .y(function(d) { return d.y });
 
-        var map = L.map('mapid', {
-            maxBoundsViscosity: 1.0
-        }).setView([46.81509864599243, 8.3221435546875], 2).setMaxBounds( [[-90,-180], [90,180]] );
-
-        var tiles = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-            maxZoom: 18,
-            minZoom: 2,
-            id: 'mapbox.streets',
-            accessToken: 'pk.eyJ1IjoibXJzYW1ibzkzIiwiYSI6ImNqdTlraWMzZjFqdGMzemxtemo0aGlsaWgifQ.zLyN6NXgZEWVGUfiYhMiVg',
-            noWrap: true
-        }).addTo(map);
-
-        L.svg().addTo(map);
-
         var container = d3.select(".svg-container").append("svg")
                 .attr("id", "mainsvg")
                 .attr("viewBox", "0 0 " + (width + margin.left + margin.right) + " " + (2*(height + margin.top + margin.bottom + margin.bottom)))
@@ -282,10 +286,12 @@
             .append("g")
                 .attr("transform", "translate(" + 0 + "," + margin.top + ")")
             .append("g")
-                .call(zoom);
 
-        var line_container = container.append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        var line_container = d3.select("#line-svg-container").append('svg')
+            .attr('id', 'svg3')
+                .attr('height', '100%')
+                .attr('width', '100%')
+            .append("g")
 
         var tip = d3.tip()
             .attr('class', 'd3-tip')
@@ -297,6 +303,24 @@
         world_map.append('circle')
             .attr('id', 'tipfollowscursor');
         world_map.call(tip);
+
+        var map = L.map('mapid', {
+            maxBoundsViscosity: 1.0,
+            zoomSnap: 0,
+            wheelPxPerZoomLevel: 400
+        }).setView([46.81509864599243, 8.3221435546875], 1).setMaxBounds( [[-90,-180], [90,180]] );
+
+        var tiles = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            minZoom: 1,
+            id: 'mapbox.streets',
+            accessToken: 'pk.eyJ1IjoibXJzYW1ibzkzIiwiYSI6ImNqdTlraWMzZjFqdGMzemxtemo0aGlsaWgifQ.zLyN6NXgZEWVGUfiYhMiVg'
+        }).addTo(map);
+
+        L.svg({ padding : 100 }).addTo(map);
+
+        var world_map2 = d3.select('#mapid').select('g');
 
         d3.json(url_map)
             .then(function(world) {
@@ -337,9 +361,6 @@
                     .attr("d", path)
                     .style('pointer-events', 'none');
 
-                
-                var world_map2 = d3.select('#mapid').select('g');
-
                 const projectPoint = function(x, y){
                     var point = map.latLngToLayerPoint(new L.LatLng(y, x))
                         this.stream.point(point.x, point.y)
@@ -359,20 +380,38 @@
                         .attr("fill-opacity", 0);
                 
                 var circle = world_map2.append('circle')
+                    .attr("class", "circletest")
                     .attr('cx', function(d) { return map.latLngToLayerPoint([0, 0]).x })
                     .attr('cy', function(d) { return map.latLngToLayerPoint([0, 0]).y })
-                    .attr('r', 10)
+                    .attr('r', 5)
                     .style("fill", "red");
                     
                 const update = () => {
                     featureElement.attr("d", geoPath);
                     circle.attr('cx', function(d) { return map.latLngToLayerPoint([0, 0]).x })
-                        .attr('cy', function(d) { return map.latLngToLayerPoint([0, 0]).y });
+                        .attr('cy', function(d) { return map.latLngToLayerPoint([0, 0]).y })
+                        .attr('r', 5);
+                    $(document).trigger('zoomed');
                 };
+
+                const update2 = () => {
+                    $(document).trigger('zoomed');
+                }
 
                 update();
 
+                var interval = null;
                 map.on("moveend", update);
+                map.on("move", update2);
+                map.on("zoomstart", function() {
+                    interval = setInterval(update2, 5);
+                });
+                map.on('zoomend', function() {
+                    if(interval) {
+                        clearInterval(interval);
+                        interval = null;
+                    }
+                });
 
                 world_map2.select('[name="Italy"]')
                     .attr("fill", "red")
@@ -392,18 +431,36 @@
                     var aspath2_clean = remove_prepending(aspath2);
 
                     show_info(announce1, announce2)
-                    get_aspaths(aspath1_clean, aspath2_clean);
+                    get_aspaths(aspath1_clean, aspath2_clean, function() {
+                        draw_lines(aspath1_clean);
+                        $(window).on('resize', function() {
+                            map.invalidateSize();
+                            draw_lines(aspath1_clean);
+                        });
+                        $(document).on('zoomed', function() {
+                            draw_lines(aspath1_clean);
+                        });
+                    });
                 } else {
                     var announce = data[0];
                     var aspath = announce.path;
                     var aspath_clean = remove_prepending(aspath);
                     show_info(announce);
-                    get_aspath(aspath_clean);
-                    get_coordinates(announce, function(coordinates) {
-                        draw_points(coordinates, function() {
-                            draw_lines(aspath_clean)
+                    get_aspath(aspath_clean, function() {
+                        draw_lines(aspath_clean);
+                        $(window).on('resize', function() {
+                            map.invalidateSize();
+                            draw_lines(aspath_clean);
                         });
                     });
+                    $(document).on('zoomed', function() {
+                            draw_lines(aspath_clean);
+                        });
+                    /*get_coordinates(announce, function(coordinates) {
+                        draw_points(coordinates, function() {
+                            draw_lines(aspath_clean);
+                        });
+                    });*/
                 }
             });
 
@@ -412,7 +469,7 @@
                     .ticks(ticks)
         }
 
-        function get_aspath(asp) {
+        function get_aspath(asp, callback) {
             /*var form = document.getElementById("form1");
             var aspath_string = form.elements[0].value;
             aspath = aspath_string.split(" ");*/
@@ -429,11 +486,13 @@
             fetch(server + "/aspath", params)
                 .then(data => {return data.json()})
                 .then(response => {
-                    draw_axis(response.response, asp);
+                    draw_axis(response.response, asp, [], [], function() {
+                        callback();
+                    });
                 });
         }
 
-        function get_aspaths(aspath1, aspath2) {
+        function get_aspaths(aspath1, aspath2, callback) {
             var data = {
                 "aspath1" : aspath1,
                 "aspath2" : aspath2
@@ -449,11 +508,13 @@
             fetch(server + "/aspaths", params)
                 .then(data => {return data.json()})
                 .then(response => {
-                    draw_axis(response.response, aspath1, aspath2, response.discarded);
+                    draw_axis(response.response, aspath1, aspath2, response.discarded, function() {
+                        callback();
+                    });
                 });
         }
 
-        function draw_axis(data, aspath1, aspath2=[], discarded=[]) {
+        function draw_axis(data, aspath1, aspath2=[], discarded=[], callback) {
             var xmax = d3.max(data, function(d) {return d.x});
             x.domain([0, xmax]);
 
@@ -474,11 +535,11 @@
 
             get_as_names(data, function(res) {
                 //console.log(res);
-                draw_as(res, aspath1, aspath2, discarded);
+                draw_as(res, aspath1, aspath2, discarded, function() { callback() });
             });
         }
 
-        function draw_as(as_data, aspath1, aspath2, discarded) {
+        function draw_as(as_data, aspath1, aspath2, discarded, callback) {
             clear();
 
             transl_to_positive(as_data, function(as_data) {
@@ -562,6 +623,7 @@
                                     //console.log(d);
                                     return d.name;
                                 });
+                    callback();
                 });
             });
         }
@@ -604,32 +666,26 @@
             callback();
         }
 
-        function draw_lines(asp, transform = null) {
+        function draw_lines(asp) {
             line_container.selectAll("#outer_line").remove();
             asp.forEach(asn => {
                 var node1 = svg.select(".end_" + asn);
-                var node2 = world_map.select(".svg2_" + asn);
+                var node2 = world_map2.select(".circletest");
 
                 if(node1.node() && node2.node()) {
 
+                    p1 = node1.node().getBoundingClientRect();
+                    p2 = node2.node().getBoundingClientRect();
+
                     var point1 = {
-                        x : parseFloat(node1.attr("cx")),
-                        y : parseFloat(node1.attr("cy"))
+                        x : p1.x - 2,
+                        y : p1.y - 1
                     };
 
                     var point2 = {
-                        x : parseFloat(node2.attr("cx")),
-                        y : parseFloat(node2.attr("cy"))
+                        x : p2.x - 3,
+                        y : p2.y - 1
                     };
-
-                    if(transform) {
-                        var inverted = transform.apply([point2.x, point2.y]);
-
-                        point2.x = inverted[0];
-                        point2.y = inverted[1];
-                    }
-
-                    point2.y += height + gap;
 
                     var data = [point1, point2];
 
@@ -639,9 +695,14 @@
                         .attr("class", "outer_line_" + asn)
                         .attr("d", new_line)
                         .style("opacity", function(d) {
-                            var point = d[1];
-                            if(point.x < 0 || point.x > width || point.y < height + gap - 50 || point.y > 2*height + gap + 50)
+                            var rec = $('#map-container').get(0).getBoundingClientRect();
+                            var cont = !(p2.right < rec.left || 
+                                            p2.left > rec.right || 
+                                            p2.bottom < rec.top || 
+                                            p2.top > rec.bottom);
+                            if(!cont) {
                                 return 0;
+                            }
                             return 1;
                         });
                 }
@@ -667,6 +728,7 @@
                     });
                 });
             });
+            callback(coordinates);
         }
 
         function build_location_queries(data, callback) {
