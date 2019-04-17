@@ -52,7 +52,9 @@
         .info-container pre {
             display: inline-block;
             text-align: left;
-            font-size: 12px;
+            font-size: 19px;
+            color: #111;
+            font-family: 'Open Sans Condensed', sans-serif;
         }
 
         #aspath {
@@ -104,6 +106,30 @@
             font-family: sans-serif;
             font-size: 15px;
             fill: #fff;
+        }
+        #info{
+          color: #444;
+          font-family: 'Open Sans Condensed',
+          sans-serif;
+          font-size: 15px;
+        }
+        #info1{
+          color: #444;
+          font-family: 'Open Sans Condensed',
+          sans-serif;
+          font-size: 15px;
+        }
+        #info2{
+          color: #444;
+          font-family: 'Open Sans Condensed',
+          sans-serif;
+          font-size: 15px;
+        }
+        #info3{
+            color: #444;
+          font-family: 'Open Sans Condensed',
+          sans-serif;
+          font-size: 15px;
         }
 
         .outer_label {
@@ -165,6 +191,71 @@
             right: 0;
             z-index: 1;
         }
+        .button {
+            background-color: #008CBA; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .titolo1 {
+                color: #444;
+                margin: 0;
+                margin-top:20px;
+                padding: 0px 0px 0px 0px;
+                font-size: 35px;
+                line-height: 44px;
+                letter-spacing: -2px;
+                font-weight: bold;
+
+        }
+        .titolo2{
+          color: #708090;
+          font-family: 'Open Sans Condensed',
+          sans-serif;
+          font-size: 25px;
+        }
+        .textinfo{
+          color: #444;
+          font-family: 'Open Sans Condensed',
+          sans-serif;
+          font-size: 20px;
+        }
+        #info.textinfo{
+          color: #444;
+          font-family: 'Open Sans Condensed',
+          sans-serif;
+          font-size: 20px;
+        }
+        #info1.textinfo{
+          color: #444;
+          font-family: 'Open Sans Condensed',
+          sans-serif;
+          font-size: 20px;
+        }
+        #info2.textinfo{
+          color: #444;
+          font-family: 'Open Sans Condensed',
+          sans-serif;
+          font-size: 20px;
+        }
+        #info3.textinfo{
+          color: #444;
+          font-family: 'Open Sans Condensed',
+          sans-serif;
+          font-size: 20px;
+        }
+        #info4.textinfo{
+          color: #444;
+          font-family: 'Open Sans Condensed',
+          sans-serif;
+          font-size: 20px;
+        }
 
         #mapid {
             height: 100%;
@@ -184,24 +275,35 @@
     <br>
     --->
 
-    <span class="info-container">Your query is:
+    <span class="info-container">
+      <div class="titolo1">Your query is:</div>
         <div style="text-align: left">
-        <pre id="info"></pre>
-        <br>
-        <div>Retrieved data:</div>
+        <pre id="info" class="textinfo">
+      </pre><br>
+
+        <div class="titolo1">
+        Retrieved data:</div>
+
         <details id="det1">
-            <summary id="sum1">First announce:</summary>
-            <pre id="info1"></pre>
+          <summary id="sum1" class="titolo2">First announce:</summary>
+          <pre id="info1" class="textinfo"></pre>
+          <div class="textinfo">Communities:</div>
+          <pre id="info3" class="textinfo"></pre>
         </details>
+
         <details id="det2">
-            <summary id="sum2">Second announce:</summary>
-            <pre id="info2"></pre>
+            <summary id="sum2" class="titolo2">Second announce:</summary>
+            <pre id="info2" class ="textinfo"></pre>
+            <div id="comm-title" class="textinfo">Communities:</div>
+            <pre id="info4" class ="textinfo"></pre>
         </details>
         </div>
+        <button class ="button" onclick="goBack()">Go Back</button>
     </span>
     <div class="svg-container">
         <div id="map-container">
             <div id="mapid"></div>
+
         </div>
     </div>
     <div id="line-svg-container"></div>
@@ -299,7 +401,7 @@
                 var content = "<span style='margin-left: 2.5px;'><b>" + d.properties.name + "</b></span><br>";
                 return content;
             });
-            
+
         world_map.append('circle')
             .attr('id', 'tipfollowscursor');
         world_map.call(tip);
@@ -365,9 +467,9 @@
                     var point = map.latLngToLayerPoint(new L.LatLng(y, x))
                         this.stream.point(point.x, point.y)
                     };
-                    
+
                 const transform = d3.geoTransform({point: projectPoint});
-                    
+
                 const geoPath = d3.geoPath().projection(transform);
 
                 const featureElement = world_map2.selectAll("path")
@@ -378,14 +480,14 @@
                         .attr("name", function(d) {return d.properties.name;})
                         .attr("fill", "black")
                         .attr("fill-opacity", 0);
-                
+
                 var circle = world_map2.append('circle')
                     .attr("class", "circletest")
                     .attr('cx', function(d) { return map.latLngToLayerPoint([0, 0]).x })
                     .attr('cy', function(d) { return map.latLngToLayerPoint([0, 0]).y })
                     .attr('r', 5)
                     .style("fill", "red");
-                    
+
                 const update = () => {
                     featureElement.attr("d", geoPath);
                     circle.attr('cx', function(d) { return map.latLngToLayerPoint([0, 0]).x })
@@ -783,25 +885,47 @@
         }
 
         function show_info(announce1, announce2=null) {
-            var info = {
-                "Prefix" : announce1["target_prefix"],
-                "RRC" : announce1["rrc"],
-                "Collected by" : announce1["source_id"]
-            };
-            $('#info').text(JSON.stringify(info, null, 4));
-            var info1 = {
-                "Aspath" : announce1['path'],
-                "Communities" : announce1['community'],
-                "Time" : announce1['query_time']
-            };
-            $('#info1').text(JSON.stringify(info1, null, 4));
+            var info = 'Prefix: '+announce1["target_prefix"]+'\n'+
+                       'Collected by: '+announce1["source_id"]+'\n'+
+                       'rrc: '+announce1["rrc"];
+
+            $('#info').html(info);
+
+            if(!announce1['community'].length>0){
+              $('#info3').html('');
+            }
+            else
+            {
+              var info3 = ''+announce1['community'];
+              var info3splitted= info3.split(",");
+              var info3 = JSON.stringify(info3splitted,null,4);
+              $('#info3').html(info3);
+            }
+            if(!announce2 || !announce2['community'].length>0){
+              $('#info4').html('');
+              $('#comm-title').html('');
+            }
+            else
+            {
+              var info4 = ''+announce2['community'];
+              var info4splitted= info4.split(",");
+              var info4 = JSON.stringify(info4splitted,null,4);
+              $('#info4').html(info4);
+            }
+
+            var info1 = 'Aspath: '+announce1["path"]+'\n'+
+                        'Time: '+announce1["query_time"];
+
+            $('#info1').html(info1);
+
+
             if(announce2) {
-                var info2 = {
-                    "Aspath" : announce2['path'],
-                    "Communities" : announce2['community'],
-                    "Time" : announce2['query_time']
-                };
-                $('#info2').text(JSON.stringify(info2, null, 4));
+
+              var info2 = 'Aspath: '+announce2["path"]+'\n'+
+                          //'Communities: '+announce2["community"]
+                          'Time: '+announce2["query_time"];
+              $('#info2').html(info2);
+
             }
         }
 
@@ -961,6 +1085,9 @@
             svg.selectAll(".line").remove();
             svg.selectAll(".dot").remove();
             svg.selectAll(".label").remove();
+        }
+        function goBack() {
+          window.history.back();
         }
 
     </script>
