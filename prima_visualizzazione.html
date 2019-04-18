@@ -73,6 +73,12 @@
             stroke-width: 3;
         }
 
+        .dashed_line {
+            fill: none;
+            stroke: red;
+            stroke-width: 3;
+        }
+
         #outer_line {
             fill: none;
             stroke: green;
@@ -298,6 +304,8 @@
             <pre id="info4" class ="textinfo"></pre>
         </details>
         </div>
+        <br>
+        <br>
         <button class ="button" onclick="goBack()">Go Back</button>
     </span>
     <div class="svg-container">
@@ -335,6 +343,8 @@
         var radius = 40;
         var points_radius = 10;
 
+        var flag = false;
+
         var x = d3.scaleLinear().range([margin.left + margin.right, width - margin.left - margin.right]);
         var y = d3.scaleLinear().range([height - margin.top, margin.top]);
 
@@ -369,11 +379,11 @@
             .scale(200)
             .translate( [width / 2, height / 1.5]);
 
-        var zoom = d3.zoom()
+        /*var zoom = d3.zoom()
             .scaleExtent([1, 200])
             .translateExtent([[0,0], [width, height]])
             .extent([[0, 0], [width, height]])
-            .on("zoom", zoomed);
+            .on("zoom", zoomed);*/
 
         var path = d3.geoPath().projection(projection);
 
@@ -385,9 +395,9 @@
                 .attr("id", "svg2")
                 .attr("width", width)
                 .attr("height", height + margin.top + margin.bottom)
-            .append("g")
+            /*.append("g")
                 .attr("transform", "translate(" + 0 + "," + margin.top + ")")
-            .append("g")
+            .append("g")*/
 
         var line_container = d3.select("#line-svg-container").append('svg')
             .attr('id', 'svg3')
@@ -402,9 +412,9 @@
                 return content;
             });
 
-        world_map.append('circle')
+        /*world_map.append('circle')
             .attr('id', 'tipfollowscursor');
-        world_map.call(tip);
+        world_map.call(tip);*/
 
         var map = L.map('mapid', {
             maxBoundsViscosity: 1.0,
@@ -426,7 +436,7 @@
 
         d3.json(url_map)
             .then(function(world) {
-                world_map.append("rect")
+                /*world_map.append("rect")
                     .attr("width", "100%")
                     .attr("height", "100%")
                     .attr("fill", "#ffff");
@@ -461,7 +471,7 @@
                     .datum(topojson.mesh(world, world.objects.countries, function(a, b) { return a !== b; }))
                     .attr("class", "mesh")
                     .attr("d", path)
-                    .style('pointer-events', 'none');
+                    .style('pointer-events', 'none');*/
 
                 const projectPoint = function(x, y){
                     var point = map.latLngToLayerPoint(new L.LatLng(y, x))
@@ -525,24 +535,45 @@
                 if(data.length === 2) {
                     var announce1 = data[0];
                     var announce2 = data[1];
+                    
+                    if(Object.keys(announce1).length != 0 && Object.keys(announce2).length != 0) {
+                        var aspath1 = announce1.path;
+                        var aspath2 = announce2.path;
 
-                    var aspath1 = announce1.path;
-                    var aspath2 = announce2.path;
+                        var aspath1_clean = remove_prepending(aspath1);
+                        var aspath2_clean = remove_prepending(aspath2);
 
-                    var aspath1_clean = remove_prepending(aspath1);
-                    var aspath2_clean = remove_prepending(aspath2);
-
-                    show_info(announce1, announce2)
-                    get_aspaths(aspath1_clean, aspath2_clean, function() {
-                        draw_lines(aspath1_clean);
-                        $(window).on('resize', function() {
-                            map.invalidateSize();
+                        show_info(announce1, announce2)
+                        get_aspaths(aspath1_clean, aspath2_clean, function() {
                             draw_lines(aspath1_clean);
+                            $(window).on('resize', function() {
+                                map.invalidateSize();
+                                draw_lines(aspath1_clean);
+                            });
+                            $(document).on('zoomed', function() {
+                                draw_lines(aspath1_clean);
+                            });
+                        });
+                    } else {
+                        var selected = announce1;
+                        if(Object.keys(announce1).length === 0) {
+                            selected = announce2;
+                        }
+                        var aspath = selected.path;
+                        flag = true;
+                        var aspath_clean = remove_prepending(aspath);
+                        show_info(selected);
+                        get_aspath(aspath_clean, function() {
+                            draw_lines(aspath_clean);
+                            $(window).on('resize', function() {
+                                map.invalidateSize();
+                                draw_lines(aspath_clean);
+                            });
                         });
                         $(document).on('zoomed', function() {
-                            draw_lines(aspath1_clean);
+                            draw_lines(aspath_clean);
                         });
-                    });
+                    }
                 } else {
                     var announce = data[0];
                     var aspath = announce.path;
@@ -556,8 +587,8 @@
                         });
                     });
                     $(document).on('zoomed', function() {
-                            draw_lines(aspath_clean);
-                        });
+                        draw_lines(aspath_clean);
+                    });
                     /*get_coordinates(announce, function(coordinates) {
                         draw_points(coordinates, function() {
                             draw_lines(aspath_clean);
@@ -588,7 +619,8 @@
             fetch(server + "/aspath", params)
                 .then(data => {return data.json()})
                 .then(response => {
-                    draw_axis(response.response, asp, [], [], function() {
+                    console.log(response);
+                    draw_axis(response.response, asp, [], response.discarded, function() {
                         callback();
                     });
                 });
@@ -690,6 +722,27 @@
                             .attr("class", "line_warning")
                             .attr("d", line_curve);
                     });
+
+                    if(flag) {
+                        var source = as_data[0];
+                        var target = as_data[as_data.length - 1];
+                        var path = svg.append("path")
+                            .datum([source, target])
+                            .attr("class", "dashed_line")
+                            .style("stroke-dasharray", ("15, 10"))
+                            .attr("d", line);
+
+                        var p = path.node().getPointAtLength(path.node().getTotalLength()/2);
+                        
+                        svg.append("image")
+                            .attr("xlink:href", server + "/query_image")
+                            .attr("x", p.x - radius)
+                            .attr("y", p.y - radius)
+                            .attr("width", 2*radius)
+                            .attr("height", 2*radius)
+                            .style("opacity", "0.7");
+
+                    }
 
                     svg.selectAll(".dot")
                         .data(as_data)
@@ -870,7 +923,7 @@
             });
         }
 
-        function zoomed() {
+        /*function zoomed() {
             world_map.selectAll(".feature")
                 .attr('transform', d3.event.transform);
 
@@ -882,7 +935,7 @@
                 .attr("r", points_radius / d3.event.transform.k + "px");
 
             draw_lines(aspath, d3.zoomTransform(world_map.node()));
-        }
+        }*/
 
         function show_info(announce1, announce2=null) {
             var info = 'Prefix: '+announce1["target_prefix"]+'\n'+

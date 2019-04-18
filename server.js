@@ -66,6 +66,14 @@ app.post('/visualize', function(req, res) {
   }
 });
 
+app.get('/visualize', function(req, res) {
+  if(fs.existsSync("temp.json")) {
+    res.sendFile(__dirname + '/prima_visualizzazione.html');
+  } else {
+    res.redirect('/');
+  }
+})
+
 app.get('/worldmap', function(req, res) {
   res.sendFile(__dirname + '/datasets/countries.topo.json');
 });
@@ -88,16 +96,27 @@ app.get('/rrc/:num', function(req, res) {
     res.json(result);
 });
 
-app.get('/collectors', function(req, res) {
-    res.sendFile(__dirname + "/datasets/collectors.json");
+app.get('/collectors', function(req, res) {  
+  res.sendFile(__dirname + "/datasets/collectors.json");
 });
 
 app.post('/aspath', function(req, res) {
-    var as_list = req.body.aspath;
+    var as_list = req.body.aspath.reverse().map(String);
     as_list = remove_prepending(as_list);
-    a(as_list.reverse(), function(aspathcompleto) {
-        var result = {"response" : aspathcompleto};
-        res.json(result);
+    var pop_x = populate_x_single(as_list);
+    var points_x = pop_x[0];
+    a(as_list, function(aspathcompleto) {
+      var pop_y = populate_y_single(aspathcompleto);
+      var points_y = pop_y[0];
+      var points = merge_coordinates(points_x, points_y);
+      var discarded = pop_x[1].concat(pop_y[1]).filter(el => {return el.length > 0});
+      discarded = [...new Set(discarded.map(v => JSON.stringify(v)))].map(v => JSON.parse(v));
+      var result = {
+        "response" : points,
+        "discarded" : discarded
+      }
+      //var result = {"response" : aspathcompleto};
+      res.json(result);
     });
 });
 
@@ -133,6 +152,10 @@ app.get('/coordinates/:query', function(req, res) {
         .catch(err => {
             console.log(err);
         });
+});
+
+app.get("/query_image", function(req, res) {
+  res.sendFile(__dirname + "/data/point.png");
 });
 
 app.listen(port, function() {
@@ -264,6 +287,43 @@ function a(aspath, callback) {
     });
 }
 
+function populate_x_single(path) {
+  var points = [];
+  var nodes = {};
+  var edges = {};
+  build_x_graph(path, 0, nodes, edges);
+  var discarded = [];
+  let cycle1 = getCycle(edges);
+  while(cycle1) {
+    discarded.push(resolve_cycle_x(nodes, edges, cycle));
+    //console.log(edges);
+    //console.log(discarded1);
+    cycle1 = getCycle(edges);
+  }
+  calculate_x(edges, nodes, points);
+  return [points, discarded];
+}
+
+function populate_y_single(path) {
+  var points = [];
+  var nodes = {};
+  var edges = {};
+  build_y_graph(path, 0, nodes, edges, []);
+  var discarded = [];
+
+  let cycle = getCycle(edges);
+  if(cycle) {
+    discarded = resolve_cycle_y(edges, nodes, path, cycle, 0);
+    cycle = getCycle(edges);
+    while(cycle) {
+      discarded.push(resolve_reverse_y(path, edges, nodes, cycle));
+      cycle = getCycle(edges);
+    }
+  }
+  calculate_y(edges, nodes, points);
+  return [points, discarded];
+}
+
 /*const edges = {
   0 : [1, 2],
   1 : [2],
@@ -365,10 +425,10 @@ function populate_y(path1, path2) {
   var nodes2 = {};
   var edges2 = {};
   build_y_graph(path1, 0, nodes1, edges1, [])
-  console.log("node_path1");
+  /*console.log("node_path1");
   console.log(nodes1);
   console.log("edge_path1")
-  console.log(edges1);
+  console.log(edges1);*/
 
   var discarded1 = [];
   var discarded2 = [];
@@ -393,10 +453,10 @@ function populate_y(path1, path2) {
   }
   let index = Object.keys(nodes1).length;
   build_y_graph(path2, index, nodes2, edges2, []);
-  console.log("node_path2");
+  /*console.log("node_path2");
   console.log(nodes2);
   console.log("edge_path2")
-  console.log(edges2);
+  console.log(edges2);*/
 
   let cycle2 = getCycle(edges2);
   if(cycle2) {
@@ -415,12 +475,12 @@ function populate_y(path1, path2) {
   var result = merge_y_graphs(edges1, edges2, full_nodes);
   let cycle3 = getCycle(result);
 
-  console.log("nodes");
+  /*console.log("nodes");
   console.log(full_nodes);
   console.log("edges");
   console.log(result);
   console.log("cycle");
-  console.log(cycle3);
+  console.log(cycle3);*/
 
   if(cycle3) {
     let deleted_all = discarded1.concat(discarded2);
@@ -1185,6 +1245,8 @@ function get_announces(coll_peer, rrc) {
     var ann1 = get_announce_from_coll_peer(cache, coll_peer, rrc);
     if(ann1) {
       result.push(ann1)
+    } else {
+      result.push({});
     }
   }  
   if(cache2) {
