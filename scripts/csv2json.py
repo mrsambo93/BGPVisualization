@@ -1,8 +1,8 @@
 import json
 import csv
 
-INPUT = "../datasets/rrc.tsv"
-OUTPUT = "../datasets/rrc_ris.json"
+INPUT = "../datasets/CommunityDB.tsv"
+OUTPUT = "../datasets/CommunityDBnew.json"
 
 output = list()
 
@@ -12,5 +12,3 @@ with open(INPUT) as csv_file:
 
 with open(OUTPUT, "w") as json_file:
     json.dump(output, json_file, indent=4)
-
-

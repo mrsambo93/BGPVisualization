@@ -75,7 +75,11 @@ app.get('/visualize', function(req, res) {
 })
 
 app.get('/worldmap', function(req, res) {
-  res.sendFile(__dirname + '/datasets/countries.topo.json');
+  res.sendFile(__dirname + '/datasets/110m.json');
+});
+
+app.get('/topology', function(req, res) {
+  res.sendFile(__dirname + "/datasets/topology.json");
 });
 
 app.get('/parsley', function(req, res) {
@@ -87,12 +91,16 @@ app.get('/announces', function(req, res) {
 });
 
 app.get('/communities', function(req, res) {
-    res.sendFile(__dirname + "/datasets/CommunityDB.json");
+    res.sendFile(__dirname + "/datasets/CommunityDBnew.json");
 });
 
 app.get('/rrc/:num', function(req, res) {
     var obj = JSON.parse(fs.readFileSync(__dirname + '/datasets/rrc.json'));
-    var result = obj[req.params.num];
+    var rrc = req.params.num;
+    if(rrc.length === 1) {
+      rrc = "0" + rrc;
+    }
+    var result = obj[rrc];
     res.json(result);
 });
 
@@ -110,10 +118,12 @@ app.post('/aspath', function(req, res) {
       var points_y = pop_y[0];
       var points = merge_coordinates(points_x, points_y);
       var discarded = pop_x[1].concat(pop_y[1]).filter(el => {return el.length > 0});
+      var info = {...pop_x[2], ...pop_y[2]};
       discarded = [...new Set(discarded.map(v => JSON.stringify(v)))].map(v => JSON.parse(v));
       var result = {
         "response" : points,
-        "discarded" : discarded
+        "discarded" : discarded,
+        "info" : info
       }
       //var result = {"response" : aspathcompleto};
       res.json(result);
@@ -133,10 +143,12 @@ app.post('/aspaths', function(req, res) {
       var points_y = pop_y[0];
       var points = merge_coordinates(points_x, points_y);
       var discarded = pop_x[1].concat(pop_y[1]).filter(el => {return el.length > 0});
+      var info = {...pop_x[2], ...pop_y[2]};
       discarded = [...new Set(discarded.map(v => JSON.stringify(v)))].map(v => JSON.parse(v));
       var result = {
         "response" : points,
-        "discarded" : discarded
+        "discarded" : discarded,
+        "info" : info
       }
       res.json(result);
     });
@@ -147,6 +159,7 @@ app.post('/aspaths', function(req, res) {
 app.get('/coordinates/:query', function(req, res) {
     geocoder.geocode(req.params.query)
         .then(result => {
+            console.log(result);
             res.json(result[0]);
         })
         .catch(err => {
@@ -293,6 +306,7 @@ function populate_x_single(path) {
   var edges = {};
   build_x_graph(path, 0, nodes, edges);
   var discarded = [];
+  var info = {};
   let cycle1 = getCycle(edges);
   while(cycle1) {
     discarded.push(resolve_cycle_x(nodes, edges, cycle));
@@ -300,8 +314,11 @@ function populate_x_single(path) {
     //console.log(discarded1);
     cycle1 = getCycle(edges);
   }
+  discarded.forEach(arc => {
+    info[arc] = "discarded arc"
+  });
   calculate_x(edges, nodes, points);
-  return [points, discarded];
+  return [points, discarded, info];
 }
 
 function populate_y_single(path) {
@@ -310,18 +327,23 @@ function populate_y_single(path) {
   var edges = {};
   build_y_graph(path, 0, nodes, edges, []);
   var discarded = [];
-
+  var info = {};
   let cycle = getCycle(edges);
   if(cycle) {
     discarded = resolve_cycle_y(edges, nodes, path, cycle, 0);
     cycle = getCycle(edges);
+    discarded.forEach(arc => {
+      info[arc] = "discarded peer";
+    });
     while(cycle) {
-      discarded.push(resolve_reverse_y(path, edges, nodes, cycle));
+      var reversed = resolve_reverse_y(path, edges, nodes, cycle)
+      discarded.push(reversed);
+      info[reversed] = "reversed arc";
       cycle = getCycle(edges);
     }
   }
   calculate_y(edges, nodes, points);
-  return [points, discarded];
+  return [points, discarded, info];
 }
 
 /*const edges = {
@@ -342,12 +364,13 @@ function populate_x(path1, path2) {
   var nodes2 = {};
   var edges1 = {};
   var edges2 = {};
-  build_x_graph(path1, 0, nodes1, edges1)
+  build_x_graph(path1, 0, nodes1, edges1);
   //console.log(nodes1);
   //console.log(edges1);
   var discarded1 = [];
   var discarded2 = [];
   var discarded3 = [];
+  var info = {};
   let cycle1 = getCycle(edges1);
   while(cycle1) {
     discarded1.push(resolve_cycle_x(nodes1, edges1, cycle1));
@@ -374,9 +397,12 @@ function populate_x(path1, path2) {
   var discarded = discarded1.concat(discarded2, discarded3).filter(el => {return el.length > 0});
   discarded = [...new Set(discarded.map(v => JSON.stringify(v)))].map(v => JSON.parse(v));;
   //console.log(discarded);
+  discarded.forEach(arc => {
+    info[arc] = "discarded arc";
+  });
 
   calculate_x(result, nodes, points);
-  return [points, discarded];
+  return [points, discarded, info];
 }
 
 var path = [
@@ -433,6 +459,7 @@ function populate_y(path1, path2) {
   var discarded1 = [];
   var discarded2 = [];
   var discarded3 = [];
+  var info = {};
 
   let cycle1 = getCycle(edges1);
   if(cycle1) {
@@ -446,8 +473,13 @@ function populate_y(path1, path2) {
     //console.log("disc");
     //console.log(discarded1);
     cycle1 = getCycle(edges1);
+    discarded1.forEach(arc => {
+      info[arc] = "discarded peer";
+    });
     while(cycle1) {
-      discarded1.push(resolve_reverse_y(path1, edges1, nodes1, cycle1));
+      var reversed = resolve_reverse_y(path1, edges1, nodes1, cycle1)
+      discarded1.push(reversed);
+      info[reversed] = "reversed arc";
       cycle1 = getCycle(edges1);
     }
   }
@@ -465,8 +497,13 @@ function populate_y(path1, path2) {
     //console.log(edges2);
     //console.log(discarded2);
     cycle2 = getCycle(edges2);
+    discarded2.forEach(arc => {
+      info[arc] = "discarded peer";
+    });
     while(cycle2) {
-      discarded2.push(resolve_reverse_y(path2, edges2, nodes2, cycle2));
+      var reversed = resolve_reverse_y(path2, edges2, nodes2, cycle2);
+      discarded2.push(reversed);
+      info[reversed] = "reversed arc";
       cycle2 = getCycle(edges2);
     }
   }
@@ -491,8 +528,13 @@ function populate_y(path1, path2) {
       discarded3 = res[2];
     }
     cycle3 = getCycle(result);
+    discarded3.forEach(arc => {
+      info[arc] = "discarded peer";
+    });
     while(cycle3) {
-      discarded3.push(resolve_reverse_y(path1.concat(path2), result, full_nodes, cycle3));
+      var reversed = resolve_reverse_y(path1.concat(path2), result, full_nodes, cycle3)
+      discarded3.push(reversed);
+      info[reversed] = "reversed arc";
       cycle3 = getCycle(result);
     }
   }
@@ -507,7 +549,7 @@ function populate_y(path1, path2) {
   console.log(result);*/
 
   calculate_y(result, full_nodes, points);
-  return [points, discarded];
+  return [points, discarded, info];
 }
 
 function build_x_graph(aspath, index, nodes, edges) {
