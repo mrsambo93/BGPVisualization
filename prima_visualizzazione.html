@@ -45,7 +45,7 @@
           /*background: gold;*/
           width: 80%;
           left: 60px;
-          top: 3em;
+          top: 1em;
           }
 
         .info-container pre {
@@ -296,14 +296,13 @@
         </details>
 
         <details id="det2">
-            <summary id="sum2" class="titolo2">Second announce:</summary>
+            <summary id="sum2" class="titolo2"></summary>
             <pre id="info2" class ="textinfo"></pre>
             <div id="comm-title" class="textinfo">Communities:</div>
             <pre id="info4" class ="textinfo"></pre>
         </details>
         </div>
-        <br>
-        <br>
+
         <button class ="button" onclick="goBack()">Go Back</button>
     </span>
     <div class="svg-container">
@@ -527,7 +526,7 @@
                 if(data.length === 2) {
                     var announce1 = data[0];
                     var announce2 = data[1];
-                    
+
                     if(Object.keys(announce1).length != 0 && Object.keys(announce2).length != 0) {
                         var aspath1 = announce1.path;
                         var aspath2 = announce2.path;
@@ -763,7 +762,7 @@
                             .attr("d", line);
 
                         var p = path.node().getPointAtLength(path.node().getTotalLength()/2);
-                        
+
                         svg.append("image")
                             .attr("xlink:href", server + "/query_image")
                             .attr("x", p.x - radius)
@@ -899,9 +898,9 @@
                         .attr("d", new_line)
                         .style("opacity", function(d) {
                             var rec = $('#map-container').get(0).getBoundingClientRect();
-                            var cont = !(p2.right < rec.left || 
-                                            p2.left > rec.right || 
-                                            p2.bottom < rec.top || 
+                            var cont = !(p2.right < rec.left ||
+                                            p2.left > rec.right ||
+                                            p2.bottom < rec.top ||
                                             p2.top > rec.bottom);
                             if(!cont) {
                                 return 0;
@@ -1049,6 +1048,11 @@
         }*/
 
         function show_info(announce1, announce2=null) {
+
+
+
+
+
             var info = 'Prefix: '+announce1["target_prefix"]+'\n'+
                        'Collected by: '+announce1["source_id"]+'\n'+
                        'rrc: '+announce1["rrc"];
@@ -1060,21 +1064,48 @@
             }
             else
             {
-              var info3 = ''+announce1['community'];
-              var info3splitted= info3.split(",");
-              var info3 = JSON.stringify(info3splitted,null,4);
-              $('#info3').html(info3);
+              var htmlStr = "<tbody>";
+              for (var i = 0; i < announce1['community'].length; i=i+3) {
+                htmlStr += "<tr>";
+                if(announce1['community'][i])
+                    htmlStr += "<td>" + announce1['community'][i] + "  </td>";
+                if(announce1['community'][i+1])
+                    htmlStr += "<td>" + announce1['community'][i+1] + "  </td>";
+                if(announce1['community'][i+2])
+                    htmlStr += "<td>" + announce1['community'][i+2] + "</td>";
+                htmlStr += "</tr>";
+              }
+              $("#info3").append(htmlStr);
+              $("#info3").append("<hr />");
             }
-            if(!announce2 || !announce2['community'].length>0){
-              $('#info4').html('');
-              $('#comm-title').html('');
-            }
-            else
+
+             if(!announce2 || !announce2['path'].length>0){
+               document.getElementById('det2').style.display = 'none';
+               $('#sum2').html('');
+               $('#info4').html('');
+               $('#comm-title').html('');
+             }
+
+            else if(announce2['path'].length>0 && announce2['community'].length>0)
             {
-              var info4 = ''+announce2['community'];
-              var info4splitted= info4.split(",");
-              var info4 = JSON.stringify(info4splitted,null,4);
-              $('#info4').html(info4);
+              $('#sum2').html('Second announce:');
+              var htmlStr = "<tbody>";
+              for (var i = 0; i < announce2['community'].length; i=i+3) {
+                htmlStr += "<tr>";
+                if(announce2['community'][i])
+                    htmlStr += "<td>" + announce2['community'][i] + "  </td>";
+                if(announce2['community'][i+1])
+                    htmlStr += "<td>" + announce2['community'][i+1] + "  </td>";
+                if(announce2['community'][i+2])
+                    htmlStr += "<td>" + announce2['community'][i+2] + "</td>";
+                htmlStr += "</tr>";
+              }
+              $("#info4").append(htmlStr);
+              $("#info4").append("<hr />");
+            }
+            else if(announce2['path'].length>0 && !announce2['community'].length>0){
+              $('#sum2').html('Second announce:');
+              $('#info4').html('');
             }
 
             var info1 = 'Aspath: '+announce1["path"]+'\n'+
