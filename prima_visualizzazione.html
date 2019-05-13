@@ -267,6 +267,54 @@
             position: relative;
         }
 
+
+                /* Tooltip container */
+        .tooltip {
+          position: relative;
+          display: inline-block;
+          border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+          tooltip:+5;
+        }
+
+        /* Tooltip text */
+        .tooltip .tooltiptext {
+          visibility: hidden;
+          width: auto;
+          background-color: #555;
+          color: #fff;
+          text-align: center;
+          padding: 5px 0;
+          border-radius: 6px;
+
+          /* Position the tooltip text */
+          position: absolute;
+          z-index: +5;
+          bottom: 125%;
+          left: 50%;
+          margin-left: -60px;
+
+          /* Fade in tooltip */
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+
+        /* Tooltip arrow */
+        .tooltip .tooltiptext::after {
+          content: "";
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #555 transparent transparent transparent;
+        }
+
+        /* Show the tooltip text when you mouse over the tooltip container */
+        .tooltip:hover .tooltiptext {
+          visibility: visible;
+          opacity: 1;
+        }
+
     </style>
 </head>
 <body>
@@ -521,6 +569,9 @@
                 world_map2.append("g").attr("class", "points_2");
             });
 
+
+
+
         d3.json("announces")
             .then(data => {
                 if(data.length === 2) {
@@ -533,6 +584,8 @@
 
                         var aspath1_clean = remove_prepending(aspath1);
                         var aspath2_clean = remove_prepending(aspath2);
+
+
 
                         show_info(announce1, announce2)
                         get_aspaths(aspath1_clean, aspath2_clean, function() {
@@ -613,6 +666,23 @@
                     });
                 }
             });
+
+            // d3.json("communitiesAndInfo")
+            //     .then(baby => {
+            //       console.log("OHIEEEEE");
+            //       var shuffledComm = [];
+            //
+            //       for(var i=0; i<baby.length;i++){
+            //         if(baby[i].info.length>1)
+            //           var item = {};
+            //           item["id"]=baby[i].id;
+            //           item["comment"]=baby[i].info;
+            //           shuffledComm.push(item);
+            //       }
+            //       for(var i=0;i<shuffledComm.length;i++){
+            //         console.log(shuffledComm[i].comment);
+            //       }
+            //     });
 
         function make_y_gridlines(ticks) {
             return d3.axisLeft(y)
@@ -1047,82 +1117,139 @@
             draw_lines(aspath, d3.zoomTransform(world_map.node()));
         }*/
 
-        function show_info(announce1, announce2=null) {
-
-
-
-
-
-            var info = 'Prefix: '+announce1["target_prefix"]+'\n'+
-                       'Collected by: '+announce1["source_id"]+'\n'+
-                       'rrc: '+announce1["rrc"];
-
-            $('#info').html(info);
-
-            if(!announce1['community'].length>0){
-              $('#info3').html('');
-            }
-            else
-            {
-              var htmlStr = "<tbody>";
-              for (var i = 0; i < announce1['community'].length; i=i+3) {
-                htmlStr += "<tr>";
-                if(announce1['community'][i])
-                    htmlStr += "<td>" + announce1['community'][i] + "  </td>";
-                if(announce1['community'][i+1])
-                    htmlStr += "<td>" + announce1['community'][i+1] + "  </td>";
-                if(announce1['community'][i+2])
-                    htmlStr += "<td>" + announce1['community'][i+2] + "</td>";
-                htmlStr += "</tr>";
-              }
-              $("#info3").append(htmlStr);
-              $("#info3").append("<hr />");
-            }
-
-             if(!announce2 || !announce2['path'].length>0){
-               document.getElementById('det2').style.display = 'none';
-               $('#sum2').html('');
-               $('#info4').html('');
-               $('#comm-title').html('');
-             }
-
-            else if(announce2['path'].length>0 && announce2['community'].length>0)
-            {
-              $('#sum2').html('Second announce:');
-              var htmlStr = "<tbody>";
-              for (var i = 0; i < announce2['community'].length; i=i+3) {
-                htmlStr += "<tr>";
-                if(announce2['community'][i])
-                    htmlStr += "<td>" + announce2['community'][i] + "  </td>";
-                if(announce2['community'][i+1])
-                    htmlStr += "<td>" + announce2['community'][i+1] + "  </td>";
-                if(announce2['community'][i+2])
-                    htmlStr += "<td>" + announce2['community'][i+2] + "</td>";
-                htmlStr += "</tr>";
-              }
-              $("#info4").append(htmlStr);
-              $("#info4").append("<hr />");
-            }
-            else if(announce2['path'].length>0 && !announce2['community'].length>0){
-              $('#sum2').html('Second announce:');
-              $('#info4').html('');
-            }
-
-            var info1 = 'Aspath: '+announce1["path"]+'\n'+
-                        'Time: '+announce1["query_time"];
-
-            $('#info1').html(info1);
-
-
-            if(announce2) {
-
-              var info2 = 'Aspath: '+announce2["path"]+'\n'+
-                          //'Communities: '+announce2["community"]
-                          'Time: '+announce2["query_time"];
-              $('#info2').html(info2);
-
-            }
+        function findCommunity(arr, propName, propValue) {
+          for (var i=0; i < arr.length; i++)
+            if (arr[i][propName] == propValue)
+              return arr[i];
         }
+
+
+        function show_info(announce1, announce2 = null) {
+
+
+            d3.json("communitiesAndInfo")
+                .then(baby => {
+                    var shuffledComm = [];
+
+                    for (var i = 0; i < baby.length; i++) {
+                        if (baby[i].info.length > 1){
+                          var item = {};
+                          item["id"] = baby[i].id;
+                          item["comment"] = baby[i].info;
+                          shuffledComm.push(item);
+                        }
+                    }
+                    for (var i = 0; i < shuffledComm.length; i++) {
+                        console.log(shuffledComm[i].comment);
+                    }
+
+
+                    var info = 'Prefix: ' + announce1["target_prefix"] + '\n' +
+                        'Collected by: ' + announce1["source_id"] + '\n' +
+                        'rrc: ' + announce1["rrc"];
+
+                    $('#info').html(info);
+
+
+
+                    if (!announce1['community'].length > 0) {
+                        $('#info3').html('');
+                    } else {
+
+                        // <div class="tooltip">Hover over me
+                        //     <span class="tooltiptext">Tooltip text</span>
+                        // </div>
+                        var htmlStr = "<tbody>";
+                        for(var x=0;x<shuffledComm.length;x++){
+                          console.log("Ciao sono la"+x+" community:");
+                          console.log(shuffledComm[x].id);
+                          console.log(shuffledComm[x].comment);
+                        }
+
+                        for (var i = 0; i < announce1['community'].length; i++) {
+                          var finded = false;
+                          if(i%3==0)
+                            htmlStr += "<tr>";
+
+                          for(var j=0; !finded && j<shuffledComm.length;j++){
+
+                            if (announce1['community'][i] && shuffledComm[j].comment){
+                              if(announce1['community'][i] == shuffledComm[j].id){
+                                htmlStr += "<td><div class='tooltip'>"+announce1['community'][i]+"<span class='tooltiptext'>"+shuffledComm[j].comment+"</span></div></td>";
+                                finded = true;
+                              }
+                            }
+                          }
+                          if(!finded)
+                            htmlStr += "<td>" + announce1['community'][i] + "  </td>";
+
+                          if((i+1)%3==0 && i!=0)
+                            htmlStr += "</tr>";
+                      }
+                    }
+                    $("#info3").append(htmlStr);
+                    $("#info3").append("<hr />");
+
+
+                    if (!announce2 || !announce2['path'].length > 0) {
+                        document.getElementById('det2').style.display = 'none';
+                        $('#sum2').html('');
+                        $('#info4').html('');
+                        $('#comm-title').html('');
+                    } else if (announce2['path'].length > 0 && announce2['community'].length > 0) {
+                        $('#sum2').html('Second announce:');
+                        var htmlStr = "<tbody>";
+
+
+                        for (var i = 0; i < announce2['community'].length; i++) {
+                          var finded = false;
+                          if(i%3==0)
+                            htmlStr += "<tr>";
+
+                          for(var j=0; !finded && j<shuffledComm.length;j++){
+
+                            if (announce2['community'][i] && shuffledComm[j].comment){
+                              if(announce2['community'][i] == shuffledComm[j].id){
+                                htmlStr += "<td><div class='tooltip'>"+announce2['community'][i]+"<span class='tooltiptext'>"+shuffledComm[j].comment+"</span></div></td>";
+                                finded = true;
+                              }
+                            }
+                          }
+                          if(!finded)
+                            htmlStr += "<td>" + announce2['community'][i] + "  </td>";
+
+                          if((i+1)%3==0 && i!=0)
+                            htmlStr += "</tr>";
+                      }
+
+
+
+                        $("#info4").append(htmlStr);
+                        $("#info4").append("<hr />");
+                    } else if (announce2['path'].length > 0 && !announce2['community'].length > 0) {
+                        $('#sum2').html('Second announce:');
+                        $('#info4').html('');
+                    }
+
+                    var info1 = 'Aspath: ' + announce1["path"] + '\n' +
+                        'Time: ' + announce1["query_time"];
+
+                    $('#info1').html(info1);
+
+
+                    if (announce2) {
+
+                        var info2 = 'Aspath: ' + announce2["path"] + '\n' +
+                            //'Communities: '+announce2["community"]
+                            'Time: ' + announce2["query_time"];
+                        $('#info2').html(info2);
+
+                    }
+
+
+                });
+        }
+
 
         function transl_to_positive(data, callback) {
             var value = 0;
@@ -1288,6 +1415,7 @@
         function goBack() {
           window.history.back();
         }
+
 
     </script>
 </body>
