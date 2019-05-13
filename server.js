@@ -167,8 +167,23 @@ app.get('/coordinates/:query', function(req, res) {
         });
 });
 
+app.get('/countryname/:query', function(req, res) {
+  let topology = JSON.parse(fs.readFileSync(__dirname + "/datasets/topology.json"));
+  topology.forEach(country => {
+    if(req.params.query == country["country-code"]) {
+      res.json({
+        "name" : country["name"]
+      });
+    }
+  });
+});
+
 app.get("/query_image", function(req, res) {
   res.sendFile(__dirname + "/data/point.png");
+});
+
+app.get("/ixp_image", function(req, res) {
+  res.sendFile(__dirname + "/data/switch.png");
 });
 
 app.listen(port, function() {

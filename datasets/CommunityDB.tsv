@@ -3162,176 +3162,176 @@ id	aut	value1	value2	region	norm_region	country	country_code	city	address	source
 8928:65110	8928	8928	65110			United States of America	840			United States of America
 8928:65111	8928	8928	65111			Sweden	752			Sweden
 										
-47147:666										Blackhole
-65535:666										RFC7999 community accepted, will be rewritten to 47147:666 internally.
-47147:621										ANX_BLACKHOLE_OUTSIDE_COUNTRY
-47147:620										ANX_BLACKHOLE_OUTSIDE_REGION
-47147:2401						Germany		FRANKFURT		
-47147:2400						Austria		VIENNA		
-47147:2402						Germany		NUREMBERG		
-47147:2403						Switzerland		ZURICH		
-47147:2404						Austria		KLAGENFURT		
-47147:2404						United States		MANASSAS		
-47147:2405						Brazil		SAOPAULO		
-47147:2406						Germany		MUNICH		
-47147:2407						Germany		DUSSELDORF		
-47147:2408						Germany		HAMBURG		
-47147:2409						Japan		TOKYO		
-47147:2410						China		TIANJIN		
-47147:2411						United Arab Emirates		DUBAI		
-47147:2412						Singapore		SINGAPORE		
-47147:2413						Poland		WARSAW		
-47147:2414						Hong Kong		HONG KONG		
-47147:2415						Mexico		MEXICO CITY		
-47147:2101						Germany				ANX_ORIGIN_COUNTRY_DE
-47147:2100						Austria				ANX_ORIGIN_COUNTRY_AT
-47147:2102						Switzerland				ANX_ORIGIN_COUNTRY_CH
-47147:2103						United States				ANX_ORIGIN_COUNTRY_US
-47147:2104						Brazil				ANX_ORIGIN_COUNTRY_BR
-47147:2105						Japan				ANX_ORIGIN_COUNTRY_JP
-47147:2106						China				ANX_ORIGIN_COUNTRY_CN
-47147:2107						United Arab Emirates				ANX_ORIGIN_COUNTRY_AE
-47147:2108						Singapore				ANX_ORIGIN_COUNTRY_SG
-47147:2109						Poland				ANX_ORIGIN_COUNTRY_PL
-47147:2110						Hong Kong				ANX_ORIGIN_COUNTRY_HK
-47147:2111						Mexico				ANX_ORIGIN_COUNTRY_MX
-47147:2702						Germany		Frankfurt		ANX_ORIGIN_PEERING_DECIXFRANKFURT
-47147:2703										ANX_ORIGIN_PEERING_VIX
-47147:2700										ANX_ORIGIN_PEERING_PNI
-47147:2701										ANX_ORIGIN_PEERING_CACHE
-47147:2704										ANX_ORIGIN_PEERING_SWISSIX
-47147:2705						Germany		Munich		ANX_ORIGIN_PEERING_DECIXMUNICH
-47147:2706						Germany		Dusseldorf		ANX_ORIGIN_PEERING_DECIXDUSSELDORF
-47147:2707						Germany		Hamburg		ANX_ORIGIN_PEERING_DECIXHAMBURG
-47147:2708										ANX_ORIGIN_PEERING_IXBRPTTBRSOPAULO
-47147:2709										ANX_ORIGIN_PEERING_UAEIX
-47147:2710										ANX_ORIGIN_PEERING_SGIX
-47147:1500										ANX_ORIGIN_RPKI_VALID
-47147:1501										ANX_ORIGIN_RPKI_INVALID
-47147:1502										ANX_ORIGIN_RPKI_UNKNOWN
-47147:2300										ANX_ORIGIN_TYPE_UPSTREAM
-47147:2301										ANX_ORIGIN_TYPE_PEERING
-47147:2302										ANX_ORIGIN_TYPE_DOWNSTREAM
-47147:2600										ANX_ORIGIN_UPSTREAM_TELIACARRIER
-47147:2601										ANX_ORIGIN_UPSTREAM_NTTCOMMUNICATIONSGLOBAL
-47147:2602										ANX_ORIGIN_UPSTREAM_DEUTSCHETELEKOM
-47147:2604										ANX_ORIGIN_UPSTREAM_ALGARTELECOM
-47147:2605										ANX_ORIGIN_UPSTREAM_LEVEL3COMMUNICATIONSLLC
-47147:2607										ANX_ORIGIN_UPSTREAM_PCCWGLOBAL
-47147:2612										ANX_ORIGIN_UPSTREAM_TELSTRA
-47147:2608										ANX_ORIGIN_UPSTREAM_DATAMENA
-47147:2609										ANX_ORIGIN_UPSTREAM_OMANTEL
-47147:2610										ANX_ORIGIN_UPSTREAM_SOLUSINDOBINTANGPRATAMAPT
-47147:3401										ANX_REJECT_CITY_FRANKFURT
-47147:3400										ANX_REJECT_CITY_VIENNA
-47147:3402										ANX_REJECT_CITY_NUREMBERG
-47147:3403										ANX_REJECT_CITY_ZURICH
-47147:3404										ANX_REJECT_CITY_KLAGENFURT
-47147:3404										ANX_REJECT_CITY_MANASSAS
-47147:3404										ANX_REJECT_CITY_SAOPAULO
-47147:3406										ANX_REJECT_CITY_MUNICH
-47147:3407										ANX_REJECT_CITY_DUSSELDORF
-47147:3408										ANX_REJECT_CITY_HAMBURG
-47147:3409										ANX_REJECT_CITY_TOKYO
-47147:3410										ANX_REJECT_CITY_TIANJIN
-47147:3411										ANX_REJECT_CITY_DUBAI
-47147:3412										ANX_REJECT_CITY_SINGAPORE
-47147:3413										ANX_REJECT_CITY_WARSAW
-47147:3414										ANX_REJECT_CITY_HONGKONG
-47147:3415										ANX_REJECT_CITY_MEXICOCITY
-47147:3100										ANX_REJECT_COUNTRY_AT
-47147:3101										ANX_REJECT_COUNTRY_DE
-47147:3102										ANX_REJECT_COUNTRY_CH
-47147:3103										ANX_REJECT_COUNTRY_US
-47147:3104										ANX_REJECT_COUNTRY_BR
-47147:3105										ANX_REJECT_COUNTRY_JP
-47147:3106										ANX_REJECT_COUNTRY_CN
-47147:3107										ANX_REJECT_COUNTRY_AE
-47147:3108										ANX_REJECT_COUNTRY_SG
-47147:3109										ANX_REJECT_COUNTRY_PL
-47147:3110										ANX_REJECT_COUNTRY_HK
-47147:3111										ANX_REJECT_COUNTRY_MX
-47147:3702										ANX_REJECT_PEERING_DECIXFRANKFURT
-47147:3703										ANX_REJECT_PEERING_VIX
-47174:3701										ANX_REJECT_PEERING_CACHE
-47174:3700										ANX_REJECT_PEERING_PNI
-47147:3704										ANX_REJECT_PEERING_SWISSIX
-47147:3705										ANX_REJECT_PEERING_DECIXMUNICH
-47147:3706										ANX_REJECT_PEERING_DECIXDUSSELDORF
-47147:3707										ANX_REJECT_PEERING_DECIXHAMBURG
-47147:3708										ANX_REJECT_PEERING_IXBRPTTBRSOPAULO
-47147:3709										ANX_REJECT_PEERING_UAEIX
-47147:3710										ANX_REJECT_PEERING_SGIX
-47147:3000										ANX_REJECT_REGION_EUROPE
-47147:3001										ANX_REJECT_REGION_NORTHAMERICA
-47147:3002										ANX_REJECT_REGION_SOUTHAMERICA
-47147:3003										ANX_REJECT_REGION_ASIA
-47147:3200										ANX_REJECT_TYPE_UPSTREAM
-47147:3202										ANX_REJECT_TYPE_DOWNSTREAM
-47147:3201										ANX_REJECT_TYPE_PEERING
-47147:3600										ANX_REJECT_UPSTREAM_TELIACARRIER
-47147:3601										ANX_REJECT_UPSTREAM_NTTCOMMUNICATIONSGLOBAL
-47147:3602										ANX_REJECT_UPSTREAM_DEUTSCHETELEKOM
-47147:3604										ANX_REJECT_UPSTREAM_ALGARTELECOM
-47147:3605										ANX_REJECT_UPSTREAM_LEVEL3COMMUNICATIONSLLC
-47147:3607										ANX_REJECT_UPSTREAM_PCCWGLOBAL
-47147:3612										ANX_REJECT_UPSTREAM_TELSTRA
-47147:3609										ANX_REJECT_UPSTREAM_DATAMENA
-47147:3610										ANX_REJECT_UPSTREAM_OMANTEL
-47147:3611										ANX_REJECT_UPSTREAM_SOLUSINDOBINTANGPRATAMAPT
-47147:1601										LOCALPREF LOW
-47147:1602										LOCALPREF LOWEST
-47147:1400										No Advertise to all ASN
-47147:1401										Prepend once to all ASNs
-47147:1402										Prepend twice to all ASNs
-47147:1403										Prepend thrice to all ASN
-13030:51102						Switzerland		Zurich	Josefstrasse 225	ZRH-2 Equinix Zurich ZH2
-13030:51140						Switzerland		Schlieren		ZRH-3 green.ch Schlieren
-13030:51141						Switzerland		Oberengstringen	Allmendstrasse 13	ZRH-5 Equinix Zurich ZH5 Oberengstringen
-13030:51139						Switzerland		Herdern		ZRH-9 Init7 (Switzerland) AG Zurich Herdern
-13030:51105						Switzerland		Zurich	8003 Zurich Letzigraben	ZLZ-1 Layer One Letzigraben / green.ch
-13030:51107						Switzerland		Zurich	Sagereistrasse 35, Glattbrugg	GLB-1 Interxion Glattbrugg
-13030:51108						Switzerland		Bern		BRN-1 VTL Wavenet Limited
-13030:51112						Switzerland		Zurich	8058 Zurich Flughafen	ZRH-10 Airport Zurich
-13030:51113						Switzerland		Winterthur	Untere Schöntalstrasse 12	WIN-1 Stadtwerk Winterthur
-13030:51114						Switzerland		Winterthur		WIN-4 Init7 (Switzerland) AG Winterthur
-13030:51116						Switzerland		Basel		BSL-1 IWB Basel
-13030:51117						Switzerland		Geneva	6 Rue de la Confederation	GVA-1 Equinix Geneva
-13030:51118						Switzerland		Zug		ZUG-2 Init7 (Switzerland) AG Zug
-13030:51121						Switzerland		Basel		BSL-2 Quickline Business AG
-13030:51124						Switzerland		Wil	Weststrasse 38	WIL-1 Online Consulting AG Wil
-13030:51125						Switzerland		Meyrin	Esplanade des Particules 1	GVA-3 CERN Geneva
-13030:51127						Switzerland		Lausanne		QLS-1 Brainserve Crissier
-13030:51128						Switzerland		Rumlang		ZRH-6 e-Shelter Ruemlang
-13030:51129						Switzerland		Lupfig		ZRH-8 green.ch Lupfig
-13030:51130						Switzerland		Pratteln		BSL-3 ColoBâle AG Pratteln
-13030:51131						Switzerland		Winterthur		WIN-6 Data:Hub Winterthur
-13030:51132						Switzerland		Ependes		EPE-1 Zayo (Ex-Viatel) Ependes
-13030:51133						Switzerland		Olten		OLT-1 Zayo (Ex-Viatel) Olten
-13030:51134						Switzerland		Winterthur		WIN-7 AXA Winterthur
-13030:51135						Switzerland		Winterthur	Technoparkstrasse 2	WIN-8 Technopark Winterthur
-13030:51136						Switzerland		St. Gallen		STG-2 Init7 (Switzerland) AG St. Gallen
-13030:51137						Switzerland		Zurich	Sagereistrasse 35, Glattbrugg	GLB-3 Interxion Glattbrugg
-13030:51138						Switzerland		Wil		WIL-2 Init7 (Switzerland) AG Wil SG
-13030:51202						Germany		Frankfurt	Kruppstrasse 121	FRA-2 Equinix Frankfurt
-13030:51203						Germany		Frankfurt	Weismullerstraße 21	FRA-3 InterXion Frankfurt 3
-13030:51212						Germany		Dusseldorf	In der Steele 29	DUS-1 InterXion Dusseldorf
-13030:51214						Germany		Berlin	Nonnendammallee 15	BER-1 IPB Berlin
-13030:51301						France		Paris	137, Boulevard Voltaire	PAR-1 Telehouse Voltaire Paris
-13030:51302						France		Marseille		MRS-1 Viatel Neuf NetCentre Marseille
-13030:51403						Spain		Madrid	Calle de Emilio Muñoz, 49	MAD-3 InterXion Madrid
-13030:52501						Italy		Milan		MXP-1 Enter Milano
-13030:51501						Holand		Amsterdam		AMS-1 SARA Amsterdam
-13030:51502						Holand		Amsterdam	Cessnalaan 22, Schiphol-Rijk	AMS-2 NIKHEF Amsterdam
-13030:51601						Denmark		Copenhagen	Industrieparken 20a, Ballerup, 2750	CPH-2 InterXion Copenhagen
-13030:51701						United Kingdom		London	Coriander Avenue, E14 2AA	LON-1 Telehouse North London
-13030:51702						United Kingdom		London	Coriander Avenue, E14 2AA	LON-2 Telehouse East London
-13030:51801						Poland		Warsaw	Grochowska 21a	WAW-1 PLIX Warsaw
-13030:51901						United States		Miami	50 Northeast 9th Street	MIA-1 Terremark Miami
-13030:51902						United States		Los Angeles	624 South Grand Avenue	LAX-1 CoreSite Los Angeles
-13030:51904						United States		New York City		NYC-2 Telehouse New York
-13030:51905						United States		Newark	165 Halsey Street	NYC-3 165 Halsey Street
-13030:52201						Austria		Vienna		VIE-1 InterXion Vienna
+47147:666	47147	47147	666							Blackhole
+65535:666	47147	47147	666							RFC7999 community accepted, will be rewritten to 47147:666 internally.
+47147:621	47147	47147	621							ANX_BLACKHOLE_OUTSIDE_COUNTRY
+47147:620	47147	47147	620							ANX_BLACKHOLE_OUTSIDE_REGION
+47147:2401	47147	47147	2401			Germany		FRANKFURT		
+47147:2400	47147	47147	2400			Austria		VIENNA		
+47147:2402	47147	47147	2402			Germany		NUREMBERG		
+47147:2403	47147	47147	2403			Switzerland		ZURICH		
+47147:2404	47147	47147	2404			Austria		KLAGENFURT		
+47147:2404	47147	47147	2404			United States		MANASSAS		
+47147:2405	47147	47147	2405			Brazil		SAOPAULO		
+47147:2406	47147	47147	2406			Germany		MUNICH		
+47147:2407	47147	47147	2407			Germany		DUSSELDORF		
+47147:2408	47147	47147	2408			Germany		HAMBURG		
+47147:2409	47147	47147	2409			Japan		TOKYO		
+47147:2410	47147	47147	2410			China		TIANJIN		
+47147:2411	47147	47147	2411			United Arab Emirates		DUBAI		
+47147:2412	47147	47147	2412			Singapore		SINGAPORE		
+47147:2413	47147	47147	2413			Poland		WARSAW		
+47147:2414	47147	47147	2414			Hong Kong		HONG KONG		
+47147:2415	47147	47147	2415			Mexico		MEXICO CITY		
+47147:2101	47147	47147	2101			Germany				ANX_ORIGIN_COUNTRY_DE
+47147:2100	47147	47147	2100			Austria				ANX_ORIGIN_COUNTRY_AT
+47147:2102	47147	47147	2102			Switzerland				ANX_ORIGIN_COUNTRY_CH
+47147:2103	47147	47147	2103			United States				ANX_ORIGIN_COUNTRY_US
+47147:2104	47147	47147	2104			Brazil				ANX_ORIGIN_COUNTRY_BR
+47147:2105	47147	47147	2105			Japan				ANX_ORIGIN_COUNTRY_JP
+47147:2106	47147	47147	2106			China				ANX_ORIGIN_COUNTRY_CN
+47147:2107	47147	47147	2107			United Arab Emirates				ANX_ORIGIN_COUNTRY_AE
+47147:2108	47147	47147	2108			Singapore				ANX_ORIGIN_COUNTRY_SG
+47147:2109	47147	47147	2109			Poland				ANX_ORIGIN_COUNTRY_PL
+47147:2110	47147	47147	2110			Hong Kong				ANX_ORIGIN_COUNTRY_HK
+47147:2111	47147	47147	2111			Mexico				ANX_ORIGIN_COUNTRY_MX
+47147:2702	47147	47147	2702			Germany		Frankfurt		ANX_ORIGIN_PEERING_DECIXFRANKFURT
+47147:2703	47147	47147	2703							ANX_ORIGIN_PEERING_VIX
+47147:2700	47147	47147	2700							ANX_ORIGIN_PEERING_PNI
+47147:2701	47147	47147	2701							ANX_ORIGIN_PEERING_CACHE
+47147:2704	47147	47147	2704							ANX_ORIGIN_PEERING_SWISSIX
+47147:2705	47147	47147	2705			Germany		Munich		ANX_ORIGIN_PEERING_DECIXMUNICH
+47147:2706	47147	47147	2706			Germany		Dusseldorf		ANX_ORIGIN_PEERING_DECIXDUSSELDORF
+47147:2707	47147	47147	2707			Germany		Hamburg		ANX_ORIGIN_PEERING_DECIXHAMBURG
+47147:2708	47147	47147	2708							ANX_ORIGIN_PEERING_IXBRPTTBRSOPAULO
+47147:2709	47147	47147	2709							ANX_ORIGIN_PEERING_UAEIX
+47147:2710	47147	47147	2710							ANX_ORIGIN_PEERING_SGIX
+47147:1500	47147	47147	1500							ANX_ORIGIN_RPKI_VALID
+47147:1501	47147	47147	1501							ANX_ORIGIN_RPKI_INVALID
+47147:1502	47147	47147	1502							ANX_ORIGIN_RPKI_UNKNOWN
+47147:2300	47147	47147	2300							ANX_ORIGIN_TYPE_UPSTREAM
+47147:2301	47147	47147	2301							ANX_ORIGIN_TYPE_PEERING
+47147:2302	47147	47147	2302							ANX_ORIGIN_TYPE_DOWNSTREAM
+47147:2600	47147	47147	2600							ANX_ORIGIN_UPSTREAM_TELIACARRIER
+47147:2601	47147	47147	2601							ANX_ORIGIN_UPSTREAM_NTTCOMMUNICATIONSGLOBAL
+47147:2602	47147	47147	2602							ANX_ORIGIN_UPSTREAM_DEUTSCHETELEKOM
+47147:2604	47147	47147	2604							ANX_ORIGIN_UPSTREAM_ALGARTELECOM
+47147:2605	47147	47147	2605							ANX_ORIGIN_UPSTREAM_LEVEL3COMMUNICATIONSLLC
+47147:2607	47147	47147	2607							ANX_ORIGIN_UPSTREAM_PCCWGLOBAL
+47147:2612	47147	47147	2612							ANX_ORIGIN_UPSTREAM_TELSTRA
+47147:2608	47147	47147	2608							ANX_ORIGIN_UPSTREAM_DATAMENA
+47147:2609	47147	47147	2609							ANX_ORIGIN_UPSTREAM_OMANTEL
+47147:2610	47147	47147	2610							ANX_ORIGIN_UPSTREAM_SOLUSINDOBINTANGPRATAMAPT
+47147:3401	47147	47147	3401							ANX_REJECT_CITY_FRANKFURT
+47147:3400	47147	47147	3400							ANX_REJECT_CITY_VIENNA
+47147:3402	47147	47147	3402							ANX_REJECT_CITY_NUREMBERG
+47147:3403	47147	47147	3403							ANX_REJECT_CITY_ZURICH
+47147:3404	47147	47147	3404							ANX_REJECT_CITY_KLAGENFURT
+47147:3404	47147	47147	3404							ANX_REJECT_CITY_MANASSAS
+47147:3404	47147	47147	3404							ANX_REJECT_CITY_SAOPAULO
+47147:3406	47147	47147	3406							ANX_REJECT_CITY_MUNICH
+47147:3407	47147	47147	3407							ANX_REJECT_CITY_DUSSELDORF
+47147:3408	47147	47147	3408							ANX_REJECT_CITY_HAMBURG
+47147:3409	47147	47147	3409							ANX_REJECT_CITY_TOKYO
+47147:3410	47147	47147	3410							ANX_REJECT_CITY_TIANJIN
+47147:3411	47147	47147	3411							ANX_REJECT_CITY_DUBAI
+47147:3412	47147	47147	3412							ANX_REJECT_CITY_SINGAPORE
+47147:3413	47147	47147	3413							ANX_REJECT_CITY_WARSAW
+47147:3414	47147	47147	3414							ANX_REJECT_CITY_HONGKONG
+47147:3415	47147	47147	3415							ANX_REJECT_CITY_MEXICOCITY
+47147:3100	47147	47147	3100							ANX_REJECT_COUNTRY_AT
+47147:3101	47147	47147	3101							ANX_REJECT_COUNTRY_DE
+47147:3102	47147	47147	3102							ANX_REJECT_COUNTRY_CH
+47147:3103	47147	47147	3103							ANX_REJECT_COUNTRY_US
+47147:3104	47147	47147	3104							ANX_REJECT_COUNTRY_BR
+47147:3105	47147	47147	3105							ANX_REJECT_COUNTRY_JP
+47147:3106	47147	47147	3106							ANX_REJECT_COUNTRY_CN
+47147:3107	47147	47147	3107							ANX_REJECT_COUNTRY_AE
+47147:3108	47147	47147	3108							ANX_REJECT_COUNTRY_SG
+47147:3109	47147	47147	3109							ANX_REJECT_COUNTRY_PL
+47147:3110	47147	47147	3110							ANX_REJECT_COUNTRY_HK
+47147:3111	47147	47147	3111							ANX_REJECT_COUNTRY_MX
+47147:3702	47147	47147	3702							ANX_REJECT_PEERING_DECIXFRANKFURT
+47147:3703	47147	47147	3703							ANX_REJECT_PEERING_VIX
+47174:3701	47174	47174	3701							ANX_REJECT_PEERING_CACHE
+47174:3700	47174	47174	3700							ANX_REJECT_PEERING_PNI
+47147:3704	47147	47147	3704							ANX_REJECT_PEERING_SWISSIX
+47147:3705	47147	47147	3705							ANX_REJECT_PEERING_DECIXMUNICH
+47147:3706	47147	47147	3706							ANX_REJECT_PEERING_DECIXDUSSELDORF
+47147:3707	47147	47147	3707							ANX_REJECT_PEERING_DECIXHAMBURG
+47147:3708	47147	47147	3708							ANX_REJECT_PEERING_IXBRPTTBRSOPAULO
+47147:3709	47147	47147	3709							ANX_REJECT_PEERING_UAEIX
+47147:3710	47147	47147	3710							ANX_REJECT_PEERING_SGIX
+47147:3000	47147	47147	3000							ANX_REJECT_REGION_EUROPE
+47147:3001	47147	47147	3001							ANX_REJECT_REGION_NORTHAMERICA
+47147:3002	47147	47147	3002							ANX_REJECT_REGION_SOUTHAMERICA
+47147:3003	47147	47147	3003							ANX_REJECT_REGION_ASIA
+47147:3200	47147	47147	3200							ANX_REJECT_TYPE_UPSTREAM
+47147:3202	47147	47147	3202							ANX_REJECT_TYPE_DOWNSTREAM
+47147:3201	47147	47147	3201							ANX_REJECT_TYPE_PEERING
+47147:3600	47147	47147	3600							ANX_REJECT_UPSTREAM_TELIACARRIER
+47147:3601	47147	47147	3601							ANX_REJECT_UPSTREAM_NTTCOMMUNICATIONSGLOBAL
+47147:3602	47147	47147	3602							ANX_REJECT_UPSTREAM_DEUTSCHETELEKOM
+47147:3604	47147	47147	3604							ANX_REJECT_UPSTREAM_ALGARTELECOM
+47147:3605	47147	47147	3605							ANX_REJECT_UPSTREAM_LEVEL3COMMUNICATIONSLLC
+47147:3607	47147	47147	3607							ANX_REJECT_UPSTREAM_PCCWGLOBAL
+47147:3612	47147	47147	3612							ANX_REJECT_UPSTREAM_TELSTRA
+47147:3609	47147	47147	3609							ANX_REJECT_UPSTREAM_DATAMENA
+47147:3610	47147	47147	3610							ANX_REJECT_UPSTREAM_OMANTEL
+47147:3611	47147	47147	3611							ANX_REJECT_UPSTREAM_SOLUSINDOBINTANGPRATAMAPT
+47147:1601	47147	47147	1601							LOCALPREF LOW
+47147:1602	47147	47147	1602							LOCALPREF LOWEST
+47147:1400	47147	47147	1400							No Advertise to all ASN
+47147:1401	47147	47147	1401							Prepend once to all ASNs
+47147:1402	47147	47147	1402							Prepend twice to all ASNs
+47147:1403	47147	47147	1403							Prepend thrice to all ASN
+13030:51102	13030	13030	51102			Switzerland		Zurich	Josefstrasse 225	ZRH-2 Equinix Zurich ZH2
+13030:51140	13030	13030	51140			Switzerland		Schlieren		ZRH-3 green.ch Schlieren
+13030:51141	13030	13030	51141			Switzerland		Oberengstringen	Allmendstrasse 13	ZRH-5 Equinix Zurich ZH5 Oberengstringen
+13030:51139	13030	13030	51139			Switzerland		Herdern		ZRH-9 Init7 (Switzerland) AG Zurich Herdern
+13030:51105	13030	13030	51105			Switzerland		Zurich	8003 Zurich Letzigraben	ZLZ-1 Layer One Letzigraben / green.ch
+13030:51107	13030	13030	51107			Switzerland		Zurich	Sagereistrasse 35, Glattbrugg	GLB-1 Interxion Glattbrugg
+13030:51108	13030	13030	51108			Switzerland		Bern		BRN-1 VTL Wavenet Limited
+13030:51112	13030	13030	51112			Switzerland		Zurich	8058 Zurich Flughafen	ZRH-10 Airport Zurich
+13030:51113	13030	13030	51113			Switzerland		Winterthur	Untere Schöntalstrasse 12	WIN-1 Stadtwerk Winterthur
+13030:51114	13030	13030	51114			Switzerland		Winterthur		WIN-4 Init7 (Switzerland) AG Winterthur
+13030:51116	13030	13030	51116			Switzerland		Basel		BSL-1 IWB Basel
+13030:51117	13030	13030	51117			Switzerland		Geneva	6 Rue de la Confederation	GVA-1 Equinix Geneva
+13030:51118	13030	13030	51118			Switzerland		Zug		ZUG-2 Init7 (Switzerland) AG Zug
+13030:51121	13030	13030	51121			Switzerland		Basel		BSL-2 Quickline Business AG
+13030:51124	13030	13030	51124			Switzerland		Wil	Weststrasse 38	WIL-1 Online Consulting AG Wil
+13030:51125	13030	13030	51125			Switzerland		Meyrin	Esplanade des Particules 1	GVA-3 CERN Geneva
+13030:51127	13030	13030	51127			Switzerland		Lausanne		QLS-1 Brainserve Crissier
+13030:51128	13030	13030	51128			Switzerland		Rumlang		ZRH-6 e-Shelter Ruemlang
+13030:51129	13030	13030	51129			Switzerland		Lupfig		ZRH-8 green.ch Lupfig
+13030:51130	13030	13030	51130			Switzerland		Pratteln		BSL-3 ColoBâle AG Pratteln
+13030:51131	13030	13030	51131			Switzerland		Winterthur		WIN-6 Data:Hub Winterthur
+13030:51132	13030	13030	51132			Switzerland		Ependes		EPE-1 Zayo (Ex-Viatel) Ependes
+13030:51133	13030	13030	51133			Switzerland		Olten		OLT-1 Zayo (Ex-Viatel) Olten
+13030:51134	13030	13030	51134			Switzerland		Winterthur		WIN-7 AXA Winterthur
+13030:51135	13030	13030	51135			Switzerland		Winterthur	Technoparkstrasse 2	WIN-8 Technopark Winterthur
+13030:51136	13030	13030	51136			Switzerland		St. Gallen		STG-2 Init7 (Switzerland) AG St. Gallen
+13030:51137	13030	13030	51137			Switzerland		Zurich	Sagereistrasse 35, Glattbrugg	GLB-3 Interxion Glattbrugg
+13030:51138	13030	13030	51138			Switzerland		Wil		WIL-2 Init7 (Switzerland) AG Wil SG
+13030:51202	13030	13030	51202			Germany		Frankfurt	Kruppstrasse 121	FRA-2 Equinix Frankfurt
+13030:51203	13030	13030	51203			Germany		Frankfurt	Weismullerstraße 21	FRA-3 InterXion Frankfurt 3
+13030:51212	13030	13030	51212			Germany		Dusseldorf	In der Steele 29	DUS-1 InterXion Dusseldorf
+13030:51214	13030	13030	51214			Germany		Berlin	Nonnendammallee 15	BER-1 IPB Berlin
+13030:51301	13030	13030	51301			France		Paris	137, Boulevard Voltaire	PAR-1 Telehouse Voltaire Paris
+13030:51302	13030	13030	51302			France		Marseille		MRS-1 Viatel Neuf NetCentre Marseille
+13030:51403	13030	13030	51403			Spain		Madrid	Calle de Emilio Muñoz, 49	MAD-3 InterXion Madrid
+13030:52501	13030	13030	52501			Italy		Milan		MXP-1 Enter Milano
+13030:51501	13030	13030	51501			Holand		Amsterdam		AMS-1 SARA Amsterdam
+13030:51502	13030	13030	51502			Holand		Amsterdam	Cessnalaan 22, Schiphol-Rijk	AMS-2 NIKHEF Amsterdam
+13030:51601	13030	13030	51601			Denmark		Copenhagen	Industrieparken 20a, Ballerup, 2750	CPH-2 InterXion Copenhagen
+13030:51701	13030	13030	51701			United Kingdom		London	Coriander Avenue, E14 2AA	LON-1 Telehouse North London
+13030:51702	13030	13030	51702			United Kingdom		London	Coriander Avenue, E14 2AA	LON-2 Telehouse East London
+13030:51801	13030	13030	51801			Poland		Warsaw	Grochowska 21a	WAW-1 PLIX Warsaw
+13030:51901	13030	13030	51901			United States		Miami	50 Northeast 9th Street	MIA-1 Terremark Miami
+13030:51902	13030	13030	51902			United States		Los Angeles	624 South Grand Avenue	LAX-1 CoreSite Los Angeles
+13030:51904	13030	13030	51904			United States		New York City		NYC-2 Telehouse New York
+13030:51905	13030	13030	51905			United States		Newark	165 Halsey Street	NYC-3 165 Halsey Street
+13030:52201	13030	13030	52201			Austria		Vienna		VIE-1 InterXion Vienna
 6453:1000	6453	6453	1000		North America					
 6453:1100	6453	6453	1100		North America	United States				
 6453:1102	6453	6453	1102		North America	United States		Newark	165 Hasley Street	
@@ -3642,49 +3642,49 @@ id	aut	value1	value2	region	norm_region	country	country_code	city	address	source
 20764:3037	20764	20764	3037							FranceIX source
 20764:3039	20764	20764	3039							TTK source
 20764:3096	20764	20764	3096							Do not announce outside of the region (for future use)
-9009:100										European routes
-9009:200										America routes
-9009:300										Asia/Pacific routes
-9009:144										United Kingdom routes
-9009:131										Netherlands routes
-9009:149										Germany routes
-9009:1420										Czech Republic routes
-9009:133										France routes
-9009:132										Belgium routes
-9009:140										Romania routes
-9009:136										Hungary routes
-9009:3549										Global Crossing routes
-9009:174										Cogent Communications routes
-9009:19151										WV Fiber routes
-9009:3257										Inteliquent
-9009:3292										TDC
-9009:30071										OCCAID Inc ipv6 only
-9009:2914										NTT Europe
-9009:1299										Telia
-9009:6762						Italia				Telecom
-9009:1000						UK		London		LINX
-9009:1100						DE		Frankfurt		DE-CIX
-9009:1200						NL		Amsterdam		AMS-IX
-9009:1300						UK		Manchester		IXManchester
-9009:1400						UK		Manchester		EdgeIX
-9009:1500						CZ		Prague		Peering.cz
-9009:1600						UK		Edinburgh		IXScotland
-9009:1700						RO		Bucarest		Balcan-IX
-9009:1800						RO		Bucarest		RoNIX
-9009:1900						RO		Bucarest		InterLAN
-9009:2000						FR		Paris		Equinix-IX
-9009:2856										British Telecom
-9009:5089										Virgin Media
-9009:13285										TalkTalk
-9009:5607										BSkyB
-9009:8657										CPRM
-9009:12715										JazzTel
-9009:6830										UPC
-9009:30781										Jaguar Networks
-9009:10026										Pacnet Global
-9009:8966										Etisalat
-9009:1273										Cable&Wireless
-9009:8928										Interoute
+9009:100	9009	9009	100							European routes
+9009:200	9009	9009	200							America routes
+9009:300	9009	9009	300							Asia/Pacific routes
+9009:144	9009	9009	144							United Kingdom routes
+9009:131	9009	9009	131							Netherlands routes
+9009:149	9009	9009	149							Germany routes
+9009:1420	9009	9009	1420							Czech Republic routes
+9009:133	9009	9009	133							France routes
+9009:132	9009	9009	132							Belgium routes
+9009:140	9009	9009	140							Romania routes
+9009:136	9009	9009	136							Hungary routes
+9009:3549	9009	9009	3549							Global Crossing routes
+9009:174	9009	9009	174							Cogent Communications routes
+9009:19151	9009	9009	19151							WV Fiber routes
+9009:3257	9009	9009	3257							Inteliquent
+9009:3292	9009	9009	3292							TDC
+9009:30071	9009	9009	30071							OCCAID Inc ipv6 only
+9009:2914	9009	9009	2914							NTT Europe
+9009:1299	9009	9009	1299							Telia
+9009:6762	9009	9009	6762			Italia				Telecom
+9009:1000	9009	9009	1000			UK		London		LINX
+9009:1100	9009	9009	1100			DE		Frankfurt		DE-CIX
+9009:1200	9009	9009	1200			NL		Amsterdam		AMS-IX
+9009:1300	9009	9009	1300			UK		Manchester		IXManchester
+9009:1400	9009	9009	1400			UK		Manchester		EdgeIX
+9009:1500	9009	9009	1500			CZ		Prague		Peering.cz
+9009:1600	9009	9009	1600			UK		Edinburgh		IXScotland
+9009:1700	9009	9009	1700			RO		Bucarest		Balcan-IX
+9009:1800	9009	9009	1800			RO		Bucarest		RoNIX
+9009:1900	9009	9009	1900			RO		Bucarest		InterLAN
+9009:2000	9009	9009	2000			FR		Paris		Equinix-IX
+9009:2856	9009	9009	2856							British Telecom
+9009:5089	9009	9009	5089							Virgin Media
+9009:13285	9009	9009	13285							TalkTalk
+9009:5607	9009	9009	5607							BSkyB
+9009:8657	9009	9009	8657							CPRM
+9009:12715	9009	9009	12715							JazzTel
+9009:6830	9009	9009	6830							UPC
+9009:30781	9009	9009	30781							Jaguar Networks
+9009:10026	9009	9009	10026							Pacnet Global
+9009:8966	9009	9009	8966							Etisalat
+9009:1273	9009	9009	1273							Cable&Wireless
+9009:8928	9009	9009	8928							Interoute
 19151:1000	19151	19151	1000			USA	840			Eastern US
 19151:61001	19151	19151	61001			USA		Ashburn (ASH)		Ashburn (ASH)
 19151:61002	19151	19151	61002			USA		New Jersey (NJ)		New Jersey (NJ)
@@ -3935,176 +3935,176 @@ id	aut	value1	value2	region	norm_region	country	country_code	city	address	source
 65104:65535	65101	65104	65535							Error
 65104:65535	65101	65104	65535							Error
 65102:65535	65101	65102	65535							Error
-8220:65000					Europe					
-8220:65001					North America					
-8220:65002					Asia Pacific					
-8220:65010						United Kingdom		London		
-8220:65011						United Kingdom		Birmingham		
-8220:65020						France		Paris		
-8220:65022						France		Lyon		
-8220:65023						France		Toulouse		
-8220:65024						France		Marseille		
-8220:65025						France		Bordeaux		
-8220:65030						Germany		Frankfurt		
-8220:65031						Germany		Cologne		
-8220:65032						Germany		Duesseldorf		
-8220:65033						Germany		Hamburg		
-8220:65034						Germany		Hannover		
-8220:65035						Germany		Berlin		
-8220:65036						Germany		Stuttgart		
-8220:65037						Germany		Munich		
-8220:65040						Netherlands		Amsterdam		
-8220:65050						Spain		Madrid		
-8220:65070						Spain		Barcelona		
-8220:65051						Spain		Valencia		
-8220:65060						Italy		Milan		
-8220:65061						Italy		Turin		
-8220:65062						Italy		Rome		
-8220:65080						Belgium		Brussels		
-8220:65090						Austria		Vienna		
-8220:65100						Poland		Warsaw		
-8220:65101						Czech Republic		Prague		
-8220:65102						Solvakia		Bratislava		
-8220:65103						Hungary		Budapest		
-8220:65104						Romania		Bucharest		
-8220:65105						Bulgaria		Sofia		
-8220:65110						Switzerland		Zurich		
-8220:65111						Switzerland		Basel		
-8220:65120						Switzerland		Geneva		
-8220:65130						Sweeden		Stockholm		
-8220:65131						Finland		Helsinki		
-8220:65140						Ireland		Dublin		
-8220:65151						France		Rouen		
-8220:65152						France		Nantes		
-8220:65160						Denmark		Copenhagen		
-8220:65180						Portugal		Lisbon		
-8220:65201						United States		New York		
-8220:65201						United States		Newark		
-8220:65250						United States		Chicago		
-8220:65251						United States		Seattle		
-8220:65252						United States		San Jose		
-8220:65253						United States		Los Angeles		
-8220:65254						United States		Phoenix		
-8220:65255						United States		Dallas		
-8220:65256						United States		Atlanta		
-8220:65257						United States		Washington		
-8220:65300						Hong Kong		Hong Kong		
-8220:65301						Japan		Osaka		
-8220:65303						Japan		Tokyo		
-8220:65302						Singapore		Singapore		
-57695:20001					Asia					route originated in Asia
-57695:20018					Asia					route originated in Asia (Far East)
-57695:20002					Europe					route originated in Europe
-57695:20020					Europe					route originated in North Europe
-57695:20021					Europe					route originated in South Europe
-57695:20022					Europe					route originated in East Europe
-57695:20023					Europe					route originated in Western Europe
-57695:20024					Europe					route originated in Central Europe
-57695:20003					America					route originated in America
-57695:20030					United States	US	840			route originated in North America
-57695:20031					South America					route originated in South America
-57695:20004					Oceania					route originated in Oceania
-57695:20005					Africa					route originated in Africa
-57695:20050					Africa					route originated in North Africa
-57695:20051					South Africa					route originated in South Africa
-57695:20052					Africa					route originated in East Africa
-57695:20053					Africa					route originated in Western Africa
-57695:24300						Austria	040			route originated in Austria
-57695:26100						Australia	036			route originated in Australia
-57695:23590						Bulgaria	100			route originated in Bulgaria
-57695:25500						Brazil	076			route originated in Brazil
-57695:28600						China	156			route originated in China
-57695:24900						Germany	276			route originated in Germany
-57695:23300						France	250			route originated in France
-57695:24400						United Kingdom	826			route originated in United Kingdom
-57695:28520						Hong Kong	344			route originated in Hong Kong
-57695:28100						Japan	392			route originated in Japan
-57695:22540						Kenya	404			route originated in Kenya
-57695:28200						Korea, Republic of	410			route originated in Korea, Republic of
-57695:23520						Luxembourg	442			route originated in Luxembourg
-57695:23100						Netherlands	528			route originated in Netherlands
-57695:27000						Russian Federation	643			route originated in Russian Federation
-57695:26500						Singapore	702			route originated in Singapore
-57695:28860						Taiwan, Province of China	158			route originated in Taiwan, Province of China
-57695:21000						United States	840			route originated in United States
-57695:22700						South Africa	710			route originated in South Africa
-6667:3000										Internal or customer
-6667:3001										Public peering
-6667:3003										Private peering
-6667:3004										Transit
-6667:4000						Finland		Tampere		
-6667:4001						Finland		Turku		
-6667:4002						Finland		Helsinki		
-6667:4003						Sweden		Stockholm		
-6667:4004						United Kingdom		London		
-6667:4005						Germany		Frankfurt		
-6667:4006						Germany		Hamburg		
-6667:4007						Denmark		Copenhagen		
-6667:4008						Norway		Oslo		
-6667:4009						The Netherlands		Amsterdam		
-6667:4010						USA		New York		
-174:21000										Route is learned from NA (North America) non-customer.
-174:21001										Route is NA internal or customer route.
-174:21100										Route is learned from EU (Europe) non-customer.
-174:21101										Route is an EU internal or customer route.
-174:21200										Route is learned from AP (Asia Pacific) non-customer.
-174:21201										Route is an AP internal or customer route.
-174:21300										Route is learned from SA (South America) non-customer.
-174:21301										Route is a SA internal or customer route.
-174:21400										Route is learned from AU (Australia) non-customer.
-174:21401										Route is an AU internal or customer route.
-174:22001						Austria	040			
-174:22002						Belgium	056			
-174:22003						Canada	124			
-174:22004						Switzerland	756			
-174:22005						Germany	276			
-174:22006						Denmark	208			
-174:22007						Spain	724			
-174:22008						France	250			
-174:22009						Italy	380			
-174:22010						Netherlands	528			
-174:22011						Portugal	620			
-174:22012						United Kingdom	826			
-174:22013						United States	840			
-174:22014						Sweden	752			
-174:22015						Norway	578			
-174:22016						Czech Republic	203			
-174:22017						Slovakia	703			
-174:22018						Hungary	348			
-174:22019						Ireland	372			
-174:22020						Romania	642			
-174:22021						Croatia (locally Hrvatska)	191			
-174:22022						Slovenia	705			
-174:22023						Bulgaria	100			
-174:22024						Finland	246			
-174:22025						Estonia	233			
-174:22026						Ukraine	804			
-174:22027						Mexico	484			
-174:22028						Poland	616			
-174:22029						Luxembourg	442			
-174:22030						Serbia	688			
-174:22031						Greece	300			
-174:22032						Japan	392			
-174:22033						Macedonia	807			
-174:22034						Lithuania	440			
-174:22035						Turkey	792			
-174:22036						Moldova	498			
-174:22037						Latvia	428			
-174:22038						Singapore	702			
-174:22039						Hong Kong	344			
-174:22040						Montenegro	499			
-174:22041						Albania	008			
-174:22042						Brazil	076			
-174:22043						Australia	036			
-174:3000										Do not announce to peers (equivalent to 174:991)
-174:3001										Prepend 174 1 time to peers.
-174:3002										Prepend 174 2 times to peers.
-174:3003										Prepend 174 3 times to peers.
-174:990										Do not send route to BGP customers, or peers.
-174:991										Do not send route to peers.
-174:10										Set customer route local preference to 10
-174:70										Set customer route local preference to 70
-174:120										Set customer route local preference to 120
-174:125										Set customer route local preference to 125
-174:135										Set customer route local preference to 135
-174:140										Set customer route local preference to 140
+8220:65000	8220	8220	65000		Europe					
+8220:65001	8220	8220	65001		North America					
+8220:65002	8220	8220	65002		Asia Pacific					
+8220:65010	8220	8220	65010			United Kingdom		London		
+8220:65011	8220	8220	65011			United Kingdom		Birmingham		
+8220:65020	8220	8220	65020			France		Paris		
+8220:65022	8220	8220	65022			France		Lyon		
+8220:65023	8220	8220	65023			France		Toulouse		
+8220:65024	8220	8220	65024			France		Marseille		
+8220:65025	8220	8220	65025			France		Bordeaux		
+8220:65030	8220	8220	65030			Germany		Frankfurt		
+8220:65031	8220	8220	65031			Germany		Cologne		
+8220:65032	8220	8220	65032			Germany		Duesseldorf		
+8220:65033	8220	8220	65033			Germany		Hamburg		
+8220:65034	8220	8220	65034			Germany		Hannover		
+8220:65035	8220	8220	65035			Germany		Berlin		
+8220:65036	8220	8220	65036			Germany		Stuttgart		
+8220:65037	8220	8220	65037			Germany		Munich		
+8220:65040	8220	8220	65040			Netherlands		Amsterdam		
+8220:65050	8220	8220	65050			Spain		Madrid		
+8220:65070	8220	8220	65070			Spain		Barcelona		
+8220:65051	8220	8220	65051			Spain		Valencia		
+8220:65060	8220	8220	65060			Italy		Milan		
+8220:65061	8220	8220	65061			Italy		Turin		
+8220:65062	8220	8220	65062			Italy		Rome		
+8220:65080	8220	8220	65080			Belgium		Brussels		
+8220:65090	8220	8220	65090			Austria		Vienna		
+8220:65100	8220	8220	65100			Poland		Warsaw		
+8220:65101	8220	8220	65101			Czech Republic		Prague		
+8220:65102	8220	8220	65102			Solvakia		Bratislava		
+8220:65103	8220	8220	65103			Hungary		Budapest		
+8220:65104	8220	8220	65104			Romania		Bucharest		
+8220:65105	8220	8220	65105			Bulgaria		Sofia		
+8220:65110	8220	8220	65110			Switzerland		Zurich		
+8220:65111	8220	8220	65111			Switzerland		Basel		
+8220:65120	8220	8220	65120			Switzerland		Geneva		
+8220:65130	8220	8220	65130			Sweeden		Stockholm		
+8220:65131	8220	8220	65131			Finland		Helsinki		
+8220:65140	8220	8220	65140			Ireland		Dublin		
+8220:65151	8220	8220	65151			France		Rouen		
+8220:65152	8220	8220	65152			France		Nantes		
+8220:65160	8220	8220	65160			Denmark		Copenhagen		
+8220:65180	8220	8220	65180			Portugal		Lisbon		
+8220:65201	8220	8220	65201			United States		New York		
+8220:65201	8220	8220	65201			United States		Newark		
+8220:65250	8220	8220	65250			United States		Chicago		
+8220:65251	8220	8220	65251			United States		Seattle		
+8220:65252	8220	8220	65252			United States		San Jose		
+8220:65253	8220	8220	65253			United States		Los Angeles		
+8220:65254	8220	8220	65254			United States		Phoenix		
+8220:65255	8220	8220	65255			United States		Dallas		
+8220:65256	8220	8220	65256			United States		Atlanta		
+8220:65257	8220	8220	65257			United States		Washington		
+8220:65300	8220	8220	65300			Hong Kong		Hong Kong		
+8220:65301	8220	8220	65301			Japan		Osaka		
+8220:65303	8220	8220	65303			Japan		Tokyo		
+8220:65302	8220	8220	65302			Singapore		Singapore		
+57695:20001	57695	57695	20001		Asia					route originated in Asia
+57695:20018	57695	57695	20018		Asia					route originated in Asia (Far East)
+57695:20002	57695	57695	20002		Europe					route originated in Europe
+57695:20020	57695	57695	20020		Europe					route originated in North Europe
+57695:20021	57695	57695	20021		Europe					route originated in South Europe
+57695:20022	57695	57695	20022		Europe					route originated in East Europe
+57695:20023	57695	57695	20023		Europe					route originated in Western Europe
+57695:20024	57695	57695	20024		Europe					route originated in Central Europe
+57695:20003	57695	57695	20003		America					route originated in America
+57695:20030	57695	57695	20030		United States	US	840			route originated in North America
+57695:20031	57695	57695	20031		South America					route originated in South America
+57695:20004	57695	57695	20004		Oceania					route originated in Oceania
+57695:20005	57695	57695	20005		Africa					route originated in Africa
+57695:20050	57695	57695	20050		Africa					route originated in North Africa
+57695:20051	57695	57695	20051		South Africa					route originated in South Africa
+57695:20052	57695	57695	20052		Africa					route originated in East Africa
+57695:20053	57695	57695	20053		Africa					route originated in Western Africa
+57695:24300	57695	57695	24300			Austria	040			route originated in Austria
+57695:26100	57695	57695	26100			Australia	036			route originated in Australia
+57695:23590	57695	57695	23590			Bulgaria	100			route originated in Bulgaria
+57695:25500	57695	57695	25500			Brazil	076			route originated in Brazil
+57695:28600	57695	57695	28600			China	156			route originated in China
+57695:24900	57695	57695	24900			Germany	276			route originated in Germany
+57695:23300	57695	57695	23300			France	250			route originated in France
+57695:24400	57695	57695	24400			United Kingdom	826			route originated in United Kingdom
+57695:28520	57695	57695	28520			Hong Kong	344			route originated in Hong Kong
+57695:28100	57695	57695	28100			Japan	392			route originated in Japan
+57695:22540	57695	57695	22540			Kenya	404			route originated in Kenya
+57695:28200	57695	57695	28200			Korea, Republic of	410			route originated in Korea, Republic of
+57695:23520	57695	57695	23520			Luxembourg	442			route originated in Luxembourg
+57695:23100	57695	57695	23100			Netherlands	528			route originated in Netherlands
+57695:27000	57695	57695	27000			Russian Federation	643			route originated in Russian Federation
+57695:26500	57695	57695	26500			Singapore	702			route originated in Singapore
+57695:28860	57695	57695	28860			Taiwan, Province of China	158			route originated in Taiwan, Province of China
+57695:21000	57695	57695	21000			United States	840			route originated in United States
+57695:22700	57695	57695	22700			South Africa	710			route originated in South Africa
+6667:3000	6667	6667	3000							Internal or customer
+6667:3001	6667	6667	3001							Public peering
+6667:3003	6667	6667	3003							Private peering
+6667:3004	6667	6667	3004							Transit
+6667:4000	6667	6667	4000			Finland		Tampere		
+6667:4001	6667	6667	4001			Finland		Turku		
+6667:4002	6667	6667	4002			Finland		Helsinki		
+6667:4003	6667	6667	4003			Sweden		Stockholm		
+6667:4004	6667	6667	4004			United Kingdom		London		
+6667:4005	6667	6667	4005			Germany		Frankfurt		
+6667:4006	6667	6667	4006			Germany		Hamburg		
+6667:4007	6667	6667	4007			Denmark		Copenhagen		
+6667:4008	6667	6667	4008			Norway		Oslo		
+6667:4009	6667	6667	4009			The Netherlands		Amsterdam		
+6667:4010	6667	6667	4010			USA		New York		
+174:21000	174	174	21000							Route is learned from NA (North America) non-customer.
+174:21001	174	174	21001							Route is NA internal or customer route.
+174:21100	174	174	21100							Route is learned from EU (Europe) non-customer.
+174:21101	174	174	21101							Route is an EU internal or customer route.
+174:21200	174	174	21200							Route is learned from AP (Asia Pacific) non-customer.
+174:21201	174	174	21201							Route is an AP internal or customer route.
+174:21300	174	174	21300							Route is learned from SA (South America) non-customer.
+174:21301	174	174	21301							Route is a SA internal or customer route.
+174:21400	174	174	21400							Route is learned from AU (Australia) non-customer.
+174:21401	174	174	21401							Route is an AU internal or customer route.
+174:22001	174	174	22001			Austria	040			
+174:22002	174	174	22002			Belgium	056			
+174:22003	174	174	22003			Canada	124			
+174:22004	174	174	22004			Switzerland	756			
+174:22005	174	174	22005			Germany	276			
+174:22006	174	174	22006			Denmark	208			
+174:22007	174	174	22007			Spain	724			
+174:22008	174	174	22008			France	250			
+174:22009	174	174	22009			Italy	380			
+174:22010	174	174	22010			Netherlands	528			
+174:22011	174	174	22011			Portugal	620			
+174:22012	174	174	22012			United Kingdom	826			
+174:22013	174	174	22013			United States	840			
+174:22014	174	174	22014			Sweden	752			
+174:22015	174	174	22015			Norway	578			
+174:22016	174	174	22016			Czech Republic	203			
+174:22017	174	174	22017			Slovakia	703			
+174:22018	174	174	22018			Hungary	348			
+174:22019	174	174	22019			Ireland	372			
+174:22020	174	174	22020			Romania	642			
+174:22021	174	174	22021			Croatia (locally Hrvatska)	191			
+174:22022	174	174	22022			Slovenia	705			
+174:22023	174	174	22023			Bulgaria	100			
+174:22024	174	174	22024			Finland	246			
+174:22025	174	174	22025			Estonia	233			
+174:22026	174	174	22026			Ukraine	804			
+174:22027	174	174	22027			Mexico	484			
+174:22028	174	174	22028			Poland	616			
+174:22029	174	174	22029			Luxembourg	442			
+174:22030	174	174	22030			Serbia	688			
+174:22031	174	174	22031			Greece	300			
+174:22032	174	174	22032			Japan	392			
+174:22033	174	174	22033			Macedonia	807			
+174:22034	174	174	22034			Lithuania	440			
+174:22035	174	174	22035			Turkey	792			
+174:22036	174	174	22036			Moldova	498			
+174:22037	174	174	22037			Latvia	428			
+174:22038	174	174	22038			Singapore	702			
+174:22039	174	174	22039			Hong Kong	344			
+174:22040	174	174	22040			Montenegro	499			
+174:22041	174	174	22041			Albania	008			
+174:22042	174	174	22042			Brazil	076			
+174:22043	174	174	22043			Australia	036			
+174:3000	174	174	3000							Do not announce to peers (equivalent to 174:991)
+174:3001	174	174	3001							Prepend 174 1 time to peers.
+174:3002	174	174	3002							Prepend 174 2 times to peers.
+174:3003	174	174	3003							Prepend 174 3 times to peers.
+174:990	174	174	990							Do not send route to BGP customers, or peers.
+174:991	174	174	991							Do not send route to peers.
+174:10	174	174	10							Set customer route local preference to 10
+174:70	174	174	70							Set customer route local preference to 70
+174:120	174	174	120							Set customer route local preference to 120
+174:125	174	174	125							Set customer route local preference to 125
+174:135	174	174	135							Set customer route local preference to 135
+174:140	174	174	140							Set customer route local preference to 140

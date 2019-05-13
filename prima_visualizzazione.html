@@ -181,10 +181,10 @@
         .d3-tip {
             line-height: 1;
             padding: 6px;
+            border-radius: 4px;
             background: rgba(0, 0, 0, 0.7);
             color: #fff;
-            border-radius: 4px;
-            font-size: 12px;
+            font-size: 15px;
         }
 
         #map-container {
@@ -309,7 +309,6 @@
     <div class="svg-container">
         <div id="map-container">
             <div id="mapid"></div>
-
         </div>
     </div>
     <div id="line-svg-container"></div>
@@ -342,6 +341,7 @@
         var points_radius = 10;
 
         var flag = false;
+        var flying = false;
 
         var x = d3.scaleLinear().range([margin.left + margin.right, width - margin.left - margin.right]);
         var y = d3.scaleLinear().range([height - margin.top, margin.top]);
@@ -372,6 +372,9 @@
                 .attr("height", height + margin.top + 2*margin.bottom)
             .append("g")
                 .attr("transform", "translate(" + margin.left + "," + 1.7*margin.top + ")");
+        
+        svg.append("circle")
+            .attr("id", "tipfollowscursor");
 
         var projection = d3.geoMercator()
             .scale(200)
@@ -405,20 +408,16 @@
         line_container.append("g").attr("class", "lines_2");
 
         var tip = d3.tip()
-            .attr('class', 'd3-tip')
-            .html(function(d) {
-                var content = "<span style='margin-left: 2.5px;'><b>" + d.properties.name + "</b></span><br>";
-                return content;
-            });
+            .attr('class', 'd3-tip');
 
         /*world_map.append('circle')
-            .attr('id', 'tipfollowscursor');
-        world_map.call(tip);*/
+            .attr('id', 'tipfollowscursor');*/
+        svg.call(tip);
 
         var map = L.map('mapid', {
             maxBoundsViscosity: 1.0,
             zoomSnap: 0,
-            wheelPxPerZoomLevel: 300
+            wheelPxPerZoomLevel: 250
         }).setView([46.81509864599243, 8.3221435546875], 1).setMaxBounds( [[-90,-180], [90,180]] );
 
         var tiles = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
@@ -429,9 +428,11 @@
             accessToken: 'pk.eyJ1IjoibXJzYW1ibzkzIiwiYSI6ImNqdTlraWMzZjFqdGMzemxtemo0aGlsaWgifQ.zLyN6NXgZEWVGUfiYhMiVg'
         }).addTo(map);
 
-        L.svg({ padding : 100 }).addTo(map);
+        L.svg({ padding : 100, clickable: true }).addTo(map);
 
-        var world_map2 = d3.select('#mapid').select('g');
+        var world_map2 = d3.select('#mapid').select('svg')
+            .attr('pointer-events', 'auto')
+            .select('g');
 
         d3.json(url_map)
             .then(function(world) {
@@ -472,10 +473,10 @@
                     .attr("d", path)
                     .style('pointer-events', 'none');*/
 
-                const projectPoint = function(x, y){
-                    var point = map.latLngToLayerPoint(new L.LatLng(y, x))
-                        this.stream.point(point.x, point.y)
-                    };
+                const projectPoint = function(x, y) {
+                    var point = map.latLngToLayerPoint(new L.LatLng(y, x));
+                    this.stream.point(point.x, point.y);
+                };
 
                 const transform = d3.geoTransform({point: projectPoint});
 
@@ -487,15 +488,18 @@
                         .append("path")
                         .attr("class", "feature")
                         .attr("id", function(d) { return d.id; })
-                        .attr("fill", "black")
+                        .attr("fill", "green")
                         .attr("fill-opacity", 0);
 
                 const update = () => {
+                    var circles = world_map2.selectAll("circle");
                     featureElement.attr("d", geoPath);
-                    world_map2.selectAll("circle")
+                    circles
                         .attr('cx', function(d) { return map.latLngToLayerPoint(d.coordinates).x })
-                        .attr('cy', function(d) { return map.latLngToLayerPoint(d.coordinates).y })
-                        .attr('r', 5);
+                        .attr('cy', function(d) { return map.latLngToLayerPoint(d.coordinates).y });
+                    world_map2.selectAll("image")
+                        .attr("x", function(d) { map.latLngToLayerPoint(d.coordinates).x - 5 })
+                        .attr("y", function(d) { map.latLngToLayerPoint(d.coordinates).y - 5 });
                     $(document).trigger('zoomed');
                 };
 
@@ -512,6 +516,7 @@
                     interval = setInterval(update2, 5);
                 });
                 map.on('zoomend', function() {
+                    world_map2.selectAll("circle").attr("r", 5);
                     if(interval) {
                         clearInterval(interval);
                         interval = null;
@@ -519,7 +524,10 @@
                 });
 
                 world_map2.append("g").attr("class", "points_1");
+                world_map2.append("g").attr("class", "country_points_1");
                 world_map2.append("g").attr("class", "points_2");
+                world_map2.append("g").attr("class", "country_points_2");
+                world_map2.append("g").attr("class", "ixp_points");
             });
 
         d3.json("announces")
@@ -535,18 +543,18 @@
                         var aspath1_clean = remove_prepending(aspath1);
                         var aspath2_clean = remove_prepending(aspath2);
 
-                        show_info(announce1, announce2)
+                        show_info(announce1, announce2);
                         get_aspaths(aspath1_clean, aspath2_clean, function() {
                             get_coordinates(announce1, function(coordinates1, countries1) {
-                                console.log(coordinates1);
                                 draw_points(coordinates1, 1, function() {
-                                    color_countries(countries1, function() {
+                                    color_countries(countries1, 1, function() {
                                         get_coordinates(announce2, function(coordinates2, countries2) {
-                                            console.log(coordinates2);
                                             draw_points(coordinates2, 2, function() {
-                                                color_countries(countries2, function() {
+                                                color_countries(countries2, 2, function() {
+                                                    check_ixps(aspath1_clean, aspath2_clean);
                                                     draw_lines(aspath1_clean, 1);
                                                     draw_lines(aspath2_clean, 2);
+                                                    auto_zoom();
                                                     $(window).on('resize', function() {
                                                         map.invalidateSize();
                                                         draw_lines(aspath1_clean, 1);
@@ -575,7 +583,7 @@
                         get_aspath(aspath_clean, function() {
                             get_coordinates(selected, function(coordinates, countries) {
                                 draw_points(coordinates, 1, function() {
-                                    color_countries(countries, function() {
+                                    color_countries(countries, 1, function() {
                                         console.log("call2");
                                         draw_lines(aspath_clean);
                                         $(window).on('resize', function() {
@@ -598,7 +606,7 @@
                     get_aspath(aspath_clean, function() {
                         get_coordinates(announce, function(coordinates, countries) {
                             draw_points(coordinates, 1, function() {
-                                color_countries(countries, function() {
+                                color_countries(countries, 1, function() {
                                     draw_lines(aspath_clean);
                                     console.log("call3");
                                     $(window).on('resize', function() {
@@ -638,7 +646,7 @@
                 .then(data => {return data.json()})
                 .then(response => {
                     console.log(response);
-                    draw_axis(response.response, asp, [], response.discarded, function() {
+                    draw_axis(response.response, asp, [], response.discarded, response.info, function() {
                         callback();
                     });
                 });
@@ -660,13 +668,13 @@
             fetch(server + "/aspaths", params)
                 .then(data => {return data.json()})
                 .then(response => {
-                    draw_axis(response.response, aspath1, aspath2, response.discarded, function() {
+                    draw_axis(response.response, aspath1, aspath2, response.discarded, response.info, function() {
                         callback();
                     });
                 });
         }
 
-        function draw_axis(data, aspath1, aspath2=[], discarded=[], callback) {
+        function draw_axis(data, aspath1, aspath2=[], discarded=[], info=[], callback) {
             var xmax = d3.max(data, function(d) {return d.x});
             x.domain([0, xmax]);
 
@@ -687,11 +695,11 @@
 
             get_as_names(data, function(res) {
                 //console.log(res);
-                draw_as(res, aspath1, aspath2, discarded, function() { callback() });
+                draw_as(res, aspath1, aspath2, discarded, info, function() { callback() });
             });
         }
 
-        function draw_as(as_data, aspath1, aspath2, discarded, callback) {
+        function draw_as(as_data, aspath1, aspath2, discarded, info, callback) {
             clear();
 
             transl_to_positive(as_data, function(as_data) {
@@ -750,7 +758,29 @@
                         var path = svg.append("path")
                             .datum(new_datum)
                             .attr("class", "line_warning")
-                            .attr("d", line_curve);
+                            .attr("d", line_curve)
+                            .on("mousemove", function(d) {
+                                d3.select(this).style("stroke-width", "7")
+                                let source = d[0].asn;
+                                let target = d[2].asn;
+                                for(key in info) {
+                                    let nodes = key.split(",");
+                                    if(source == nodes[0] && target == nodes[1]) {
+                                        let message = get_error_message(info[key]);
+                                        let mouse = d3.mouse(this);
+                                        let t = d3.select('#tipfollowscursor')
+                                            .attr('cx', mouse[0])
+                                            .attr('cy', mouse[1] - 10)
+                                            .node();
+                                        tip.html(message);
+                                        tip.show(d, t);
+                                    }
+                                }
+                            })
+                            .on("mouseout", function() {
+                                d3.select(this).style("stroke-width", "3")
+                                tip.hide();
+                            });
                     });
 
                     if(flag) {
@@ -760,6 +790,7 @@
                             .datum([source, target])
                             .attr("class", "dashed_line")
                             .style("stroke-dasharray", ("15, 10"))
+                            .style("opacity", "0.7")
                             .attr("d", line);
 
                         var p = path.node().getPointAtLength(path.node().getTotalLength()/2);
@@ -770,7 +801,7 @@
                             .attr("y", p.y - radius)
                             .attr("width", 2*radius)
                             .attr("height", 2*radius)
-                            .style("opacity", "0.7");
+                            .style("opacity", "0.5");
 
                     }
 
@@ -849,23 +880,88 @@
                 };
                 data_points.push(data_point);
             });
-            console.log(data_points);
             world_map2.select(".points_" + aspath_n)
                 .selectAll("circle")
                 .data(data_points)
                 .enter()
                 .append("circle")
-                .attr("class", function(d) { return "svg2_" + d.id; })
-                .attr("aspath", aspath_n)
-                .attr("cx", function (d) { return map.latLngToLayerPoint(d.coordinates).x; })
-		        .attr("cy", function (d) { return map.latLngToLayerPoint(d.coordinates).y; })
-		        .attr("r", 5)
-                .attr("fill", "green");
+                    .attr("class", function(d) { return "svg2_" + d.id; })
+                    .attr("aspath", aspath_n)
+                    .attr("cx", function (d) { return map.latLngToLayerPoint(d.coordinates).x; })
+		            .attr("cy", function (d) { return map.latLngToLayerPoint(d.coordinates).y; })
+		            .attr("r", 5)
+                    .attr("fill", "green");
             callback();
         }
 
-        function color_countries(countries, callback) {
+        function color_countries(countries, aspath_n = 1, callback) {
+            let data_points = [];
+            let i = 0;
+            if(Object.keys(countries).length > 0) {
+            countries.forEach(element => {
+                let asn = element[0];
+                let asn_countries = element[1];
+                asn_countries.forEach(country => {
+                    world_map2.select('[id="' + country + '"]')
+                        .attr("fill-opacity", "0.4")
+                        .attr("visible", "true");
+                });
+                get_biggest_country_name(asn_countries)
+                    .then(country_name => {
+                        fetch(server + "/coordinates/" + country_name)
+                            .then(response => {return response.json()})
+                            .then(response => {
+                                let num_coord = [response.latitude, response.longitude];
+                                let data_point = {
+                                    id : asn,
+                                    coordinates : num_coord
+                                }
+                                data_points.push(data_point);
+                                i++;
+                                if(i === countries.length) {
+                                    world_map2.select(".country_points_" + aspath_n)
+                                        .selectAll("circle")
+                                        .data(data_points)
+                                        .enter()
+                                        .append("circle")
+                                            .attr("class", function(d) { return "svg2_" + d.id; })
+                                            .attr("aspath", aspath_n)
+                                            .attr("cx", function (d) { return map.latLngToLayerPoint(d.coordinates).x; })
+		                                    .attr("cy", function (d) { return map.latLngToLayerPoint(d.coordinates).y; })
+		                                    .attr("r", 5)
+                                            .attr("fill", "green")
+                                            .attr("fill-opacity", "0");
+                                    
+                                    callback();
+                                }
+                            });
+                    });
+            });
+            }
             callback();
+        }
+
+        function get_biggest_country_name(countries) {
+            var areas = [];
+            let id = countries[0];
+            if(countries.length > 1) {
+                for(let i = 0; i < countries.length; i++) {
+                    let country = world_map2.select('[id="' + countries[i] + '"]');
+                    let rect = country.node().getBBox();
+                    let area = rect.width * rect.height;
+                    areas.push(area);
+                }
+                id = countries[areas.indexOf(d3.max(areas))];
+            }
+            return new Promise(function(resolve, reject) {
+                fetch(server + "/countryname/" + id)
+                    .then(response => {
+                        return response.json();
+                    })
+                    .then(response => {
+                        resolve(response.name);
+                    });
+            });
         }
 
         function draw_lines(asp, number = 1) {
@@ -901,9 +997,9 @@
                             var rec = $('#map-container').get(0).getBoundingClientRect();
                             var cont = !(p2.right < rec.left || 
                                             p2.left > rec.right || 
-                                            p2.bottom < rec.top || 
+                                            p2.bottom - 5 < rec.top || 
                                             p2.top > rec.bottom);
-                            if(!cont) {
+                            if(!cont || flying) {
                                 return 0;
                             }
                             return 1;
@@ -1032,6 +1128,27 @@
                 });
             }*/
             return result;
+        }
+
+        function check_ixps(aspath1, aspath2 = []) {
+            var circles = world_map2.selectAll("circle");
+            var to_remove = [];
+            circles.each(function(d) {
+                if(!aspath1.includes(d.id) && !aspath2.includes(d.id)) {
+                    let c = d3.select(this);
+                    world_map2.select(".ixp_points")
+                        .append("image")
+                        .datum(d)
+                        .attr("xlink:href", server + "/ixp_image")
+                        .attr("class", function(d) { return "ixp_" + d.id } )
+                        .attr("aspath", c.attr("aspath"))
+                        .attr("x", function(d) { map.latLngToLayerPoint(d.coordinates).x - 5 })
+                        .attr("y", function(d) { map.latLngToLayerPoint(d.coordinates).y - 5 })
+                        .attr("width", 2)
+                        .attr("height", 2)
+                    to_remove.push(c);
+                }
+            });
         }
 
         /*function zoomed() {
@@ -1254,8 +1371,44 @@
             svg.selectAll(".dot").remove();
             svg.selectAll(".label").remove();
         }
+
         function goBack() {
           window.history.back();
+        }
+
+        function get_error_message(text) {
+            if(text = "discarded peer") {
+                return "This peering was ignored because of an inconsistency in the hierarchy";
+            }
+            if(text = "discarded arc") {
+                return "This arc was ignored because of a cycle in the aspath";
+            }
+            if(text = "reversed arc") {
+                return "This arc was reversed because of a cycle in the hierarchy";
+            }
+        }
+
+        function auto_zoom() {
+            let circles = world_map2.selectAll("circle").style("fill-opacity", 0);
+            let lines = line_container.selectAll("#outer_line").style("opacity", 0);
+            let countries = world_map2.selectAll('[visible="true"]').style("opacity", 0);
+            flying = true;
+            let lats = circles.data().map(el => el.coordinates[0]);
+            let lons = circles.data().map(el => el.coordinates[1]);
+            let lat_min = d3.min(lats);
+            let lat_max = d3.max(lats);
+            let lon_min = d3.min(lons);
+            let lon_max = d3.max(lons);
+            map.flyToBounds([[lat_min, lon_min], [lat_max, lon_max]], {
+                easeLinearity: 1,
+                padding: [100, 100]
+            });
+            map.on("zoomend", function() {
+                circles.style("fill-opacity", 1);
+                lines.style("opacity", 1);
+                countries.style("opacity", 0.5)
+                flying = false;
+            });
         }
 
     </script>

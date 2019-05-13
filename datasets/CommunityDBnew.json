@@ -41125,11 +41125,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Blackhole", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "666", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:666", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41138,11 +41138,11 @@
         "country": "", 
         "region": "", 
         "source_description": "RFC7999 community accepted, will be rewritten to 47147:666 internally.", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "666", 
+        "value1": "47147", 
         "address": "", 
         "id": "65535:666", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41151,11 +41151,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_BLACKHOLE_OUTSIDE_COUNTRY", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "621", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:621", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41164,11 +41164,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_BLACKHOLE_OUTSIDE_REGION", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "620", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:620", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "FRANKFURT", 
@@ -41177,11 +41177,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2401", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2401", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "VIENNA", 
@@ -41190,11 +41190,11 @@
         "country": "Austria", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2400", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2400", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "NUREMBERG", 
@@ -41203,11 +41203,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2402", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2402", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "ZURICH", 
@@ -41216,11 +41216,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2403", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2403", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "KLAGENFURT", 
@@ -41229,11 +41229,11 @@
         "country": "Austria", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2404", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2404", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "MANASSAS", 
@@ -41242,11 +41242,11 @@
         "country": "United States", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2404", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2404", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "SAOPAULO", 
@@ -41255,11 +41255,11 @@
         "country": "Brazil", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2405", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2405", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "MUNICH", 
@@ -41268,11 +41268,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2406", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2406", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "DUSSELDORF", 
@@ -41281,11 +41281,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2407", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2407", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "HAMBURG", 
@@ -41294,11 +41294,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2408", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2408", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "TOKYO", 
@@ -41307,11 +41307,11 @@
         "country": "Japan", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2409", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2409", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "TIANJIN", 
@@ -41320,11 +41320,11 @@
         "country": "China", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2410", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2410", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "DUBAI", 
@@ -41333,11 +41333,11 @@
         "country": "United Arab Emirates", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2411", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2411", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "SINGAPORE", 
@@ -41346,11 +41346,11 @@
         "country": "Singapore", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2412", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2412", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "WARSAW", 
@@ -41359,11 +41359,11 @@
         "country": "Poland", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2413", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2413", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "HONG KONG", 
@@ -41372,11 +41372,11 @@
         "country": "Hong Kong", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2414", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2414", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "MEXICO CITY", 
@@ -41385,11 +41385,11 @@
         "country": "Mexico", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2415", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2415", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41398,11 +41398,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_DE", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2101", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2101", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41411,11 +41411,11 @@
         "country": "Austria", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_AT", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2100", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2100", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41424,11 +41424,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_CH", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2102", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2102", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41437,11 +41437,11 @@
         "country": "United States", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_US", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2103", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2103", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41450,11 +41450,11 @@
         "country": "Brazil", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_BR", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2104", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2104", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41463,11 +41463,11 @@
         "country": "Japan", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_JP", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2105", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2105", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41476,11 +41476,11 @@
         "country": "China", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_CN", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2106", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2106", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41489,11 +41489,11 @@
         "country": "United Arab Emirates", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_AE", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2107", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2107", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41502,11 +41502,11 @@
         "country": "Singapore", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_SG", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2108", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2108", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41515,11 +41515,11 @@
         "country": "Poland", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_PL", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2109", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2109", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41528,11 +41528,11 @@
         "country": "Hong Kong", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_HK", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2110", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2110", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41541,11 +41541,11 @@
         "country": "Mexico", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_MX", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2111", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2111", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "Frankfurt", 
@@ -41554,11 +41554,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "ANX_ORIGIN_PEERING_DECIXFRANKFURT", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2702", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2702", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41567,11 +41567,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_PEERING_VIX", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2703", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2703", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41580,11 +41580,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_PEERING_PNI", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2700", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2700", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41593,11 +41593,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_PEERING_CACHE", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2701", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2701", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41606,11 +41606,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_PEERING_SWISSIX", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2704", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2704", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "Munich", 
@@ -41619,11 +41619,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "ANX_ORIGIN_PEERING_DECIXMUNICH", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2705", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2705", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "Dusseldorf", 
@@ -41632,11 +41632,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "ANX_ORIGIN_PEERING_DECIXDUSSELDORF", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2706", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2706", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "Hamburg", 
@@ -41645,11 +41645,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "ANX_ORIGIN_PEERING_DECIXHAMBURG", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2707", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2707", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41658,11 +41658,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_PEERING_IXBRPTTBRSOPAULO", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2708", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2708", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41671,11 +41671,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_PEERING_UAEIX", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2709", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2709", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41684,11 +41684,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_PEERING_SGIX", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2710", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2710", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41697,11 +41697,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_RPKI_VALID", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1500", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:1500", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41710,11 +41710,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_RPKI_INVALID", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1501", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:1501", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41723,11 +41723,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_RPKI_UNKNOWN", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1502", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:1502", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41736,11 +41736,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_TYPE_UPSTREAM", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2300", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2300", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41749,11 +41749,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_TYPE_PEERING", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2301", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2301", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41762,11 +41762,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_TYPE_DOWNSTREAM", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2302", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2302", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41775,11 +41775,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_UPSTREAM_TELIACARRIER", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2600", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2600", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41788,11 +41788,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_UPSTREAM_NTTCOMMUNICATIONSGLOBAL", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2601", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2601", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41801,11 +41801,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_UPSTREAM_DEUTSCHETELEKOM", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2602", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2602", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41814,11 +41814,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_UPSTREAM_ALGARTELECOM", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2604", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2604", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41827,11 +41827,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_UPSTREAM_LEVEL3COMMUNICATIONSLLC", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2605", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2605", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41840,11 +41840,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_UPSTREAM_PCCWGLOBAL", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2607", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2607", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41853,11 +41853,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_UPSTREAM_TELSTRA", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2612", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2612", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41866,11 +41866,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_UPSTREAM_DATAMENA", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2608", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2608", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41879,11 +41879,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_UPSTREAM_OMANTEL", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2609", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2609", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41892,11 +41892,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_ORIGIN_UPSTREAM_SOLUSINDOBINTANGPRATAMAPT", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2610", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:2610", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41905,11 +41905,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_CITY_FRANKFURT", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3401", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3401", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41918,11 +41918,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_CITY_VIENNA", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3400", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3400", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41931,11 +41931,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_CITY_NUREMBERG", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3402", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3402", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41944,11 +41944,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_CITY_ZURICH", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3403", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3403", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41957,11 +41957,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_CITY_KLAGENFURT", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3404", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3404", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41970,11 +41970,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_CITY_MANASSAS", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3404", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3404", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41983,11 +41983,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_CITY_SAOPAULO", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3404", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3404", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -41996,11 +41996,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_CITY_MUNICH", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3406", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3406", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42009,11 +42009,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_CITY_DUSSELDORF", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3407", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3407", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42022,11 +42022,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_CITY_HAMBURG", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3408", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3408", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42035,11 +42035,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_CITY_TOKYO", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3409", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3409", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42048,11 +42048,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_CITY_TIANJIN", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3410", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3410", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42061,11 +42061,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_CITY_DUBAI", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3411", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3411", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42074,11 +42074,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_CITY_SINGAPORE", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3412", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3412", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42087,11 +42087,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_CITY_WARSAW", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3413", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3413", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42100,11 +42100,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_CITY_HONGKONG", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3414", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3414", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42113,11 +42113,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_CITY_MEXICOCITY", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3415", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3415", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42126,11 +42126,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_COUNTRY_AT", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3100", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3100", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42139,11 +42139,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_COUNTRY_DE", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3101", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3101", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42152,11 +42152,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_COUNTRY_CH", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3102", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3102", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42165,11 +42165,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_COUNTRY_US", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3103", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3103", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42178,11 +42178,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_COUNTRY_BR", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3104", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3104", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42191,11 +42191,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_COUNTRY_JP", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3105", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3105", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42204,11 +42204,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_COUNTRY_CN", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3106", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3106", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42217,11 +42217,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_COUNTRY_AE", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3107", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3107", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42230,11 +42230,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_COUNTRY_SG", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3108", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3108", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42243,11 +42243,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_COUNTRY_PL", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3109", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3109", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42256,11 +42256,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_COUNTRY_HK", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3110", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3110", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42269,11 +42269,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_COUNTRY_MX", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3111", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3111", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42282,11 +42282,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_PEERING_DECIXFRANKFURT", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3702", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3702", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42295,11 +42295,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_PEERING_VIX", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3703", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3703", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42308,11 +42308,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_PEERING_CACHE", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3701", 
+        "value1": "47174", 
         "address": "", 
         "id": "47174:3701", 
-        "aut": ""
+        "aut": "47174"
     }, 
     {
         "city": "", 
@@ -42321,11 +42321,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_PEERING_PNI", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3700", 
+        "value1": "47174", 
         "address": "", 
         "id": "47174:3700", 
-        "aut": ""
+        "aut": "47174"
     }, 
     {
         "city": "", 
@@ -42334,11 +42334,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_PEERING_SWISSIX", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3704", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3704", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42347,11 +42347,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_PEERING_DECIXMUNICH", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3705", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3705", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42360,11 +42360,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_PEERING_DECIXDUSSELDORF", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3706", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3706", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42373,11 +42373,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_PEERING_DECIXHAMBURG", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3707", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3707", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42386,11 +42386,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_PEERING_IXBRPTTBRSOPAULO", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3708", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3708", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42399,11 +42399,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_PEERING_UAEIX", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3709", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3709", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42412,11 +42412,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_PEERING_SGIX", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3710", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3710", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42425,11 +42425,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_REGION_EUROPE", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3000", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3000", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42438,11 +42438,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_REGION_NORTHAMERICA", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3001", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3001", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42451,11 +42451,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_REGION_SOUTHAMERICA", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3002", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3002", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42464,11 +42464,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_REGION_ASIA", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3003", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3003", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42477,11 +42477,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_TYPE_UPSTREAM", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3200", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3200", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42490,11 +42490,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_TYPE_DOWNSTREAM", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3202", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3202", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42503,11 +42503,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_TYPE_PEERING", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3201", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3201", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42516,11 +42516,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_UPSTREAM_TELIACARRIER", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3600", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3600", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42529,11 +42529,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_UPSTREAM_NTTCOMMUNICATIONSGLOBAL", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3601", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3601", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42542,11 +42542,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_UPSTREAM_DEUTSCHETELEKOM", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3602", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3602", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42555,11 +42555,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_UPSTREAM_ALGARTELECOM", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3604", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3604", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42568,11 +42568,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_UPSTREAM_LEVEL3COMMUNICATIONSLLC", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3605", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3605", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42581,11 +42581,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_UPSTREAM_PCCWGLOBAL", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3607", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3607", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42594,11 +42594,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_UPSTREAM_TELSTRA", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3612", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3612", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42607,11 +42607,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_UPSTREAM_DATAMENA", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3609", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3609", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42620,11 +42620,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_UPSTREAM_OMANTEL", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3610", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3610", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42633,11 +42633,11 @@
         "country": "", 
         "region": "", 
         "source_description": "ANX_REJECT_UPSTREAM_SOLUSINDOBINTANGPRATAMAPT", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3611", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:3611", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42646,11 +42646,11 @@
         "country": "", 
         "region": "", 
         "source_description": "LOCALPREF LOW", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1601", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:1601", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42659,11 +42659,11 @@
         "country": "", 
         "region": "", 
         "source_description": "LOCALPREF LOWEST", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1602", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:1602", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42672,11 +42672,11 @@
         "country": "", 
         "region": "", 
         "source_description": "No Advertise to all ASN", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1400", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:1400", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42685,11 +42685,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Prepend once to all ASNs", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1401", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:1401", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42698,11 +42698,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Prepend twice to all ASNs", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1402", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:1402", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "", 
@@ -42711,11 +42711,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Prepend thrice to all ASN", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1403", 
+        "value1": "47147", 
         "address": "", 
         "id": "47147:1403", 
-        "aut": ""
+        "aut": "47147"
     }, 
     {
         "city": "Zurich", 
@@ -42724,11 +42724,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "ZRH-2 Equinix Zurich ZH2", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51102", 
+        "value1": "13030", 
         "address": "Josefstrasse 225", 
         "id": "13030:51102", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Schlieren", 
@@ -42737,11 +42737,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "ZRH-3 green.ch Schlieren", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51140", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:51140", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Oberengstringen", 
@@ -42750,11 +42750,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "ZRH-5 Equinix Zurich ZH5 Oberengstringen", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51141", 
+        "value1": "13030", 
         "address": "Allmendstrasse 13", 
         "id": "13030:51141", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Herdern", 
@@ -42763,11 +42763,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "ZRH-9 Init7 (Switzerland) AG Zurich Herdern", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51139", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:51139", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Zurich", 
@@ -42776,11 +42776,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "ZLZ-1 Layer One Letzigraben / green.ch", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51105", 
+        "value1": "13030", 
         "address": "8003 Zurich Letzigraben", 
         "id": "13030:51105", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Zurich", 
@@ -42789,11 +42789,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "GLB-1 Interxion Glattbrugg", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51107", 
+        "value1": "13030", 
         "address": "Sagereistrasse 35, Glattbrugg", 
         "id": "13030:51107", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Bern", 
@@ -42802,11 +42802,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "BRN-1 VTL Wavenet Limited", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51108", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:51108", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Zurich", 
@@ -42815,11 +42815,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "ZRH-10 Airport Zurich", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51112", 
+        "value1": "13030", 
         "address": "8058 Zurich Flughafen", 
         "id": "13030:51112", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Winterthur", 
@@ -42828,11 +42828,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "WIN-1 Stadtwerk Winterthur", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51113", 
+        "value1": "13030", 
         "address": "Untere Sch\u00f6ntalstrasse 12", 
         "id": "13030:51113", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Winterthur", 
@@ -42841,11 +42841,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "WIN-4 Init7 (Switzerland) AG Winterthur", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51114", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:51114", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Basel", 
@@ -42854,11 +42854,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "BSL-1 IWB Basel", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51116", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:51116", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Geneva", 
@@ -42867,11 +42867,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "GVA-1 Equinix Geneva", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51117", 
+        "value1": "13030", 
         "address": "6 Rue de la Confederation", 
         "id": "13030:51117", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Zug", 
@@ -42880,11 +42880,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "ZUG-2 Init7 (Switzerland) AG Zug", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51118", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:51118", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Basel", 
@@ -42893,11 +42893,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "BSL-2 Quickline Business AG", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51121", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:51121", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Wil", 
@@ -42906,11 +42906,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "WIL-1 Online Consulting AG Wil", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51124", 
+        "value1": "13030", 
         "address": "Weststrasse 38", 
         "id": "13030:51124", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Meyrin", 
@@ -42919,11 +42919,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "GVA-3 CERN Geneva", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51125", 
+        "value1": "13030", 
         "address": "Esplanade des Particules 1", 
         "id": "13030:51125", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Lausanne", 
@@ -42932,11 +42932,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "QLS-1 Brainserve Crissier", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51127", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:51127", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Rumlang", 
@@ -42945,11 +42945,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "ZRH-6 e-Shelter Ruemlang", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51128", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:51128", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Lupfig", 
@@ -42958,11 +42958,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "ZRH-8 green.ch Lupfig", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51129", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:51129", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Pratteln", 
@@ -42971,11 +42971,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "BSL-3 ColoB\u00e2le AG Pratteln", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51130", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:51130", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Winterthur", 
@@ -42984,11 +42984,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "WIN-6 Data:Hub Winterthur", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51131", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:51131", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Ependes", 
@@ -42997,11 +42997,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "EPE-1 Zayo (Ex-Viatel) Ependes", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51132", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:51132", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Olten", 
@@ -43010,11 +43010,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "OLT-1 Zayo (Ex-Viatel) Olten", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51133", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:51133", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Winterthur", 
@@ -43023,11 +43023,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "WIN-7 AXA Winterthur", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51134", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:51134", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Winterthur", 
@@ -43036,11 +43036,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "WIN-8 Technopark Winterthur", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51135", 
+        "value1": "13030", 
         "address": "Technoparkstrasse 2", 
         "id": "13030:51135", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "St. Gallen", 
@@ -43049,11 +43049,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "STG-2 Init7 (Switzerland) AG St. Gallen", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51136", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:51136", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Zurich", 
@@ -43062,11 +43062,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "GLB-3 Interxion Glattbrugg", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51137", 
+        "value1": "13030", 
         "address": "Sagereistrasse 35, Glattbrugg", 
         "id": "13030:51137", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Wil", 
@@ -43075,11 +43075,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "WIL-2 Init7 (Switzerland) AG Wil SG", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51138", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:51138", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Frankfurt", 
@@ -43088,11 +43088,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "FRA-2 Equinix Frankfurt", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51202", 
+        "value1": "13030", 
         "address": "Kruppstrasse 121", 
         "id": "13030:51202", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Frankfurt", 
@@ -43101,11 +43101,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "FRA-3 InterXion Frankfurt 3", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51203", 
+        "value1": "13030", 
         "address": "Weismullerstra\u00dfe 21", 
         "id": "13030:51203", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Dusseldorf", 
@@ -43114,11 +43114,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "DUS-1 InterXion Dusseldorf", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51212", 
+        "value1": "13030", 
         "address": "In der Steele 29", 
         "id": "13030:51212", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Berlin", 
@@ -43127,11 +43127,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "BER-1 IPB Berlin", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51214", 
+        "value1": "13030", 
         "address": "Nonnendammallee 15", 
         "id": "13030:51214", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Paris", 
@@ -43140,11 +43140,11 @@
         "country": "France", 
         "region": "", 
         "source_description": "PAR-1 Telehouse Voltaire Paris", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51301", 
+        "value1": "13030", 
         "address": "137, Boulevard Voltaire", 
         "id": "13030:51301", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Marseille", 
@@ -43153,11 +43153,11 @@
         "country": "France", 
         "region": "", 
         "source_description": "MRS-1 Viatel Neuf NetCentre Marseille", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51302", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:51302", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Madrid", 
@@ -43166,11 +43166,11 @@
         "country": "Spain", 
         "region": "", 
         "source_description": "MAD-3 InterXion Madrid", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51403", 
+        "value1": "13030", 
         "address": "Calle de Emilio Mu\u00f1oz, 49", 
         "id": "13030:51403", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Milan", 
@@ -43179,11 +43179,11 @@
         "country": "Italy", 
         "region": "", 
         "source_description": "MXP-1 Enter Milano", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "52501", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:52501", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Amsterdam", 
@@ -43192,11 +43192,11 @@
         "country": "Holand", 
         "region": "", 
         "source_description": "AMS-1 SARA Amsterdam", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51501", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:51501", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Amsterdam", 
@@ -43205,11 +43205,11 @@
         "country": "Holand", 
         "region": "", 
         "source_description": "AMS-2 NIKHEF Amsterdam", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51502", 
+        "value1": "13030", 
         "address": "Cessnalaan 22, Schiphol-Rijk", 
         "id": "13030:51502", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Copenhagen", 
@@ -43218,11 +43218,11 @@
         "country": "Denmark", 
         "region": "", 
         "source_description": "CPH-2 InterXion Copenhagen", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51601", 
+        "value1": "13030", 
         "address": "Industrieparken 20a, Ballerup, 2750", 
         "id": "13030:51601", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "London", 
@@ -43231,11 +43231,11 @@
         "country": "United Kingdom", 
         "region": "", 
         "source_description": "LON-1 Telehouse North London", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51701", 
+        "value1": "13030", 
         "address": "Coriander Avenue, E14 2AA", 
         "id": "13030:51701", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "London", 
@@ -43244,11 +43244,11 @@
         "country": "United Kingdom", 
         "region": "", 
         "source_description": "LON-2 Telehouse East London", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51702", 
+        "value1": "13030", 
         "address": "Coriander Avenue, E14 2AA", 
         "id": "13030:51702", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Warsaw", 
@@ -43257,11 +43257,11 @@
         "country": "Poland", 
         "region": "", 
         "source_description": "WAW-1 PLIX Warsaw", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51801", 
+        "value1": "13030", 
         "address": "Grochowska 21a", 
         "id": "13030:51801", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Miami", 
@@ -43270,11 +43270,11 @@
         "country": "United States", 
         "region": "", 
         "source_description": "MIA-1 Terremark Miami", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51901", 
+        "value1": "13030", 
         "address": "50 Northeast 9th Street", 
         "id": "13030:51901", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Los Angeles", 
@@ -43283,11 +43283,11 @@
         "country": "United States", 
         "region": "", 
         "source_description": "LAX-1 CoreSite Los Angeles", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51902", 
+        "value1": "13030", 
         "address": "624 South Grand Avenue", 
         "id": "13030:51902", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "New York City", 
@@ -43296,11 +43296,11 @@
         "country": "United States", 
         "region": "", 
         "source_description": "NYC-2 Telehouse New York", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51904", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:51904", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Newark", 
@@ -43309,11 +43309,11 @@
         "country": "United States", 
         "region": "", 
         "source_description": "NYC-3 165 Halsey Street", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "51905", 
+        "value1": "13030", 
         "address": "165 Halsey Street", 
         "id": "13030:51905", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "Vienna", 
@@ -43322,11 +43322,11 @@
         "country": "Austria", 
         "region": "", 
         "source_description": "VIE-1 InterXion Vienna", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "52201", 
+        "value1": "13030", 
         "address": "", 
         "id": "13030:52201", 
-        "aut": ""
+        "aut": "13030"
     }, 
     {
         "city": "", 
@@ -47365,11 +47365,11 @@
         "country": "", 
         "region": "", 
         "source_description": "European routes", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "100", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:100", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47378,11 +47378,11 @@
         "country": "", 
         "region": "", 
         "source_description": "America routes", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "200", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:200", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47391,11 +47391,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Asia/Pacific routes", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "300", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:300", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47404,11 +47404,11 @@
         "country": "", 
         "region": "", 
         "source_description": "United Kingdom routes", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "144", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:144", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47417,11 +47417,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Netherlands routes", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "131", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:131", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47430,11 +47430,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Germany routes", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "149", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:149", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47443,11 +47443,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Czech Republic routes", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1420", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:1420", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47456,11 +47456,11 @@
         "country": "", 
         "region": "", 
         "source_description": "France routes", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "133", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:133", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47469,11 +47469,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Belgium routes", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "132", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:132", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47482,11 +47482,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Romania routes", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "140", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:140", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47495,11 +47495,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Hungary routes", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "136", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:136", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47508,11 +47508,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Global Crossing routes", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3549", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:3549", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47521,11 +47521,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Cogent Communications routes", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "174", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:174", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47534,11 +47534,11 @@
         "country": "", 
         "region": "", 
         "source_description": "WV Fiber routes", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "19151", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:19151", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47547,11 +47547,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Inteliquent", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3257", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:3257", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47560,11 +47560,11 @@
         "country": "", 
         "region": "", 
         "source_description": "TDC", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3292", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:3292", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47573,11 +47573,11 @@
         "country": "", 
         "region": "", 
         "source_description": "OCCAID Inc ipv6 only", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "30071", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:30071", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47586,11 +47586,11 @@
         "country": "", 
         "region": "", 
         "source_description": "NTT Europe", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2914", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:2914", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47599,11 +47599,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Telia", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1299", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:1299", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47612,11 +47612,11 @@
         "country": "Italia", 
         "region": "", 
         "source_description": "Telecom", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "6762", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:6762", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "London", 
@@ -47625,11 +47625,11 @@
         "country": "UK", 
         "region": "", 
         "source_description": "LINX", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1000", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:1000", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "Frankfurt", 
@@ -47638,11 +47638,11 @@
         "country": "DE", 
         "region": "", 
         "source_description": "DE-CIX", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1100", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:1100", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "Amsterdam", 
@@ -47651,11 +47651,11 @@
         "country": "NL", 
         "region": "", 
         "source_description": "AMS-IX", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1200", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:1200", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "Manchester", 
@@ -47664,11 +47664,11 @@
         "country": "UK", 
         "region": "", 
         "source_description": "IXManchester", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1300", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:1300", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "Manchester", 
@@ -47677,11 +47677,11 @@
         "country": "UK", 
         "region": "", 
         "source_description": "EdgeIX", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1400", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:1400", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "Prague", 
@@ -47690,11 +47690,11 @@
         "country": "CZ", 
         "region": "", 
         "source_description": "Peering.cz", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1500", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:1500", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "Edinburgh", 
@@ -47703,11 +47703,11 @@
         "country": "UK", 
         "region": "", 
         "source_description": "IXScotland", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1600", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:1600", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "Bucarest", 
@@ -47716,11 +47716,11 @@
         "country": "RO", 
         "region": "", 
         "source_description": "Balcan-IX", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1700", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:1700", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "Bucarest", 
@@ -47729,11 +47729,11 @@
         "country": "RO", 
         "region": "", 
         "source_description": "RoNIX", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1800", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:1800", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "Bucarest", 
@@ -47742,11 +47742,11 @@
         "country": "RO", 
         "region": "", 
         "source_description": "InterLAN", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1900", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:1900", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "Paris", 
@@ -47755,11 +47755,11 @@
         "country": "FR", 
         "region": "", 
         "source_description": "Equinix-IX", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2000", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:2000", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47768,11 +47768,11 @@
         "country": "", 
         "region": "", 
         "source_description": "British Telecom", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "2856", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:2856", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47781,11 +47781,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Virgin Media", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "5089", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:5089", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47794,11 +47794,11 @@
         "country": "", 
         "region": "", 
         "source_description": "TalkTalk", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "13285", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:13285", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47807,11 +47807,11 @@
         "country": "", 
         "region": "", 
         "source_description": "BSkyB", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "5607", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:5607", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47820,11 +47820,11 @@
         "country": "", 
         "region": "", 
         "source_description": "CPRM", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "8657", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:8657", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47833,11 +47833,11 @@
         "country": "", 
         "region": "", 
         "source_description": "JazzTel", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "12715", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:12715", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47846,11 +47846,11 @@
         "country": "", 
         "region": "", 
         "source_description": "UPC", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "6830", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:6830", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47859,11 +47859,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Jaguar Networks", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "30781", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:30781", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47872,11 +47872,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Pacnet Global", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "10026", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:10026", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47885,11 +47885,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Etisalat", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "8966", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:8966", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47898,11 +47898,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Cable&Wireless", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "1273", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:1273", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -47911,11 +47911,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Interoute", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "8928", 
+        "value1": "9009", 
         "address": "", 
         "id": "9009:8928", 
-        "aut": ""
+        "aut": "9009"
     }, 
     {
         "city": "", 
@@ -51174,11 +51174,11 @@
         "country": "", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65000", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65000", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "", 
@@ -51187,11 +51187,11 @@
         "country": "", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65001", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65001", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "", 
@@ -51200,11 +51200,11 @@
         "country": "", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65002", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65002", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "London", 
@@ -51213,11 +51213,11 @@
         "country": "United Kingdom", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65010", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65010", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Birmingham", 
@@ -51226,11 +51226,11 @@
         "country": "United Kingdom", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65011", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65011", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Paris", 
@@ -51239,11 +51239,11 @@
         "country": "France", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65020", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65020", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Lyon", 
@@ -51252,11 +51252,11 @@
         "country": "France", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65022", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65022", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Toulouse", 
@@ -51265,11 +51265,11 @@
         "country": "France", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65023", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65023", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Marseille", 
@@ -51278,11 +51278,11 @@
         "country": "France", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65024", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65024", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Bordeaux", 
@@ -51291,11 +51291,11 @@
         "country": "France", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65025", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65025", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Frankfurt", 
@@ -51304,11 +51304,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65030", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65030", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Cologne", 
@@ -51317,11 +51317,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65031", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65031", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Duesseldorf", 
@@ -51330,11 +51330,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65032", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65032", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Hamburg", 
@@ -51343,11 +51343,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65033", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65033", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Hannover", 
@@ -51356,11 +51356,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65034", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65034", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Berlin", 
@@ -51369,11 +51369,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65035", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65035", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Stuttgart", 
@@ -51382,11 +51382,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65036", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65036", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Munich", 
@@ -51395,11 +51395,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65037", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65037", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Amsterdam", 
@@ -51408,11 +51408,11 @@
         "country": "Netherlands", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65040", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65040", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Madrid", 
@@ -51421,11 +51421,11 @@
         "country": "Spain", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65050", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65050", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Barcelona", 
@@ -51434,11 +51434,11 @@
         "country": "Spain", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65070", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65070", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Valencia", 
@@ -51447,11 +51447,11 @@
         "country": "Spain", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65051", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65051", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Milan", 
@@ -51460,11 +51460,11 @@
         "country": "Italy", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65060", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65060", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Turin", 
@@ -51473,11 +51473,11 @@
         "country": "Italy", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65061", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65061", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Rome", 
@@ -51486,11 +51486,11 @@
         "country": "Italy", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65062", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65062", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Brussels", 
@@ -51499,11 +51499,11 @@
         "country": "Belgium", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65080", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65080", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Vienna", 
@@ -51512,11 +51512,11 @@
         "country": "Austria", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65090", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65090", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Warsaw", 
@@ -51525,11 +51525,11 @@
         "country": "Poland", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65100", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65100", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Prague", 
@@ -51538,11 +51538,11 @@
         "country": "Czech Republic", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65101", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65101", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Bratislava", 
@@ -51551,11 +51551,11 @@
         "country": "Solvakia", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65102", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65102", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Budapest", 
@@ -51564,11 +51564,11 @@
         "country": "Hungary", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65103", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65103", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Bucharest", 
@@ -51577,11 +51577,11 @@
         "country": "Romania", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65104", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65104", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Sofia", 
@@ -51590,11 +51590,11 @@
         "country": "Bulgaria", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65105", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65105", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Zurich", 
@@ -51603,11 +51603,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65110", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65110", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Basel", 
@@ -51616,11 +51616,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65111", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65111", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Geneva", 
@@ -51629,11 +51629,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65120", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65120", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Stockholm", 
@@ -51642,11 +51642,11 @@
         "country": "Sweeden", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65130", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65130", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Helsinki", 
@@ -51655,11 +51655,11 @@
         "country": "Finland", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65131", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65131", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Dublin", 
@@ -51668,11 +51668,11 @@
         "country": "Ireland", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65140", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65140", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Rouen", 
@@ -51681,11 +51681,11 @@
         "country": "France", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65151", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65151", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Nantes", 
@@ -51694,11 +51694,11 @@
         "country": "France", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65152", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65152", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Copenhagen", 
@@ -51707,11 +51707,11 @@
         "country": "Denmark", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65160", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65160", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Lisbon", 
@@ -51720,11 +51720,11 @@
         "country": "Portugal", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65180", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65180", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "New York", 
@@ -51733,11 +51733,11 @@
         "country": "United States", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65201", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65201", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Newark", 
@@ -51746,11 +51746,11 @@
         "country": "United States", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65201", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65201", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Chicago", 
@@ -51759,11 +51759,11 @@
         "country": "United States", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65250", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65250", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Seattle", 
@@ -51772,11 +51772,11 @@
         "country": "United States", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65251", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65251", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "San Jose", 
@@ -51785,11 +51785,11 @@
         "country": "United States", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65252", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65252", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Los Angeles", 
@@ -51798,11 +51798,11 @@
         "country": "United States", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65253", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65253", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Phoenix", 
@@ -51811,11 +51811,11 @@
         "country": "United States", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65254", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65254", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Dallas", 
@@ -51824,11 +51824,11 @@
         "country": "United States", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65255", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65255", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Atlanta", 
@@ -51837,11 +51837,11 @@
         "country": "United States", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65256", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65256", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Washington", 
@@ -51850,11 +51850,11 @@
         "country": "United States", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65257", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65257", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Hong Kong", 
@@ -51863,11 +51863,11 @@
         "country": "Hong Kong", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65300", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65300", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Osaka", 
@@ -51876,11 +51876,11 @@
         "country": "Japan", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65301", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65301", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Tokyo", 
@@ -51889,11 +51889,11 @@
         "country": "Japan", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65303", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65303", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "Singapore", 
@@ -51902,11 +51902,11 @@
         "country": "Singapore", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "65302", 
+        "value1": "8220", 
         "address": "", 
         "id": "8220:65302", 
-        "aut": ""
+        "aut": "8220"
     }, 
     {
         "city": "", 
@@ -51915,11 +51915,11 @@
         "country": "", 
         "region": "", 
         "source_description": "route originated in Asia", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "20001", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:20001", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -51928,11 +51928,11 @@
         "country": "", 
         "region": "", 
         "source_description": "route originated in Asia (Far East)", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "20018", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:20018", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -51941,11 +51941,11 @@
         "country": "", 
         "region": "", 
         "source_description": "route originated in Europe", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "20002", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:20002", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -51954,11 +51954,11 @@
         "country": "", 
         "region": "", 
         "source_description": "route originated in North Europe", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "20020", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:20020", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -51967,11 +51967,11 @@
         "country": "", 
         "region": "", 
         "source_description": "route originated in South Europe", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "20021", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:20021", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -51980,11 +51980,11 @@
         "country": "", 
         "region": "", 
         "source_description": "route originated in East Europe", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "20022", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:20022", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -51993,11 +51993,11 @@
         "country": "", 
         "region": "", 
         "source_description": "route originated in Western Europe", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "20023", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:20023", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52006,11 +52006,11 @@
         "country": "", 
         "region": "", 
         "source_description": "route originated in Central Europe", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "20024", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:20024", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52019,11 +52019,11 @@
         "country": "", 
         "region": "", 
         "source_description": "route originated in America", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "20003", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:20003", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52032,11 +52032,11 @@
         "country": "US", 
         "region": "", 
         "source_description": "route originated in North America", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "20030", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:20030", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52045,11 +52045,11 @@
         "country": "", 
         "region": "", 
         "source_description": "route originated in South America", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "20031", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:20031", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52058,11 +52058,11 @@
         "country": "", 
         "region": "", 
         "source_description": "route originated in Oceania", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "20004", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:20004", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52071,11 +52071,11 @@
         "country": "", 
         "region": "", 
         "source_description": "route originated in Africa", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "20005", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:20005", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52084,11 +52084,11 @@
         "country": "", 
         "region": "", 
         "source_description": "route originated in North Africa", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "20050", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:20050", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52097,11 +52097,11 @@
         "country": "", 
         "region": "", 
         "source_description": "route originated in South Africa", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "20051", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:20051", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52110,11 +52110,11 @@
         "country": "", 
         "region": "", 
         "source_description": "route originated in East Africa", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "20052", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:20052", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52123,11 +52123,11 @@
         "country": "", 
         "region": "", 
         "source_description": "route originated in Western Africa", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "20053", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:20053", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52136,11 +52136,11 @@
         "country": "Austria", 
         "region": "", 
         "source_description": "route originated in Austria", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "24300", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:24300", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52149,11 +52149,11 @@
         "country": "Australia", 
         "region": "", 
         "source_description": "route originated in Australia", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "26100", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:26100", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52162,11 +52162,11 @@
         "country": "Bulgaria", 
         "region": "", 
         "source_description": "route originated in Bulgaria", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "23590", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:23590", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52175,11 +52175,11 @@
         "country": "Brazil", 
         "region": "", 
         "source_description": "route originated in Brazil", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "25500", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:25500", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52188,11 +52188,11 @@
         "country": "China", 
         "region": "", 
         "source_description": "route originated in China", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "28600", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:28600", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52201,11 +52201,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "route originated in Germany", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "24900", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:24900", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52214,11 +52214,11 @@
         "country": "France", 
         "region": "", 
         "source_description": "route originated in France", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "23300", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:23300", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52227,11 +52227,11 @@
         "country": "United Kingdom", 
         "region": "", 
         "source_description": "route originated in United Kingdom", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "24400", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:24400", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52240,11 +52240,11 @@
         "country": "Hong Kong", 
         "region": "", 
         "source_description": "route originated in Hong Kong", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "28520", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:28520", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52253,11 +52253,11 @@
         "country": "Japan", 
         "region": "", 
         "source_description": "route originated in Japan", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "28100", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:28100", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52266,11 +52266,11 @@
         "country": "Kenya", 
         "region": "", 
         "source_description": "route originated in Kenya", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22540", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:22540", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52279,11 +52279,11 @@
         "country": "Korea, Republic of", 
         "region": "", 
         "source_description": "route originated in Korea, Republic of", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "28200", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:28200", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52292,11 +52292,11 @@
         "country": "Luxembourg", 
         "region": "", 
         "source_description": "route originated in Luxembourg", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "23520", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:23520", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52305,11 +52305,11 @@
         "country": "Netherlands", 
         "region": "", 
         "source_description": "route originated in Netherlands", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "23100", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:23100", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52318,11 +52318,11 @@
         "country": "Russian Federation", 
         "region": "", 
         "source_description": "route originated in Russian Federation", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "27000", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:27000", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52331,11 +52331,11 @@
         "country": "Singapore", 
         "region": "", 
         "source_description": "route originated in Singapore", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "26500", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:26500", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52344,11 +52344,11 @@
         "country": "Taiwan, Province of China", 
         "region": "", 
         "source_description": "route originated in Taiwan, Province of China", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "28860", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:28860", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52357,11 +52357,11 @@
         "country": "United States", 
         "region": "", 
         "source_description": "route originated in United States", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "21000", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:21000", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52370,11 +52370,11 @@
         "country": "South Africa", 
         "region": "", 
         "source_description": "route originated in South Africa", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22700", 
+        "value1": "57695", 
         "address": "", 
         "id": "57695:22700", 
-        "aut": ""
+        "aut": "57695"
     }, 
     {
         "city": "", 
@@ -52383,11 +52383,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Internal or customer", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3000", 
+        "value1": "6667", 
         "address": "", 
         "id": "6667:3000", 
-        "aut": ""
+        "aut": "6667"
     }, 
     {
         "city": "", 
@@ -52396,11 +52396,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Public peering", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3001", 
+        "value1": "6667", 
         "address": "", 
         "id": "6667:3001", 
-        "aut": ""
+        "aut": "6667"
     }, 
     {
         "city": "", 
@@ -52409,11 +52409,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Private peering", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3003", 
+        "value1": "6667", 
         "address": "", 
         "id": "6667:3003", 
-        "aut": ""
+        "aut": "6667"
     }, 
     {
         "city": "", 
@@ -52422,11 +52422,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Transit", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3004", 
+        "value1": "6667", 
         "address": "", 
         "id": "6667:3004", 
-        "aut": ""
+        "aut": "6667"
     }, 
     {
         "city": "Tampere", 
@@ -52435,11 +52435,11 @@
         "country": "Finland", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "4000", 
+        "value1": "6667", 
         "address": "", 
         "id": "6667:4000", 
-        "aut": ""
+        "aut": "6667"
     }, 
     {
         "city": "Turku", 
@@ -52448,11 +52448,11 @@
         "country": "Finland", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "4001", 
+        "value1": "6667", 
         "address": "", 
         "id": "6667:4001", 
-        "aut": ""
+        "aut": "6667"
     }, 
     {
         "city": "Helsinki", 
@@ -52461,11 +52461,11 @@
         "country": "Finland", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "4002", 
+        "value1": "6667", 
         "address": "", 
         "id": "6667:4002", 
-        "aut": ""
+        "aut": "6667"
     }, 
     {
         "city": "Stockholm", 
@@ -52474,11 +52474,11 @@
         "country": "Sweden", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "4003", 
+        "value1": "6667", 
         "address": "", 
         "id": "6667:4003", 
-        "aut": ""
+        "aut": "6667"
     }, 
     {
         "city": "London", 
@@ -52487,11 +52487,11 @@
         "country": "United Kingdom", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "4004", 
+        "value1": "6667", 
         "address": "", 
         "id": "6667:4004", 
-        "aut": ""
+        "aut": "6667"
     }, 
     {
         "city": "Frankfurt", 
@@ -52500,11 +52500,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "4005", 
+        "value1": "6667", 
         "address": "", 
         "id": "6667:4005", 
-        "aut": ""
+        "aut": "6667"
     }, 
     {
         "city": "Hamburg", 
@@ -52513,11 +52513,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "4006", 
+        "value1": "6667", 
         "address": "", 
         "id": "6667:4006", 
-        "aut": ""
+        "aut": "6667"
     }, 
     {
         "city": "Copenhagen", 
@@ -52526,11 +52526,11 @@
         "country": "Denmark", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "4007", 
+        "value1": "6667", 
         "address": "", 
         "id": "6667:4007", 
-        "aut": ""
+        "aut": "6667"
     }, 
     {
         "city": "Oslo", 
@@ -52539,11 +52539,11 @@
         "country": "Norway", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "4008", 
+        "value1": "6667", 
         "address": "", 
         "id": "6667:4008", 
-        "aut": ""
+        "aut": "6667"
     }, 
     {
         "city": "Amsterdam", 
@@ -52552,11 +52552,11 @@
         "country": "The Netherlands", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "4009", 
+        "value1": "6667", 
         "address": "", 
         "id": "6667:4009", 
-        "aut": ""
+        "aut": "6667"
     }, 
     {
         "city": "New York", 
@@ -52565,11 +52565,11 @@
         "country": "USA", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "4010", 
+        "value1": "6667", 
         "address": "", 
         "id": "6667:4010", 
-        "aut": ""
+        "aut": "6667"
     }, 
     {
         "city": "", 
@@ -52578,11 +52578,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Route is learned from NA (North America) non-customer.", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "21000", 
+        "value1": "174", 
         "address": "", 
         "id": "174:21000", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52591,11 +52591,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Route is NA internal or customer route.", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "21001", 
+        "value1": "174", 
         "address": "", 
         "id": "174:21001", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52604,11 +52604,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Route is learned from EU (Europe) non-customer.", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "21100", 
+        "value1": "174", 
         "address": "", 
         "id": "174:21100", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52617,11 +52617,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Route is an EU internal or customer route.", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "21101", 
+        "value1": "174", 
         "address": "", 
         "id": "174:21101", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52630,11 +52630,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Route is learned from AP (Asia Pacific) non-customer.", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "21200", 
+        "value1": "174", 
         "address": "", 
         "id": "174:21200", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52643,11 +52643,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Route is an AP internal or customer route.", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "21201", 
+        "value1": "174", 
         "address": "", 
         "id": "174:21201", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52656,11 +52656,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Route is learned from SA (South America) non-customer.", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "21300", 
+        "value1": "174", 
         "address": "", 
         "id": "174:21300", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52669,11 +52669,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Route is a SA internal or customer route.", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "21301", 
+        "value1": "174", 
         "address": "", 
         "id": "174:21301", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52682,11 +52682,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Route is learned from AU (Australia) non-customer.", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "21400", 
+        "value1": "174", 
         "address": "", 
         "id": "174:21400", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52695,11 +52695,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Route is an AU internal or customer route.", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "21401", 
+        "value1": "174", 
         "address": "", 
         "id": "174:21401", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52708,11 +52708,11 @@
         "country": "Austria", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22001", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22001", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52721,11 +52721,11 @@
         "country": "Belgium", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22002", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22002", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52734,11 +52734,11 @@
         "country": "Canada", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22003", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22003", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52747,11 +52747,11 @@
         "country": "Switzerland", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22004", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22004", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52760,11 +52760,11 @@
         "country": "Germany", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22005", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22005", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52773,11 +52773,11 @@
         "country": "Denmark", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22006", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22006", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52786,11 +52786,11 @@
         "country": "Spain", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22007", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22007", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52799,11 +52799,11 @@
         "country": "France", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22008", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22008", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52812,11 +52812,11 @@
         "country": "Italy", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22009", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22009", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52825,11 +52825,11 @@
         "country": "Netherlands", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22010", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22010", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52838,11 +52838,11 @@
         "country": "Portugal", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22011", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22011", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52851,11 +52851,11 @@
         "country": "United Kingdom", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22012", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22012", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52864,11 +52864,11 @@
         "country": "United States", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22013", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22013", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52877,11 +52877,11 @@
         "country": "Sweden", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22014", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22014", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52890,11 +52890,11 @@
         "country": "Norway", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22015", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22015", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52903,11 +52903,11 @@
         "country": "Czech Republic", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22016", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22016", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52916,11 +52916,11 @@
         "country": "Slovakia", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22017", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22017", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52929,11 +52929,11 @@
         "country": "Hungary", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22018", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22018", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52942,11 +52942,11 @@
         "country": "Ireland", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22019", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22019", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52955,11 +52955,11 @@
         "country": "Romania", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22020", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22020", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52968,11 +52968,11 @@
         "country": "Croatia (locally Hrvatska)", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22021", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22021", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52981,11 +52981,11 @@
         "country": "Slovenia", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22022", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22022", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -52994,11 +52994,11 @@
         "country": "Bulgaria", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22023", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22023", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53007,11 +53007,11 @@
         "country": "Finland", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22024", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22024", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53020,11 +53020,11 @@
         "country": "Estonia", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22025", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22025", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53033,11 +53033,11 @@
         "country": "Ukraine", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22026", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22026", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53046,11 +53046,11 @@
         "country": "Mexico", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22027", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22027", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53059,11 +53059,11 @@
         "country": "Poland", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22028", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22028", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53072,11 +53072,11 @@
         "country": "Luxembourg", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22029", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22029", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53085,11 +53085,11 @@
         "country": "Serbia", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22030", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22030", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53098,11 +53098,11 @@
         "country": "Greece", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22031", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22031", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53111,11 +53111,11 @@
         "country": "Japan", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22032", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22032", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53124,11 +53124,11 @@
         "country": "Macedonia", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22033", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22033", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53137,11 +53137,11 @@
         "country": "Lithuania", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22034", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22034", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53150,11 +53150,11 @@
         "country": "Turkey", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22035", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22035", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53163,11 +53163,11 @@
         "country": "Moldova", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22036", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22036", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53176,11 +53176,11 @@
         "country": "Latvia", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22037", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22037", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53189,11 +53189,11 @@
         "country": "Singapore", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22038", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22038", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53202,11 +53202,11 @@
         "country": "Hong Kong", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22039", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22039", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53215,11 +53215,11 @@
         "country": "Montenegro", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22040", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22040", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53228,11 +53228,11 @@
         "country": "Albania", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22041", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22041", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53241,11 +53241,11 @@
         "country": "Brazil", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22042", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22042", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53254,11 +53254,11 @@
         "country": "Australia", 
         "region": "", 
         "source_description": "", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "22043", 
+        "value1": "174", 
         "address": "", 
         "id": "174:22043", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53267,11 +53267,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Do not announce to peers (equivalent to 174:991)", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3000", 
+        "value1": "174", 
         "address": "", 
         "id": "174:3000", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53280,11 +53280,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Prepend 174 1 time to peers.", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3001", 
+        "value1": "174", 
         "address": "", 
         "id": "174:3001", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53293,11 +53293,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Prepend 174 2 times to peers.", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3002", 
+        "value1": "174", 
         "address": "", 
         "id": "174:3002", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53306,11 +53306,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Prepend 174 3 times to peers.", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "3003", 
+        "value1": "174", 
         "address": "", 
         "id": "174:3003", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53319,11 +53319,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Do not send route to BGP customers, or peers.", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "990", 
+        "value1": "174", 
         "address": "", 
         "id": "174:990", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53332,11 +53332,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Do not send route to peers.", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "991", 
+        "value1": "174", 
         "address": "", 
         "id": "174:991", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53345,11 +53345,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Set customer route local preference to 10", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "10", 
+        "value1": "174", 
         "address": "", 
         "id": "174:10", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53358,11 +53358,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Set customer route local preference to 70", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "70", 
+        "value1": "174", 
         "address": "", 
         "id": "174:70", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53371,11 +53371,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Set customer route local preference to 120", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "120", 
+        "value1": "174", 
         "address": "", 
         "id": "174:120", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53384,11 +53384,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Set customer route local preference to 125", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "125", 
+        "value1": "174", 
         "address": "", 
         "id": "174:125", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53397,11 +53397,11 @@
         "country": "", 
         "region": "", 
         "source_description": "Set customer route local preference to 135", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "135", 
+        "value1": "174", 
         "address": "", 
         "id": "174:135", 
-        "aut": ""
+        "aut": "174"
     }, 
     {
         "city": "", 
@@ -53410,10 +53410,10 @@
         "country": "", 
         "region": "", 
         "source_description": "Set customer route local preference to 140", 
-        "value2": "", 
-        "value1": "", 
+        "value2": "140", 
+        "value1": "174", 
         "address": "", 
         "id": "174:140", 
-        "aut": ""
+        "aut": "174"
     }
 ]
