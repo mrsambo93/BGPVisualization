@@ -45,7 +45,7 @@
           /*background: gold;*/
           width: 80%;
           left: 60px;
-          top: 3em;
+          top: 1em;
           }
 
         .info-container pre {
@@ -82,7 +82,7 @@
             fill: none;
             stroke: green;
             stroke-width: 0.2vh;
-            pointer-events: none;
+            pointer-events: auto;
         }
 
         #sum1 {
@@ -166,6 +166,8 @@
             width: 99%;
             height: 98%;
             z-index: 10;
+            top: 0;
+            left: 0;
             pointer-events: none;
         }
 
@@ -267,6 +269,54 @@
             position: relative;
         }
 
+
+        /* Tooltip container */
+        .tooltip {
+          position: relative;
+          display: inline-block;
+          border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+        }
+
+        /* Tooltip text */
+        .tooltip .tooltiptext {
+          visibility: hidden;
+          background-color: rgba(0, 0, 0, 0.7);
+          color: #fff;
+          text-align: center;
+          padding: 5px 0;
+          border-radius: 6px;
+
+          /* Position the tooltip text */
+          position: absolute;
+          display: inline;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: +5;
+          bottom: 125%;
+          padding: 6px;
+
+          /* Fade in tooltip */
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+
+        /* Tooltip arrow */
+        .tooltip .tooltiptext::after {
+          content: "";
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #555 transparent transparent transparent;
+        }
+
+        /* Show the tooltip text when you mouse over the tooltip container */
+        .tooltip:hover .tooltiptext {
+          visibility: visible;
+          opacity: 1;
+        }
+
     </style>
 </head>
 <body>
@@ -296,22 +346,21 @@
         </details>
 
         <details id="det2">
-            <summary id="sum2" class="titolo2">Second announce:</summary>
+            <summary id="sum2" class="titolo2"></summary>
             <pre id="info2" class ="textinfo"></pre>
             <div id="comm-title" class="textinfo">Communities:</div>
             <pre id="info4" class ="textinfo"></pre>
         </details>
         </div>
         <br>
-        <br>
         <button class ="button" onclick="goBack()">Go Back</button>
     </span>
+    <div id="line-svg-container"></div>
     <div class="svg-container">
         <div id="map-container">
             <div id="mapid"></div>
         </div>
     </div>
-    <div id="line-svg-container"></div>
     <script src="http://d3js.org/d3.v5.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/topojson-client@3"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -342,6 +391,7 @@
 
         var flag = false;
         var flying = false;
+        var asn2countries = null;
 
         var x = d3.scaleLinear().range([margin.left + margin.right, width - margin.left - margin.right]);
         var y = d3.scaleLinear().range([height - margin.top, margin.top]);
@@ -509,17 +559,15 @@
 
                 update();
 
-                var interval = null;
+                let interval = null;
                 map.on("moveend", update);
                 map.on("move", update2);
                 map.on("zoomstart", function() {
                     interval = setInterval(update2, 5);
                 });
                 map.on('zoomend', function() {
-                    world_map2.selectAll("circle").attr("r", 5);
                     if(interval) {
                         clearInterval(interval);
-                        interval = null;
                     }
                 });
 
@@ -535,7 +583,7 @@
                 if(data.length === 2) {
                     var announce1 = data[0];
                     var announce2 = data[1];
-                    
+
                     if(Object.keys(announce1).length != 0 && Object.keys(announce2).length != 0) {
                         var aspath1 = announce1.path;
                         var aspath2 = announce2.path;
@@ -551,6 +599,7 @@
                                         get_coordinates(announce2, function(coordinates2, countries2) {
                                             draw_points(coordinates2, 2, function() {
                                                 color_countries(countries2, 2, function() {
+                                                    asn2countries = countries1.concat(countries2);
                                                     check_ixps(aspath1_clean, aspath2_clean);
                                                     draw_lines(aspath1_clean, 1);
                                                     draw_lines(aspath2_clean, 2);
@@ -584,8 +633,10 @@
                             get_coordinates(selected, function(coordinates, countries) {
                                 draw_points(coordinates, 1, function() {
                                     color_countries(countries, 1, function() {
-                                        console.log("call2");
+                                        asn2countries = countries;
+                                        check_ixps(aspath_clean);
                                         draw_lines(aspath_clean);
+                                        auto_zoom();
                                         $(window).on('resize', function() {
                                             map.invalidateSize();
                                             draw_lines(aspath_clean);
@@ -607,8 +658,10 @@
                         get_coordinates(announce, function(coordinates, countries) {
                             draw_points(coordinates, 1, function() {
                                 color_countries(countries, 1, function() {
+                                    asn2countries = countries;
+                                    check_ixps(aspath_clean);
                                     draw_lines(aspath_clean);
-                                    console.log("call3");
+                                    auto_zoom();
                                     $(window).on('resize', function() {
                                         map.invalidateSize();
                                         draw_lines(aspath_clean);
@@ -622,6 +675,23 @@
                     });
                 }
             });
+
+            // d3.json("communitiesAndInfo")
+            //     .then(baby => {
+            //       console.log("OHIEEEEE");
+            //       var shuffledComm = [];
+            //
+            //       for(var i=0; i<baby.length;i++){
+            //         if(baby[i].info.length>1)
+            //           var item = {};
+            //           item["id"]=baby[i].id;
+            //           item["comment"]=baby[i].info;
+            //           shuffledComm.push(item);
+            //       }
+            //       for(var i=0;i<shuffledComm.length;i++){
+            //         console.log(shuffledComm[i].comment);
+            //       }
+            //     });
 
         function make_y_gridlines(ticks) {
             return d3.axisLeft(y)
@@ -746,6 +816,12 @@
                                 if(id === 3) {
                                     return "green";
                                 }
+                            })
+                            .on("mouseover", function() {
+                                d3.select(this).style("stroke-width", "8")
+                            })
+                            .on("mouseout", function() {
+                                d3.select(this).style("stroke-width", "3")
                             });
 
                         paths.push([path, element]);
@@ -760,7 +836,7 @@
                             .attr("class", "line_warning")
                             .attr("d", line_curve)
                             .on("mousemove", function(d) {
-                                d3.select(this).style("stroke-width", "7")
+                                d3.select(this).style("stroke-width", "8")
                                 let source = d[0].asn;
                                 let target = d[2].asn;
                                 for(key in info) {
@@ -794,7 +870,7 @@
                             .attr("d", line);
 
                         var p = path.node().getPointAtLength(path.node().getTotalLength()/2);
-                        
+
                         svg.append("image")
                             .attr("xlink:href", server + "/query_image")
                             .attr("x", p.x - radius)
@@ -850,7 +926,9 @@
             var start_point = path.node().getPointAtLength(radius);
 
             svg.append("circle")
+                .attr("id", "marker")
                 .attr("class", "start_" + asn1)
+                .attr("aspath", function() { return path.attr("aspath"); })
                 .attr("cx", start_point.x)
                 .attr("cy", start_point.y)
                 .attr("r", points_radius)
@@ -860,8 +938,9 @@
             var end_point = path.node().getPointAtLength(l - radius);
 
             svg.append("circle")
+                .attr("id", "marker")
                 .attr("class", "end_" + asn2)
-                .attr("aspath", function() { return path.attr("aspath")} )
+                .attr("aspath", function() { return path.attr("aspath"); })
                 .attr("cx", end_point.x)
                 .attr("cy", end_point.y)
                 .attr("r", points_radius)
@@ -890,7 +969,30 @@
                     .attr("cx", function (d) { return map.latLngToLayerPoint(d.coordinates).x; })
 		            .attr("cy", function (d) { return map.latLngToLayerPoint(d.coordinates).y; })
 		            .attr("r", 5)
-                    .attr("fill", "green");
+                    .attr("fill", "green")
+                    .attr("fill-opacity", 0)
+                    .on("mouseover", function() {
+                        let circle = d3.select(this);
+                        let cx = circle.attr("cx");
+                        let cy = circle.attr("cy");
+                        let circles1 = world_map2.select(".points_1").selectAll('[cx="'+cx+'"][cy="'+cy+'"]');
+                        let circles2 = world_map2.select(".points_2").selectAll('[cx="'+cx+'"][cy="'+cy+'"]');
+                        
+                        if(circles1) {
+                            circles1.each(function(d) {
+                                let element = d3.select(this);
+                                focus_community(element);
+                            });
+                        }
+
+                        if(circles2) {
+                            circles2.each(function(d) {
+                                let element = d3.select(this);
+                                focus_community(element);
+                            });
+                        }
+                    })
+                    .on("mouseout", reset_view);
             callback();
         }
 
@@ -903,6 +1005,7 @@
                 let asn_countries = element[1];
                 asn_countries.forEach(country => {
                     world_map2.select('[id="' + country + '"]')
+                        .attr("aspath", aspath_n)
                         .attr("fill-opacity", "0.4")
                         .attr("visible", "true");
                 });
@@ -977,13 +1080,13 @@
                     p2 = node2.node().getBoundingClientRect();
 
                     var point1 = {
-                        x : p1.x - 2,
-                        y : p1.y - 1
+                        x : p1.left + p1.width/2,
+                        y : p1.top + p1.height/2
                     };
 
                     var point2 = {
-                        x : p2.x - 3,
-                        y : p2.y - 2
+                        x : p2.left + p2.width/2,
+                        y : p2.top + p2.height/2
                     };
 
                     var data = [point1, point2];
@@ -992,6 +1095,7 @@
                         .datum(data)
                         .attr("id", "outer_line")
                         .attr("class", "outer_line_" + asn)
+                        .attr("aspath", number)
                         .attr("d", new_line)
                         .style("opacity", function(d) {
                             var rec = $('#map-container').get(0).getBoundingClientRect();
@@ -1003,7 +1107,12 @@
                                 return 0;
                             }
                             return 1;
-                        });
+                        })
+                        .on("mouseover", function() {
+                            var element = d3.select(this);
+                            focus_community(element);
+                        })
+                        .on("mouseout", reset_view);
                 }
             });
         }
@@ -1048,7 +1157,7 @@
                     for(let i = 0; i < communities.length; i++) {
                         if(communities[i]["id"] === community) {
                             var com = communities[i];
-                            var aut = com["id"].split(":")[0];
+                            var aut = com["aut"];
                             if(com["address"] != "" || com["city"] != "" || com["country_code"] != "" /*|| com["norm_region != "" */) {
                                 if(!(aut in ases)) {
                                     ases[aut] = [];
@@ -1165,50 +1274,139 @@
             draw_lines(aspath, d3.zoomTransform(world_map.node()));
         }*/
 
-        function show_info(announce1, announce2=null) {
-            var info = 'Prefix: '+announce1["target_prefix"]+'\n'+
-                       'Collected by: '+announce1["source_id"]+'\n'+
-                       'rrc: '+announce1["rrc"];
-
-            $('#info').html(info);
-
-            if(!announce1['community'].length>0){
-              $('#info3').html('');
-            }
-            else
-            {
-              var info3 = ''+announce1['community'];
-              var info3splitted= info3.split(",");
-              var info3 = JSON.stringify(info3splitted,null,4);
-              $('#info3').html(info3);
-            }
-            if(!announce2 || !announce2['community'].length>0){
-              $('#info4').html('');
-              $('#comm-title').html('');
-            }
-            else
-            {
-              var info4 = ''+announce2['community'];
-              var info4splitted= info4.split(",");
-              var info4 = JSON.stringify(info4splitted,null,4);
-              $('#info4').html(info4);
-            }
-
-            var info1 = 'Aspath: '+announce1["path"]+'\n'+
-                        'Time: '+announce1["query_time"];
-
-            $('#info1').html(info1);
-
-
-            if(announce2) {
-
-              var info2 = 'Aspath: '+announce2["path"]+'\n'+
-                          //'Communities: '+announce2["community"]
-                          'Time: '+announce2["query_time"];
-              $('#info2').html(info2);
-
-            }
+        function findCommunity(arr, propName, propValue) {
+          for (var i=0; i < arr.length; i++)
+            if (arr[i][propName] == propValue)
+              return arr[i];
         }
+
+
+        function show_info(announce1, announce2 = null) {
+
+
+            d3.json("communitiesAndInfo")
+                .then(baby => {
+                    var shuffledComm = [];
+
+                    for (var i = 0; i < baby.length; i++) {
+                        if (baby[i].info.length > 1){
+                          var item = {};
+                          item["id"] = baby[i].id;
+                          item["comment"] = baby[i].info;
+                          shuffledComm.push(item);
+                        }
+                    }
+                    for (var i = 0; i < shuffledComm.length; i++) {
+                        console.log(shuffledComm[i].comment);
+                    }
+
+
+                    var info = 'Prefix: ' + announce1["target_prefix"] + '\n' +
+                        'Collected by: ' + announce1["source_id"] + '\n' +
+                        'rrc: ' + announce1["rrc"];
+
+                    $('#info').html(info);
+
+
+
+                    if (!announce1['community'].length > 0) {
+                        $('#info3').html('');
+                    } else {
+
+                        // <div class="tooltip">Hover over me
+                        //     <span class="tooltiptext">Tooltip text</span>
+                        // </div>
+                        var htmlStr = "<tbody>";
+                        for(var x=0;x<shuffledComm.length;x++){
+                          console.log("Ciao sono la"+x+" community:");
+                          console.log(shuffledComm[x].id);
+                          console.log(shuffledComm[x].comment);
+                        }
+
+                        for (var i = 0; i < announce1['community'].length; i++) {
+                          var finded = false;
+                          if(i%3==0)
+                            htmlStr += "<tr>";
+
+                          for(var j=0; !finded && j<shuffledComm.length;j++){
+
+                            if (announce1['community'][i] && shuffledComm[j].comment){
+                              if(announce1['community'][i] == shuffledComm[j].id){
+                                htmlStr += "<td><div class='tooltip'>"+announce1['community'][i]+"<span class='tooltiptext'>"+shuffledComm[j].comment+"</span></div></td>";
+                                finded = true;
+                              }
+                            }
+                          }
+                          if(!finded)
+                            htmlStr += "<td>" + announce1['community'][i] + "  </td>";
+
+                          if((i+1)%3==0 && i!=0)
+                            htmlStr += "</tr>";
+                      }
+                    }
+                    $("#info3").append(htmlStr);
+                    $("#info3").append("<hr />");
+
+
+                    if (!announce2 || !announce2['path'].length > 0) {
+                        document.getElementById('det2').style.display = 'none';
+                        $('#sum2').html('');
+                        $('#info4').html('');
+                        $('#comm-title').html('');
+                    } else if (announce2['path'].length > 0 && announce2['community'].length > 0) {
+                        $('#sum2').html('Second announce:');
+                        var htmlStr = "<tbody>";
+
+
+                        for (var i = 0; i < announce2['community'].length; i++) {
+                          var finded = false;
+                          if(i%3==0)
+                            htmlStr += "<tr>";
+
+                          for(var j=0; !finded && j<shuffledComm.length;j++){
+
+                            if (announce2['community'][i] && shuffledComm[j].comment){
+                              if(announce2['community'][i] == shuffledComm[j].id){
+                                htmlStr += "<td><div class='tooltip'>"+announce2['community'][i]+"<span class='tooltiptext'>"+shuffledComm[j].comment+"</span></div></td>";
+                                finded = true;
+                              }
+                            }
+                          }
+                          if(!finded)
+                            htmlStr += "<td>" + announce2['community'][i] + "  </td>";
+
+                          if((i+1)%3==0 && i!=0)
+                            htmlStr += "</tr>";
+                      }
+
+
+
+                        $("#info4").append(htmlStr);
+                        $("#info4").append("<hr />");
+                    } else if (announce2['path'].length > 0 && !announce2['community'].length > 0) {
+                        $('#sum2').html('Second announce:');
+                        $('#info4').html('');
+                    }
+
+                    var info1 = 'Aspath: ' + announce1["path"] + '\n' +
+                        'Time: ' + announce1["query_time"];
+
+                    $('#info1').html(info1);
+
+
+                    if (announce2) {
+
+                        var info2 = 'Aspath: ' + announce2["path"] + '\n' +
+                            //'Communities: '+announce2["community"]
+                            'Time: ' + announce2["query_time"];
+                        $('#info2').html(info2);
+
+                    }
+
+
+                });
+        }
+
 
         function transl_to_positive(data, callback) {
             var value = 0;
@@ -1389,10 +1587,12 @@
         }
 
         function auto_zoom() {
-            let circles = world_map2.selectAll("circle").style("fill-opacity", 0);
+            let circles1 = world_map2.select(".points_1").selectAll("circle").style("fill-opacity", 0);
+            let circles2 = world_map2.select(".points_2").selectAll("circle").style("fill-opacity", 0);
             let lines = line_container.selectAll("#outer_line").style("opacity", 0);
             let countries = world_map2.selectAll('[visible="true"]').style("opacity", 0);
             flying = true;
+            let circles = world_map2.selectAll("circle");
             let lats = circles.data().map(el => el.coordinates[0]);
             let lons = circles.data().map(el => el.coordinates[1]);
             let lat_min = d3.min(lats);
@@ -1404,11 +1604,38 @@
                 padding: [100, 100]
             });
             map.on("zoomend", function() {
-                circles.style("fill-opacity", 1);
+                circles1.style("fill-opacity", 1);
+                circles2.style("fill-opacity", 1);
                 lines.style("opacity", 1);
                 countries.style("opacity", 0.5)
                 flying = false;
+                for (var i = 1; i < 99999; i++)
+                    clearInterval(i);
             });
+        }
+
+        function focus_community(element) {
+            let arr = element.attr("class").split("_");
+            let asn = arr[arr.length - 1];
+            let aspath = element.attr("aspath");
+
+            let point1 = svg.select('[class="end_' + asn + '"][aspath="' + aspath + '"]');
+            let point2 = world_map2.select('[class="svg2_' + asn + '"][aspath="' + aspath + '"]');
+            let link = line_container.select('[class="outer_line_' + asn + '"][aspath="' + aspath + '"]');
+
+            point1.attr("r", points_radius + 5);
+            point2.attr("r", 8);
+            link.style("stroke-width", "4");
+        }
+
+        function reset_view(d) {
+            let point1 = svg.selectAll("#marker");
+            let point2 = world_map2.selectAll("circle");
+            let link = line_container.selectAll("#outer_line");
+
+            point1.attr("r", points_radius);
+            point2.attr("r", 5);
+            link.style("stroke-width", "0.2vh")
         }
 
     </script>

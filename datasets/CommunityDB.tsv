@@ -2436,13 +2436,13 @@ id	aut	value1	value2	region	norm_region	country	country_code	city	address	source
 286:1200	286	286	1200							do-not-announce to Equinix New York
 286:3000	286	286	3000							AS286 originated "allocation"
 286:3803	286	286	3803							more specific of AS286 "allocation"
-65535:65282	65535	65535	65282							do not advertise beyond direct attached PE
+65535:65282	286	65535	65282							do not advertise beyond direct attached PE
 286:1020	286	286	1020							do-not-announce to NL-IX
 286:28667	286	286	28667							erBH / rtsdCos helper
 286:1070	286	286	1070							do-not-announce to LINX
 286:3002	286	286	3002							AS286 originated "allocation" announced only in Africa (legacy)
 286:1140	286	286	1140							do-not-announce to NOTA
-65535:65281	65535	65535	65281							do not export to any customer or peer of AS286
+65535:65281	286	65535	65281							do not export to any customer or peer of AS286
 286:1160	286	286	1160							do-not-announce to DECIX HH
 286:19	286	286	19							do not announce to European peers
 286:3902	286	286	3902							IGP re-advertised route
@@ -2470,7 +2470,7 @@ id	aut	value1	value2	region	norm_region	country	country_code	city	address	source
 286:3003	286	286	3003							AS286 originated "allocation" announced only in Europe (legacy)
 286:28666	286	286	28666							blackhole helper
 286:66	286	286	66							traffic to prefixes tagged with 286:66 will be discard / routed to null
-65535:666	65535	65535	666							proposed "standard" IETF BH community (draft-ietf-grow-blackholing) will be treated like 286:66 (and rewritten to it)
+65535:666	286	65535	666							proposed "standard" IETF BH community (draft-ietf-grow-blackholing) will be treated like 286:66 (and rewritten to it)
 286:3855	286	286	3855							manual configured selective blackhole (sBH/erBH) route
 286:3866	286	286	3866							manual configured network wide blackhole route
 286:3850	286	286	3850							peering with customer route
@@ -2631,89 +2631,89 @@ id	aut	value1	value2	region	norm_region	country	country_code	city	address	source
 4589:635	4589	4589	635							From CH NAPs
 4589:644	4589	4589	644							From INXS Hamburg
 4589:9613	4589	4589	9613							Filter announcement, i.e. don't announce, to LoNAP
-11341:1620	11341	11341	1620							Filter announcement, for outbound prefixes, to BE NAPs
+11341:1620	4589	11341	1620							Filter announcement, for outbound prefixes, to BE NAPs
 4589:9541	4589	4589	9541							Filter announcement, i.e. don't announce, to Cable & Wireless UK (AS3561)
-11341:1631	11341	11341	1631							Filter announcement, for outbound prefixes, to AMS-IX
-11341:1652	11341	11341	1652							Filter announcement, for outbound prefixes, to MAE Paris
+11341:1631	4589	11341	1631							Filter announcement, for outbound prefixes, to AMS-IX
+11341:1652	4589	11341	1652							Filter announcement, for outbound prefixes, to MAE Paris
 4589:9653	4589	4589	9653							Filter announcement, i.e. don't announce, to FreeIX
 4589:9542	4589	4589	9542							Filter announcement, i.e. don't announce, to Cable & Wireless DE (AS1273)
 4589:9654	4589	4589	9654							Filter announcement, i.e. don't announce, to PARIX
-11341:1621	11341	11341	1621							Filter announcement, for outbound prefixes, to BNIX
+11341:1621	4589	11341	1621							Filter announcement, for outbound prefixes, to BNIX
 4589:9565	4589	4589	9565							Filter announcement, i.e. don't announce, to Level 3 DE (AS3356)
 4589:9626	4589	4589	9626							Filter announcement, i.e. don't announce, to ESPANIX
 4589:9612	4589	4589	9612							Filter announcement, i.e. don't announce, to LINX (AS65044 - UK)
-11341:1550	11341	11341	1550							Filter announcement, for outbound prefixes, to KPNQwest [was Ebone]
-11341:1635	11341	11341	1635							Filter announcement, for outbound prefixes, to CH NAPs
-11341:1644	11341	11341	1644							Filter announcement, for outbound prefixes, to INXS Hamburg
-11341:1702	11341	11341	1702							Filter announcement, for outbound prefixes, to DTAG (AS3320)
+11341:1550	4589	11341	1550							Filter announcement, for outbound prefixes, to KPNQwest [was Ebone]
+11341:1635	4589	11341	1635							Filter announcement, for outbound prefixes, to CH NAPs
+11341:1644	4589	11341	1644							Filter announcement, for outbound prefixes, to INXS Hamburg
+11341:1702	4589	11341	1702							Filter announcement, for outbound prefixes, to DTAG (AS3320)
 4589:9652	4589	4589	9652							Filter announcement, i.e. don't announce, to MAE Paris
 4589:9621	4589	4589	9621							Filter announcement, i.e. don't announce, to BNIX
-11341:1612	11341	11341	1612							Filter announcement, for outbound prefixes, to LINX (AS5607)
-11341:1637	11341	11341	1637							Filter announcement, for outbound prefixes, to CERN/CIXP
+11341:1612	4589	11341	1612							Filter announcement, for outbound prefixes, to LINX (AS5607)
+11341:1637	4589	11341	1637							Filter announcement, for outbound prefixes, to CERN/CIXP
 4589:9591	4589	4589	9591							Filter announcement, i.e. don't announce, to Cable & Wireless DE (AS3561)
-11341:1530	11341	11341	1530							Filter announcement, for outbound prefixes, to Genuity
-11341:1651	11341	11341	1651							Filter announcement, for outbound prefixes, to SFINX
-11341:1700	11341	11341	1700							Filter announcement, for outbound prefixes, to a Private Peer
+11341:1530	4589	11341	1530							Filter announcement, for outbound prefixes, to Genuity
+11341:1651	4589	11341	1651							Filter announcement, for outbound prefixes, to SFINX
+11341:1700	4589	11341	1700							Filter announcement, for outbound prefixes, to a Private Peer
 4589:9642	4589	4589	9642							Filter announcement, i.e. don't announce, to MAE Frankfurt
 4589:9662	4589	4589	9662							Filter announcement, i.e. don't announce, to TopIX
 4589:9651	4589	4589	9651							Filter announcement, i.e. don't announce, to SFINX
 4589:9900	4589	4589	9900							Filter announcement, i.e. don't announce, to Tunneled IPv6 Peers
-11341:1641	11341	11341	1641							Filter announcement, for outbound prefixes, to DECIX
+11341:1641	4589	11341	1641							Filter announcement, for outbound prefixes, to DECIX
 4589:9661	4589	4589	9661							Filter announcement, i.e. don't announce, to MiX
 4589:9672	4589	4589	9672							Filter announcement, i.e. don't announce, to NY6IX
-11341:1653	11341	11341	1653							Filter announcement, for outbound prefixes, to FreeIX
-11341:1701	11341	11341	1701							Filter announcement, for outbound prefixes, to AboveNET (AS6461)
-11341:1643	11341	11341	1643							Filter announcement, for outbound prefixes, to INXS Munich
-11341:1630	11341	11341	1630							Filter announcement, for outbound prefixes, to NL NAPs
+11341:1653	4589	11341	1653							Filter announcement, for outbound prefixes, to FreeIX
+11341:1701	4589	11341	1701							Filter announcement, for outbound prefixes, to AboveNET (AS6461)
+11341:1643	4589	11341	1643							Filter announcement, for outbound prefixes, to INXS Munich
+11341:1630	4589	11341	1630							Filter announcement, for outbound prefixes, to NL NAPs
 4589:9570	4589	4589	9570							Filter announcement, i.e. don't announce, to Telia FR (AS1299)
 4589:9560	4589	4589	9560							Filter announcement, i.e. don't announce, to Sprint IT
-11341:1611	11341	11341	1611							Filter announcement, for outbound prefixes, to LINX (AS11341)
+11341:1611	4589	11341	1611							Filter announcement, for outbound prefixes, to LINX (AS11341)
 4589:9625	4589	4589	9625							Filter announcement, i.e. don't announce, to ES NAPs
 4589:9550	4589	4589	9550							Filter announcement, i.e. don't announce, to unused (was KPNQwest AS286, formerly Ebone AS1755)
 4589:9611	4589	4589	9611							Filter announcement, i.e. don't announce, to LINX (AS65000 - Int'l)
 4589:9740	4589	4589	9740							Filter announcement, i.e. don't announce, to a DE private peering
-11341:1642	11341	11341	1642							Filter announcement, for outbound prefixes, to MAE Frankfurt
+11341:1642	4589	11341	1642							Filter announcement, for outbound prefixes, to MAE Frankfurt
 4589:9902	4589	4589	9902							Filter announcement, i.e. don't announce, to Tunneled IPv6 peer with (some) transit agreement
-11341:1613	11341	11341	1613							Filter announcement, for outbound prefixes, to LoNAP
-11341:1654	11341	11341	1654							Filter announcement, for outbound prefixes, to PARIX
+11341:1613	4589	11341	1613							Filter announcement, for outbound prefixes, to LoNAP
+11341:1654	4589	11341	1654							Filter announcement, for outbound prefixes, to PARIX
 4589:9580	4589	4589	9580							Filter announcement, i.e. don't announce, to InfoNet NL (AS3300)
-11341:1540	11341	11341	1540							Filter announcement, for outbound prefixes, to Cable & Wireless
-11341:1640	11341	11341	1640							Filter announcement, for outbound prefixes, to DE NAPs
+11341:1540	4589	11341	1540							Filter announcement, for outbound prefixes, to Cable & Wireless
+11341:1640	4589	11341	1640							Filter announcement, for outbound prefixes, to DE NAPs
 4589:9637	4589	4589	9637							Filter announcement, i.e. don't announce, to CERN/CIXP
 4589:9635	4589	4589	9635							Filter announcement, i.e. don't announce, to CH NAPs
 4589:9631	4589	4589	9631							Filter announcement, i.e. don't announce, to AMS-IX
 4589:9643	4589	4589	9643							Filter announcement, i.e. don't announce, to INXS Munich
-11341:1661	11341	11341	1661							Filter announcement, for outbound prefixes, to MIIX
+11341:1661	4589	11341	1661							Filter announcement, for outbound prefixes, to MIIX
 4589:9644	4589	4589	9644							Filter announcement, i.e. don't announce, to INXS Hamburg
 4589:9627	4589	4589	9627							Filter announcement, i.e. don't announce, to CATNIX
-11341:1615	11341	11341	1615							Filter announcement, for outbound prefixes, to Scotix
-11341:1500	11341	11341	1500							Filter announcement, for outbound prefixes, to external Transit
+11341:1615	4589	11341	1615							Filter announcement, for outbound prefixes, to Scotix
+11341:1500	4589	11341	1500							Filter announcement, for outbound prefixes, to external Transit
 4589:9670	4589	4589	9670							Filter announcement, i.e. don't announce, to US NAPs
-11341:1660	11341	11341	1660							Filter announcement, for outbound prefixes, to IT NAPs
+11341:1660	4589	11341	1660							Filter announcement, for outbound prefixes, to IT NAPs
 4589:9671	4589	4589	9671							Filter announcement, i.e. don't announce, to NYIIX
 4589:9520	4589	4589	9520							Filter announcement, i.e. don't announce, to unused (was Teleglobe AS6453)
-11341:1670	11341	11341	1670							Filter announcement, for outbound prefixes, to US NAPs
+11341:1670	4589	11341	1670							Filter announcement, for outbound prefixes, to US NAPs
 4589:9641	4589	4589	9641							Filter announcement, i.e. don't announce, to DECIX
 4589:9645	4589	4589	9645							Filter announcement, i.e. don't announce, to BCIX Berlin
 4589:9531	4589	4589	9531							Filter announcement, i.e. don't announce, to Genuity DE (AS7176)
 4589:9530	4589	4589	9530							Filter announcement, i.e. don't announce, to Genuity US (AS1)
-11341:1560	11341	11341	1560							Filter announcement, for outbound prefixes, to ECRC
+11341:1560	4589	11341	1560							Filter announcement, for outbound prefixes, to ECRC
 4589:9710	4589	4589	9710							Filter announcement, i.e. don't announce, to a UK private peering
 4589:9801	4589	4589	9801							Filter announcement, i.e. don't announce, to Telia (AS1299)
 4589:9614	4589	4589	9614							Filter announcement, i.e. don't announce, to MaNAP
 4589:9636	4589	4589	9636							Filter announcement, i.e. don't announce, to TIX
-11341:1520	11341	11341	1520							Filter announcement, for outbound prefixes, to Teleglobe
-11341:1636	11341	11341	1636							Filter announcement, for outbound prefixes, to TIX
-11341:1627	11341	11341	1627							Filter announcement, for outbound prefixes, to CATNIX
+11341:1520	4589	11341	1520							Filter announcement, for outbound prefixes, to Teleglobe
+11341:1636	4589	11341	1636							Filter announcement, for outbound prefixes, to TIX
+11341:1627	4589	11341	1627							Filter announcement, for outbound prefixes, to CATNIX
 4589:9615	4589	4589	9615							Filter announcement, i.e. don't announce, to Scotix
-11341:1600	11341	11341	1600							Filter announcement, for outbound prefixes, to an IXP/NAP peer
-11341:1614	11341	11341	1614							Filter announcement, for outbound prefixes, to MaNAP
-11341:1626	11341	11341	1626							Filter announcement, for outbound prefixes, to ESPANIX
-11341:1650	11341	11341	1650							Filter announcement, for outbound prefixes, to FR NAPs
+11341:1600	4589	11341	1600							Filter announcement, for outbound prefixes, to an IXP/NAP peer
+11341:1614	4589	11341	1614							Filter announcement, for outbound prefixes, to MaNAP
+11341:1626	4589	11341	1626							Filter announcement, for outbound prefixes, to ESPANIX
+11341:1650	4589	11341	1650							Filter announcement, for outbound prefixes, to FR NAPs
 4589:9540	4589	4589	9540							Filter announcement, i.e. don't announce, to Cable & Wireless US (AS3561)
-11341:1671	11341	11341	1671							Filter announcement, for outbound prefixes, to NYIIX
-11341:1625	11341	11341	1625							Filter announcement, for outbound prefixes, to ES NAPs
-11341:1610	11341	11341	1610							Filter announcement, for outbound prefixes, to UK NAPs
+11341:1671	4589	11341	1671							Filter announcement, for outbound prefixes, to NYIIX
+11341:1625	4589	11341	1625							Filter announcement, for outbound prefixes, to ES NAPs
+11341:1610	4589	11341	1610							Filter announcement, for outbound prefixes, to UK NAPs
 4589:9901	4589	4589	9901							Filter announcement, i.e. don't announce, to Tunneled IPv6 peer without transit
 4589:2631	4589	4589	2631							Prepend announcement with "4589 4589", to AMS-IX
 4589:2560	4589	4589	2560							Prepend announcement with "4589 4589", to Sprint IT
@@ -2721,10 +2721,10 @@ id	aut	value1	value2	region	norm_region	country	country_code	city	address	source
 4589:2644	4589	4589	2644							Prepend announcement with "4589 4589", to INXS Hamburg
 4589:2613	4589	4589	2613							Prepend announcement with "4589 4589", to LoNAP
 4589:3901	4589	4589	3901							Prepend announcement with "4589 4589 4589", to Tunneled IPv6 peer without transit
-11341:2637	11341	11341	2637							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to CERN/CIXP
+11341:2637	4589	11341	2637							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to CERN/CIXP
 4589:2550	4589	4589	2550							Prepend announcement with "4589 4589", to unused (was KPNQwest AS286, formerly Ebone AS1755)
 4589:2636	4589	4589	2636							Prepend announcement with "4589 4589", to TIX
-11341:2650	11341	11341	2650							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to FR NAPs
+11341:2650	4589	11341	2650							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to FR NAPs
 4589:2654	4589	4589	2654							Prepend announcement with "4589 4589", to PARIX
 4589:3591	4589	4589	3591							Prepend announcement with "4589 4589 4589", to Cable & Wireless DE (AS3561)
 4589:3615	4589	4589	3615							Prepend announcement with "4589 4589 4589", to Scotix
@@ -2733,32 +2733,32 @@ id	aut	value1	value2	region	norm_region	country	country_code	city	address	source
 4589:3520	4589	4589	3520							Prepend announcement with "4589 4589 4589", to unused (was Teleglobe AS6453)
 4589:3636	4589	4589	3636							Prepend announcement with "4589 4589 4589", to TIX
 4589:3635	4589	4589	3635							Prepend announcement with "4589 4589 4589", to CH NAPs
-11341:2642	11341	11341	2642							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to MAE Frankfurt
-11341:2614	11341	11341	2614							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to MaNAP
+11341:2642	4589	11341	2642							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to MAE Frankfurt
+11341:2614	4589	11341	2614							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to MaNAP
 4589:1902	4589	4589	1902							Prepend announcement with "4589" on its AS-path, to Tunneled IPv6 peer with (some) transit agreement
 4589:3621	4589	4589	3621							Prepend announcement with "4589 4589 4589", to BNIX
 4589:2740	4589	4589	2740							Prepend announcement with "4589 4589", to a DE private peering
-11341:2615	11341	11341	2615							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to Scotix
+11341:2615	4589	11341	2615							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to Scotix
 4589:2531	4589	4589	2531							Prepend announcement with "4589 4589", to Genuity DE (AS7176)
 4589:3541	4589	4589	3541							Prepend announcement with "4589 4589 4589", to Cable & Wireless UK (AS3561)
 4589:1652	4589	4589	1652							Prepend announcement with "4589" on its AS-path, to MAE Paris
 4589:2710	4589	4589	2710							Prepend announcement with "4589 4589", to a UK private peering
 4589:3670	4589	4589	3670							Prepend announcement with "4589 4589 4589", to US NAPs
-11341:2611	11341	11341	2611							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to LINX (AS11341)
+11341:2611	4589	11341	2611							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to LINX (AS11341)
 4589:1672	4589	4589	1672							Prepend announcement with "4589" on its AS-path, to NY6IX
 4589:2530	4589	4589	2530							Prepend announcement with "4589 4589", to Genuity US (AS1)
 4589:3550	4589	4589	3550							Prepend announcement with "4589 4589 4589", to unused (was KPNQwest AS286, formerly Ebone AS1755)
-11341:2612	11341	11341	2612							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to LINX (AS5607)
-11341:2625	11341	11341	2625							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to ES NAPs
+11341:2612	4589	11341	2612							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to LINX (AS5607)
+11341:2625	4589	11341	2625							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to ES NAPs
 4589:1565	4589	4589	1565							Prepend announcement with "4589" on its AS-path, to Level 3 DE (AS3356)
-11341:2610	11341	11341	2610							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to UK NAPs
+11341:2610	4589	11341	2610							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to UK NAPs
 4589:2662	4589	4589	2662							Prepend announcement with "4589 4589", to TopIX
 4589:1671	4589	4589	1671							Prepend announcement with "4589" on its AS-path, to NYIIX
-11341:2671	11341	11341	2671							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to NYIIX
+11341:2671	4589	11341	2671							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to NYIIX
 4589:1542	4589	4589	1542							Prepend announcement with "4589" on its AS-path, to Cable & Wireless DE (AS1273)
 4589:2672	4589	4589	2672							Prepend announcement with "4589 4589", to NY6IX
 4589:1643	4589	4589	1643							Prepend announcement with "4589" on its AS-path, to INXS Munich
-11341:2621	11341	11341	2621							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to BNIX
+11341:2621	4589	11341	2621							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to BNIX
 4589:1740	4589	4589	1740							Prepend announcement with "4589" on its AS-path, to a DE private peering
 4589:1636	4589	4589	1636							Prepend announcement with "4589" on its AS-path, to TIX
 4589:2643	4589	4589	2643							Prepend announcement with "4589 4589", to INXS Munich
@@ -2770,13 +2770,13 @@ id	aut	value1	value2	region	norm_region	country	country_code	city	address	source
 4589:3580	4589	4589	3580							Prepend announcement with "4589 4589 4589", to InfoNet NL (AS3300)
 4589:2902	4589	4589	2902							Prepend announcement with "4589 4589", to Tunneled IPv6 peer with (some) transit agreement
 4589:2645	4589	4589	2645							Prepend announcement with "4589 4589", to BCIX Berlin
-11341:2530	11341	11341	2530							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to Genuity
+11341:2530	4589	11341	2530							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to Genuity
 4589:1900	4589	4589	1900							Prepend announcement with "4589" on its AS-path, to Tunneled IPv6 Peers
-11341:2702	11341	11341	2702							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to DTAG (AS3320)
+11341:2702	4589	11341	2702							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to DTAG (AS3320)
 4589:2661	4589	4589	2661							Prepend announcement with "4589 4589", to MiX
 4589:3531	4589	4589	3531							Prepend announcement with "4589 4589 4589", to Genuity DE (AS7176)
 4589:1642	4589	4589	1642							Prepend announcement with "4589" on its AS-path, to MAE Frankfurt
-11341:2670	11341	11341	2670							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to US NAPs
+11341:2670	4589	11341	2670							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to US NAPs
 4589:3560	4589	4589	3560							Prepend announcement with "4589 4589 4589", to Sprint IT
 4589:3644	4589	4589	3644							Prepend announcement with "4589 4589 4589", to INXS Hamburg
 4589:2565	4589	4589	2565							Prepend announcement with "4589 4589", to Level 3 DE (AS3356)
@@ -2784,20 +2784,20 @@ id	aut	value1	value2	region	norm_region	country	country_code	city	address	source
 4589:1530	4589	4589	1530							Prepend announcement with "4589" on its AS-path, to Genuity US (AS1)
 4589:3661	4589	4589	3661							Prepend announcement with "4589 4589 4589", to MiX
 4589:1654	4589	4589	1654							Prepend announcement with "4589" on its AS-path, to PARIX
-11341:2644	11341	11341	2644							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to INXS Hamburg
-11341:2651	11341	11341	2651							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to SFINX
+11341:2644	4589	11341	2644							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to INXS Hamburg
+11341:2651	4589	11341	2651							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to SFINX
 4589:3530	4589	4589	3530							Prepend announcement with "4589 4589 4589", to Genuity US (AS1)
 4589:1653	4589	4589	1653							Prepend announcement with "4589" on its AS-path, to FreeIX
 4589:2642	4589	4589	2642							Prepend announcement with "4589 4589", to MAE Frankfurt
 4589:3637	4589	4589	3637							Prepend announcement with "4589 4589 4589", to CERN/CIXP
 4589:1644	4589	4589	1644							Prepend announcement with "4589" on its AS-path, to INXS Hamburg
-11341:2661	11341	11341	2661							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to MIIX
+11341:2661	4589	11341	2661							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to MIIX
 4589:1613	4589	4589	1613							Prepend announcement with "4589" on its AS-path, to LoNAP
 4589:3613	4589	4589	3613							Prepend announcement with "4589 4589 4589", to LoNAP
-11341:2635	11341	11341	2635							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to CH NAPs
-11341:2560	11341	11341	2560							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to ECRC
+11341:2635	4589	11341	2635							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to CH NAPs
+11341:2560	4589	11341	2560							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to ECRC
 4589:2900	4589	4589	2900							Prepend announcement with "4589 4589", to Tunneled IPv6 Peers
-11341:2540	11341	11341	2540							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to Cable & Wireless
+11341:2540	4589	11341	2540							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to Cable & Wireless
 4589:1635	4589	4589	1635							Prepend announcement with "4589" on its AS-path, to CH NAPs
 4589:2611	4589	4589	2611							Prepend announcement with "4589 4589", to LINX (AS65000 - Int'l)
 4589:1580	4589	4589	1580							Prepend announcement with "4589" on its AS-path, to InfoNet NL (AS3300)
@@ -2808,40 +2808,40 @@ id	aut	value1	value2	region	norm_region	country	country_code	city	address	source
 4589:2621	4589	4589	2621							Prepend announcement with "4589 4589", to BNIX
 4589:2635	4589	4589	2635							Prepend announcement with "4589 4589", to CH NAPs
 4589:3710	4589	4589	3710							Prepend announcement with "4589 4589 4589", to a UK private peering
-11341:2654	11341	11341	2654							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to PARIX
+11341:2654	4589	11341	2654							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to PARIX
 4589:1670	4589	4589	1670							Prepend announcement with "4589" on its AS-path, to US NAPs
 4589:3662	4589	4589	3662							Prepend announcement with "4589 4589 4589", to TopIX
-11341:2636	11341	11341	2636							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to TIX
+11341:2636	4589	11341	2636							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to TIX
 4589:2625	4589	4589	2625							Prepend announcement with "4589 4589", to ES NAPs
-11341:2700	11341	11341	2700							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to a Private Peer
+11341:2700	4589	11341	2700							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to a Private Peer
 4589:2580	4589	4589	2580							Prepend announcement with "4589 4589", to InfoNet NL (AS3300)
 4589:2541	4589	4589	2541							Prepend announcement with "4589 4589", to Cable & Wireless UK (AS3561)
 4589:2652	4589	4589	2652							Prepend announcement with "4589 4589", to MAE Paris
 4589:1631	4589	4589	1631							Prepend announcement with "4589" on its AS-path, to AMS-IX
-11341:2613	11341	11341	2613							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to LoNAP
+11341:2613	4589	11341	2613							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to LoNAP
 4589:1651	4589	4589	1651							Prepend announcement with "4589" on its AS-path, to SFINX
 4589:1520	4589	4589	1520							Prepend announcement with "4589" on its AS-path, to unused (was Teleglobe AS6453)
 4589:3627	4589	4589	3627							Prepend announcement with "4589 4589 4589", to CATNIX
 4589:1550	4589	4589	1550							Prepend announcement with "4589" on its AS-path, to unused (was KPNQwest AS286, formerly Ebone AS1755)
 4589:2591	4589	4589	2591							Prepend announcement with "4589 4589", to Cable & Wireless DE (AS3561)
-11341:2626	11341	11341	2626							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to ESPANIX
-11341:2627	11341	11341	2627							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to CATNIX
+11341:2626	4589	11341	2626							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to ESPANIX
+11341:2627	4589	11341	2627							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to CATNIX
 4589:2651	4589	4589	2651							Prepend announcement with "4589 4589", to SFINX
-11341:2652	11341	11341	2652							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to MAE Paris
+11341:2652	4589	11341	2652							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to MAE Paris
 4589:1626	4589	4589	1626							Prepend announcement with "4589" on its AS-path, to ESPANIX
 4589:1625	4589	4589	1625							Prepend announcement with "4589" on its AS-path, to ES NAPs
 4589:3542	4589	4589	3542							Prepend announcement with "4589 4589 4589", to Cable & Wireless DE (AS1273)
-11341:2640	11341	11341	2640							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to DE NAPs
+11341:2640	4589	11341	2640							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to DE NAPs
 4589:3643	4589	4589	3643							Prepend announcement with "4589 4589 4589", to INXS Munich
 4589:1611	4589	4589	1611							Prepend announcement with "4589" on its AS-path, to LINX (AS65000 - Int'l)
 4589:2612	4589	4589	2612							Prepend announcement with "4589 4589", to LINX (AS65044 - UK)
 4589:3653	4589	4589	3653							Prepend announcement with "4589 4589 4589", to FreeIX
 4589:3654	4589	4589	3654							Prepend announcement with "4589 4589 4589", to PARIX
-11341:2701	11341	11341	2701							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to AboveNET (AS6461)
+11341:2701	4589	11341	2701							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to AboveNET (AS6461)
 4589:2670	4589	4589	2670							Prepend announcement with "4589 4589", to US NAPs
 4589:1637	4589	4589	1637							Prepend announcement with "4589" on its AS-path, to CERN/CIXP
 4589:3611	4589	4589	3611							Prepend announcement with "4589 4589 4589", to LINX (AS65000 - Int'l)
-11341:2653	11341	11341	2653							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to FreeIX
+11341:2653	4589	11341	2653							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to FreeIX
 4589:2801	4589	4589	2801							Prepend announcement with "4589 4589", to Telia (AS1299)
 4589:3740	4589	4589	3740							Prepend announcement with "4589 4589 4589", to a DE private peering
 4589:3612	4589	4589	3612							Prepend announcement with "4589 4589 4589", to LINX (AS65044 - UK)
@@ -2851,14 +2851,14 @@ id	aut	value1	value2	region	norm_region	country	country_code	city	address	source
 4589:3651	4589	4589	3651							Prepend announcement with "4589 4589 4589", to SFINX
 4589:1614	4589	4589	1614							Prepend announcement with "4589" on its AS-path, to MaNAP
 4589:1540	4589	4589	1540							Prepend announcement with "4589" on its AS-path, to Cable & Wireless US (AS3561)
-11341:2520	11341	11341	2520							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to Teleglobe
+11341:2520	4589	11341	2520							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to Teleglobe
 4589:1627	4589	4589	1627							Prepend announcement with "4589" on its AS-path, to CATNIX
 4589:1662	4589	4589	1662							Prepend announcement with "4589" on its AS-path, to TopIX
 4589:3672	4589	4589	3672							Prepend announcement with "4589 4589 4589", to NY6IX
-11341:2631	11341	11341	2631							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to AMS-IX
+11341:2631	4589	11341	2631							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to AMS-IX
 4589:3641	4589	4589	3641							Prepend announcement with "4589 4589 4589", to DECIX
 4589:3652	4589	4589	3652							Prepend announcement with "4589 4589 4589", to MAE Paris
-11341:2630	11341	11341	2630							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to NL NAPs
+11341:2630	4589	11341	2630							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to NL NAPs
 4589:3631	4589	4589	3631							Prepend announcement with "4589 4589 4589", to AMS-IX
 4589:2671	4589	4589	2671							Prepend announcement with "4589 4589", to NYIIX
 4589:1621	4589	4589	1621							Prepend announcement with "4589" on its AS-path, to BNIX
@@ -2867,8 +2867,8 @@ id	aut	value1	value2	region	norm_region	country	country_code	city	address	source
 4589:1645	4589	4589	1645							Prepend announcement with "4589" on its AS-path, to BCIX Berlin
 4589:1801	4589	4589	1801							Prepend announcement with "4589" on its AS-path, to Telia (AS1299)
 4589:3902	4589	4589	3902							Prepend announcement with "4589 4589 4589", to Tunneled IPv6 peer with (some) transit agreement
-11341:2620	11341	11341	2620							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to BE NAPs
-11341:2660	11341	11341	2660							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to IT NAPs
+11341:2620	4589	11341	2620							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to BE NAPs
+11341:2660	4589	11341	2660							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to IT NAPs
 4589:1591	4589	4589	1591							Prepend announcement with "4589" on its AS-path, to Cable & Wireless DE (AS3561)
 4589:3645	4589	4589	3645							Prepend announcement with "4589 4589 4589", to BCIX Berlin
 4589:2614	4589	4589	2614							Prepend announcement with "4589 4589", to MaNAP
@@ -2879,20 +2879,20 @@ id	aut	value1	value2	region	norm_region	country	country_code	city	address	source
 4589:1901	4589	4589	1901							Prepend announcement with "4589" on its AS-path, to Tunneled IPv6 peer without transit
 4589:1570	4589	4589	1570							Prepend announcement with "4589" on its AS-path, to Telia FR (AS1299)
 4589:1661	4589	4589	1661							Prepend announcement with "4589" on its AS-path, to MiX
-11341:2550	11341	11341	2550							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to KPNQwest [was Ebone]
-11341:2643	11341	11341	2643							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to INXS Munich
+11341:2550	4589	11341	2550							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to KPNQwest [was Ebone]
+11341:2643	4589	11341	2643							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to INXS Munich
 4589:3671	4589	4589	3671							Prepend announcement with "4589 4589 4589", to NYIIX
 4589:2570	4589	4589	2570							Prepend announcement with "4589 4589", to Telia FR (AS1299)
-11341:2500	11341	11341	2500							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to external Transit
-11341:2600	11341	11341	2600							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to an IXP/NAP peer
+11341:2500	4589	11341	2500							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to external Transit
+11341:2600	4589	11341	2600							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to an IXP/NAP peer
 4589:1641	4589	4589	1641							Prepend announcement with "4589" on its AS-path, to DECIX
-11341:2641	11341	11341	2641							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to DECIX
+11341:2641	4589	11341	2641							Prepend announcement with "11341 11341 11341" on its AS-path, for outbound prefixes, to DECIX
 4589:3900	4589	4589	3900							Prepend announcement with "4589 4589 4589", to Tunneled IPv6 Peers
 4589:3540	4589	4589	3540							Prepend announcement with "4589 4589 4589", to Cable & Wireless US (AS3561)
 4589:3565	4589	4589	3565							Prepend announcement with "4589 4589 4589", to Level 3 DE (AS3356)
 4589:2	4589	4589	2							Global network. This is a prefix that is visible in the DFZ (default free zone), e.g. routes received from peers or from upstreams. This is also set on customer routes.
 4589:3	4589	4589	3							Confederation network. This prefix is visible only within the AS4589 confederations. Examples include the IPv6 suballocations or the SAP "extranet" prefix. Normally these prefixes will have no-export set too.
-11341:1	11341	11341	1							Easynet or Customer network
+11341:1	4589	11341	1							Easynet or Customer network
 4589:710	4589	4589	710							From a UK private peering
 4589:740	4589	4589	740							From a DE private peering
 4589:901	4589	4589	901							Tunneled IPv6 peer without transit
@@ -2900,85 +2900,85 @@ id	aut	value1	value2	region	norm_region	country	country_code	city	address	source
 4589:1	4589	4589	1							Easynet or customer network. Unless specifically supressed by other means, this prefix will be announced everywhere, including upstreams and peers. For a prefix to get transit, it MUST have this community set on it.
 4589:902	4589	4589	902							Tunneled IPv6 peer with (some) transit agreement
 4589:13401	4589	4589	13401							Mad (Alfonso XI) [almad]
-11341:105	11341	11341	105							Rome (Colt)
-11341:70	11341	11341	70			Netherlands	528			NL
-11341:37	11341	11341	37			Germany		Hamburg		Hamburg (C&W, INXS) [ixham]
+11341:105	4589	11341	105							Rome (Colt)
+11341:70	4589	11341	70			Netherlands	528			NL
+11341:37	4589	11341	37			Germany		Hamburg		Hamburg (C&W, INXS) [ixham]
 4589:10101	4589	4589	10101					NYC	60 Hudson Street	60 Hudson Street (TelX, NYC) [hsnyc]
 4589:14432	4589	4589	14432			Scotland		Edinburgh		Scotland (Easynet Edinburgh)
-11341:91	11341	11341	91			Switzerland		Zurich		Zurich Office [htzur]
+11341:91	4589	11341	91			Switzerland		Zurich		Zurich Office [htzur]
 4589:13200	4589	4589	13200							Unspecified location (self-originated prefixes)
 4589:13900	4589	4589	13900							Unspecified location (self-originated prefixes)
 4589:14418	4589	4589	14418			United Kingdom		London		London (Redbus - Meridian Gate
 4589:13906	4589	4589	13906			Italy		Rome		Rome (Simone Martini) [smrom]
 4589:14102	4589	4589	14102			Switzerland		Zurich		Zuerich (TIX, Telehouse) [thzrh]
-11341:33	11341	11341	33			Germany		Frankfurt		Frankfurt (NT Telehouse) [ttfra]
-11341:20	11341	11341	20			United Kingdom	826			UK National Network
-11341:62	11341	11341	62			Belgium		Brussels		Brussels (Belnet) [bnbru]
-11341:41	11341	11341	41			United States		NYC	60 Hudson Street	60 Hudson Street (TelX, NYC) [hsnyc]
+11341:33	4589	11341	33			Germany		Frankfurt		Frankfurt (NT Telehouse) [ttfra]
+11341:20	4589	11341	20			United Kingdom	826			UK National Network
+11341:62	4589	11341	62			Belgium		Brussels		Brussels (Belnet) [bnbru]
+11341:41	4589	11341	41			United States		NYC	60 Hudson Street	60 Hudson Street (TelX, NYC) [hsnyc]
 4589:13905	4589	4589	13905			Italy		Milan		Milan (MiX) [ixmil]
 4589:14414	4589	4589	14414			United Kingdom		London		London (Telecity) [tclon]
-11341:95	11341	11341	95			Switzerland		Geneva		Geneva (Office)
-11341:31	11341	11341	31			Germany		Frankfurt		Frankfurt (WCOM/MAE Frankfurt) [mafra]
-11341:82	11341	11341	82			Spain		Madrid		Madrid (Redbus)
-11341:97	11341	11341	97			Switzerland		Meyrin	Espl. des Particules 1	Geneva (CERN)
-11341:40	11341	11341	40			United States	840			US
+11341:95	4589	11341	95			Switzerland		Geneva		Geneva (Office)
+11341:31	4589	11341	31			Germany		Frankfurt		Frankfurt (WCOM/MAE Frankfurt) [mafra]
+11341:82	4589	11341	82			Spain		Madrid		Madrid (Redbus)
+11341:97	4589	11341	97			Switzerland		Meyrin	Espl. des Particules 1	Geneva (CERN)
+11341:40	4589	11341	40			United States	840			US
 4589:13904	4589	4589	13904			Italy		Milan		Milan (San Donato M.) [sdmil]
 4589:14431	4589	4589	14431			Scotland		Edinburgh		Scotland (Scolocate Edinburgh)
 4589:13202	4589	4589	13202			Belgium		Brussels		ixbru (InterXion, Brussels)
 4589:10102	4589	4589	10102			United States		NYC	25 Broadway	25 Broadway (Telehouse, NYC) [bwnyc]
 4589:13903	4589	4589	13903			Italy		Milan		Milan (Redbus) [rbmil]
-11341:34	11341	11341	34			Germany		Munich		Munich (INXS/ECRC) [ixmuc]
-11341:42	11341	11341	42			United States		NYC	25 Broadway	25 Broadway (Telehouse, NYC) [bwnyc]
-11341:100	11341	11341	100			Italy	380			IT
-11341:50	11341	11341	50			France	250			FR
+11341:34	4589	11341	34			Germany		Munich		Munich (INXS/ECRC) [ixmuc]
+11341:42	4589	11341	42			United States		NYC	25 Broadway	25 Broadway (Telehouse, NYC) [bwnyc]
+11341:100	4589	11341	100			Italy	380			IT
+11341:50	4589	11341	50			France	250			FR
 4589:14101	4589	4589	14101			Switzerland		Zurich	Hardturmstrasse 135	Zuerich (Hardturmstrasse 135) [htzrh]
-11341:11	11341	11341	11			United Kingdom		London	44 Whitfield Street	London (44 Whitfield) [wslon]
-11341:85	11341	11341	85			Spain		Barcelona		Barcelona (Cable & Wireless)
+11341:11	4589	11341	11			United Kingdom		London	44 Whitfield Street	London (44 Whitfield) [wslon]
+11341:85	4589	11341	85			Spain		Barcelona		Barcelona (Cable & Wireless)
 4589:13402	4589	4589	13402			Spain		Madrid		Madrid (ESPANIX, Colonia Banesto) [exmad]
-11341:32	11341	11341	32			Germany		Frankfurt		Frankfurt (DECIX) [ixfra]
+11341:32	4589	11341	32			Germany		Frankfurt		Frankfurt (DECIX) [ixfra]
 4589:14416	4589	4589	14416			United Kingdom		London		London (Slough)
 4589:14417	4589	4589	14417			United Kingdom		London		London (Redbus - Harbour Exchange)
-11341:63	11341	11341	63			Belgium		Brussels		Brussels (InterXion) [ixbru]
-11341:30	11341	11341	30			Germany	276			DE
-11341:103	11341	11341	103			Italy		Milan		Milan (Redbus)
+11341:63	4589	11341	63			Belgium		Brussels		Brussels (InterXion) [ixbru]
+11341:30	4589	11341	30			Germany	276			DE
+11341:103	4589	11341	103			Italy		Milan		Milan (Redbus)
 4589:14419	4589	4589	14419			United Kingdom		London		London (Redbus - Sovereign House)
 4589:13400	4589	4589	13400							Unspecified location (self-originated prefixes)
-11341:12	11341	11341	12			United Kingdom		London	39 Whitfield Street	London (39 Whitfield) (deprecated)
-11341:96	11341	11341	96			Switzerland		Geneva		Geneva (Telehouse)
+11341:12	4589	11341	12			United Kingdom		London	39 Whitfield Street	London (39 Whitfield) (deprecated)
+11341:96	4589	11341	96			Switzerland		Geneva		Geneva (Telehouse)
 4589:13901	4589	4589	13901			Italy		Milan	via Fulvio Testi 7	Milan (Fulvio Testi 7) [ftmil]
-11341:15	11341	11341	15			United Kingdom		London	1 Brick Lane	London (1 Brick Lane) [bllon]
-11341:72	11341	11341	72			Holand		Amsterdam		Amsterdam (Telecity) [tcams]
+11341:15	4589	11341	15			United Kingdom		London	1 Brick Lane	London (1 Brick Lane) [bllon]
+11341:72	4589	11341	72			Holand		Amsterdam		Amsterdam (Telecity) [tcams]
 4589:14412	4589	4589	14412			United Kingdom		London	39 Whitfield Street	London (39 Whitfield) (deprecated)
-11341:35	11341	11341	35			Germany		Hamburg		Hamburg (NT Telcotrust) [ttham]
-11341:101	11341	11341	101			Italy		Milan		Milan Office [ftmil]
-11341:92	11341	11341	92			Switzerland		Zurich		Zurich (TIX)
+11341:35	4589	11341	35			Germany		Hamburg		Hamburg (NT Telcotrust) [ttham]
+11341:101	4589	11341	101			Italy		Milan		Milan Office [ftmil]
+11341:92	4589	11341	92			Switzerland		Zurich		Zurich (TIX)
 4589:14415	4589	4589	14415			United Kingdom		London	1 Brick Lane	London (1 Brick Lane) [bllon]
-11341:71	11341	11341	71			Holand		Amsterdam		Amsterdam (Level 3) [l3ams]
+11341:71	4589	11341	71			Holand		Amsterdam		Amsterdam (Level 3) [l3ams]
 4589:14413	4589	4589	14413			United Kingdom		London		London (Telehouse) [thlon]
 4589:13403	4589	4589	13403			Spain		Barcelona		Barcelona (C&W, Pedrosa) [cwbcn]
-11341:80	11341	11341	80			Spain	724			ES
+11341:80	4589	11341	80			Spain	724			ES
 4589:13902	4589	4589	13902			Italy		Milan	Via Caldera 22	Milan (Via Caldera 22) [camil]
 4589:13404	4589	4589	13404			Spain		Barcelona		Barcelona (CATNIX, Cesca) [cxbcn]
-11341:90	11341	11341	90			Switzerland	756			CH
-11341:13	11341	11341	13			United Kingdom		London		London (Telehouse) [thlon]
+11341:90	4589	11341	90			Switzerland	756			CH
+11341:13	4589	11341	13			United Kingdom		London		London (Telehouse) [thlon]
 4589:13203	4589	4589	13203			Belgium		Brussels	Belnet	bnbru (Belnet, Brussels)
-11341:102	11341	11341	102			Italy		Milan		Milan (MiX)
-11341:51	11341	11341	51			France		Paris		Paris (Telehouse) [thpar]
-11341:14	11341	11341	14			United Kingdom		London		London (Telecity) [tclon]
-11341:21	11341	11341	21			United Kingdom		Manchester		Manchester (Telecity) [tcman]
-11341:16	11341	11341	16			United Kingdom		London		London (Slough)
-11341:73	11341	11341	73			Holand		Hoofddorp		Amsterdam (Hoofddorp) [enhfd]
-11341:52	11341	11341	52			France		Paris	Beaubourg	Paris (Beaubourg) [bbpar]
-11341:86	11341	11341	86			Spain		Barcelona		Barcelona (Catnix)
-11341:81	11341	11341	81			Spain		Madrid	Calle Alfonso XI	Madrid (Alfonso XI) [almad]
+11341:102	4589	11341	102			Italy		Milan		Milan (MiX)
+11341:51	4589	11341	51			France		Paris		Paris (Telehouse) [thpar]
+11341:14	4589	11341	14			United Kingdom		London		London (Telecity) [tclon]
+11341:21	4589	11341	21			United Kingdom		Manchester		Manchester (Telecity) [tcman]
+11341:16	4589	11341	16			United Kingdom		London		London (Slough)
+11341:73	4589	11341	73			Holand		Hoofddorp		Amsterdam (Hoofddorp) [enhfd]
+11341:52	4589	11341	52			France		Paris	Beaubourg	Paris (Beaubourg) [bbpar]
+11341:86	4589	11341	86			Spain		Barcelona		Barcelona (Catnix)
+11341:81	4589	11341	81			Spain		Madrid	Calle Alfonso XI	Madrid (Alfonso XI) [almad]
 4589:14420	4589	4589	14420			United Kingdom		London		London (InterXion)
 4589:14103	4589	4589	14103			Switzerland		Geneva		Geneva (CIXP, Telehouse) [thgva]
 4589:13201	4589	4589	13201			Belgium		Brussels		gdbru (Gulledelle, Brussels)
-11341:61	11341	11341	61			Belgium		Brussels		Brussels Office [gdbru]
-11341:10	11341	11341	10			United Kingdom	826			UK
+11341:61	4589	11341	61			Belgium		Brussels		Brussels Office [gdbru]
+11341:10	4589	11341	10			United Kingdom	826			UK
 4589:14411	4589	4589	14411			United Kingdom		London	44 Whitfield Street	London (44 Whitfield) [wslon]
-11341:60	11341	11341	60			Belgium	056			BE
-11341:36	11341	11341	36			Germany		Berlin		Berlin (NT Telcotrust) [ttber]
+11341:60	4589	11341	60			Belgium	056			BE
+11341:36	4589	11341	36			Germany		Berlin		Berlin (NT Telcotrust) [ttber]
 4589:14100	4589	4589	14100							Unspecified location (self-originated prefixes)
 4589:531	4589	4589	531							Genuity DE (AS7176)
 4589:560	4589	4589	560							Sprint IT

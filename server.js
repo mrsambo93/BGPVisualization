@@ -55,9 +55,19 @@ app.post('/solve', function (req, res, next) {
 
 app.post('/visualize', function(req, res) {
   console.log(req.body);
+
+
   if(req.body.coll_peer && req.body.rrc) {
+
     var announces = get_announces(req.body.coll_peer, req.body.rrc);
-    
+
+    var decriptate = extractAvailableCommunitiesFromBothAnnounces(announces);
+    //var communitiesDecrypted = decryptCommunities(announces[0].community,announces[1].community);
+
+    // fs.writeFileSync("tempxxx.json", JSON.stringify(communitiesDecrypted, null, 2), 'utf8', function(err) {
+    //   if(err) console.log(err);
+    // });
+
     fs.writeFileSync("temp.json", JSON.stringify(announces, null, 2), 'utf8', function(err) {
       if(err) console.log(err);
     });
@@ -90,6 +100,10 @@ app.get('/announces', function(req, res) {
     res.sendFile(__dirname + '/temp.json');
 });
 
+app.get('/communitiesAndInfo', function(req, res) {
+    res.sendFile(__dirname + '/tempCommunities.json');
+});
+
 app.get('/communities', function(req, res) {
     res.sendFile(__dirname + "/datasets/CommunityDBnew.json");
 });
@@ -104,7 +118,7 @@ app.get('/rrc/:num', function(req, res) {
     res.json(result);
 });
 
-app.get('/collectors', function(req, res) {  
+app.get('/collectors', function(req, res) {
   res.sendFile(__dirname + "/datasets/collectors.json");
 });
 
@@ -189,6 +203,96 @@ app.get("/ixp_image", function(req, res) {
 app.listen(port, function() {
   console.log('App listening on port 8080')
 });
+
+function decryptCommunities(announceOneComm){
+  var communitiesDB = JSON.parse(fs.readFileSync(__dirname + '/datasets/CommunityDBnew.json', 'utf8'));
+  var communitiesAndInfo = [];
+  for (var j=0; j<announceOneComm.length;j++){
+
+    item = {};
+    item["id"]=announceOneComm[j];
+    var x = findCommunity(communitiesDB,"id", announceOneComm[j]);
+    if (x){
+      item["info"]=(x["region"] + ", " + x["norm_region"] + ", " + 
+        x["country"] + ", " + x["city"] + ", " + x["address"] + "\n" + x["source_description"])
+          .replace(/, ,/g, "").replace(/^,+|, $/g,'').trim();   
+    }else{
+      item["info"]="";
+    }
+    communitiesAndInfo.push(item);
+
+  }
+  return communitiesAndInfo;
+}
+
+
+//   for(var i=0; i<announceOneComm.length; i++){
+//       // fs.writeFile("tempxxx.json", JSON.stringify(announceOneComm[i], null, 2) , 'utf8', function(err) {
+//       //   //x["comment"]
+//       //   if(err)
+//       //     console.log(err);
+//       // });
+//
+//     var x = findCommunity(communitiesDB,"id", announceOneComm[i]);
+//     if(x){
+//
+//
+//       fs.writeFile("tempxxx.json", x["comment"] , 'utf8', function(err) {
+//         //x["comment"]
+//         if(err)
+//           console.log(err);
+//       });
+//     }
+//   }
+// }
+
+
+function findCommunity(dbcommunities, propName, propValue){
+    for(var i=0; i<dbcommunities.length; i++) {
+      if(dbcommunities[i][propName] == propValue){
+        return dbcommunities[i];
+        // fs.appendFile("tempxxx.json", communitiesDB[5]["id"], 'utf8', function(err) {
+        //   if(err)
+        //     console.log(err);
+        // });
+      }
+    }
+}
+
+function extractAvailableCommunitiesFromBothAnnounces(announces){
+    if(!announces[0].community && !announces[1].community){
+      fs.writeFile("tempCommunities.json", "", 'utf8', function(err) {
+        if(err) console.log(err);
+      });
+    }
+
+    if(announces[0].community && announces[1].community){
+      var announcesUnion = announces[0].community.concat(announces[1].community);
+      var decrypted = decryptCommunities(announcesUnion);
+      fs.writeFile("tempCommunities.json", JSON.stringify(decrypted,null,2),'utf8', function(err) {
+         if(err) console.log(err);
+      });
+
+      // fs.appendFile("tempxxx.json", JSON.stringify(announcesUnion,null,2), 'utf8', function(err) {
+      //   if(err) console.log(err);
+      // });
+      return decrypted;
+    }
+    if(announces[0].community && !announces[1].community){
+      fs.writeFile("tempCommunities.json", JSON.stringify(announces[0].community,null,2), 'utf8', function(err) {
+        if(err) console.log(err);
+      });
+    }
+    if(!announces[0].community && announces[1].community){
+      fs.writeFile("tempCommunities.json", JSON.stringify(announces[1].community, null, 2), 'utf8', function(err) {
+        if(err) console.log(err);
+      });
+    }
+}
+
+
+
+
 
 function a(aspath, callback) {
     //var aspath = ["3","6939","6505","27735","7049"];
@@ -1305,7 +1409,7 @@ function get_announces(coll_peer, rrc) {
     } else {
       result.push({});
     }
-  }  
+  }
   if(cache2) {
     console.log("cache2");
     console.log(cache2);
