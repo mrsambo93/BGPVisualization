@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style type="text/css">
 
         html {
@@ -92,10 +93,20 @@
           outline: red;
         }
 
-        .dot {
-            fill: darkblue;
+  /*      .dot {
+            fill: green;
+            stroke: #fff;
+        }*/
+      /*  .dot:first-child {
+            fill: red;
             stroke: #fff;
         }
+        .dot:last-child {
+            fill: yellow;
+            stroke: #fff;
+        }
+*/
+
 
         .grid line {
             stroke: grey;
@@ -108,8 +119,8 @@
         }
 
         .inner_label {
-            font-family: sans-serif;
-            font-size: 15px;
+            font-family: 'Open Sans Condensed';
+            font-size: 19px;
             fill: #fff;
         }
         #info{
@@ -138,8 +149,8 @@
         }
 
         .outer_label {
-            font-family: sans-serif;
-            font-size: 15px;
+            font-family: 'Open Sans Condensed';
+            font-size: 19px;
             fill: black;
         }
 
@@ -220,8 +231,14 @@
             letter-spacing: -2px;
             font-weight: bold;
         }
-        .titolo2{
-          color: #708090;
+        .titolo2_1{
+          color: #02008c;
+          font-family: 'Open Sans Condensed',
+          sans-serif;
+          font-size: 25px;
+        }
+        .titolo2_2{
+          color: #d5d64d;
           font-family: 'Open Sans Condensed',
           sans-serif;
           font-size: 25px;
@@ -316,6 +333,68 @@
           visibility: visible;
           opacity: 1;
         }
+        div.c {
+          position: absolute;
+          right: 150px;
+          width: 200px;
+          height: 500px;
+          border: 3px solid green;
+        }
+        pre {border: 0;
+             background-color: transparent;
+             }
+
+        .circleOther {
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          font-size: 12px;
+          color: #fff;
+          display: inline-block;
+          line-height: 45px;
+          text-align: center;
+          background: #000;
+          margin-left:auto;
+          margin-right:40px;
+        }
+        .circleOrigin {
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          font-size: 12px;
+          color: #fff;
+          display: inline-block;
+          line-height: 45px;
+          text-align: center;
+          background: red;
+          margin-left: auto;
+          margin-right:40px;
+        }
+        .circleCollPeer {
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          font-size: 12px;
+          color: black;
+          display: inline-block;
+          line-height: 45px;
+          text-align: center;
+          background: blue;
+          margin-left:auto;
+          margin-right:40px;
+        }
+        .dashed {
+          border-bottom: 1px dashed #000;
+          text-align: center;
+          max-width: 200px;
+          height: 10px;
+          margin-bottom: 10px;
+        }
+
+        .dashed span {
+          background: #fff;
+          padding: 0 5px;
+        }
 
     </style>
 </head>
@@ -327,26 +406,42 @@
         <input id="bt" type="submit" onclick="get_aspath()" value="Submit">
     </form>
     <br>
-    --->
+    -->
+    <br>
+<div style="position:absolute; right:40px">
+      <!--<span class="dotOther">Other</span>
+      <span class="dotOrigin">Origin</span>-->
+      <h3>Info:</h3>
+      <span class="circleOrigin">Origin</span>
+      <span class="circleOther">Other</span>
+      <span class="circleCollPeer">C.Peer</span>
+
+    </div><br><br><br><br><br><br>
+    <div style="position:absolute; right:218px">
+      <div style="width:85px;height:10px;border-top:2px dashed red;">No  Announce</div>
+
+    </div>
+
+
 
     <span class="info-container">
       <div class="titolo1">Your query is:</div>
         <div style="text-align: left">
-        <pre id="info" class="textinfo">
-      </pre><br>
+        <pre id="infoRRC" class="textinfo"></pre><br>
+        <pre id="info" class="textinfo"></pre><br>
 
         <div class="titolo1">
         Retrieved data:</div>
 
         <details id="det1">
-          <summary id="sum1" class="titolo2">First announce:</summary>
+          <summary id="sum1" class="titolo2_1">First announce:</summary>
           <pre id="info1" class="textinfo"></pre>
           <div class="textinfo">Communities:</div>
           <pre id="info3" class="textinfo"></pre>
         </details>
 
         <details id="det2">
-            <summary id="sum2" class="titolo2"></summary>
+            <summary id="sum2" class="titolo2_2"></summary>
             <pre id="info2" class ="textinfo"></pre>
             <div id="comm-title" class="textinfo">Communities:</div>
             <pre id="info4" class ="textinfo"></pre>
@@ -422,7 +517,7 @@
                 .attr("height", height + margin.top + 2*margin.bottom)
             .append("g")
                 .attr("transform", "translate(" + margin.left + "," + 1.7*margin.top + ")");
-        
+
         svg.append("circle")
             .attr("id", "tipfollowscursor");
 
@@ -880,14 +975,48 @@
                             .style("opacity", "0.5");
 
                     }
+/*
+                    d3.selection.prototype.first = function() {
+                      return d3.select(this[0][0]);
+                    };
+                    d3.selection.prototype.last = function() {
+                      var last = this.size() - 1;
+                      return d3.select(this[0][last]);
+                    };
+*/
+                for (var c=0; c<as_data.length; c++){
+                  as_data[c].colore= "black"
+                }
+
+                as_data[0].colore= "red"
+                as_data[as_data.length-1].colore="blue"
+
+                for (var c=0; c<as_data.length; c++){
+                  if(as_data[c].x === 0)
+                      as_data[c].colore = "red"
+                }
 
                     svg.selectAll(".dot")
                         .data(as_data)
-                        .enter().append("circle")
+                        .enter()
+                          .append("circle")
                                 .attr("class", "dot")
                                 .attr("cx", function(d) { return x(d.x); })
                                 .attr("cy", function(d) { return y(d.y); })
-                                .attr("r", radius);
+                                .attr("r", radius)
+                                .style("fill", function(d){ return d.colore})
+
+
+
+
+
+          /*  var tickLabels = svg.selectAll(".dot");
+
+            tickLabels.first()
+              .style("fill","red");
+            tickLabels.last()
+              .style("fill","red");*/
+
 
                     paths.forEach(element => {
                         draw_markers(element[0], element[1]);
@@ -977,7 +1106,7 @@
                         let cy = circle.attr("cy");
                         let circles1 = world_map2.select(".points_1").selectAll('[cx="'+cx+'"][cy="'+cy+'"]');
                         let circles2 = world_map2.select(".points_2").selectAll('[cx="'+cx+'"][cy="'+cy+'"]');
-                        
+
                         if(circles1) {
                             circles1.each(function(d) {
                                 let element = d3.select(this);
@@ -1034,7 +1163,7 @@
 		                                    .attr("r", 5)
                                             .attr("fill", "green")
                                             .attr("fill-opacity", "0");
-                                    
+
                                     callback();
                                 }
                             });
@@ -1099,9 +1228,9 @@
                         .attr("d", new_line)
                         .style("opacity", function(d) {
                             var rec = $('#map-container').get(0).getBoundingClientRect();
-                            var cont = !(p2.right < rec.left || 
-                                            p2.left > rec.right || 
-                                            p2.bottom - 5 < rec.top || 
+                            var cont = !(p2.right < rec.left ||
+                                            p2.left > rec.right ||
+                                            p2.bottom - 5 < rec.top ||
                                             p2.top > rec.bottom);
                             if(!cont || flying) {
                                 return 0;
@@ -1283,13 +1412,21 @@
 
         function show_info(announce1, announce2 = null) {
 
+            var risposta = d3.json("rrcDescription")
+              .then(elem => {
+                if(elem)
+                    var strHtml = "RRC:"+elem[0].rrcDescription+"<br>";
+                    $('#infoRRC').html(strHtml);
 
-            d3.json("communitiesAndInfo")
+              });
+
+
+            d3.json("communitiesAndInfo") /* "id": "5511:500", "info": "European customers" */
                 .then(baby => {
                     var shuffledComm = [];
 
                     for (var i = 0; i < baby.length; i++) {
-                        if (baby[i].info.length > 1){
+                        if (baby[i].info){
                           var item = {};
                           item["id"] = baby[i].id;
                           item["comment"] = baby[i].info;
@@ -1302,14 +1439,16 @@
 
 
                     var info = 'Prefix: ' + announce1["target_prefix"] + '\n' +
-                        'Collected by: ' + announce1["source_id"] + '\n' +
-                        'rrc: ' + announce1["rrc"];
+                        'Collected by: ' + announce1["source_id"];// + '\n' +
+                        //'rrc: ' + announce1["rrc"];
 
                     $('#info').html(info);
 
+                  //  $('#info').append(info);
 
 
-                    if (!announce1['community'].length > 0) {
+//                  if (!announce1['community'].length > 0) {
+                    if (!announce1['community']) {
                         $('#info3').html('');
                     } else {
 
@@ -1332,20 +1471,20 @@
 
                             if (announce1['community'][i] && shuffledComm[j].comment){
                               if(announce1['community'][i] == shuffledComm[j].id){
-                                htmlStr += "<td><div class='tooltip'>"+announce1['community'][i]+"<span class='tooltiptext'>"+shuffledComm[j].comment+"</span></div></td>";
+                                htmlStr += "<td>"+"  "+"<div class='tooltip'>"+announce1['community'][i]+"<span class='tooltiptext'>"+shuffledComm[j].comment+"</span></div>"+"  "+"</td>";
                                 finded = true;
                               }
                             }
                           }
                           if(!finded)
-                            htmlStr += "<td>" + announce1['community'][i] + "  </td>";
+                            htmlStr += "<td>"+"  " + announce1['community'][i] + "  "+"</td>";
 
                           if((i+1)%3==0 && i!=0)
                             htmlStr += "</tr>";
                       }
                     }
                     $("#info3").append(htmlStr);
-                    $("#info3").append("<hr />");
+                    //$("#info3").append("<hr />");
 
 
                     if (!announce2 || !announce2['path'].length > 0) {
@@ -1367,13 +1506,13 @@
 
                             if (announce2['community'][i] && shuffledComm[j].comment){
                               if(announce2['community'][i] == shuffledComm[j].id){
-                                htmlStr += "<td><div class='tooltip'>"+announce2['community'][i]+"<span class='tooltiptext'>"+shuffledComm[j].comment+"</span></div></td>";
+                                htmlStr += "<td>"+"  "+"<div class='tooltip'>"+announce2['community'][i]+"<span class='tooltiptext'>"+shuffledComm[j].comment+"</span></div>"+"  "+"</td>";
                                 finded = true;
                               }
                             }
                           }
                           if(!finded)
-                            htmlStr += "<td>" + announce2['community'][i] + "  </td>";
+                            htmlStr += "<td>"+"  " + announce2['community'][i] + "  "+"</td>";
 
                           if((i+1)%3==0 && i!=0)
                             htmlStr += "</tr>";
@@ -1382,7 +1521,7 @@
 
 
                         $("#info4").append(htmlStr);
-                        $("#info4").append("<hr />");
+                        //$("#info4").append("<hr />");
                     } else if (announce2['path'].length > 0 && !announce2['community'].length > 0) {
                         $('#sum2').html('Second announce:');
                         $('#info4').html('');
@@ -1549,6 +1688,7 @@
 
         function remove_prepending(aspath) {
             var result = [];
+            if(aspath){
             for(let i = 0; i < aspath.length; i++) {
                 let curr = aspath[i];
                 if(i < aspath.length - 1) {
@@ -1560,6 +1700,7 @@
                     result.push(curr);
                 }
             }
+          }
             return result;
         }
 
@@ -1576,13 +1717,15 @@
 
         function get_error_message(text) {
             if(text = "discarded peer") {
-                return "This peering was ignored because of an inconsistency in the hierarchy";
+                return "This is Peer-Peer relationship, drawn in this way because of an inconsistency in the hierarchy";
             }
             if(text = "discarded arc") {
-                return "This arc was ignored because of a cycle in the aspath";
+                return "This is Customer-Provider relationship, drawn in this way because of an inconsistency in the hierarchy";
+                //return "This arc was ignored because of a cycle in the aspath";
             }
             if(text = "reversed arc") {
-                return "This arc was reversed because of a cycle in the hierarchy";
+                return "This is Customer-Provider relationship, drawn in this way because of an inconsistency in the hierarchy";
+                //return "This arc was reversed because of a cycle in the hierarchy";
             }
         }
 

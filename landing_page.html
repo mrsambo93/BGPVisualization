@@ -1,5 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+<style type="text/css">
+
+
+.hero-title {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 25px 60px 25px 60px;
+  margin: center;
+  margin-left: center;
+  margin-top:50px;
+}
+
+.hero-title::before {
+  content: "";
+  /*position: absolute;*/
+  /*left: 0;*/
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.text-wraper {
+  color: #FFFFFF;
+  width: 100%;
+}
+.page-title {
+  position: center;
+  max-width: 65%;
+  top: 50px;
+  margin-left: 335px;
+}
+
+.main-title {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1pt;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.sub-title1 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5em;
+  /*text-transform: uppercase;*/
+  margin: 5px;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+.sub-title2 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5em;
+  /*text-transform: uppercase;*/
+  margin: 5px;
+  margin-top:10px;
+  margin-bottom: 30px;
+  padding-left:30px;
+}
+
+
+</style>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,25 +75,63 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
+
+    <br>
+    <br>
+    <br>
+
+    <!--
+    <div class="page-title">
+      <div class="hero-title">
+        <div class="text-wraper">
+          <div class="main-title">This tool can help you to:</div>
+          <div class="sub-title">
+            - analyse bgp situation of 1 or 2 announces bgp in 2 different moments of time.<br>
+            - compare them from the POV of cutomer-provider hierarchy.<br>
+            - geolocate routers involved in the bgp updates.<br>
+          </div>
+        </div>
+      </div>
+    </div>-->
+<div class="container">
+<h2></h2><!--
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading"></div>
+      <div class="panel-body">
+
+
+
+</h3>
+    </div>
+  </div>
+</div>
+-->
     <br>
     <br>
     <br>
 <div class="container">
     <div class="panel panel-primary">
-        <div class="panel-heading">BGP visualization</div>
+        <div class="panel-heading"><div class="main-title">BGP-HIERARCHY-GEO VISUALIZATION:</div></div>
         <div class="panel-body">
+          <div class="sub-title1">
+            This tool may help you in:<br></div>
+            <div class="sub-title2">
+            - analyse bgp situation of 1 or 2 announces bgp in 2 different moments of time.<br>
+            - compare selected announce/s from the POV of cutomer-provider hierarchy.<br>
+            - geolocate routers involved in the bgp updates.<br></div>
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="ipaddress" class="control-label">IP Address or Prefix</label>
-                        <input type="text" class="form-control" 
-                        name="ipaddress" 
-                        id="ipaddress" 
-                        autocomplete="on" 
-                        data-parsley-required 
-                        data-parsley-trigger="keyup blur" 
-                        data-parsley-ipaddress="" 
-                        data-parsley-validation-threshold="0" 
+                        <input type="text" class="form-control"
+                        name="ipaddress"
+                        id="ipaddress"
+                        autocomplete="on"
+                        data-parsley-required
+                        data-parsley-trigger="keyup blur"
+                        data-parsley-ipaddress=""
+                        data-parsley-validation-threshold="0"
                         onkeyup="try_send_data()">
                     </div>
                 </div>
@@ -36,10 +141,10 @@
                     <div class="form-group">
                         <label for="date1" class="control-label">First BGP time</label>
                         <div class='input-group date' id='datetimepicker1'>
-                            <input type='text' class="form-control" name="date1" id="date1" 
-                            data-parsley-required 
+                            <input type='text' class="form-control" name="date1" id="date1"
+                            data-parsley-required
                             data-parsley-trigger="keyup blur"
-                            placeholder="dd/mm/yyyy HH:MM" 
+                            placeholder="dd/mm/yyyy HH:MM"
                             data-parsley-validation-threshold="0"
                             data-parsley-datetime=""
                             onkeyup="try_send_data()"/>
@@ -53,11 +158,11 @@
                     <div class="form-group">
                         <label for="date2" class="control-label">Second BGP time</label>
                         <div class='input-group date' id='datetimepicker2'>
-                            <input type='text' class="form-control" name="date2" id="date2" 
+                            <input type='text' class="form-control" name="date2" id="date2"
                             placeholder="dd/mm/yyyy HH:MM(optional)"
-                            data-parsley-trigger="keyup blur" 
+                            data-parsley-trigger="keyup blur"
                             data-parsley-validation-threshold="0"
-                            data-parsley-datetime="" 
+                            data-parsley-datetime=""
                             onkeyup="try_send_data()"/>
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-calendar"></span>
@@ -75,6 +180,8 @@
                             </select>
                         </div>
                     </div>
+            </div>
+            <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="col_peers" class="control-label">Collector peer</label>
@@ -88,6 +195,9 @@
         </div>
     </div>
 </div>
+
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -119,7 +229,7 @@
             en : 'Please provide date in format dd/mm/yyyy HH:MM'
         }
     })
-    
+
     var ip_parsley = $('#ipaddress').parsley();
     var date1_parsley = $('#date1').parsley();
     var date2_parsley = $('#date2').parsley();
@@ -178,10 +288,33 @@
 
     var vals = ["----"];
 
-    for(let i = 0; i < 24; i++) {
+  /*  for(let i = 0; i < 24; i++) {
+
+
         if(i !== 17 && i !== 2 && i !== 8 && i !== 9)
             vals.push(i);
-    }
+    }*/
+
+    vals.push(0);
+    vals.push(1+" UK,London");
+    vals.push(3+" Netherlands,Amsterdam");
+    vals.push(4+" CH,Geneva");
+    vals.push(5+" Austria,Vienna");
+    vals.push(6+" Japan,Tokyo");
+    vals.push(7+" Sweden,Stockholm");
+    vals.push(10+" Italy,Milan");
+    vals.push(11+" US,New York");
+    vals.push(12+" Germany,Frankfurt");
+    vals.push(13+" Russia,Moscow");
+    vals.push(14+" US,California");
+    vals.push(15+" Brazil,Sao Paulo");
+    vals.push(16+" US,Florida");
+    vals.push(18+" Spain,Barcelona");
+    vals.push(19+" South Africa,Johannesburg");
+    vals.push(20+" CH,Zurich");
+    vals.push(21+" France,Paris");
+    vals.push(22+" Romania,Bucharest");
+    vals.push(23+" Singapore,Singapore");
 
     var $choice = $('#choice');
     $choice.empty();
@@ -198,7 +331,7 @@
     var button = $('#button');
     button.css("pointer-events", "none");
     button.css('opacity', '.5');
-    
+
     $choice2.change(function() {
         if($choice2.val() !== "----") {
             button.css("pointer-events", "auto");
@@ -213,7 +346,8 @@
         var parameters = {
             "param1" : ip,
             "param2" : date1,
-            "param4" : rrc  
+            "param4" : rrc.split(" ")[0],
+            "param5" : rrc
         }
         if($("#date2").val() !== "") {
             var date2 = $("#datetimepicker2").data('DateTimePicker').date().toISOString().substring(0, 16);
@@ -226,11 +360,14 @@
                 console.log(data);
                 var peers = data.response;
                 $.each(peers, function(index, value) {
-                    $choice2.append('<option>' + value + '</option>');
+                  //file json dove vado a pescare:
+                  // - input => indirizzo ip
+                  // - output => ASN + Description
+                    $choice2.append('<option>' + value +'</option>');
                 });
                 $choice2.css("pointer-events", "auto");
                 $choice2.css('opacity', '1');
-            });         
+            });
     }
 
     function try_send_data() {
@@ -243,7 +380,7 @@
         if(ip_parsley.isValid() && date1_parsley.isValid()) {
             var ip = $("#ipaddress").val();
             var date1 = $("#datetimepicker1").data('DateTimePicker').date().toISOString().substring(0, 16);
-            var rrc = $("#choice").val();
+            var rrc = $("#choice").val().split(" ")[0];
             if(ip !== "" && date1 !== "" & !Number.isNaN(parseInt(rrc))) {
                 send_data();
             }
@@ -253,12 +390,13 @@
     function submit_peer() {
         var peer = $('#choice2').val();
         var rrc = $('#choice').val();
-        
+
         var params = {
             "coll_peer" : peer,
-            "rrc" : rrc
+            "rrc" : rrc.split(" ")[0],
+            "rrcDescription": rrc
         };
-        
+
         var form = document.createElement('form');
         form.setAttribute('method', 'post');
         form.setAttribute('action', server + '/visualize');
@@ -268,7 +406,7 @@
             hiddenField.setAttribute("type", "hidden");
             hiddenField.setAttribute("name", param);
             hiddenField.setAttribute("value", params[param]);
-            
+
             form.appendChild(hiddenField);
         }
 

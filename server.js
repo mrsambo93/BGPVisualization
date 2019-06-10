@@ -56,10 +56,10 @@ app.post('/solve', function (req, res, next) {
 app.post('/visualize', function(req, res) {
   console.log(req.body);
 
-
   if(req.body.coll_peer && req.body.rrc) {
 
     var announces = get_announces(req.body.coll_peer, req.body.rrc);
+
 
     var decriptate = extractAvailableCommunitiesFromBothAnnounces(announces);
     //var communitiesDecrypted = decryptCommunities(announces[0].community,announces[1].community);
@@ -67,10 +67,19 @@ app.post('/visualize', function(req, res) {
     // fs.writeFileSync("tempxxx.json", JSON.stringify(communitiesDecrypted, null, 2), 'utf8', function(err) {
     //   if(err) console.log(err);
     // });
+    var parenthesis = [];
+
+    var item = { "rrcDescription": req.body.rrcDescription };
+    parenthesis.push(item);
+
+    fs.writeFileSync("rrcDescription.json", JSON.stringify(parenthesis,null,2), 'utf8', function(err) {
+      if(err) console.log(err);
+    });
 
     fs.writeFileSync("temp.json", JSON.stringify(announces, null, 2), 'utf8', function(err) {
       if(err) console.log(err);
     });
+
 
     res.sendFile(__dirname + '/prima_visualizzazione.html');
   }
@@ -86,6 +95,10 @@ app.get('/visualize', function(req, res) {
 
 app.get('/worldmap', function(req, res) {
   res.sendFile(__dirname + '/datasets/110m.json');
+});
+
+app.get('/rrcDescription', function(req, res) {
+  res.sendFile(__dirname + "/rrcDescription.json");
 });
 
 app.get('/topology', function(req, res) {
@@ -213,9 +226,9 @@ function decryptCommunities(announceOneComm){
     item["id"]=announceOneComm[j];
     var x = findCommunity(communitiesDB,"id", announceOneComm[j]);
     if (x){
-      item["info"]=(x["region"] + ", " + x["norm_region"] + ", " + 
+      item["info"]=(x["region"] + ", " + x["norm_region"] + ", " +
         x["country"] + ", " + x["city"] + ", " + x["address"] + "\n" + x["source_description"])
-          .replace(/, ,/g, "").replace(/^,+|, $/g,'').trim();   
+          .replace(/, ,/g, "").replace(/^,+|, $/g,'').trim();
     }else{
       item["info"]="";
     }
@@ -260,12 +273,30 @@ function findCommunity(dbcommunities, propName, propValue){
 }
 
 function extractAvailableCommunitiesFromBothAnnounces(announces){
-    if(!announces[0].community && !announces[1].community){
+
+
+    if(!announces[0].community && !announces[1]){
       fs.writeFile("tempCommunities.json", "", 'utf8', function(err) {
         if(err) console.log(err);
       });
+      return;
+    }
+    if(announces[0].community && !announces[1]){
+      var decrypted = decryptCommunities(announces[0].community);
+      fs.writeFile("tempCommunities.json", JSON.stringify(decrypted,null,2), 'utf8', function(err) {
+        if(err) console.log(err);
+      });
+      return;
     }
 
+    if(!announces[0] && announces[1].community){
+      var decrypted = decryptCommunities(announces[1].community);
+
+      fs.writeFile("tempCommunities.json", JSON.stringify(decrypted, null, 2), 'utf8', function(err) {
+        if(err) console.log(err);
+      });
+      return;
+    }
     if(announces[0].community && announces[1].community){
       var announcesUnion = announces[0].community.concat(announces[1].community);
       var decrypted = decryptCommunities(announcesUnion);
@@ -278,16 +309,8 @@ function extractAvailableCommunitiesFromBothAnnounces(announces){
       // });
       return decrypted;
     }
-    if(announces[0].community && !announces[1].community){
-      fs.writeFile("tempCommunities.json", JSON.stringify(announces[0].community,null,2), 'utf8', function(err) {
-        if(err) console.log(err);
-      });
-    }
-    if(!announces[0].community && announces[1].community){
-      fs.writeFile("tempCommunities.json", JSON.stringify(announces[1].community, null, 2), 'utf8', function(err) {
-        if(err) console.log(err);
-      });
-    }
+
+
 }
 
 
@@ -1212,6 +1235,7 @@ function pleaseSolve(parms, res) {
       el['query_time'] = date;
       el['rrc'] = rrc;
     });
+    //ASN + Description
     cache = JSON.parse(JSON.stringify(complete));
 
     var peers = new Set(complete.map(el => el["source_id"].substring(el["source_id"].indexOf('-') + 1)));
@@ -1390,7 +1414,7 @@ function peers_names(peer_list) {
   peer_list.forEach(peer_ip => {
     collector_peers.forEach(peer => {
       if(peer['Address'] === peer_ip) {
-        result.push(peer['ASN'] + " - " + peer_ip);
+        result.push(peer['ASN'] + " - " + peer_ip +" - " + peer['Description']/*peer_ip*/);
         return;
       }
     });
@@ -1403,12 +1427,15 @@ function get_announces(coll_peer, rrc) {
   if(cache) {
     console.log("cache1");
     console.log(cache);
+
     var ann1 = get_announce_from_coll_peer(cache, coll_peer, rrc);
     if(ann1) {
       result.push(ann1)
+      //result.push(rrcDescription)
     } else {
       result.push({});
     }
+
   }
   if(cache2) {
     console.log("cache2");
@@ -1420,12 +1447,18 @@ function get_announces(coll_peer, rrc) {
       result.push({});
     }
   }
+
   return result;
 }
 
 function get_announce_from_coll_peer(announces, coll_peer, rrc) {
   var result = null;
   var ip = coll_peer.split(" ")[2];
+
+  /*ASN + Description
+  Trovami a chi appartiene questo ip*/
+
+
   announces.forEach(ann => {
     var source = ann['source_id'].substring(ann["source_id"].indexOf('-') + 1);
     if(source === ip) {
