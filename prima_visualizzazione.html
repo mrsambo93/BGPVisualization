@@ -468,7 +468,7 @@
             maxBoundsViscosity: 1.0,
             zoomSnap: 0,
             wheelPxPerZoomLevel: 250
-        }).setView([46.81509864599243, 8.3221435546875], 1).setMaxBounds( [[-90,-180], [90,180]] );
+        }).setView([46.81509864599243, 8.3221435546875], 2).setMaxBounds( [[-90,-180], [90,180]] );
 
         var tiles = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -1006,7 +1006,7 @@
                 asn_countries.forEach(country => {
                     world_map2.select('[id="' + country + '"]')
                         .attr("aspath", aspath_n)
-                        .attr("fill-opacity", "0.4")
+                        .attr("fill-opacity", "0.5")
                         .attr("visible", "true");
                 });
                 get_biggest_country_name(asn_countries)
@@ -1143,6 +1143,10 @@
                         let item = [asn, countries];
                         as_countries.push(item);
                         i++;
+                        if(i === Object.keys(as_locations).length) {
+                            console.log(coordinates);
+                            callback(coordinates, as_countries);
+                        }
                     }
                 }
             });
@@ -1189,7 +1193,7 @@
                 fetch(server + "/rrc/" + data.rrc)
                 .then(rrc => {return rrc.json()})
                 .then(rrc => {
-                    if(rrc != "00") {
+                    if(data.rrc != "0") {
                         key = data.path[0];
                         query = rrc.location;
                         if(!(as_locations.hasOwnProperty(key))) {
@@ -1599,15 +1603,17 @@
             let lat_max = d3.max(lats);
             let lon_min = d3.min(lons);
             let lon_max = d3.max(lons);
-            map.flyToBounds([[lat_min, lon_min], [lat_max, lon_max]], {
-                easeLinearity: 1,
-                padding: [100, 100]
-            });
+            if(lat_min && lat_max && lon_min && lon_max)
+                map.flyToBounds([[lat_min, lon_min], [lat_max, lon_max]], {
+                    easeLinearity: 1,
+                    padding: [100, 100],
+                    maxZoom: 6
+                });
             map.on("zoomend", function() {
                 circles1.style("fill-opacity", 1);
                 circles2.style("fill-opacity", 1);
                 lines.style("opacity", 1);
-                countries.style("opacity", 0.5)
+                countries.style("opacity", 0.6)
                 flying = false;
                 for (var i = 1; i < 99999; i++)
                     clearInterval(i);
@@ -1625,7 +1631,7 @@
 
             point1.attr("r", points_radius + 5);
             point2.attr("r", 8);
-            link.style("stroke-width", "4");
+            link.style("stroke-width", "5");
         }
 
         function reset_view(d) {
