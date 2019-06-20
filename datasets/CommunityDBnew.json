@@ -41394,7 +41394,7 @@
     {
         "city": "", 
         "norm_region": "", 
-        "country_code": "", 
+        "country_code": "276", 
         "country": "Germany", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_DE", 
@@ -41407,7 +41407,7 @@
     {
         "city": "", 
         "norm_region": "", 
-        "country_code": "", 
+        "country_code": "040", 
         "country": "Austria", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_AT", 
@@ -41420,7 +41420,7 @@
     {
         "city": "", 
         "norm_region": "", 
-        "country_code": "", 
+        "country_code": "756", 
         "country": "Switzerland", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_CH", 
@@ -41433,7 +41433,7 @@
     {
         "city": "", 
         "norm_region": "", 
-        "country_code": "", 
+        "country_code": "840", 
         "country": "United States", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_US", 
@@ -41446,7 +41446,7 @@
     {
         "city": "", 
         "norm_region": "", 
-        "country_code": "", 
+        "country_code": "076", 
         "country": "Brazil", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_BR", 
@@ -41459,7 +41459,7 @@
     {
         "city": "", 
         "norm_region": "", 
-        "country_code": "", 
+        "country_code": "392", 
         "country": "Japan", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_JP", 
@@ -41472,7 +41472,7 @@
     {
         "city": "", 
         "norm_region": "", 
-        "country_code": "", 
+        "country_code": "156", 
         "country": "China", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_CN", 
@@ -41485,7 +41485,7 @@
     {
         "city": "", 
         "norm_region": "", 
-        "country_code": "", 
+        "country_code": "784", 
         "country": "United Arab Emirates", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_AE", 
@@ -41498,7 +41498,7 @@
     {
         "city": "", 
         "norm_region": "", 
-        "country_code": "", 
+        "country_code": "702", 
         "country": "Singapore", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_SG", 
@@ -41511,7 +41511,7 @@
     {
         "city": "", 
         "norm_region": "", 
-        "country_code": "", 
+        "country_code": "616", 
         "country": "Poland", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_PL", 
@@ -41524,7 +41524,7 @@
     {
         "city": "", 
         "norm_region": "", 
-        "country_code": "", 
+        "country_code": "344", 
         "country": "Hong Kong", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_HK", 
@@ -41537,7 +41537,7 @@
     {
         "city": "", 
         "norm_region": "", 
-        "country_code": "", 
+        "country_code": "484", 
         "country": "Mexico", 
         "region": "", 
         "source_description": "ANX_ORIGIN_COUNTRY_MX", 
